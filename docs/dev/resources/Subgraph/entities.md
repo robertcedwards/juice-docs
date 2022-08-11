@@ -12,11 +12,14 @@ title: Subgraph Entities
 - StreamTransaction
 - Withdrawal
 
+Notes:
+
+- Events used for both v1 and v2 contracts include a `cv` (contracts version) property, which allows querying events for a specific contracts version.
+- `project.id` is string concatenated from multiple properties. `projectId` represents an integer id of the project.
+
 # Data Preview
 
 You can see sample records of the various entities to faimilarize yourself with [GraphLooker](https://graphlooker.com/explore?uri=https%3A%2F%2Fgateway.thegraph.com%2Fapi%2F7ba063459ec88c336425c0847b9368a1%2Fsubgraphs%2Fid%2FFVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&e=ProtocolLog&efd=protocolLogs).
-
-Note: `project.id` is string concatenated from multiple properties. `projectId` represents an integer id of the project.
 
 ## Addresses
 
@@ -33,12 +36,6 @@ Description: type ProtocolLog @entity
 | redeemCount    | Int!                                     |             |
 | erc20Count     | Int!                                     |             |
 
-#############################################################################
-############################### vx.x entities ###############################
-#############################################################################
-
-# Note: Events used for both v1 and v2 contracts include a `cv` (contracts version) property, which allows querying events for a specific contracts version.
-
 ## ProjectCreateEvent
 
 Description: v1.0, v1.1, v2
@@ -53,14 +50,15 @@ Description: v1.0, v1.1, v2
 | txHash    | Bytes!   |             |
 | caller    | Bytes!   |             |
 
-# v1.0, v1.1, v2
+# Project
 
-type Project @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-|id| ID!| test |
-|projectId| Int! | |
-|cv| String!| |
+Description: v1.0, v1.1, v2
+
+| Field     | Type    | Description |
+| --------- | ------- | ----------- |
+| id        | ID!     | test        |
+| projectId | Int!    |             |
+| cv        | String! |             |
 
 # Conditional on if using v1.x or v2 contracts
 
@@ -98,34 +96,35 @@ type Project @entity {
 | projectEvents                        | [ProjectEvent!]! @derivedFrom(field: "project")                        |             |
 | ethErc20ProjectPayers                | [ETHERC20ProjectPayer!]! @derivedFrom(field: "project")                |             |
 
-# v2
+# ENSNode
 
-type ENSNode @entity {
+Description: v2
 
 | Field     | Type | Description |
 | --------- | ---- | ----------- |
 | id        | ID!  |             |
-| projectId | Int  |
+| projectId | Int  |             |
 
-# v1.0, v1.1, v2
+# Participant
 
-type Participant @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-|id| ID!| |
-|project| Project!| |
-|projectId| Int!| |
-| cv| String!| |
-| wallet| Bytes!| |
-| totalPaid| BigInt!| |
-| lastPaidTimestamp| Int! | |
-| balance| BigInt!| |
-| stakedBalance| BigInt! | |
-| unstakedBalance| BigInt!| |
+Description: v1.0, v1.1, v2
 
-# v1.0, v1.1, v2
+| Field             | Type     | Description |
+| ----------------- | -------- | ----------- |
+| id                | ID!      |             |
+| project           | Project! |             |
+| projectId         | Int!     |             |
+| cv                | String!  |             |
+| wallet            | Bytes!   |             |
+| totalPaid         | BigInt!  |             |
+| lastPaidTimestamp | Int!     |             |
+| balance           | BigInt!  |             |
+| stakedBalance     | BigInt!  |             |
+| unstakedBalance   | BigInt!  |             |
 
-type ProjectEvent @entity {
+# ProjectEvent
+
+Description: v1.0, v1.1, v2
 
 | Field     | Type     | Description |
 | --------- | -------- | ----------- |
@@ -155,9 +154,9 @@ type ProjectEvent @entity {
 | useAllowanceEvent                   | UseAllowanceEvent                   |             |
 | deployETHERC20ProjectPayerEvent     | DeployETHERC20ProjectPayerEvent     |             |
 
-# v1.0, v1.1, v2
+# PayEvent
 
-type PayEvent @entity {
+Description: v1.0, v1.1, v2
 
 | Field            | Type                                                       | Description |
 | ---------------- | ---------------------------------------------------------- | ----------- |
@@ -173,9 +172,9 @@ type PayEvent @entity {
 | note             | String!                                                    |             |
 | feeFromV2Project | Int # Indicates payment is a fee from project with this ID |             |
 
-# v1.0, v1.1, v2
+# MintTokensEvent
 
-type MintTokensEvent @entity {
+Description: v1.0, v1.1, v2
 
 | Field       | Type     | Description |
 | ----------- | -------- | ----------- |
@@ -190,182 +189,184 @@ type MintTokensEvent @entity {
 | memo        | String!  |             |
 | caller      | Bytes!   |             |
 
-# v1.0, v1.1, v2
+# RedeemEvent
 
-type RedeemEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-| id| ID! | |
-| project| Project!| |
-| projectId| Int!| |
-| cv| String!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| holder| Bytes!| |
-| beneficiary| Bytes!| |
-| amount| BigInt!| |
-| returnAmount| BigInt!| |
-| caller| Bytes!| |
+Description: v1.0, v1.1, v2
 
-# v1.0, v1.1, v2
+| Field        | Type     | Description |
+| ------------ | -------- | ----------- |
+| id           | ID!      |             |
+| project      | Project! |             |
+| projectId    | Int!     |             |
+| cv           | String!  |             |
+| timestamp    | Int!     |             |
+| txHash       | Bytes!   |             |
+| holder       | Bytes!   |             |
+| beneficiary  | Bytes!   |             |
+| amount       | BigInt!  |             |
+| returnAmount | BigInt!  |             |
+| caller       | Bytes!   |             |
 
-type DeployedERC20Event @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| cv| String!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| symbol| String!| |
-| address| Bytes # will be empty for v1.x events| |
+# DeployedERC20Event
 
-#############################################################################
-############################### v1.x entities ###############################
-#############################################################################
+Description: v1.0, v1.1, v2
 
-# v1.0, v1.1
+| Field     | Type                                  | Description |
+| --------- | ------------------------------------- | ----------- |
+| id        | ID!                                   |             |
+| project   | Project!                              |             |
+| projectId | Int!                                  |             |
+| cv        | String!                               |             |
+| timestamp | Int!                                  |             |
+| txHash    | Bytes!                                |             |
+| symbol    | String!                               |             |
+| address   | Bytes # will be empty for v1.x events |             |
 
-type ProtocolV1Log @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-| id| ID!| |
-| log| ProtocolLog!| |
-| projectsCount| Int!| |
-| volumePaid| BigInt!| |
-| volumeRedeemed| BigInt!| |
-| paymentsCount| Int!| |
-| redeemCount| Int!| |
-| erc20Count| Int!| |
+# ProtocolV1Log
 
-# v1.0, v1.1
+Description: v1.0, v1.1
 
-type PrintReservesEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| fundingCycleId| BigInt!| |
-| beneficiary| Bytes!| |
-| count| BigInt!| |
-| beneficiaryTicketAmount| BigInt!| |
-| caller| Bytes!| |
-| distributions| [DistributeToTicketModEvent!]!@derivedFrom(field: "printReservesEvent")| |
+| Field          | Type         | Description |
+| -------------- | ------------ | ----------- |
+| id             | ID!          |             |
+| log            | ProtocolLog! |             |
+| projectsCount  | Int!         |             |
+| volumePaid     | BigInt!      |             |
+| volumeRedeemed | BigInt!      |             |
+| paymentsCount  | Int!         |             |
+| redeemCount    | Int!         |             |
+| erc20Count     | Int!         |             |
 
-# v1.0, v1.1
+# PrintReservesEvent
 
-type DistributeToPayoutModEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-| id| ID! | |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| fundingCycleId| BigInt!| |
-| modProjectId| Int!| |
-| modAllocator| Bytes!| |
-| modBeneficiary| Bytes!| |
-| modPreferUnstaked| Boolean!| |
-| modCut| BigInt!| |
-| caller| Bytes!| |
-| tapEvent| TapEvent!| |
+Description: v1.0, v1.1
 
-# v1.0, v1.1
+| Field                   | Type                                                                    | Description |
+| ----------------------- | ----------------------------------------------------------------------- | ----------- |
+| id                      | ID!                                                                     |             |
+| project                 | Project!                                                                |             |
+| projectId               | Int!                                                                    |             |
+| timestamp               | Int!                                                                    |             |
+| txHash                  | Bytes!                                                                  |             |
+| fundingCycleId          | BigInt!                                                                 |             |
+| beneficiary             | Bytes!                                                                  |             |
+| count                   | BigInt!                                                                 |             |
+| beneficiaryTicketAmount | BigInt!                                                                 |             |
+| caller                  | Bytes!                                                                  |             |
+| distributions           | [DistributeToTicketModEvent!]!@derivedFrom(field: "printReservesEvent") |             |
 
-type TapEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| fundingCycleId| BigInt!| |
-| beneficiary| Bytes!| |
-| amount| BigInt!| |
-| currency| BigInt!| |
-| netTransferAmount| BigInt!| |
-| beneficiaryTransferAmount| BigInt!| |
-| govFeeAmount| BigInt!| |
-| caller| Bytes!| |
-| distributions| [DistributeToPayoutModEvent!]! @derivedFrom(field: "tapEvent")| |
+# DistributeToPayoutModEvent
 
-# v1.0, v1.1
+Description: v1.0, v1.1
 
-type DistributeToTicketModEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| fundingCycleId| BigInt!| |
-| modBeneficiary| Bytes!| |
-| modPreferUnstaked| Boolean!| |
-| modCut| BigInt!| |
-| caller| Bytes!| |
-| printReservesEvent| PrintReservesEvent!| |
+| Field             | Type      | Description |
+| ----------------- | --------- | ----------- |
+| id                | ID!       |             |
+| project           | Project!  |             |
+| projectId         | Int!      |             |
+| timestamp         | Int!      |             |
+| txHash            | Bytes!    |             |
+| fundingCycleId    | BigInt!   |             |
+| modProjectId      | Int!      |             |
+| modAllocator      | Bytes!    |             |
+| modBeneficiary    | Bytes!    |             |
+| modPreferUnstaked | Boolean!  |             |
+| modCut            | BigInt!   |             |
+| caller            | Bytes!    |             |
+| tapEvent          | TapEvent! |             |
 
-#############################################################################
-############################### v2.x entities ###############################
-#############################################################################
+# TapEvent
 
-# v2
+Description: v1.0, v1.1
 
-type ProtocolV2Log @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id| ID!| |
-| log| ProtocolLog!| |
-| projectsCount| Int!| |
-| volumePaid| BigInt!| |
-| volumeRedeemed| BigInt!| |
-| paymentsCount| Int!| |
-| redeemCount| Int!| |
-| erc20Count| Int!| |
+| Field                     | Type                                                           | Description |
+| ------------------------- | -------------------------------------------------------------- | ----------- |
+| id                        | ID!                                                            |             |
+| project                   | Project!                                                       |             |
+| projectId                 | Int!                                                           |             |
+| timestamp                 | Int!                                                           |             |
+| txHash                    | Bytes!                                                         |             |
+| fundingCycleId            | BigInt!                                                        |             |
+| beneficiary               | Bytes!                                                         |             |
+| amount                    | BigInt!                                                        |             |
+| currency                  | BigInt!                                                        |             |
+| netTransferAmount         | BigInt!                                                        |             |
+| beneficiaryTransferAmount | BigInt!                                                        |             |
+| govFeeAmount              | BigInt!                                                        |             |
+| caller                    | Bytes!                                                         |             |
+| distributions             | [DistributeToPayoutModEvent!]! @derivedFrom(field: "tapEvent") |             |
 
-# v2
+# DistributeToTicketModEvent
 
-type DistributePayoutsEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| fundingCycleConfiguration| BigInt!| |
-| fundingCycleNumber| Int!| |
-| beneficiary| Bytes!| |
-| amount| BigInt!| |
-| distributedAmount| BigInt!| |
-| fee| BigInt!| |
-| beneficiaryDistributionAmount: BigInt!| |
-| memo| String!| |
-| caller| Bytes!| |
-| splitDistributions|[DistributeToPayoutSplitEvent!]!@derivedFrom(field: "distributePayoutsEvent")| |
+Description: v1.0, v1.1
 
-# v2
+| Field              | Type                | Description |
+| ------------------ | ------------------- | ----------- |
+| id                 | ID!                 |             |
+| project            | Project!            |             |
+| projectId          | Int!                |             |
+| timestamp          | Int!                |             |
+| txHash             | Bytes!              |             |
+| fundingCycleId     | BigInt!             |             |
+| modBeneficiary     | Bytes!              |             |
+| modPreferUnstaked  | Boolean!            |             |
+| modCut             | BigInt!             |             |
+| caller             | Bytes!              |             |
+| printReservesEvent | PrintReservesEvent! |             |
 
-type DistributeToPayoutSplitEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id: ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| domain| BigInt!| |
-| group| BigInt!| |
-| amount| BigInt!| |
-| caller| Bytes!| |
-| distributePayoutsEvent| DistributePayoutsEvent!| |
+# ProtocolV2Log
+
+Description: v2
+
+| Field          | Type         | Description |
+| -------------- | ------------ | ----------- |
+| id             | ID!          |             |
+| log            | ProtocolLog! |             |
+| projectsCount  | Int!         |             |
+| volumePaid     | BigInt!      |             |
+| volumeRedeemed | BigInt!      |             |
+| paymentsCount  | Int!         |             |
+| redeemCount    | Int!         |             |
+| erc20Count     | Int!         |             |
+
+# DistributePayoutsEvent
+
+Description: v2
+
+| Field                                  | Type                                                                          | Description |
+| -------------------------------------- | ----------------------------------------------------------------------------- | ----------- |
+| id                                     | ID!                                                                           |             |
+| project                                | Project!                                                                      |             |
+| projectId                              | Int!                                                                          |             |
+| timestamp                              | Int!                                                                          |             |
+| txHash                                 | Bytes!                                                                        |             |
+| fundingCycleConfiguration              | BigInt!                                                                       |             |
+| fundingCycleNumber                     | Int!                                                                          |             |
+| beneficiary                            | Bytes!                                                                        |             |
+| amount                                 | BigInt!                                                                       |             |
+| distributedAmount                      | BigInt!                                                                       |             |
+| fee                                    | BigInt!                                                                       |             |
+| beneficiaryDistributionAmount: BigInt! |                                                                               |
+| memo                                   | String!                                                                       |             |
+| caller                                 | Bytes!                                                                        |             |
+| splitDistributions                     | [DistributeToPayoutSplitEvent!]!@derivedFrom(field: "distributePayoutsEvent") |             |
+
+# DistributeToPayoutSplitEvent
+
+Description: v2
+
+| Field                  | Type                    | Description |
+| ---------------------- | ----------------------- | ----------- |
+| id: ID!                |                         |
+| project                | Project!                |             |
+| projectId              | Int!                    |             |
+| timestamp              | Int!                    |             |
+| txHash                 | Bytes!                  |             |
+| domain                 | BigInt!                 |             |
+| group                  | BigInt!                 |             |
+| amount                 | BigInt!                 |             |
+| caller                 | Bytes!                  |             |
+| distributePayoutsEvent | DistributePayoutsEvent! |             |
 
 # Split struct properties below
 
@@ -379,37 +380,39 @@ type DistributeToPayoutSplitEvent @entity {
 | lockedUntil        | Int!     |             |
 | allocator          | Bytes!   |             |
 
-# v2
+# DistributeReservedTokensEvent
 
-type DistributeReservedTokensEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| fundingCycleNumber| Int!| |
-| beneficiary| Bytes!| |
-| tokenCount| BigInt!| |
-| beneficiaryTokenCount| BigInt!| |
-| memo| String!| |
-| caller| Bytes!| |
-| splitDistributions| [DistributeToReservedTokenSplitEvent!]!@derivedFrom(field"distributeReservedTokensEvent")| |
+Description: v2
 
-# v2
+| Field                 | Type                                                                                      | Description |
+| --------------------- | ----------------------------------------------------------------------------------------- | ----------- |
+| id                    | ID!                                                                                       |             |
+| project               | Project!                                                                                  |             |
+| projectId             | Int!                                                                                      |             |
+| timestamp             | Int!                                                                                      |             |
+| txHash                | Bytes!                                                                                    |             |
+| fundingCycleNumber    | Int!                                                                                      |             |
+| beneficiary           | Bytes!                                                                                    |             |
+| tokenCount            | BigInt!                                                                                   |             |
+| beneficiaryTokenCount | BigInt!                                                                                   |             |
+| memo                  | String!                                                                                   |             |
+| caller                | Bytes!                                                                                    |             |
+| splitDistributions    | [DistributeToReservedTokenSplitEvent!]!@derivedFrom(field"distributeReservedTokensEvent") |             |
 
-type DistributeToReservedTokenSplitEvent @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| tokenCount| BigInt!| |
-| caller| Bytes!| |
-| distributeReservedTokensEvent| DistributeReservedTokensEvent!| |
+# DistributeToReservedTokenSplitEvent
+
+Description: v2
+
+| Field                         | Type                           | Description |
+| ----------------------------- | ------------------------------ | ----------- |
+| id                            | ID!                            |             |
+| project                       | Project!                       |             |
+| projectId                     | Int!                           |             |
+| timestamp                     | Int!                           |             |
+| txHash                        | Bytes!                         |             |
+| tokenCount                    | BigInt!                        |             |
+| caller                        | Bytes!                         |             |
+| distributeReservedTokensEvent | DistributeReservedTokensEvent! |             |
 
 # Split struct properties below
 
@@ -422,75 +425,81 @@ type DistributeToReservedTokenSplitEvent @entity {
 | lockedUntil             | Int!   |             |
 | allocator               | Bytes! |             |
 
-# v2
+# UseAllowanceEvent
 
-type UseAllowanceEvent @entity{
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| fundingCycleConfiguration| BigInt!| |
-| fundingCycleNumber| Int!| |
-| beneficiary| Bytes!| |
-| amount| BigInt!| |
-| distributedAmount| BigInt!| |
-| netDistributedamount| BigInt!| |
-| memo |String!| |
-| caller| Bytes!| |
+Description: v2
 
-# v2
+| Field                     | Type     | Description |
+| ------------------------- | -------- | ----------- |
+| id                        | ID!      |             |
+| project                   | Project! |             |
+| projectId                 | Int!     |             |
+| timestamp                 | Int!     |             |
+| txHash                    | Bytes!   |             |
+| fundingCycleConfiguration | BigInt!  |             |
+| fundingCycleNumber        | Int!     |             |
+| beneficiary               | Bytes!   |             |
+| amount                    | BigInt!  |             |
+| distributedAmount         | BigInt!  |             |
+| netDistributedamount      | BigInt!  |             |
+| memo                      | String!  |             |
+| caller                    | Bytes!   |             |
 
-type DeployETHERC20ProjectPayerEvent @entity{
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id| ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| timestamp| Int!| |
-| txHash| Bytes!| |
-| address| Bytes!| |
-| beneficiary| Bytes!| |
-| preferClaimedTokens| Boolean!| |
-| preferAddToBalance| Boolean!| |
-| directory| Bytes!| |
-| owner| Bytes!| |
-| memo| String| |
-| metadata| Bytes| |
-| caller| Bytes!| |
+# DeployETHERC20ProjectPayerEvent
 
-# v2
+Description: V2
 
-type ETHERC20ProjectPayer @entity{
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id: ID!| |
-| project| Project!| |
-| projectId| Int!| |
-| address| Bytes!| |
-| beneficiary| Bytes!| |
-| preferClaimedTokens| Boolean!| |
-| preferAddToBalance| Boolean!| |
-| directory| Bytes!| |
-| owner| Bytes!| |
-| memo| String| |
-| metadata| Bytes| |
+| Field               | Type     | Description |
+| ------------------- | -------- | ----------- |
+| id                  | ID!      |             |
+| project             | Project! |             |
+| projectId           | Int!     |             |
+| timestamp           | Int!     |             |
+| txHash              | Bytes!   |             |
+| address             | Bytes!   |             |
+| beneficiary         | Bytes!   |             |
+| preferClaimedTokens | Boolean! |             |
+| preferAddToBalance  | Boolean! |             |
+| directory           | Bytes!   |             |
+| owner               | Bytes!   |             |
+| memo                | String   |             |
+| metadata            | Bytes    |             |
+| caller              | Bytes!   |             |
 
-type VeNftToken @entity {
-| Field | Type | Description |
-| ----------- | ----------- | ----------- |  
-| id| ID!| |
-| tokenId| Int!| |
-| tokenUri| String!| |
-| createdAt| Int!| |
-| redeemedAt| Int| |
-| owner| Bytes!| |
-| participant| Participant!| |
-| lockAmount| BigInt!| |
-| lockEnd| Int!| |
-| lockDuration| Int!| |
-| lockUseJbToken| Boolean!| |
-| lockAllowPublicExtension| Boolean!| |
-| unlockedAt| Int!| |
+## ETHERC20ProjectPayer
+
+Description: V2
+
+| Field               | Type     | Description |
+| ------------------- | -------- | ----------- |
+| id: ID!             |          |
+| project             | Project! |             |
+| projectId           | Int!     |             |
+| address             | Bytes!   |             |
+| beneficiary         | Bytes!   |             |
+| preferClaimedTokens | Boolean! |             |
+| preferAddToBalance  | Boolean! |             |
+| directory           | Bytes!   |             |
+| owner               | Bytes!   |             |
+| memo                | String   |             |
+| metadata            | Bytes    |             |
+
+## VeNftToken
+
+Description: V2
+
+| Field                    | Type         | Description |
+| ------------------------ | ------------ | ----------- |
+| id                       | ID!          |             |
+| tokenId                  | Int!         |             |
+| tokenUri                 | String!      |             |
+| createdAt                | Int!         |             |
+| redeemedAt               | Int          |             |
+| owner                    | Bytes!       |             |
+| participant              | Participant! |             |
+| lockAmount               | BigInt!      |             |
+| lockEnd                  | Int!         |             |
+| lockDuration             | Int!         |             |
+| lockUseJbToken           | Boolean!     |             |
+| lockAllowPublicExtension | Boolean!     |             |
+| unlockedAt               | Int!         |             |
