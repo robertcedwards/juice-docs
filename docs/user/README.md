@@ -1,5 +1,5 @@
 ---
-title: Juicebox Docs
+title: Project Creator Hub
 sidebar_position: 1
 ---
 

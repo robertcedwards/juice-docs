@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-# Tools for Project Creators
+# Other Tools
 
 :::tip
 Aeolian's [DAO Tooling 101](https://info.juicebox.money/blog/dao-tooling-101/) is another great resource for project creators.
