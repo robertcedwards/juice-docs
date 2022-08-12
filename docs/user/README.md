@@ -22,7 +22,9 @@ sidebar_position: 1
 
 ## Launch Your Project
 
-Start by connecting your wallet to [juicebox.money](https://juicebox.money) and clicking `Launch your project`! Enter information on the left side of your screen—the right side is a preview. The NFT which represents your project will be minted to your wallet once you create your project. You can send this NFT to a multisig or another address if you would like to transfer your project's ownership.
+1. Start by connecting your wallet to [juicebox.money](https://juicebox.money) and clicking `Launch your project`.
+2. Enter information on the left side of your screen—the right side is a preview.
+3. The NFT which represents your project will be minted to your wallet once you create your project. You can send this NFT to a multisig or another address if you would like to transfer your project's ownership.
 
 :::tip
 Consider creating a test project on the [Rinkeby testnet version of Juicebox](https://rinkeby.juicebox.money) before creating a mainnet project. If you need help deciding how to configure your project, ask in the [Juicebox DAO Discord](https://discord.gg/juicebox).
