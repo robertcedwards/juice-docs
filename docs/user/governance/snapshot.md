@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Using Snapshot With Juicebox
 
-## WTF is Snapshot?
+## What's Snapshot?
 
 From the [Snapshot Docs](https://docs.snapshot.org/):
 > Snapshot is a decentralized voting system. It provides flexibility on how voting power is calculated for a vote. Snapshot supports various voting types to cater to the needs of organizations. Creating proposals and voting on Snapshot is user-friendly and does not cost gas as the process is performed off-chain.

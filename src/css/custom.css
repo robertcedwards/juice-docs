@@ -44,6 +44,11 @@ article img {
   margin: auto;
 }
 
+article iframe {
+  display: block;
+  margin: auto;
+}
+
 .subtitle {
   text-align: center;
   font-style: italic;
