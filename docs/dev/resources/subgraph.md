@@ -11,8 +11,8 @@ Multiple subgraphs are maintained by [Peel](https://discord.gg/b4rpjgGPHX) in a 
 |Name|Status|Description|
 |-|-|-|
 |juicebox|[Published](https://thegraph.com/explorer/subgraph?id=FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&view=Overview)|The primary mainnet subgraph used by [juicebox.money](https://juicebox.money).|
-|mainnet-dev|[Unpublished](https://api.studio.thegraph.com/query/30654/mainnet-dev/0.1.0)|Indexes mainnet Juicebox protocol contracts.|
-|rinkeby-dev|[Unpublished](https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.1.0)|Indexes rinkeby Juicebox protocol contracts.|
+|mainnet-dev|[Unpublished](https://api.studio.thegraph.com/query/30654/mainnet-dev/0.2.0)|Indexes mainnet Juicebox protocol contracts.|
+|rinkeby-dev|[Unpublished](https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.2.0)|Indexes rinkeby Juicebox protocol contracts.|
 
 <br/>
 
