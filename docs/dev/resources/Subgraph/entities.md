@@ -334,6 +334,7 @@ Applicable Versions: v2
 ## DistributePayoutsEvent
 
 Description:
+
 Applicable Versions: v2
 
 | Field                         | Type                                                                          | Description                                        |
@@ -357,6 +358,7 @@ Applicable Versions: v2
 ## DistributeToPayoutSplitEvent
 
 Description:
+
 Applicable Versions: v2
 
 | Field                  | Type                    | Description                                              |
@@ -382,6 +384,7 @@ Applicable Versions: v2
 ## DistributeReservedTokensEvent
 
 Description:
+
 Applicable Versions: v2
 
 | Field                 | Type                                                                                      | Description                                                |
@@ -402,6 +405,7 @@ Applicable Versions: v2
 ## DistributeToReservedTokenSplitEvent
 
 Description:
+
 Applicable Versions: v2
 
 | Field                         | Type                           | Description                       |
@@ -424,6 +428,7 @@ Applicable Versions: v2
 ## UseAllowanceEvent
 
 Description:
+
 Applicable Versions: v2
 
 | Field                     | Type     | Description                                     |
@@ -445,6 +450,7 @@ Applicable Versions: v2
 ## DeployETHERC20ProjectPayerEvent
 
 Description:
+
 Applicable Versions: V2
 
 | Field               | Type     | Description                                |
@@ -467,6 +473,7 @@ Applicable Versions: V2
 ## ETHERC20ProjectPayer
 
 Description:
+
 Applicable Versions: V2
 
 | Field               | Type     | Description                       |
@@ -486,6 +493,7 @@ Applicable Versions: V2
 ## VeNftToken
 
 Description:
+
 Applicable Versions: V2
 
 | Field                    | Type         | Description |
