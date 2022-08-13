@@ -9,22 +9,67 @@ Below are some sample queries you can use to gather information from the Juicebo
 
 You can build your own queries using a [GraphQL Explorer](https://graphiql-online.com/graphiql) and enter your endpoint to limit your queries to the exact data desired.
 
-### Project Metrics
+### Get Project Metrics By Owner
 
-Get the latest metrics for nodes on the network
+Get your Project ID.
 
 ```graphql
-query NodeOverview {
-  projects(first: 10) {
+query ProjectByOwner(
+  $Owner: String! = "0xaf28bcb48c40dbc86f52d459a6562f658fc94b1e"
+) {
+  projects(where: { owner: $Owner }, first: 10) {
+    createdAt
     id
+    owner
+    projectId
+    totalPaid
+    totalRedeemed
+    metadataUri
+    handle
+    terminal
+    currentBalance
+    cv
   }
 }
 ```
 
-### Sample Query 2
+### Project Metrics
 
-Description of Sample Query 2
+Get the latest metrics for your project
 
 ```graphql
+query ProjectMetrics($Project: String! = "1-1") {
+  projects(where: { id: $Project }) {
+    createdAt
+    id
+    owner
+    projectId
+    totalPaid
+    totalRedeemed
+    metadataUri
+    handle
+    terminal
+    currentBalance
+    cv
+  }
+}
+```
 
+### Project Payments
+
+Get the 20 latest payments into your project
+
+```graphql
+query ProjectPayments($ProjectId: String! = "2-1") {
+  projects(where: { id: $ProjectId }, first: 10) {
+    handle
+    payEvents(first: 20, orderBy: timestamp, orderDirection: desc) {
+      amount
+      caller
+      note
+      timestamp
+      txHash
+    }
+  }
+}
 ```
