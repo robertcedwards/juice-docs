@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo.svg',
   organizationName: 'Juicebox', // Usually your GitHub org/user name.
   projectName: 'Juicebox Protocol', // Usually your repo name.
 
@@ -68,7 +68,6 @@ const config = {
       maxHeadingLevel: 5,
     },
     navbar: {
-      title: 'Juicebox',
       logo: {
         alt: 'Juicebox Logo',
         src: 'img/logo.png',

@@ -74,11 +74,6 @@ h4, h5 {
   overflow: auto;
 }
 
-.navbar__title {
-  font-family: monospace;
-  font-size: 120%;
-}
-
 .clean-list li{
     list-style-position: inside;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
