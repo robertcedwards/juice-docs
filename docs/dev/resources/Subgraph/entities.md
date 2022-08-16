@@ -5,12 +5,30 @@ title: Subgraph Entities
 
 # Entities
 
-- Token
-- Cancellation
-- Stream
-- StreamToSalary
-- StreamTransaction
-- Withdrawal
+- ProtocolLog
+- ProjectCreateEvent
+- Project
+- ENSNode
+- Participant
+- ProjetEvent
+- PayEvent
+- MintTokensEvent
+- RedeemEvent
+- DeployedERC20Event
+- ProtocolV1Log
+- PrintReservesEvent
+- DistributeToPayoutModEvent
+- TapEvent
+- DistributeToTicketModEvent
+- ProtocolV2Log
+- DistributePayoutsEvent
+- DistributeToPayoutSplitEvent
+- DistributeReservedTokensEvent
+- DistributeToReservedTokenSplitEvent
+- UseAllowanceEvent
+- DeployETHERC20ProjectPayerEvent
+- ETHERC20ProjectPayer
+- VeNftToken
 
 Notes:
 
@@ -60,8 +78,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 | Field                                | Type                                                                   | Description                           |
 | ------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------- |
-| id                                   | ID!                                                                    |                                       |
-| projectId                            | Int!                                                                   |                                       |
+| id                                   | ID!                                                                    | Concatenation of CV - projectId       |
+| projectId                            | Int!                                                                   | Project id as an Integer              |
 | cv                                   | String!                                                                | Contract Version of the project       |
 | handle                               | String                                                                 | Project Name                          |
 | metadataUri                          | String                                                                 | URI for Project Metadata              |
@@ -157,12 +175,12 @@ Applicable Versions: v1.0, v1.1, v2
 | project          | Project! | Sub entity leading to the project                    |
 | projectId        | Int!     | Project id as an Integer                             |
 | cv               | String!  | Contract Version of the project                      |
-| timestamp        | Int!     |                                                      |
-| txHash           | Bytes!   |                                                      |
+| timestamp        | Int!     | Timestamp of the transaction                         |
+| txHash           | Bytes!   | Transaction hash                                     |
 | caller           | Bytes!   | The wallet address that paid the project             |
-| beneficiary      | Bytes!   |                                                      |
-| amount           | BigInt!  |                                                      |
-| note             | String!  |                                                      |
+| beneficiary      | Bytes!   | Recipient of the funds from the pay event            |
+| amount           | BigInt!  | Amount of the pay event                              |
+| note             | String!  | Note for the pay event                               |
 | feeFromV2Project | Int      | Indicates payment is a fee from project with this ID |
 
 ## MintTokensEvent
@@ -170,18 +188,18 @@ Applicable Versions: v1.0, v1.1, v2
 Description:
 Applicable Versions: v1.0, v1.1, v2
 
-| Field       | Type     | Description                           |
-| ----------- | -------- | ------------------------------------- |
-| id          | ID!      |                                       |
-| project     | Project! | Sub entity leading to the project     |
-| projectId   | Int!     | Project id as an Integer              |
-| cv          | String!  | Contract Version of the project       |
-| timestamp   | Int!     |                                       |
-| txHash      | Bytes!   |                                       |
-| beneficiary | Bytes!   |                                       |
-| amount      | BigInt!  |                                       |
-| memo        | String!  |                                       |
-| caller      | Bytes!   | The wallet address that minted tokens |
+| Field       | Type     | Description                                |
+| ----------- | -------- | ------------------------------------------ |
+| id          | ID!      |                                            |
+| project     | Project! | Sub entity leading to the project          |
+| projectId   | Int!     | Project id as an Integer                   |
+| cv          | String!  | Contract Version of the project            |
+| timestamp   | Int!     | Timestamp of the transaction               |
+| txHash      | Bytes!   | Transaction hash                           |
+| beneficiary | Bytes!   | Recipient of the funds from the mint event |
+| amount      | BigInt!  | Amount of the mint event                   |
+| memo        | String!  | Note for the mint event                    |
+| caller      | Bytes!   | The wallet address that minted tokens      |
 
 ## RedeemEvent
 
@@ -194,12 +212,12 @@ Applicable Versions: v1.0, v1.1, v2
 | project      | Project! | Sub entity leading to the project                |
 | projectId    | Int!     | Project id as an Integer                         |
 | cv           | String!  | Contract Version of the project                  |
-| timestamp    | Int!     |                                                  |
-| txHash       | Bytes!   |                                                  |
+| timestamp    | Int!     | Timestamp of the transaction                     |
+| txHash       | Bytes!   | Transaction hash                                 |
 | holder       | Bytes!   |                                                  |
-| beneficiary  | Bytes!   |                                                  |
-| amount       | BigInt!  |                                                  |
-| returnAmount | BigInt!  |                                                  |
+| beneficiary  | Bytes!   | Recipient of the funds from the redeem event     |
+| amount       | BigInt!  | Amount of the redeem event                       |
+| returnAmount | BigInt!  | Note for the redeem event                        |
 | caller       | Bytes!   | The wallet address that initiated the redemption |
 
 ## DeployedERC20Event
@@ -213,9 +231,9 @@ Applicable Versions: v1.0, v1.1, v2
 | project   | Project! | Sub entity leading to the project |
 | projectId | Int!     | Project id as an Integer          |
 | cv        | String!  | Contract Version of the project   |
-| timestamp | Int!     |                                   |
-| txHash    | Bytes!   |                                   |
-| symbol    | String!  |                                   |
+| timestamp | Int!     | Timestamp of the transaction      |
+| txHash    | Bytes!   | Transaction hash                  |
+| symbol    | String!  | symbol of the ERC20               |
 | address   | Bytes    | will be empty for v1.x events     |
 
 ## ProtocolV1Log
@@ -223,16 +241,16 @@ Applicable Versions: v1.0, v1.1, v2
 Description:
 Applicable Versions: v1.0, v1.1
 
-| Field          | Type         | Description |
-| -------------- | ------------ | ----------- |
-| id             | ID!          |             |
-| log            | ProtocolLog! |             |
-| projectsCount  | Int!         |             |
-| volumePaid     | BigInt!      |             |
-| volumeRedeemed | BigInt!      |             |
-| paymentsCount  | Int!         |             |
-| redeemCount    | Int!         |             |
-| erc20Count     | Int!         |             |
+| Field          | Type         | Description                                  |
+| -------------- | ------------ | -------------------------------------------- |
+| id             | ID!          |                                              |
+| log            | ProtocolLog! |                                              |
+| projectsCount  | Int!         | Total V1.X projects                          |
+| volumePaid     | BigInt!      | Total volume paid to V1.X projects           |
+| volumeRedeemed | BigInt!      | Total volume redeemed to V1.X projects       |
+| paymentsCount  | Int!         | Total number of payments to V1.X projects    |
+| redeemCount    | Int!         | Total number of redemptions to V1.X projects |
+| erc20Count     | Int!         | Total ERC20 deployed by V1.X projects        |
 
 ## PrintReservesEvent
 
@@ -244,8 +262,8 @@ Applicable Versions: v1.0, v1.1
 | id                      | ID!                                                                     |                                             |
 | project                 | Project!                                                                | Sub entity leading to the project           |
 | projectId               | Int!                                                                    | Project id as an Integer                    |
-| timestamp               | Int!                                                                    |                                             |
-| txHash                  | Bytes!                                                                  |                                             |
+| timestamp               | Int!                                                                    | Timestamp of the transaction                |
+| txHash                  | Bytes!                                                                  | Transaction hash                            |
 | fundingCycleId          | BigInt!                                                                 |                                             |
 | beneficiary             | Bytes!                                                                  |                                             |
 | count                   | BigInt!                                                                 |                                             |
@@ -263,8 +281,8 @@ Applicable Versions: v1.0, v1.1
 | id                | ID!       |                                                    |
 | project           | Project!  | Sub entity leading to the project                  |
 | projectId         | Int!      | Project id as an Integer                           |
-| timestamp         | Int!      |                                                    |
-| txHash            | Bytes!    |                                                    |
+| timestamp         | Int!      | Timestamp of the transaction                       |
+| txHash            | Bytes!    | Transaction hash                                   |
 | fundingCycleId    | BigInt!   |                                                    |
 | modProjectId      | Int!      |                                                    |
 | modAllocator      | Bytes!    |                                                    |
@@ -272,29 +290,29 @@ Applicable Versions: v1.0, v1.1
 | modPreferUnstaked | Boolean!  |                                                    |
 | modCut            | BigInt!   |                                                    |
 | caller            | Bytes!    | The wallet address that initiated the distribution |
-| tapEvent          | TapEvent! |                                                    |
+| tapEvent          | TapEvent! | Sub-entity leading to tap events                   |
 
 ## TapEvent
 
 Description:
 Applicable Versions: v1.0, v1.1
 
-| Field                     | Type                                                           | Description                               |
-| ------------------------- | -------------------------------------------------------------- | ----------------------------------------- |
-| id                        | ID!                                                            |                                           |
-| project                   | Project!                                                       | Sub entity leading to the project         |
-| projectId                 | Int!                                                           | Project id as an Integer                  |
-| timestamp                 | Int!                                                           |                                           |
-| txHash                    | Bytes!                                                         |                                           |
-| fundingCycleId            | BigInt!                                                        |                                           |
-| beneficiary               | Bytes!                                                         |                                           |
-| amount                    | BigInt!                                                        |                                           |
-| currency                  | BigInt!                                                        |                                           |
-| netTransferAmount         | BigInt!                                                        |                                           |
-| beneficiaryTransferAmount | BigInt!                                                        |                                           |
-| govFeeAmount              | BigInt!                                                        |                                           |
-| caller                    | Bytes!                                                         | The wallet address that initiated the tap |
-| distributions             | [DistributeToPayoutModEvent!]! @derivedFrom(field: "tapEvent") |                                           |
+| Field                     | Type                                                           | Description                                    |
+| ------------------------- | -------------------------------------------------------------- | ---------------------------------------------- |
+| id                        | ID!                                                            |                                                |
+| project                   | Project!                                                       | Sub entity leading to the project              |
+| projectId                 | Int!                                                           | Project id as an Integer                       |
+| timestamp                 | Int!                                                           | Timestamp of the transaction                   |
+| txHash                    | Bytes!                                                         | Transaction hash                               |
+| fundingCycleId            | BigInt!                                                        |                                                |
+| beneficiary               | Bytes!                                                         | Recipient of the tap event                     |
+| amount                    | BigInt!                                                        | Amount of the tap event                        |
+| currency                  | BigInt!                                                        | Currency address of the token in the tap event |
+| netTransferAmount         | BigInt!                                                        | Net amount transfered in all tap events        |
+| beneficiaryTransferAmount | BigInt!                                                        | Amount sent to the beneficiary                 |
+| govFeeAmount              | BigInt!                                                        | Tax amount on the tap event                    |
+| caller                    | Bytes!                                                         | The wallet address that initiated the tap      |
+| distributions             | [DistributeToPayoutModEvent!]! @derivedFrom(field: "tapEvent") |                                                |
 
 ## DistributeToTicketModEvent
 
@@ -306,30 +324,30 @@ Applicable Versions: v1.0, v1.1
 | id                 | ID!                 |                                                    |
 | project            | Project!            | Sub entity leading to the project                  |
 | projectId          | Int!                | Project id as an Integer                           |
-| timestamp          | Int!                |                                                    |
-| txHash             | Bytes!              |                                                    |
+| timestamp          | Int!                | Timestamp of the transaction                       |
+| txHash             | Bytes!              | Transaction hash                                   |
 | fundingCycleId     | BigInt!             |                                                    |
 | modBeneficiary     | Bytes!              |                                                    |
 | modPreferUnstaked  | Boolean!            |                                                    |
 | modCut             | BigInt!             |                                                    |
 | caller             | Bytes!              | The wallet address that initiated the distribution |
-| printReservesEvent | PrintReservesEvent! |                                                    |
+| printReservesEvent | PrintReservesEvent! | Sub-entity leading to the print reserve events     |
 
 ## ProtocolV2Log
 
 Description:
 Applicable Versions: v2
 
-| Field          | Type         | Description |
-| -------------- | ------------ | ----------- |
-| id             | ID!          |             |
-| log            | ProtocolLog! |             |
-| projectsCount  | Int!         |             |
-| volumePaid     | BigInt!      |             |
-| volumeRedeemed | BigInt!      |             |
-| paymentsCount  | Int!         |             |
-| redeemCount    | Int!         |             |
-| erc20Count     | Int!         |             |
+| Field          | Type         | Description                                |
+| -------------- | ------------ | ------------------------------------------ |
+| id             | ID!          |                                            |
+| log            | ProtocolLog! |                                            |
+| projectsCount  | Int!         |                                            |
+| volumePaid     | BigInt!      | Total volume paid to V2 projects           |
+| volumeRedeemed | BigInt!      | Total volume redeemed to V2 projects       |
+| paymentsCount  | Int!         | Total number of payments to V2 projects    |
+| redeemCount    | Int!         | Total number of redemptions to V2 projects |
+| erc20Count     | Int!         | Total ERC20's deployed by V2 projects      |
 
 ## DistributePayoutsEvent
 
@@ -342,18 +360,18 @@ Applicable Versions: v2
 | id                            | ID!                                                                           |                                                    |
 | project                       | Project!                                                                      | Sub entity leading to the project                  |
 | projectId                     | Int!                                                                          | Project id as an Integer                           |
-| timestamp                     | Int!                                                                          |                                                    |
-| txHash                        | Bytes!                                                                        |                                                    |
+| timestamp                     | Int!                                                                          | Timestamp of the transaction                       |
+| txHash                        | Bytes!                                                                        | Transaction hash                                   |
 | fundingCycleConfiguration     | BigInt!                                                                       |                                                    |
 | fundingCycleNumber            | Int!                                                                          |                                                    |
-| beneficiary                   | Bytes!                                                                        |                                                    |
-| amount                        | BigInt!                                                                       |                                                    |
-| distributedAmount             | BigInt!                                                                       |                                                    |
-| fee                           | BigInt!                                                                       |                                                    |
-| beneficiaryDistributionAmount | BigInt!                                                                       |                                                    |
-| memo                          | String!                                                                       |                                                    |
+| beneficiary                   | Bytes!                                                                        | Beneficiary of the distribution                    |
+| amount                        | BigInt!                                                                       | Amount of the distribution event                   |
+| distributedAmount             | BigInt!                                                                       | Total amount distributed as of this event          |
+| fee                           | BigInt!                                                                       | Fee on this distribution                           |
+| beneficiaryDistributionAmount | BigInt!                                                                       | Net amount sent to the beneficiary                 |
+| memo                          | String!                                                                       | Note on the disribution                            |
 | caller                        | Bytes!                                                                        | The wallet address that initiated the distribution |
-| splitDistributions            | [DistributeToPayoutSplitEvent!]!@derivedFrom(field: "distributePayoutsEvent") |                                                    |
+| splitDistributions            | [DistributeToPayoutSplitEvent!]!@derivedFrom(field: "distributePayoutsEvent") | Sub-entity leading to split distributions          |
 
 ## DistributeToPayoutSplitEvent
 
@@ -366,8 +384,8 @@ Applicable Versions: v2
 | id:                    | ID!                     |                                                          |
 | project                | Project!                | Sub entity leading to the project                        |
 | projectId              | Int!                    | Project id as an Integer                                 |
-| timestamp              | Int!                    |                                                          |
-| txHash                 | Bytes!                  |                                                          |
+| timestamp              | Int!                    | Timestamp of the transaction                             |
+| txHash                 | Bytes!                  | Transaction hash                                         |
 | domain                 | BigInt!                 |                                                          |
 | group                  | BigInt!                 |                                                          |
 | amount                 | BigInt!                 |                                                          |
@@ -392,8 +410,8 @@ Applicable Versions: v2
 | id                    | ID!                                                                                       |                                                            |
 | project               | Project!                                                                                  | Sub entity leading to the project                          |
 | projectId             | Int!                                                                                      | Project id as an Integer                                   |
-| timestamp             | Int!                                                                                      |                                                            |
-| txHash                | Bytes!                                                                                    |                                                            |
+| timestamp             | Int!                                                                                      | Timestamp of the transaction                               |
+| txHash                | Bytes!                                                                                    | Transaction hash                                           |
 | fundingCycleNumber    | Int!                                                                                      |                                                            |
 | beneficiary           | Bytes!                                                                                    |                                                            |
 | tokenCount            | BigInt!                                                                                   |                                                            |
@@ -413,8 +431,8 @@ Applicable Versions: v2
 | id                            | ID!                            |                                   |
 | project                       | Project!                       | Sub entity leading to the project |
 | projectId                     | Int!                           | Project id as an Integer          |
-| timestamp                     | Int!                           |                                   |
-| txHash                        | Bytes!                         |                                   |
+| timestamp                     | Int!                           | Timestamp of the transaction      |
+| txHash                        | Bytes!                         | Transaction hash                  |
 | tokenCount                    | BigInt!                        |                                   |
 | caller                        | Bytes!                         |                                   |
 | distributeReservedTokensEvent | DistributeReservedTokensEvent! |                                   |
@@ -436,15 +454,15 @@ Applicable Versions: v2
 | id                        | ID!      |                                                 |
 | project                   | Project! | Sub entity leading to the project               |
 | projectId                 | Int!     | Project id as an Integer                        |
-| timestamp                 | Int!     |                                                 |
-| txHash                    | Bytes!   |                                                 |
+| timestamp                 | Int!     | Timestamp of the transaction                    |
+| txHash                    | Bytes!   | Transaction hash                                |
 | fundingCycleConfiguration | BigInt!  |                                                 |
 | fundingCycleNumber        | Int!     |                                                 |
-| beneficiary               | Bytes!   |                                                 |
-| amount                    | BigInt!  |                                                 |
+| beneficiary               | Bytes!   | Beneficiary of the allowance                    |
+| amount                    | BigInt!  | Amountof the allowance                          |
 | distributedAmount         | BigInt!  |                                                 |
-| netDistributedamount      | BigInt!  |                                                 |
-| memo                      | String!  |                                                 |
+| netDistributedamount      | BigInt!  | Total amount distributed by the project         |
+| memo                      | String!  | Note for the distribution                       |
 | caller                    | Bytes!   | The wallet address that initiated the allowance |
 
 ## DeployETHERC20ProjectPayerEvent
@@ -458,8 +476,8 @@ Applicable Versions: V2
 | id                  | ID!      |                                            |
 | project             | Project! | Sub entity leading to the project          |
 | projectId           | Int!     | Project id as an Integer                   |
-| timestamp           | Int!     |                                            |
-| txHash              | Bytes!   |                                            |
+| timestamp           | Int!     | Timestamp of the transaction               |
+| txHash              | Bytes!   | Transaction hash                           |
 | address             | Bytes!   |                                            |
 | beneficiary         | Bytes!   |                                            |
 | preferClaimedTokens | Boolean! |                                            |
@@ -496,18 +514,18 @@ Description:
 
 Applicable Versions: V2
 
-| Field                    | Type         | Description |
-| ------------------------ | ------------ | ----------- |
-| id                       | ID!          |             |
-| tokenId                  | Int!         |             |
-| tokenUri                 | String!      |             |
-| createdAt                | Int!         |             |
-| redeemedAt               | Int          |             |
-| owner                    | Bytes!       |             |
-| participant              | Participant! |             |
-| lockAmount               | BigInt!      |             |
-| lockEnd                  | Int!         |             |
-| lockDuration             | Int!         |             |
-| lockUseJbToken           | Boolean!     |             |
-| lockAllowPublicExtension | Boolean!     |             |
-| unlockedAt               | Int!         |             |
+| Field                    | Type         | Description                               |
+| ------------------------ | ------------ | ----------------------------------------- |
+| id                       | ID!          |                                           |
+| tokenId                  | Int!         | Token identifier                          |
+| tokenUri                 | String!      | Token URI                                 |
+| createdAt                | Int!         | timestamp for when the token was created  |
+| redeemedAt               | Int          | timestamp for when the token was redeemed |
+| owner                    | Bytes!       | owner of the NFT                          |
+| participant              | Participant! |                                           |
+| lockAmount               | BigInt!      |                                           |
+| lockEnd                  | Int!         |                                           |
+| lockDuration             | Int!         |                                           |
+| lockUseJbToken           | Boolean!     |                                           |
+| lockAllowPublicExtension | Boolean!     |                                           |
+| unlockedAt               | Int!         |                                           |
