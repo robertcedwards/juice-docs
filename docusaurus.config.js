@@ -117,6 +117,10 @@ const config = {
               label: 'GitHub',
               to: 'https://github.com/jbx-protocol',
             },
+            {
+              label: 'Podcast',
+              to: 'https://anchor.fm/thejuicecast',
+            },
           ],
         },
       ],
