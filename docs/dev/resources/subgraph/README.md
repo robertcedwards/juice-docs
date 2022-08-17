@@ -12,8 +12,8 @@ Multiple subgraphs are maintained by [Peel](https://discord.gg/b4rpjgGPHX) in a 
 | Name        | Status                                                                                                            | Description                                                                    |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | juicebox    | [Published](https://thegraph.com/explorer/subgraph?id=FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&view=Overview) | The primary mainnet subgraph used by [juicebox.money](https://juicebox.money). |
-| mainnet-dev | [Unpublished](https://api.studio.thegraph.com/query/30654/mainnet-dev/0.1.0)                                      | Indexes mainnet Juicebox protocol contracts.                                   |
-| rinkeby-dev | [Unpublished](https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.1.0)                                      | Indexes rinkeby Juicebox protocol contracts.                                   |
+| mainnet-dev | [Unpublished](https://api.studio.thegraph.com/query/30654/mainnet-dev/0.2.0)                                      | Indexes mainnet Juicebox protocol contracts.                                   |
+| rinkeby-dev | [Unpublished](https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.2.0)                                      | Indexes rinkeby Juicebox protocol contracts.                                   |
 
 <br/>
 
@@ -29,6 +29,6 @@ To use the mainnet Juicebox subgraph without being rate-limited:
 2. Fund your billing balance on [Subgraph Studio Billing](https://thegraph.com/studio/billing/).
 3. Query the mainnet Juicebox subgraph using `https://gateway.thegraph.com/api/<your-api-key>/subgraphs/id/FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC`.
 
-You can also follow the [Video Tutorial](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
+You can also follow the [Video Tutorial](https://www.youtube.com/watch?v=UrfIpm-Vlgs).
 
-_For more info on Graph query billing, visit [Billing on the Subgraph Studio - The Graph Docs](https://thegraph.com/docs/en/querying/billing/). and [Managing your API Key & Setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/)_
+*For more info on Graph query billing, visit [Billing on the Subgraph Studio - The Graph Docs](https://thegraph.com/docs/en/querying/billing/) and [Managing your API Key & Setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/).*

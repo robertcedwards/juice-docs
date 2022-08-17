@@ -3,46 +3,45 @@ sidebar_position: 2
 title: Subgraph Entities
 ---
 
-# Entities
+*See [The Graph Docs](https://thegraph.com/docs/en/developing/creating-a-subgraph/#defining-entities) for more on defining entities.*
 
-- ProtocolLog
-- ProjectCreateEvent
-- Project
-- ENSNode
-- Participant
-- ProjetEvent
-- PayEvent
-- MintTokensEvent
-- RedeemEvent
-- DeployedERC20Event
-- ProtocolV1Log
-- PrintReservesEvent
-- DistributeToPayoutModEvent
-- TapEvent
-- DistributeToTicketModEvent
-- ProtocolV2Log
-- DistributePayoutsEvent
-- DistributeToPayoutSplitEvent
-- DistributeReservedTokensEvent
-- DistributeToReservedTokenSplitEvent
-- UseAllowanceEvent
-- DeployETHERC20ProjectPayerEvent
-- ETHERC20ProjectPayer
-- VeNftToken
+## Entities
+
+- [`ProtocolLog`](#protocollog)
+- [`ProjectCreateEvent`](#projectcreateevent)
+- [`Project`](#project)
+- [`ENSNode`](#ensnode)
+- [`Participant`](#participant)
+- [`ProjectEvent`](#projectevent)
+- [`PayEvent`](#payevent)
+- [`MintTokensEvent`](#minttokensevent)
+- [`RedeemEvent`](#redeemevent)
+- [`DeployedERC20Event`](#deployederc20event)
+- [`ProtocolV1Log`](#protocolv1log)
+- [`PrintReservesEvent`](#printreservesevent)
+- [`DistributeToPayoutModEvent`](#distributetopayoutmodevent)
+- [`TapEvent`](#tapevent)
+- [`DistributeToTicketModEvent`](#distributetoticketmodevent)
+- [`ProtocolV2Log`](#protocolv2log)
+- [`DistributePayoutsEvent`](#distributepayoutsevent)
+- [`DistributeToPayoutSplitEvent`](#distributetopayoutsplitevent)
+- [`DistributeReservedTokensEvent`](#distributereservedtokensevent)
+- [`DistributeToReservedTokenSplitEvent`](#distributetoreservedtokensplitevent)
+- [`UseAllowanceEvent`](#useallowanceevent)
+- [`DeployETHERC20ProjectPayerEvent`](#deployetherc20projectpayerevent)
+- [`ETHERC20ProjectPayer`](#etherc20projectpayer)
+- [`VeNftToken`](#venfttoken)
 
 Notes:
 
-- Events used for both v1 and v2 contracts include a `cv` (contracts version) property, which allows querying events for a specific contracts version.
+- Events used for both Juicebox v1 and Juicebox v2 contracts include a `cv` (contracts version) property, which allows querying events for a specific contracts version.
 - `project.id` is string concatenated from multiple properties. `projectId` represents an integer id of the project.
-
-# Data Preview
-
-You can see sample records of the various entities to faimilarize yourself with [GraphLooker](https://graphlooker.com/explore?uri=https%3A%2F%2Fgateway.thegraph.com%2Fapi%2F7ba063459ec88c336425c0847b9368a1%2Fsubgraphs%2Fid%2FFVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&e=ProtocolLog&efd=protocolLogs).
+- Familiarize yourself with sample records of the various entities on [GraphLooker](https://graphlooker.com/explore?uri=https%3A%2F%2Fgateway.thegraph.com%2Fapi%2F7ba063459ec88c336425c0847b9368a1%2Fsubgraphs%2Fid%2FFVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&e=ProtocolLog&efd=protocolLogs).
 
 ## ProtocolLog
 
-Description: High level view of the Juicebox Protocol
-Applicable Versions: v1.0, v1.1, v2
+**Description:** High level view of the Juicebox Protocol<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field                  | Type                                     | Description                               |
 | ---------------------- | ---------------------------------------- | ----------------------------------------- |
@@ -58,8 +57,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## ProjectCreateEvent
 
-Description: Entity detailing info about the creation of a project
-Applicable Versions: v1.0, v1.1, v2
+**Description:** Entity detailing info about the creation of a project<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field     | Type     | Description                                       |
 | --------- | -------- | ------------------------------------------------- |
@@ -73,8 +72,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## Project
 
-Description:
-Applicable Versions: v1.0, v1.1, v2
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field                                | Type                                                                   | Description                           |
 | ------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------- |
@@ -110,8 +109,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## ENSNode
 
-Description:
-Applicable Versions: v2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field     | Type | Description |
 | --------- | ---- | ----------- |
@@ -120,8 +119,8 @@ Applicable Versions: v2
 
 ## Participant
 
-Description: A users participation with a project. This is the M:M link between users:projects
-Applicable Versions: v1.0, v1.1, v2
+**Description:** A users participation with a project. This is the M:M link between users:projects<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field             | Type     | Description                                                    |
 | ----------------- | -------- | -------------------------------------------------------------- |
@@ -138,8 +137,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## ProjectEvent
 
-Description:
-Applicable Versions: v1.0, v1.1, v2
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field                               | Type                                | Description                                                     |
 | ----------------------------------- | ----------------------------------- | --------------------------------------------------------------- |
@@ -166,8 +165,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## PayEvent
 
-Description:
-Applicable Versions: v1.0, v1.1, v2
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field            | Type     | Description                                          |
 | ---------------- | -------- | ---------------------------------------------------- |
@@ -185,8 +184,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## MintTokensEvent
 
-Description:
-Applicable Versions: v1.0, v1.1, v2
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field       | Type     | Description                                |
 | ----------- | -------- | ------------------------------------------ |
@@ -203,8 +202,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## RedeemEvent
 
-Description:
-Applicable Versions: v1.0, v1.1, v2
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field        | Type     | Description                                      |
 | ------------ | -------- | ------------------------------------------------ |
@@ -222,8 +221,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## DeployedERC20Event
 
-Description:
-Applicable Versions: v1.0, v1.1, v2
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`, `v2`
 
 | Field     | Type     | Description                       |
 | --------- | -------- | --------------------------------- |
@@ -238,8 +237,8 @@ Applicable Versions: v1.0, v1.1, v2
 
 ## ProtocolV1Log
 
-Description:
-Applicable Versions: v1.0, v1.1
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`
 
 | Field          | Type         | Description                                  |
 | -------------- | ------------ | -------------------------------------------- |
@@ -254,8 +253,8 @@ Applicable Versions: v1.0, v1.1
 
 ## PrintReservesEvent
 
-Description:
-Applicable Versions: v1.0, v1.1
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`
 
 | Field                   | Type                                                                    | Description                                 |
 | ----------------------- | ----------------------------------------------------------------------- | ------------------------------------------- |
@@ -273,8 +272,8 @@ Applicable Versions: v1.0, v1.1
 
 ## DistributeToPayoutModEvent
 
-Description:
-Applicable Versions: v1.0, v1.1
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`
 
 | Field             | Type      | Description                                        |
 | ----------------- | --------- | -------------------------------------------------- |
@@ -294,8 +293,8 @@ Applicable Versions: v1.0, v1.1
 
 ## TapEvent
 
-Description:
-Applicable Versions: v1.0, v1.1
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`
 
 | Field                     | Type                                                           | Description                                    |
 | ------------------------- | -------------------------------------------------------------- | ---------------------------------------------- |
@@ -316,8 +315,8 @@ Applicable Versions: v1.0, v1.1
 
 ## DistributeToTicketModEvent
 
-Description:
-Applicable Versions: v1.0, v1.1
+**Description:**<br/>
+**Applicable Versions:** `v1.0`, `v1.1`
 
 | Field              | Type                | Description                                        |
 | ------------------ | ------------------- | -------------------------------------------------- |
@@ -335,8 +334,8 @@ Applicable Versions: v1.0, v1.1
 
 ## ProtocolV2Log
 
-Description:
-Applicable Versions: v2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field          | Type         | Description                                |
 | -------------- | ------------ | ------------------------------------------ |
@@ -351,9 +350,8 @@ Applicable Versions: v2
 
 ## DistributePayoutsEvent
 
-Description:
-
-Applicable Versions: v2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field                         | Type                                                                          | Description                                        |
 | ----------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------- |
@@ -375,9 +373,8 @@ Applicable Versions: v2
 
 ## DistributeToPayoutSplitEvent
 
-Description:
-
-Applicable Versions: v2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field                  | Type                    | Description                                              |
 | ---------------------- | ----------------------- | -------------------------------------------------------- |
@@ -401,9 +398,8 @@ Applicable Versions: v2
 
 ## DistributeReservedTokensEvent
 
-Description:
-
-Applicable Versions: v2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field                 | Type                                                                                      | Description                                                |
 | --------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -422,9 +418,8 @@ Applicable Versions: v2
 
 ## DistributeToReservedTokenSplitEvent
 
-Description:
-
-Applicable Versions: v2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field                         | Type                           | Description                       |
 | ----------------------------- | ------------------------------ | --------------------------------- |
@@ -445,9 +440,8 @@ Applicable Versions: v2
 
 ## UseAllowanceEvent
 
-Description:
-
-Applicable Versions: v2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field                     | Type     | Description                                     |
 | ------------------------- | -------- | ----------------------------------------------- |
@@ -467,9 +461,8 @@ Applicable Versions: v2
 
 ## DeployETHERC20ProjectPayerEvent
 
-Description:
-
-Applicable Versions: V2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field               | Type     | Description                                |
 | ------------------- | -------- | ------------------------------------------ |
@@ -490,9 +483,8 @@ Applicable Versions: V2
 
 ## ETHERC20ProjectPayer
 
-Description:
-
-Applicable Versions: V2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field               | Type     | Description                       |
 | ------------------- | -------- | --------------------------------- |
@@ -510,9 +502,8 @@ Applicable Versions: V2
 
 ## VeNftToken
 
-Description:
-
-Applicable Versions: V2
+**Description:**<br/>
+**Applicable Versions:** `v2`
 
 | Field                    | Type         | Description                               |
 | ------------------------ | ------------ | ----------------------------------------- |

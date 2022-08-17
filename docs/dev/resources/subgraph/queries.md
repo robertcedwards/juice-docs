@@ -7,7 +7,7 @@ title: Sample Queries
 
 Below are some sample queries you can use to gather information from the Juicebox contracts.
 
-You can build your own queries using a [GraphQL Explorer](https://graphiql-online.com/graphiql) and enter your endpoint to limit your queries to the exact data desired.
+You can build your own queries using a [GraphQL Explorer](https://graphiql-online.com/graphiql)—enter your endpoint to limit your queries to the exact data desired.
 
 ### Get Project Metrics By Owner
 
@@ -35,7 +35,7 @@ query ProjectByOwner(
 
 ### Project Metrics
 
-Get the latest metrics for your project
+Get the latest metrics for your project.
 
 ```graphql
 query ProjectMetrics($Project: String! = "1-1") {
@@ -57,7 +57,7 @@ query ProjectMetrics($Project: String! = "1-1") {
 
 ### Project Payments
 
-Get the 20 latest payments into your project
+Get the 20 latest payments into your project.
 
 ```graphql
 query ProjectPayments($ProjectId: String! = "2-1") {
