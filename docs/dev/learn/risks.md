@@ -18,6 +18,8 @@ export const Highlight = ({children, color}) => (
 
 The following are risks that everyone should be aware of before interacting with the protocol. The protocol's design exposes these risks in consequence to its normal operating procedures. 
 
+*Also see [Security & Audits](/dev/resources/security).*
+
 #### Smart contract risk
 <p>
 The protocol runs entirely on public smart contracts explained in detail throughout these docs. The Juicebox protocol is public infrastructure running well-known code, all consequences from interacting with networks running the protocol are borne by the entities who sign each transaction. The protocol works according to the specifications outlined in these docs to the extent the code is written and deployed correctly, which is a collective responsibility and not guaranteed. There is a major risk that this is not the case. Please do your own research.
