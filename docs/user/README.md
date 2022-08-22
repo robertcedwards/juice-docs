@@ -9,7 +9,7 @@ sidebar_position: 1
 
 <summary>Video Guides</summary>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sT8m75QDXvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pJszOKMxYNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p class="subtitle">Launch your project in 5 minutes. Worry about the details later.</p>
 
