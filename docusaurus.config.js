@@ -106,6 +106,45 @@ const config = {
               to: 'https://juicebox.money',
             },
             {
+              label: 'GitHub',
+              to: 'https://github.com/jbx-protocol',
+            },
+            {
+              label: 'JuiceTool',
+              to: 'https://juicetool.xyz/',
+            },
+            {
+              label: 'Dune Analytics',
+              to: 'https://dune.com/twodam',
+            },
+            {
+              label: 'Moody\'s DAO',
+              to: 'https://docs.google.com/spreadsheets/d/1zb3gHOdWiAbXDTdBA9ixv2yOJDIzCo_fEwLDdbTvJVo',
+            },
+            {
+              label: 'Snapshot',
+              to: 'https://vote.juicebox.money/#/jbdao.eth',
+            },
+            {
+              label: 'Bookkeeping',
+              to: 'https://drive.google.com/drive/folders/1JsMOMXz6Z684DsTsLiJu3mo7jNAwjYwQ',
+            },
+            {
+              label: 'Proposals',
+              to: 'https://www.notion.so/9d126f9148dc42ee83317d5cd74e4db4',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Media',
+          position: 'right',
+          items: [
+            {
+              label: 'Metaverse',
+              to: 'https://www.cryptovoxels.com/parcels/6188',
+            },
+            {
               label: 'Discord',
               to: 'https://discord.gg/juicebox',
             },
@@ -114,12 +153,16 @@ const config = {
               to: 'https://twitter.com/juiceboxETH',
             },
             {
-              label: 'GitHub',
-              to: 'https://github.com/jbx-protocol',
-            },
-            {
               label: 'Podcast',
               to: 'https://anchor.fm/thejuicecast',
+            },
+            {
+              label: 'Newsletter',
+              to: 'https://juicenews.beehiiv.com/',
+            },
+            {
+              label: 'YouTube',
+              to: 'https://www.youtube.com/c/JuiceboxDAO/',
             },
           ],
         },
