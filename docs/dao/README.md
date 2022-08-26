@@ -11,6 +11,7 @@ JuiceboxDAO contributors build in the open—to participate, [join our Discord](
 - Learn about the DAO's core values in the **[Foundation](foundation).**
 - Learn how the DAO makes decisions in the **[Governance Process](process).**
 - Learn how to become a contributor with the **[Contributor Guide](contribute).**
+- Visit the DAO's **[Snapshot](https://snapshot.org/#/jbdao.eth).**
 
 <details>
 
