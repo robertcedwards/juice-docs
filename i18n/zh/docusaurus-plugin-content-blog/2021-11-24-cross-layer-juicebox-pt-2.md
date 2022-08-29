@@ -1,5 +1,5 @@
 ---
-slug: multi-layer-juicebox
+slug: cross-layer-juicebox-pt-2
 title: 跨层 Juicebox 协议：跟进 #1 
 authors: [jango]
 tags: [protocol, observations]
