@@ -1,5 +1,5 @@
 ---
-slug: comicsdao-the-whole-enchilada
+slug: 2022-08-29-comicsdao-the-whole-enchilada
 title: ComicsDAO - The Whole Enchilada
 authors: [felixander]
 tags: [dao, project profile, juicebox]
