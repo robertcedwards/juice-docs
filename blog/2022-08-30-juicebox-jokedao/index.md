@@ -16,6 +16,7 @@ In this video, I'll show you how to:
 - Airdrop voting tokens using [Coinvise](https://www.coinvise.co/)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KIL8MpcqpVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
 
 The Snapshot GraphQL query used in the video:
 
