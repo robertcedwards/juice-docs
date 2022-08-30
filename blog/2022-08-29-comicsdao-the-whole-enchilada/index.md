@@ -19,7 +19,7 @@ Central to the cause of ComicsDAO is a wild piece of technology that allows the 
 
 Don’t believe it? Check out this image Adam provided of an original, 1952 Donald Duck comic. The image you see below was extracted from a comic book that was closed and sealed. The scanning machine literally looked *through* the cover to reconstruct this image.
 
-![3.jpg](ComicsDAO%20-%20The%20Whole%20Enchilada%200cb47c0bfe0d483a8cc18d54af61575a/3.jpg)
+![3.jpg](3.jpg)
 
 *“We use something called T-Rays (think X-Rays, just a bit different) to read each page without opening up the book at all.” - Adam from ComicsDAO*
 
@@ -31,7 +31,7 @@ Adam puts it like this: “It would be like if you had a poster an artist made o
 
 For an example, the image below shows both an original (left) and redraw (right) of the same page of a comic. The first has some fading from the passage of time, but beyond that a quick glance will show you that the style and feel are quite different. That’s the difference between the real thing and a reprint, Adam argues.
 
-![image0.jpg](ComicsDAO%20-%20The%20Whole%20Enchilada%200cb47c0bfe0d483a8cc18d54af61575a/image0.jpg)
+![image0.jpg](image0.jpg)
 
 *The original (left) and the redrawn, re-issued reprint on the right.*
 
@@ -39,9 +39,9 @@ For an example, the image below shows both an original (left) and redraw (right)
 
 Less than six months after springing up, ComicsDAO has over 300 followers on twitter and a growing community on discord. With Adam at the helm of twitter and talented artist gabobena doing art, the team still has allstar Gogo keeping it all together and working on infrastructure and strategy. A steady flow of good shitposts and memes coupled with in inclusive community designed to attract and marry comic book nerds and web3 enthusiasts seems to be finding much success.
 
-![thor_meme.jpg](ComicsDAO%20-%20The%20Whole%20Enchilada%200cb47c0bfe0d483a8cc18d54af61575a/thor_meme.jpg)
+![thor_meme.jpg](thor_meme.jpg)
 
-![SPIDER_MEME.jpg](ComicsDAO%20-%20The%20Whole%20Enchilada%200cb47c0bfe0d483a8cc18d54af61575a/SPIDER_MEME.jpg)
+![SPIDER_MEME.jpg](SPIDER_MEME.jpg)
 
 *Shitposting memes isn’t the only thing ComicsDAO slays at.*
 
@@ -51,9 +51,9 @@ With the advent of the scanning technology, ComicsDAO also hopes to be able to o
 
 Beyond all that, ComicsDAO has also been creating partnerships with other DAOs in unique and fun ways. Two such examples (pictured below) are their cover-series, where they create comic-style covers for noteworthy DAOs. In the case of ComicsDAO, this has led to a partnership with NounsDAO that is poised to culminate in the creation of a paperback comic book to be distributed nationwide. 
 
-![Studio_Dao_S.jpg](ComicsDAO%20-%20The%20Whole%20Enchilada%200cb47c0bfe0d483a8cc18d54af61575a/Studio_Dao_S.jpg)
+![Studio_Dao_S.jpg](Studio_Dao_S.jpg)
 
-![Superman_Noun_Dao.jpg](ComicsDAO%20-%20The%20Whole%20Enchilada%200cb47c0bfe0d483a8cc18d54af61575a/Superman_Noun_Dao.jpg)
+![Superman_Noun_Dao.jpg](Superman_Noun_Dao.jpg)
 
 *ComicsDAO cover collaboration with StudioDAO and NounsDAO. “This will be an awesome way to take something web3, like ComicsDAO, and put it back into the real world. Imagine being able to buy a NounsDAO comic book at your local bookstore!” -Adam from ComicsDAO*
 
