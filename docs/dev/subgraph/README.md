@@ -9,11 +9,11 @@ title: Subgraph Introduction
 
 Multiple subgraphs are maintained by [Peel](https://discord.gg/b4rpjgGPHX) in a Graph Studio owned by the [Peel Gnosis safe](https://gnosis-safe.io/app/eth:0x0e9D15e28e3De9bB3CF64FFbC2f2F49Da9Ac545B). Only the primary Juicebox subgraph has been published to the Graph Network; others are available to use for free with rate-limited queries.
 
-| Name        | Status                                                                                                            | Description                                                                    |
+| Name        | URL                                                                                                            | Description                                                                    |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| juicebox    | [Published](https://thegraph.com/explorer/subgraph?id=FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&view=Overview) | The primary mainnet subgraph used by [juicebox.money](https://juicebox.money). |
-| mainnet-dev | [Unpublished](https://api.studio.thegraph.com/query/30654/mainnet-dev/0.2.0)                                      | Indexes mainnet Juicebox protocol contracts.                                   |
-| rinkeby-dev | [Unpublished](https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.2.0)                                      | Indexes rinkeby Juicebox protocol contracts.                                   |
+| juicebox    | [View on Graph explorer](https://thegraph.com/explorer/subgraph?id=FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&view=Overview) | The primary mainnet subgraph used by [juicebox.money](https://juicebox.money). |
+| mainnet-dev | Queries: https://api.studio.thegraph.com/query/30654/mainnet-dev/0.3.0                                      | Indexes mainnet Juicebox protocol contracts.                                   |
+| rinkeby-dev | Queries: https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.3.0                                      | Indexes rinkeby Juicebox protocol contracts.                                   |
 
 <br/>
 
