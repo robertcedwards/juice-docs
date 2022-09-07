@@ -29,8 +29,8 @@ Other than the exorbitant take rates (50%? hmmm…), the problem is that financi
 Rather than relying on a centralized financier, StudioDAO is a decentralized movie studio working to become the first million person committee of fans green-lighting movies. By combining the power of collective action with NFT sales to fund films, anyone can participate regardless if they have 0.01, 0.1, or 1 ETH to contribute. For the first time ever the audience will have the opportunity to decide which films they want to fund and watch, all while building community and gaining behind-the-scenes access in the process.
 
 > Our goal is to have a million people come together to fund a movie for the price of a movie ticket
-<br>— Kenny
 >
+>— Kenny
 
 ### 💸 StudioDAO’s hybrid funding model
 
@@ -71,8 +71,8 @@ The first goal for Unlikely Love Stories is to raise $305,000 USD for the pilot 
 The idea of crowdfunding films isn’t new: [Kickstarter](https://www.kickstarter.com/watch?ref=category_spotlight) has helped raise $500M USD for films over the last ten years, including [5.7 million for Veronica Mars](https://www.kickstarter.com/projects/559914737/the-veronica-mars-movie-project?) in 2019. Fast forward to 2022, crowdfunding on Ethereum has opened up new ways for fans around the world to support films, like filmmaker [Miguel Faus](https://www.miguelfaus.com/) who crowdfunded his film [Calladita](https://calladita.film/) with tiered NFTs. Going one step further than a one-time fundraise, StudioDAO is building a regenerative model in which project creators get to make their dream projects while fans get unprecedented access to the green-lighting process. And all of this magic happens transparently and out in the open on Juicebox.
 
 > There is a two trillion dollar entertainment market and there is a clear scenario for a decentralized studio to do one billion dollars of production 3-4 years from now.
-<br>— Kenny
 >
+>— Kenny
 
 ### Relevant links
 
