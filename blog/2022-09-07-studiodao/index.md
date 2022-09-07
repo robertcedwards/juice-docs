@@ -4,6 +4,7 @@ title: StudioDAO, A Decentralized Movie Studio Flipping the Script on Funding Fi
 description: How StudioDAO is building the first million person green-light committee on Juicebox.
 authors: [matthew, brileigh]
 tags: [studiodao, decentralized movie studio, film financing, netflix, NFTs, utility, juicebox, ethereum, crypto]
+image: https://info.juicebox.money/assets/images/studiodao-25a8b3e8c725cf93b5d15ef9c9830c86.jpeg
 ---
 
 # 🎬 StudioDAO: A Decentralized Movie Studio Flipping the Script on Funding Films  
