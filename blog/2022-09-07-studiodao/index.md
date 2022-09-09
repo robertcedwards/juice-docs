@@ -77,7 +77,7 @@ The idea of crowdfunding films isn’t new: [Kickstarter](https://www.kickstarte
 
 ### Relevant links
 
-🎙️ Listen to Kenny tell the story of StudioDAO on episode 9 of the Juicecast on [Spotify](https://open.spotify.com/episode/7ueh4wW79XFIkTnAxgtiV7?si=3824158b264f4867) and [Apple Podcasts](https://podcasts.apple.com/us/podcast/ep-10-sean-from-jokedao/id1623504302?i=1000577791425)
+🎙️ Listen to Kenny tell the story of StudioDAO on episode 9 of the Juicecast on [Spotify](https://open.spotify.com/episode/7ueh4wW79XFIkTnAxgtiV7?si=3824158b264f4867) and [Apple Podcasts](https://podcasts.apple.com/us/podcast/ep-9-kenny-from-studiodao/id1623504302?i=1000576149672)
 
 🟢 Follow StudioDAO on Twitter: [@studioDao](https://twitter.com/studioDao)
 
