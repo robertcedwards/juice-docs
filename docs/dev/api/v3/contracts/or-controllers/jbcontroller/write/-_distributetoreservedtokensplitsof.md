@@ -30,13 +30,25 @@ function _distributeToReservedTokenSplitsOf(
 
 #### Body
 
-1.  Save the passed in amount as the leftover amount that will be returned. The subsequent routine will decrement the leftover amount as splits are settled.
+1.  Keep a reference to the token store.
+
+    ```
+    // Keep a reference to the token store.
+    IJBTokenStore _tokenStore = tokenStore;
+    ```
+
+    _Internal references:_
+
+    * [`tokenStore`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
+
+2.  Save the passed in amount as the leftover amount that will be returned. The subsequent routine will decrement the leftover amount as splits are settled.
 
     ```
     // Set the leftover amount to the initial amount.
     leftoverAmount = _amount;
     ```
-2.  Get a reference to reserved token splits for the current funding cycle configuration of the project.
+
+3.  Get a reference to reserved token splits for the current funding cycle configuration of the project.
 
     ```
     // Get a reference to the project's reserved token splits.
@@ -50,11 +62,11 @@ function _distributeToReservedTokenSplitsOf(
     _External references:_
 
     * [`splitsOf`](/dev/api/v2/contracts/jbsplitsstore/read/splitsof.md)
-3.  Loop through each split.
+4.  Loop through each split.
 
     ```
     //Transfer between all splits.
-    for (uint256 _i = 0; _i < _splits.length; _i++) { ... }
+    for (uint256 _i; _i < _splits.length;) { ... }
     ```
 
     1.  Get a reference to the current split being iterated on.
@@ -105,7 +117,7 @@ function _distributeToReservedTokenSplitsOf(
           if (_split.allocator != IJBSplitAllocator(address(0)))
             _split.allocator.allocate(
               JBSplitAllocationData(
-                address(tokenStore.tokenOf(_projectId)),
+                address(_tokenStore.tokenOf(_projectId)),
                 _tokenCount,
                 18, // 18 decimals.
                 _projectId,
@@ -126,22 +138,30 @@ function _distributeToReservedTokenSplitsOf(
         * [`allocate`](/dev/api/v2/interfaces/ijbsplitallocator.md)
         * [`ownerOf`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721-ownerOf-uint256-)
 
-7.  Emit a `DistributeToReservedTokenSplit` event for the split being iterated on with the relevant parameters.
+    7.  Emit a `DistributeToReservedTokenSplit` event for the split being iterated on with the relevant parameters.
 
-    ```
-    emit DistributeToReservedTokenSplit(
-      _projectId,
-      _domain,
-      _group,
-      _split,
-      _tokenCount,
-      msg.sender
-    );
-    ```
+        ```
+        emit DistributeToReservedTokenSplit(
+          _projectId,
+          _domain,
+          _group,
+          _split,
+          _tokenCount,
+          msg.sender
+        );
+        ```
 
-    _Event references:_
+        _Event references:_
 
-    * [`DistributeToReservedTokenSplit`](/dev/api/v2/contracts/or-controllers/jbcontroller/events/distributetoreservedtokensplit.md)
+        * [`DistributeToReservedTokenSplit`](/dev/api/v2/contracts/or-controllers/jbcontroller/events/distributetoreservedtokensplit.md)
+    
+    8.  Increment the loop counter.
+
+        ```
+        unchecked {
+          ++_i;
+        }
+        ```
 
 </TabItem>
 
@@ -165,6 +185,9 @@ function _distributeToReservedTokenSplitsOf(
   uint256 _group,
   uint256 _amount
 ) internal returns (uint256 leftoverAmount) {
+  // Keep a reference to the token store.
+  IJBTokenStore _tokenStore = tokenStore;
+
   // Set the leftover amount to the initial amount.
   leftoverAmount = _amount;
 
@@ -172,7 +195,7 @@ function _distributeToReservedTokenSplitsOf(
   JBSplit[] memory _splits = splitsStore.splitsOf(_projectId, _domain, _group);
 
   //Transfer between all splits.
-  for (uint256 _i = 0; _i < _splits.length; _i++) {
+  for (uint256 _i; _i < _splits.length;) {
     // Get a reference to the split being iterated on.
     JBSplit memory _split = _splits[_i];
 
@@ -185,7 +208,7 @@ function _distributeToReservedTokenSplitsOf(
 
     // Mints tokens for the split if needed.
     if (_tokenCount > 0) {
-      tokenStore.mintFor(
+      _tokenStore.mintFor(
         // If an allocator is set in the splits, set it as the beneficiary.
         // Otherwise if a projectId is set in the split, set the project's owner as the beneficiary.
         // If the split has a beneficiary send to the split's beneficiary. Otherwise send to the msg.sender.
@@ -205,7 +228,7 @@ function _distributeToReservedTokenSplitsOf(
       if (_split.allocator != IJBSplitAllocator(address(0)))
         _split.allocator.allocate(
           JBSplitAllocationData(
-            address(tokenStore.tokenOf(_projectId)),
+            address(_tokenStore.tokenOf(_projectId)),
             _tokenCount,
             18, // 18 decimals.
             _projectId,
@@ -226,6 +249,10 @@ function _distributeToReservedTokenSplitsOf(
       _tokenCount,
       msg.sender
     );
+
+    unchecked {
+      ++_i;
+    }
   }
 }
 ```

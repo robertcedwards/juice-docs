@@ -11,7 +11,7 @@ Contract: [`JBChainlinkV3PriceFeed`](/dev/api/v2/contracts/or-price-feeds/jbchai
   @notice 
   The feed that prices are reported from.
 */
-AggregatorV3Interface public feed;
+AggregatorV3Interface public immutable feed;
 ```
 
 * The resulting view function can be accessed externally by anyone.

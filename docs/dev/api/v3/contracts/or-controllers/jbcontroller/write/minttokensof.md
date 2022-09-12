@@ -47,7 +47,7 @@ function mintTokensOf(
     // There should be tokens to mint.
     if (_tokenCount == 0) revert ZERO_TOKENS_TO_MINT();
     ```
-2.  Make sure the message sender has appropriate permissions and that the project currently allows directly minting tokens by checking that it isn't paused when being called by any contract other than one of the project's terminals or current data sources. If the request is coming from a terminal or current data source, allow minting regardless of the pause state because it could be a sub-routine of another operation such as receiving payments. If minting is allowed, get a reference to the reserved rate that should be used. 
+2.  Make sure the message sender has appropriate permissions and that the project currently allows directly minting tokens by checking that it isn't paused when being called by any contract other than one of the project's terminals or current data sources. If the request is coming from a terminal or current data source, allow minting regardless of the pause state because it could be a sub-routine of another operation such as receiving payments. If minting is allowed, get a reference to the reserved rate that should be used. If claimed tokens are prefered at a funding cycle level, override the argument's preference.
 
     ```
     // Define variables that will be needed outside scoped section below.
@@ -67,7 +67,7 @@ function mintTokensOf(
           msg.sender == address(_fundingCycle.dataSource())
       );
 
-      // If the message sender is not a terminal or a datasource, the current funding cycle must allow minting.
+      // If the message sender is a terminal or a datasource, the current funding cycle must allow minting.
       if (
         !_fundingCycle.mintingAllowed() &&
         !directory.isTerminalOf(_projectId, IJBPaymentTerminal(msg.sender)) &&
@@ -76,6 +76,11 @@ function mintTokensOf(
 
       // Determine the reserved rate to use.
       _reservedRate = _useReservedRate ? _fundingCycle.reservedRate() : 0;
+
+      // Override the claimed token preference with the funding cycle value.
+      _preferClaimedTokens = _preferClaimedTokens == true
+        ? _preferClaimedTokens
+        : _fundingCycle.preferClaimedTokenOverride();
     }
     ```
 
@@ -84,6 +89,7 @@ function mintTokensOf(
     * [`JBFundingCycleMetadataResolver`](/dev/api/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.mintPaused(...)`
       * `.reservedRate(...)`
+      * `.preferClaimedTokenOverride(...)`
 
     _Internal references:_
 
@@ -101,7 +107,7 @@ function mintTokensOf(
       // Subtract the total weighted amount from the tracker so the full reserved token amount can be printed later.
       _processedTokenTrackerOf[_projectId] =
         _processedTokenTrackerOf[_projectId] -
-        int256(_tokenCount);
+        SafeCast.toInt256(_tokenCount);
     else {
       // The unreserved token count that will be minted for the beneficiary.
       beneficiaryTokenCount = PRBMath.mulDiv(
@@ -114,7 +120,7 @@ function mintTokensOf(
         // If there's no reserved rate, increment the tracker with the newly minted tokens.
         _processedTokenTrackerOf[_projectId] =
           _processedTokenTrackerOf[_projectId] +
-          int256(beneficiaryTokenCount);
+          SafeCast.toInt256(beneficiaryTokenCount);
 
       // Mint the tokens.
       tokenStore.mintFor(_beneficiary, _projectId, beneficiaryTokenCount, _preferClaimedTokens);
@@ -127,6 +133,8 @@ function mintTokensOf(
       * `.mulDiv(...)`
     * [`JBConstants`](/dev/api/v2/libraries/jbconstants.md)
       * `.MAX_RESERVED_RATE`
+    * [`SafeCast`](https://docs.openzeppelin.com/contracts/4.x/api/utils#SafeCast)
+      * `.toInt256(...)`
 
     _Internal references:_
 
@@ -195,7 +203,7 @@ function mintTokensOf(
         msg.sender == address(_fundingCycle.dataSource())
     );
 
-    // If the message sender is not a terminal or a datasource, the current funding cycle must allow minting.
+    // If the message sender is a terminal or a datasource, the current funding cycle must allow minting.
     if (
       !_fundingCycle.mintingAllowed() &&
       !directory.isTerminalOf(_projectId, IJBPaymentTerminal(msg.sender)) &&
@@ -204,13 +212,18 @@ function mintTokensOf(
 
     // Determine the reserved rate to use.
     _reservedRate = _useReservedRate ? _fundingCycle.reservedRate() : 0;
+
+    // Override the claimed token preference with the funding cycle value.
+    _preferClaimedTokens = _preferClaimedTokens == true
+      ? _preferClaimedTokens
+      : _fundingCycle.preferClaimedTokenOverride();
   }
 
   if (_reservedRate == JBConstants.MAX_RESERVED_RATE)
     // Subtract the total weighted amount from the tracker so the full reserved token amount can be printed later.
     _processedTokenTrackerOf[_projectId] =
       _processedTokenTrackerOf[_projectId] -
-      int256(_tokenCount);
+      SafeCast.toInt256(_tokenCount);
   else {
     // The unreserved token count that will be minted for the beneficiary.
     beneficiaryTokenCount = PRBMath.mulDiv(
@@ -223,7 +236,7 @@ function mintTokensOf(
       // If there's no reserved rate, increment the tracker with the newly minted tokens.
       _processedTokenTrackerOf[_projectId] =
         _processedTokenTrackerOf[_projectId] +
-        int256(beneficiaryTokenCount);
+        SafeCast.toInt256(beneficiaryTokenCount);
 
     // Mint the tokens.
     tokenStore.mintFor(_beneficiary, _projectId, beneficiaryTokenCount, _preferClaimedTokens);

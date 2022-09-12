@@ -31,21 +31,28 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
 #### Body
 
-1.  Make sure this controller is the project's current controller. 
+1.  Keep a reference to the directory.
 
     ```
-    // This controller must be the project's current controller.
-    if (directory.controllerOf(_projectId) != address(this)) revert NOT_CURRENT_CONTROLLER();
+    // Keep a reference to the directory.
+    IJBDirectory _directory = directory;
     ```
 
     _Internal references:_
 
     * [`directory`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/directory.md)
 
+2.  Make sure this controller is the project's current controller. 
+
+    ```
+    // This controller must be the project's current controller.
+    if (_directory.controllerOf(_projectId) != address(this)) revert NOT_CURRENT_CONTROLLER();
+    ```
+
     _External references:_
 
     * [`controllerOf`](/dev/api/v2/contracts/jbdirectory/properties/controllerof.md)
-2.  Get a reference to the current funding cycle for the project.
+3.  Get a reference to the current funding cycle for the project.
 
     ```
     // Get a reference to the project's current funding cycle.
@@ -59,7 +66,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
     _External references:_
 
     * [`currentOf`](/dev/api/v2/contracts/jbfundingcyclestore/read/currentof.md)
-3.  Make sure the project's current funding cycle is configured to allow controller migrations.
+4.  Make sure the project's current funding cycle is configured to allow controller migrations.
 
     ```
     // Migration must be allowed.
@@ -70,12 +77,14 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     * [`JBFundingCycleMetadataResolver`](/dev/api/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.controllerMigrationAllowed(...)`
-4.  Distribute any outstanding reserved tokens. There are reserved tokens to be distributed if the tracker does not equal the token's total supply.
+5.  Distribute any outstanding reserved tokens. There are reserved tokens to be distributed if the tracker does not equal the token's total supply.
 
     ```
     // All reserved tokens must be minted before migrating.
-    if (uint256(_processedTokenTrackerOf[_projectId]) != tokenStore.totalSupplyOf(_projectId))
-      _distributeReservedTokensOf(_projectId, '');
+    if (
+      _processedTokenTrackerOf[_projectId] < 0 ||
+      uint256(_processedTokenTrackerOf[_projectId]) != tokenStore.totalSupplyOf(_projectId)
+    ) _distributeReservedTokensOf(_projectId, '');
     ```
 
     _Internal references:_
@@ -87,7 +96,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
     _External references:_
 
     * [`totalSupplyOf`](/dev/api/v2/contracts/jbtokenstore/read/totalsupplyof.md)
-5.  Let the new controller know that a migration to it is happening.
+6.  Let the new controller know that a migration to it is happening.
 
     ```
     // Make sure the new controller is prepped for the migration.
@@ -97,21 +106,17 @@ function migrate(uint256 _projectId, IJBMigratable _to)
     _External references:_
 
     * [`prepForMigrationOf`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/prepformigrationof.md)
-6.  Set the new controller of the project.
+7.  Set the new controller of the project.
 
     ```
     // Set the new controller.
-    directory.setControllerOf(_projectId, _to);
+    _directory.setControllerOf(_projectId, _to);
     ```
-
-    _Internal references:_
-
-    * [`directory`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/directory.md)
 
     _External references:_
 
     * [`setControllerOf`](/dev/api/v2/contracts/jbdirectory/write/setcontrollerof.md)
-7.  Emit a `Migrate` event with the relevant parameters.
+8.  Emit a `Migrate` event with the relevant parameters.
 
     ```
     emit Migrate(_projectId, _to, msg.sender);
@@ -142,8 +147,11 @@ function migrate(uint256 _projectId, IJBMigratable _to)
   override
   requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.MIGRATE_CONTROLLER)
 {
+  // Keep a reference to the directory.
+  IJBDirectory _directory = directory;
+
   // This controller must be the project's current controller.
-  if (directory.controllerOf(_projectId) != address(this)) revert NOT_CURRENT_CONTROLLER();
+  if (_directory.controllerOf(_projectId) != address(this)) revert NOT_CURRENT_CONTROLLER();
 
   // Get a reference to the project's current funding cycle.
   JBFundingCycle memory _fundingCycle = fundingCycleStore.currentOf(_projectId);
@@ -152,14 +160,16 @@ function migrate(uint256 _projectId, IJBMigratable _to)
   if (!_fundingCycle.controllerMigrationAllowed()) revert MIGRATION_NOT_ALLOWED();
 
   // All reserved tokens must be minted before migrating.
-  if (uint256(_processedTokenTrackerOf[_projectId]) != tokenStore.totalSupplyOf(_projectId))
-    _distributeReservedTokensOf(_projectId, '');
+  if (
+    _processedTokenTrackerOf[_projectId] < 0 ||
+    uint256(_processedTokenTrackerOf[_projectId]) != tokenStore.totalSupplyOf(_projectId)
+  ) _distributeReservedTokensOf(_projectId, '');
 
   // Make sure the new controller is prepped for the migration.
   _to.prepForMigrationOf(_projectId, address(this));
 
   // Set the new controller.
-  directory.setControllerOf(_projectId, _to);
+  _directory.setControllerOf(_projectId, _to);
 
   emit Migrate(_projectId, _to, msg.sender);
 }

@@ -47,7 +47,18 @@ function launchProjectFor(
 
 #### Body
 
-1.  Create the project. This will mint an ERC-721 in the owner's wallet representing ownership over the project.
+1.  Keep a reference to the directory.
+
+    ```
+    // Keep a reference to the directory.
+    IJBDirectory _directory = directory;
+    ```
+
+    _Internal references:_
+
+    * [`directory`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/directory.md)
+
+2.  Create the project. This will mint an ERC-721 in the owner's wallet representing ownership over the project.
 
     ```
     // Mint the project into the wallet of the message sender.
@@ -61,21 +72,17 @@ function launchProjectFor(
     _External references:_
 
     * [`createFor`](/dev/api/v2/contracts/jbprojects/write/createfor.md)
-2.  Set this controller as the controller of the project.
+3.  Set this controller as the controller of the project.
 
     ```
     // Set this contract as the project's controller in the directory.
-    directory.setControllerOf(projectId, address(this));
+    _directory.setControllerOf(projectId, address(this));
     ```
-
-    _Internal references:_
-
-    * [`directory`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/directory.md)
 
     _External references:_
 
     * [`setControllerOf`](/dev/api/v2/contracts/jbdirectory/write/setcontrollerof.md)
-3.  Configure the project's funding cycle, fund access constraints, and splits. Get a reference to the resulting funding cycle's configuration.
+4.  Configure the project's funding cycle, fund access constraints, and splits. Get a reference to the resulting funding cycle's configuration.
 
     ```
     // Configure the first funding cycle.
@@ -92,21 +99,17 @@ function launchProjectFor(
     _Internal references:_
 
     * [`_configure`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/-_configure.md)
-4.  If terminals were provided, add them to the list of terminals the project can accept funds through.
+5.  If terminals were provided, add them to the list of terminals the project can accept funds through.
 
     ```
     // Add the provided terminals to the list of terminals.
-    if (_terminals.length > 0) directory.setTerminalsOf(projectId, _terminals);
+    if (_terminals.length > 0) _directory.setTerminalsOf(projectId, _terminals);
     ```
-
-    _Internal references:_
-
-    * [`directory`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/directory.md)
     
     _External references:_
 
     * [`setTerminalsOf`](/dev/api/v2/contracts/jbdirectory/write/setterminalsof.md)
-5.  Emit a `LaunchProject` event with the relevant parameters.
+6.  Emit a `LaunchProject` event with the relevant parameters.
 
     ```
     emit LaunchProject(_configuration, projectId, _memo, msg.sender);
@@ -154,11 +157,14 @@ function launchProjectFor(
   IJBPaymentTerminal[] calldata _terminals,
   string calldata _memo
 ) external virtual override returns (uint256 projectId) {
+  // Keep a reference to the directory.
+  IJBDirectory _directory = directory;
+
   // Mint the project into the wallet of the message sender.
   projectId = projects.createFor(_owner, _projectMetadata);
 
   // Set this contract as the project's controller in the directory.
-  directory.setControllerOf(projectId, address(this));
+  _directory.setControllerOf(projectId, address(this));
 
   // Configure the first funding cycle.
   uint256 _configuration = _configure(
@@ -171,7 +177,7 @@ function launchProjectFor(
   );
 
   // Add the provided terminals to the list of terminals.
-  if (_terminals.length > 0) directory.setTerminalsOf(projectId, _terminals);
+  if (_terminals.length > 0) _directory.setTerminalsOf(projectId, _terminals);
 
   emit LaunchProject(_configuration, projectId, _memo, msg.sender);
 }

@@ -102,7 +102,7 @@ function _configure(
 
     ```
     // Set distribution limits if there are any.
-    for (uint256 _i; _i < _fundAccessConstraints.length; _i++) {
+    for (uint256 _i; _i < _fundAccessConstraints.length) {
       JBFundAccessConstraints memory _constraints = _fundAccessConstraints[_i];
 
       // If distribution limit value is larger than 232 bits, revert.
@@ -138,6 +138,10 @@ function _configure(
         _constraints,
         msg.sender
       );
+
+      unchecked {
+        ++_i;
+      }
     }
 
     ```
@@ -205,7 +209,7 @@ function _configure(
   splitsStore.set(_projectId, _fundingCycle.configuration, _groupedSplits);
 
   // Set distribution limits if there are any.
-  for (uint256 _i; _i < _fundAccessConstraints.length; _i++) {
+  for (uint256 _i; _i < _fundAccessConstraints.length;) {
     JBFundAccessConstraints memory _constraints = _fundAccessConstraints[_i];
 
     // If distribution limit value is larger than 232 bits, revert.
@@ -245,6 +249,10 @@ function _configure(
       _constraints,
       msg.sender
     );
+
+    unchecked {
+      ++_i;
+    }
   }
 
   return _fundingCycle.configuration;

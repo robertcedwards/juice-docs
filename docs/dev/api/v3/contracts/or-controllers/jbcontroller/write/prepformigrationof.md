@@ -49,8 +49,13 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
 
     ```
     // Set the tracker as the total supply.
-    _processedTokenTrackerOf[_projectId] = int256(tokenStore.totalSupplyOf(_projectId));
+    _processedTokenTrackerOf[_projectId] = SafeCast.toInt256(tokenStore.totalSupplyOf(_projectId));
     ```
+
+    _Library references:_
+
+    * [`SafeCast`](https://docs.openzeppelin.com/contracts/4.x/api/utils#SafeCast)
+      * `.toInt256(...)`
 
     _Internal references:_
 
@@ -92,7 +97,7 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
     revert CANT_MIGRATE_TO_CURRENT_CONTROLLER();
 
   // Set the tracker as the total supply.
-  _processedTokenTrackerOf[_projectId] = int256(tokenStore.totalSupplyOf(_projectId));
+  _processedTokenTrackerOf[_projectId] =  SafeCast.toInt256(tokenStore.totalSupplyOf(_projectId));
 
   emit PreppedMigration(_projectId, _from, msg.sender);
 }

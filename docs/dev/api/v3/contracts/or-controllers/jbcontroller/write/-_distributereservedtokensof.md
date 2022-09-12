@@ -24,7 +24,18 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
 
 #### Body
 
-1.  Get a reference to the current funding cycle of the project.
+1.  Keep a reference to the token store.
+
+    ```
+    // Keep a reference to the token store.
+    IJBTokenStore _tokenStore = tokenStore;
+    ```
+
+    _Internal references:_
+
+    * [`tokenStore`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
+
+2.  Get a reference to the current funding cycle of the project.
 
     ```
     // Get the current funding cycle to read the reserved rate from.
@@ -38,21 +49,17 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
     _External references:_
 
     * [`currentOf`](/dev/api/v2/contracts/jbfundingcyclestore/read/currentof.md)
-2.  Get a reference to the current total supply of tokens issued for the project.
+3.  Get a reference to the current total supply of tokens issued for the project.
 
     ```
     // Get a reference to new total supply of tokens before minting reserved tokens.
-    uint256 _totalTokens = tokenStore.totalSupplyOf(_projectId);
+    uint256 _totalTokens = _tokenStore.totalSupplyOf(_projectId);
     ```
-
-    _Internal references:_
-
-    * [`tokenStore`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
 
     _External references:_
 
     * [`totalSupplyOf`](/dev/api/v2/contracts/jbtokenstore/read/totalsupplyof.md)
-3.  Get a reference to the current amount of reserved tokens given the current state of the tracker, the current funding cycle's reserved rate, and the current total token supply.
+4.  Get a reference to the current amount of reserved tokens given the current state of the tracker, the current funding cycle's reserved rate, and the current total token supply.
 
     ```
     // Get a reference to the number of tokens that need to be minted.
@@ -72,17 +79,22 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
 
     * [`_processedTokenTrackerOf`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
     * [`_reservedTokenAmountFrom`](/dev/api/v2/contracts/or-controllers/jbcontroller/read/-_reservedtokenamountfrom.md)
-4.  Set the tracker to be equal to the new current total token supply, which is the amount stored plus the amount that will be minted and distributed.
+5.  Set the tracker to be equal to the new current total token supply, which is the amount stored plus the amount that will be minted and distributed.
 
     ```
     // Set the tracker to be the new total supply.
-    _processedTokenTrackerOf[_projectId] = int256(_totalTokens + tokenCount);
+    _processedTokenTrackerOf[_projectId] = SafeCast.toInt256(_totalTokens + tokenCount);
     ```
+
+    _Library references:_
+
+    * [`SafeCast`](https://docs.openzeppelin.com/contracts/4.x/api/utils#SafeCast)
+      * `.toInt256(...)`
 
     _Internal references:_
 
     * [`_processedTokenTrackerOf`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
-5.  Get a reference to the project's owner.
+6.  Get a reference to the project's owner.
 
     ```
     // Get a reference to the project owner.
@@ -96,7 +108,7 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
     _External references:_
 
     * [`ownerOf`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721-ownerOf-uint256-)
-6.  If there are outstanding reserved tokens, distribute them to reserved token splits. Get a reference to any leftover amount after the splits are settled.
+7.  If there are outstanding reserved tokens, distribute them to reserved token splits. Get a reference to any leftover amount after the splits are settled.
 
     ```
     // Distribute tokens to splits and get a reference to the leftover amount to mint after all splits have gotten their share.
@@ -118,17 +130,18 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
     _Internal references:_
 
     * [`_distributeToReservedTokenSplitsOf`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/-_distributetoreservedtokensplitsof.md)
-7.  If there are any leftover reserved tokens, mint them for the project's owner.
+8.  If there are any leftover reserved tokens, mint them for the project's owner.
 
     ```
     // Mint any leftover tokens to the project owner.
-    if (_leftoverTokenCount > 0) tokenStore.mintFor(_owner, _projectId, _leftoverTokenCount, false);
+    if (_leftoverTokenCount > 0) 
+      _tokenStore.mintFor(_owner, _projectId, _leftoverTokenCount, false);
     ```
 
-    _Internal references:_
+    _External references:_
 
     * [`mintFor`](/dev/api/v2/contracts/jbtokenstore/write/mintfor.md)
-8.  Emit a `DistributeReservedTokens` event with the relevant parameters.
+9.  Emit a `DistributeReservedTokens` event with the relevant parameters.
 
     ```
     emit DistributeReservedTokens(
@@ -165,11 +178,15 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
   internal
   returns (uint256 tokenCount)
 {
+
+  // Keep a reference to the token store.
+  IJBTokenStore _tokenStore = tokenStore;
+
   // Get the current funding cycle to read the reserved rate from.
   JBFundingCycle memory _fundingCycle = fundingCycleStore.currentOf(_projectId);
 
   // Get a reference to new total supply of tokens before minting reserved tokens.
-  uint256 _totalTokens = tokenStore.totalSupplyOf(_projectId);
+  uint256 _totalTokens = _tokenStore.totalSupplyOf(_projectId);
 
   // Get a reference to the number of tokens that need to be minted.
   tokenCount = _reservedTokenAmountFrom(
@@ -179,7 +196,7 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
   );
 
   // Set the tracker to be the new total supply.
-  _processedTokenTrackerOf[_projectId] = int256(_totalTokens + tokenCount);
+  _processedTokenTrackerOf[_projectId] = SafeCast.toInt256(_totalTokens + tokenCount);
 
   // Get a reference to the project owner.
   address _owner = projects.ownerOf(_projectId);
@@ -195,7 +212,8 @@ function _distributeReservedTokensOf(uint256 _projectId, string memory _memo)
       );
 
   // Mint any leftover tokens to the project owner.
-  if (_leftoverTokenCount > 0) tokenStore.mintFor(_owner, _projectId, _leftoverTokenCount, false);
+  if (_leftoverTokenCount > 0) 
+    _tokenStore.mintFor(_owner, _projectId, _leftoverTokenCount, false);
 
   emit DistributeReservedTokens(
     _fundingCycle.configuration,

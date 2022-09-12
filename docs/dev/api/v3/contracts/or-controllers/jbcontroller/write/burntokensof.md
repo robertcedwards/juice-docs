@@ -72,7 +72,7 @@ function burnTokensOf(
 3.  Make sure the current funding cycle for the project hasn't paused burning if the request is not coming from one of the project's terminals. If the request is coming from a terminal, allow burning regardless of the pause state because it could be a sub-routine of another operation such as redemption.
 
     ```
-    // If the message sender is not a terminal, the current funding cycle must not be paused.
+    // If the message sender is a terminal, the current funding cycle must not be paused.
     if (
       _fundingCycle.burnPaused() &&
       !directory.isTerminalOf(_projectId, IJBPaymentTerminal(msg.sender))
@@ -97,8 +97,13 @@ function burnTokensOf(
     // Update the token tracker so that reserved tokens will still be correctly mintable.
     _processedTokenTrackerOf[_projectId] =
       _processedTokenTrackerOf[_projectId] -
-      int256(_tokenCount);
+      SafeCast.toInt256(_tokenCount);
     ```
+
+    _Library references:_
+
+    * [`SafeCast`](https://docs.openzeppelin.com/contracts/4.x/api/utils#SafeCast)
+      * `.toInt256(...)`
 
     _Internal references:_
 
@@ -168,7 +173,7 @@ function burnTokensOf(
   // Get a reference to the project's current funding cycle.
   JBFundingCycle memory _fundingCycle = fundingCycleStore.currentOf(_projectId);
 
-  // If the message sender is not a terminal, the current funding cycle must not be paused.
+  // If the message sender is a terminal, the current funding cycle must not be paused.
   if (
     _fundingCycle.burnPaused() &&
     !directory.isTerminalOf(_projectId, IJBPaymentTerminal(msg.sender))
@@ -177,7 +182,7 @@ function burnTokensOf(
   // Update the token tracker so that reserved tokens will still be correctly mintable.
   _processedTokenTrackerOf[_projectId] =
     _processedTokenTrackerOf[_projectId] -
-    int256(_tokenCount);
+    SafeCast.toInt256(_tokenCount);
 
   // Burn the tokens.
   tokenStore.burnFrom(_holder, _projectId, _tokenCount, _preferClaimedTokens);

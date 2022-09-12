@@ -30,8 +30,9 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
 1.  Get the latest price being reported by the price feed. The `latestRoundData` function returns several feed parameters, but only the `_price` is needed.
 
     ```
-    // Get the latest round information. Only need the price is needed.
-    (, int256 _price, , , ) = feed.latestRoundData();
+    // Get the latest round information.
+    (uint80 roundId, int256 _price, , uint256 updatedAt, uint80 answeredInRound) = feed
+      .latestRoundData();
     ```
 
     _Internal references:_
@@ -41,7 +42,28 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
     _External references:_
 
     * [`latestRoundData`](https://docs.chain.link/price-feeds-api-reference/#latestrounddata)
-2.  Get the number of decimals being reported by the price feed that the provided price is expected to have.
+2.  Make sure the reported price is not from a previous round.
+
+    ```
+    // Make sure the price isn't stale.
+    if (answeredInRound < roundId) revert STALE_PRICE();
+    ```
+
+3.  Make sure the round has finished.
+
+    ```
+    // Make sure the round is finished.
+    if (updatedAt == 0) revert INCOMPLETE_ROUND();
+    ```
+
+4.  Make sure the price isn't negative.
+
+    ```
+    // Make sure the price is positive.
+    if (_price < 0) revert NEGATIVE_PRICE();
+    ```
+
+5.  Get the number of decimals being reported by the price feed that the provided price is expected to have.
 
     ```
     // Get a reference to the number of decimals the feed uses.
@@ -81,8 +103,18 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
   @return The current price of the feed, as a fixed point number with the specified number of decimals.
 */
 function currentPrice(uint256 _decimals) external view override returns (uint256) {
-  // Get the latest round information. Only need the price is needed.
-  (, int256 _price, , , ) = feed.latestRoundData();
+  // Get the latest round information.
+  (uint80 roundId, int256 _price, , uint256 updatedAt, uint80 answeredInRound) = feed
+    .latestRoundData();
+
+  // Make sure the price isn't stale.
+  if (answeredInRound < roundId) revert STALE_PRICE();
+
+  // Make sure the round is finished.
+  if (updatedAt == 0) revert INCOMPLETE_ROUND();
+
+  // Make sure the price is positive.
+  if (_price < 0) revert NEGATIVE_PRICE();
 
   // Get a reference to the number of decimals the feed uses.
   uint256 _feedDecimals = feed.decimals();
@@ -91,6 +123,16 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
   return uint256(_price).adjustDecimals(_feedDecimals, _decimals);
 }
 ```
+
+</TabItem>
+
+<TabItem value="Errors" label="Errors">
+
+| String                                       | Description                                                                     |
+| -------------------------------------------- | ------------------------------------------------------------------------------- |
+| **`STALE_PRICE`**    | Thrown if the price was reported in a previous round.   |
+| **`INCOMPLETE_ROUND`**    | Thrown if the price was reported during a round that hasn't finished yet.   |
+| **`NEGATIVE_PRICE`**    | Thrown if the reported price is negative.   |
 
 </TabItem>
 
