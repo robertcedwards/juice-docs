@@ -53,8 +53,7 @@ function setTerminalsOf(uint256 _projectId, IJBPaymentTerminal[] calldata _termi
     ```
     // Setting terminals must be allowed if not called from the current controller.
     if (
-      msg.sender != address(controllerOf[_projectId]) &&
-      !uint8(_fundingCycle.metadata >> 8).setTerminalsAllowed()
+      msg.sender != address(controllerOf[_projectId]) && !_fundingCycle.global().allowSetTerminals
     ) revert SET_TERMINALS_NOT_ALLOWED();
     ```
 
@@ -81,7 +80,7 @@ function setTerminalsOf(uint256 _projectId, IJBPaymentTerminal[] calldata _termi
 4.  Delete the project's current set of terminals from storage.
 
     ```
-    // Delete the stored terminals for the project.
+    // Set the stored terminals for the project.
     _terminalsOf[_projectId] = _terminals;
     ```
 
@@ -93,9 +92,19 @@ function setTerminalsOf(uint256 _projectId, IJBPaymentTerminal[] calldata _termi
     ```
     // Make sure duplicates were not added.
     if (_terminals.length > 1)
-      for (uint256 _i; _i < _terminals.length; _i++)
-        for (uint256 _j = _i + 1; _j < _terminals.length; _j++)
+      for (uint256 _i; _i < _terminals.length;) {
+        for (uint256 _j = _i + 1; _j < _terminals.length;) {
           if (_terminals[_i] == _terminals[_j]) revert DUPLICATE_TERMINALS();
+
+          unchecked {
+            ++_j;
+          }
+        }
+
+        unchecked {
+          ++_i;
+        }
+      }
     ```
 
 6.  Emit a `SetTerminals` event with the relevant parameters.
@@ -138,18 +147,27 @@ function setTerminalsOf(uint256 _projectId, IJBPaymentTerminal[] calldata _termi
 
   // Setting terminals must be allowed if not called from the current controller.
   if (
-    msg.sender != address(controllerOf[_projectId]) &&
-    !uint8(_fundingCycle.metadata >> 8).setTerminalsAllowed()
+    msg.sender != address(controllerOf[_projectId]) && !_fundingCycle.global().allowSetTerminals
   ) revert SET_TERMINALS_NOT_ALLOWED();
 
-  // Delete the stored terminals for the project.
+  // Set the stored terminals for the project.
   _terminalsOf[_projectId] = _terminals;
 
   // Make sure duplicates were not added.
   if (_terminals.length > 1)
-    for (uint256 _i; _i < _terminals.length; _i++)
-      for (uint256 _j = _i + 1; _j < _terminals.length; _j++)
+    for (uint256 _i; _i < _terminals.length;) {
+      for (uint256 _j = _i + 1; _j < _terminals.length;) {
         if (_terminals[_i] == _terminals[_j]) revert DUPLICATE_TERMINALS();
+
+        unchecked {
+          ++_j;
+        }
+      }
+
+      unchecked {
+        ++_i;
+      }
+    }
 
   emit SetTerminals(_projectId, _terminals, msg.sender);
 }

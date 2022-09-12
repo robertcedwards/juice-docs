@@ -44,7 +44,7 @@ function _payTo(
 
     ```
     // Settle between all splits.
-    for (uint256 i = 0; i < _splits.length; i++) {
+    for (uint256 i; i < _splits.length;) {
       // Get a reference to the split being iterated on.
       JBSplit memory _split = _splits[i];
 
@@ -71,7 +71,7 @@ function _payTo(
 
           // Approve the `_amount` of tokens for the split allocator to transfer tokens from this contract.
           if (_token != JBTokens.ETH)
-            IERC20(_token).approve(address(_split.allocator), _splitAmount);
+            IERC20(_token).safeApprove(address(_split.allocator), _splitAmount);
 
           // If the token is ETH, send it in msg.value.
           uint256 _payableValue = _token == JBTokens.ETH ? _splitAmount : 0;
@@ -112,7 +112,7 @@ function _payTo(
             );
             // Or, transfer the ERC20.
           else {
-            IERC20(_token).transfer(
+            IERC20(_token).safeTransfer(
               // Get a reference to the address receiving the tokens. If there's a beneficiary, send the funds directly to the beneficiary. Otherwise send to the `_defaultBeneficiary`.
               _split.beneficiary != address(0) ? _split.beneficiary : _defaultBeneficiary,
               _splitAmount
@@ -133,6 +133,10 @@ function _payTo(
         _defaultBeneficiary,
         msg.sender
       );
+
+      unchecked {
+        ++i;
+      }
     }
     ```
 
@@ -150,8 +154,8 @@ function _payTo(
 
     _External references:_
 
-    * [`approve`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-approve-address-uint256-)
-    * [`transfer`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-transfer-address-uint256-)
+    * [`safeApprove`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeApprove-contract-IERC20-address-uint256-)
+    * [`safeTransfer`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeTransfer-contract-IERC20-address-uint256-)
     * [`allocate`](/dev/api/v2/interfaces/ijbsplitallocator.md)
 
     _Event references:_
@@ -186,7 +190,7 @@ function _payTo(
   leftoverAmount = _amount;
 
   // Settle between all splits.
-  for (uint256 i = 0; i < _splits.length; i++) {
+  for (uint256 i; i < _splits.length;) {
     // Get a reference to the split being iterated on.
     JBSplit memory _split = _splits[i];
 
@@ -213,7 +217,7 @@ function _payTo(
 
         // Approve the `_amount` of tokens for the split allocator to transfer tokens from this contract.
         if (_token != JBTokens.ETH)
-          IERC20(_token).approve(address(_split.allocator), _splitAmount);
+          IERC20(_token).safeApprove(address(_split.allocator), _splitAmount);
 
         // If the token is ETH, send it in msg.value.
         uint256 _payableValue = _token == JBTokens.ETH ? _splitAmount : 0;
@@ -254,7 +258,7 @@ function _payTo(
           );
           // Or, transfer the ERC20.
         else {
-          IERC20(_token).transfer(
+          IERC20(_token).safeTransfer(
             // Get a reference to the address receiving the tokens. If there's a beneficiary, send the funds directly to the beneficiary. Otherwise send to the `_defaultBeneficiary`.
             _split.beneficiary != address(0) ? _split.beneficiary : _defaultBeneficiary,
             _splitAmount
@@ -275,6 +279,10 @@ function _payTo(
       _defaultBeneficiary,
       msg.sender
     );
+
+    unchecked {
+      ++i;
+    }
   }
 }
 ```

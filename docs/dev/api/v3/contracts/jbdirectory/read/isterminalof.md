@@ -28,17 +28,31 @@ function isTerminalOf(uint256 _projectId, IJBPaymentTerminal _terminal)
 
 #### Body
 
-1.  Loop through each of the project's terminals looking for the one specified. If it's found, return true.
-
+1.  Keep a reference to the number of terminal's the project has.
+    
     ```
-    for (uint256 _i; _i < _terminalsOf[_projectId].length; _i++)
-      if (_terminalsOf[_projectId][_i] == _terminal) return true;
+    // Keep a reference to the number of terminals the project has.
+    uint256 _numberOfTerminals = _terminalsOf[_projectId].length;
     ```
 
     _Internal references:_
 
     * [`_terminalsOf`](/dev/api/v2/contracts/jbdirectory/properties/-_terminalsof.md)
-2.  If a terminal is not found, return false.
+
+2.  Loop through each of the project's terminals looking for the one specified. If it's found, return true.
+
+    ```
+    for (uint256 _i; _i < _numberOfTerminals;) {
+      // If the terminal being iterated on matches the provided terminal, return true.
+      if (_terminalsOf[_projectId][_i] == _terminal) return true;
+
+      unchecked {
+        ++_i;
+      }
+    }
+    ```
+
+3.  If a terminal is not found, return false.
 
     ```
     return false;
@@ -64,8 +78,19 @@ function isTerminalOf(uint256 _projectId, IJBPaymentTerminal _terminal)
   override
   returns (bool)
 {
-  for (uint256 _i; _i < _terminalsOf[_projectId].length; _i++)
+
+  // Keep a reference to the number of terminals the project has.
+  uint256 _numberOfTerminals = _terminalsOf[_projectId].length;
+
+  for (uint256 _i; _i < _numberOfTerminals;) {
+    // If the terminal being iterated on matches the provided terminal, return true.
     if (_terminalsOf[_projectId][_i] == _terminal) return true;
+
+    unchecked {
+      ++_i;
+    }
+  }
+
   return false;
 }
 ```

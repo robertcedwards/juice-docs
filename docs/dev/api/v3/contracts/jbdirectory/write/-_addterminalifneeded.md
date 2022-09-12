@@ -55,15 +55,14 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
     ```
     // Setting terminals must be allowed if not called from the current controller.
     if (
-      msg.sender != address(controllerOf[_projectId]) &&
-      !uint8(_fundingCycle.metadata >> 8).setTerminalsAllowed()
+      msg.sender != address(controllerOf[_projectId]) && !_fundingCycle.global().allowSetTerminals
     ) revert SET_TERMINALS_NOT_ALLOWED();
     ```
 
     _Library references:_
 
     * [`JBFundingCycleMetadataResolver`](/dev/api/v2/libraries/jbfundingcyclemetadataresolver.md)
-      * `.setTerminalsAllowed(...)`
+      * `.global(...)`
 
     _Internal references:_
 
@@ -109,8 +108,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
   // Setting terminals must be allowed if not called from the current controller.
   if (
-    msg.sender != address(controllerOf[_projectId]) &&
-    !uint8(_fundingCycle.metadata >> 8).setTerminalsAllowed()
+    msg.sender != address(controllerOf[_projectId]) && !_fundingCycle.global().allowSetTerminals
   ) revert SET_TERMINALS_NOT_ALLOWED();
 
   // Add the new terminal.

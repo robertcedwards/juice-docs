@@ -77,7 +77,7 @@ function _pay(
 
     ```
     // Approve the `_amount` of tokens from the destination terminal to transfer tokens from this contract.
-    if (_token != JBTokens.ETH) IERC20(_token).approve(address(_terminal), _amount);
+    if (_token != JBTokens.ETH) IERC20(_token).safeApprove(address(_terminal), _amount);
     ```
 
     _Library references:_
@@ -87,7 +87,7 @@ function _pay(
 
     _External references:_
 
-    * [`approve`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-approve-address-uint256-)
+    * [`safeApprove`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeApprove-contract-IERC20-address-uint256-)
 
 5.  Keep a reference to the amount to send in the transaction. If the token being paid is ETH, send the value along with the tx.   
 
@@ -110,7 +110,7 @@ function _pay(
       _projectId,
       _amount, // ignored if the token is JBTokens.ETH.
       _token,
-      _beneficiary != address(0) ? _beneficiary : msg.sender,
+      _beneficiary != address(0) ? _beneficiary : tx.origin,
       _minReturnedTokens,
       _preferClaimedTokens,
       _memo,
@@ -168,7 +168,7 @@ function _pay(
   uint256 _payableValue = _token == JBTokens.ETH ? _amount : 0;
 
   // Approve the `_amount` of tokens from the destination terminal to transfer tokens from this contract.
-  if (_token != JBTokens.ETH) IERC20(_token).approve(address(_terminal), _amount);
+  if (_token != JBTokens.ETH) IERC20(_token).safeApprove(address(_terminal), _amount);
 
   // If the token is ETH, send it in msg.value.
   uint256 _payableValue = _token == JBTokens.ETH ? _amount : 0;

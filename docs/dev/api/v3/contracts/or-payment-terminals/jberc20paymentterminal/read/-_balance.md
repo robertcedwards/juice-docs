@@ -1,4 +1,4 @@
-# _beforeTransferTo
+# _balance
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -8,31 +8,31 @@ Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
 
-**Logic to be triggered before transferring tokens from this terminal.**
+**Checks the balance of tokens in this contract.**
 
 #### Definition
 
 ```
-function _beforeTransferTo(address, uint256) internal override { ...}
+function _balance() internal view override returns (uint256) { ...}
 ```
 
 * Arguments:
-  * `_to` is the address to which the transfer is going.
-  * `_amount` is the amount of the transfer, as a fixed point number with the same number of decimals as this terminal.
 * The resulting function is internal to this contract and its inheriters.
-* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/v2/interfaces/ijbpayoutredemptionpaymentterminal.md) interface.
+* The view function does not alter state on the blockchain.
+* The resulting function overrides a function definition from the [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal) interface.
+* The function returns the contract's balance, as a fixed point number with the same amount of decimals as this terminal.
 
 #### Body
 
-1.  Before transferring tokens to another address, approve that address to pull the specified amount of tokens from this contract.
+1.  Return this terminal's token balance.
 
     ```
-    IERC20(token).safeApprove(_to, _amount);
+    return IERC20(token).balanceOf(address(this));
     ```
 
     _External references:_
 
-    * [`safeApprove`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeApprove-contract-IERC20-address-uint256-)
+    * [`balanceOf`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-balanceOf-address-)
 
 
 </TabItem>
@@ -42,13 +42,12 @@ function _beforeTransferTo(address, uint256) internal override { ...}
 ```
 /** 
   @notice
-  Logic to be triggered before transferring tokens from this terminal.
+  Checks the balance of tokens in this contract.
 
-  @param _to The address to which the transfer is going.
-  @param _amount The amount of the transfer, as a fixed point number with the same number of decimals as this terminal.
+  @return The contract's balance, as a fixed point number with the same amount of decimals as this terminal.
 */
-function _beforeTransferTo(address _to, uint256 _amount) internal override {
-  IERC20(token).safeApprove(_to, _amount);
+function _balance() internal view override returns (uint256) {
+  return IERC20(token).balanceOf(address(this));
 }
 ```
 

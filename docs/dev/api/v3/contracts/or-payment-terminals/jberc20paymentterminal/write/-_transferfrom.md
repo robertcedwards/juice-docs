@@ -33,14 +33,14 @@ function _transferFrom(
 
     ```
      _from == address(this)
-      ? IERC20(token).transfer(_to, _amount)
-      : IERC20(token).transferFrom(_from, _to, _amount);
+      ? IERC20(token).safeTransfer(_to, _amount)
+      : IERC20(token).safeTransferFrom(_from, _to, _amount);
     ```
 
     _External references:_
 
-    * [`transfer`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-Transfer-address-address-uint256-)
-    * [`transferFrom`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-transferFrom-address-address-uint256-)
+    * [`safeTransfer`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeTransfer-contract-IERC20-address-uint256-)
+    * [`safeTransferFrom`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeTransferFrom-contract-IERC20-address-address-uint256-)
 
 
 </TabItem>
@@ -62,8 +62,8 @@ function _transferFrom(
   uint256 _amount
 ) internal override {
   _from == address(this)
-    ? IERC20(token).transfer(_to, _amount)
-    : IERC20(token).transferFrom(_from, _to, _amount);
+    ? IERC20(token).safeTransfer(_to, _amount)
+    : IERC20(token).safeTransferFrom(_from, _to, _amount);
 }
 ```
 

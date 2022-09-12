@@ -80,14 +80,14 @@ function setControllerOf(uint256 _projectId, address _controller)
     if (
       msg.sender != address(controllerOf[_projectId]) &&
       controllerOf[_projectId] != address(0) &&
-      !uint8(_fundingCycle.metadata >> 8).setControllerAllowed()
+      !_fundingCycle.global().allowSetController
     ) revert SET_CONTROLLER_NOT_ALLOWED();
     ```
 
     _Library references:_
 
     * [`JBFundingCycleMetadataResolver`](/dev/api/v2/libraries/jbfundingcyclemetadataresolver.md)
-      * `.setControllerAllowed(...)`
+      * `.global(...)`
 
     _Internal references:_
 
@@ -150,7 +150,7 @@ function setControllerOf(uint256 _projectId, address _controller)
   if (
     msg.sender != address(controllerOf[_projectId]) &&
     controllerOf[_projectId] != address(0) &&
-    !uint8(_fundingCycle.metadata >> 8).setControllerAllowed()
+    !_fundingCycle.global().allowSetController
   ) revert SET_CONTROLLER_NOT_ALLOWED();
 
   // Set the new controller.

@@ -47,7 +47,7 @@ receive() external payable virtual override { ... }
         JBTokens.ETH,
         address(this).balance,
         18, // balance is a fixed point number with 18 decimals.
-        defaultBeneficiary == address(0) ? msg.sender : defaultBeneficiary,
+        defaultBeneficiary == address(0) ? tx.origin : defaultBeneficiary,
         0, // Can't determine expectation of returned tokens ahead of time.
         defaultPreferClaimedTokens,
         defaultMemo,
@@ -99,7 +99,7 @@ receive() external payable virtual override {
       JBTokens.ETH,
       address(this).balance,
       18, // balance is a fixed point number with 18 decimals.
-      defaultBeneficiary == address(0) ? msg.sender : defaultBeneficiary,
+      defaultBeneficiary == address(0) ? tx.origin : defaultBeneficiary,
       0, // Can't determine expectation of returned tokens ahead of time.
       defaultPreferClaimedTokens,
       defaultMemo,

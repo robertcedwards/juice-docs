@@ -38,7 +38,7 @@ receive() external payable virtual override { ... }
       JBTokens.ETH,
       address(this).balance,
       18, // decimals.
-      defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender
+      defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin
     );
     ```
 
@@ -79,16 +79,16 @@ receive() external payable virtual override { ... }
           JBTokens.ETH,
           _leftoverAmount,
           18, // decimals.
-          defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender,
+          defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin,
           0, // min returned tokens.
           defaultPreferClaimedTokens,
           defaultMemo,
           defaultMetadata
         );
-    // If no project was specified, send the funds directly to the beneficiary or the msg.sender.
+    // If no project was specified, send the funds directly to the beneficiary or the tx.origin.
     else
       Address.sendValue(
-        defaultBeneficiary != address(0) ? payable(defaultBeneficiary) : payable(msg.sender),
+        defaultBeneficiary != address(0) ? payable(defaultBeneficiary) : payable(tx.origin),
         _leftoverAmount
       );
     ```
@@ -132,7 +132,7 @@ receive() external payable virtual override nonReentrant {
     JBTokens.ETH,
     address(this).balance,
     18, // decimals.
-    defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender
+    defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin
   );
 
   // If there is no leftover amount, nothing left to pay.
@@ -157,16 +157,16 @@ receive() external payable virtual override nonReentrant {
         JBTokens.ETH,
         _leftoverAmount,
         18, // decimals.
-        defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender,
+        defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin,
         0, // min returned tokens.
         defaultPreferClaimedTokens,
         defaultMemo,
         defaultMetadata
       );
-  // If no project was specified, send the funds directly to the beneficiary or the msg.sender.
+  // If no project was specified, send the funds directly to the beneficiary or the tx.origin.
   else
     Address.sendValue(
-      defaultBeneficiary != address(0) ? payable(defaultBeneficiary) : payable(msg.sender),
+      defaultBeneficiary != address(0) ? payable(defaultBeneficiary) : payable(tx.origin),
       _leftoverAmount
     );
 }

@@ -71,7 +71,7 @@ function _addToBalanceOf(
 
     ```
     // Approve the `_amount` of tokens from the destination terminal to transfer tokens from this contract.
-    if (_token != JBTokens.ETH) IERC20(_token).approve(address(_terminal), _amount);
+    if (_token != JBTokens.ETH) IERC20(_token).safeApprove(address(_terminal), _amount);
     ```
 
     _Library references:_
@@ -81,7 +81,8 @@ function _addToBalanceOf(
 
     _External references:_
 
-    * [`approve`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-approve-address-uint256-)
+    * [`safeApprove`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeApprove-contract-IERC20-address-uint256-)
+
 
 5.  Keep a reference to the amount to send in the transaction. If the token being paid is ETH, send the value along with the tx.   
 
@@ -141,7 +142,7 @@ function _addToBalanceOf(
   if (_terminal.decimalsForToken(_token) != _decimals) revert INCORRECT_DECIMAL_AMOUNT();
 
   // Approve the `_amount` of tokens from the destination terminal to transfer tokens from this contract.
-  if (_token != JBTokens.ETH) IERC20(_token).approve(address(_terminal), _amount);
+  if (_token != JBTokens.ETH) IERC20(_token).safeApprove(address(_terminal), _amount);
 
   // If the token is ETH, send it in msg.value.
   uint256 _payableValue = _token == JBTokens.ETH ? _amount : 0;

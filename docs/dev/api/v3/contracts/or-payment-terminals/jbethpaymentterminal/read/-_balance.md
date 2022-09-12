@@ -1,31 +1,34 @@
-# _beforeTransferTo
+# _balance
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/jbethpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/jberc20paymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
 
-**Logic to be triggered before transferring tokens from this terminal.**
+**Checks the balance of tokens in this contract.**
 
 #### Definition
 
 ```
-function _beforeTransferTo(address _to, uint256 _amount) internal pure override { ...}
+function _balance() internal view override returns (uint256) { ...}
 ```
 
 * Arguments:
-  * `_to` is the address to which the transfer is going. This is ignored.
-  * `_amount` is the amount of the transfer, as a fixed point number with the same number of decimals as this terminal. This is ignored.
 * The resulting function is internal to this contract and its inheriters.
-* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/v2/interfaces/ijbpayoutredemptionpaymentterminal.md) interface.
+* The view function does not alter state on the blockchain.
+* The resulting function overrides a function definition from the [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal) interface.
+* The function returns the contract's balance, as a fixed point number with the same amount of decimals as this terminal.
 
 #### Body
 
-_Empty_
+1.  Return this terminal's token balance.
 
+    ```
+    return address(this).balance;
+    ```
 
 </TabItem>
 
@@ -34,14 +37,12 @@ _Empty_
 ```
 /** 
   @notice
-  Logic to be triggered before transferring tokens from this terminal.
+  Checks the balance of tokens in this contract.
 
-  @param _to The address to which the transfer is going.
-  @param _amount The amount of the transfer, as a fixed point number with the same number of decimals as this terminal.
+  @return The contract's balance, as a fixed point number with the same amount of decimals as this terminal.
 */
-function _beforeTransferTo(address _to, uint256 _amount) internal pure override {
-  _to; // Prevents unused var compiler and natspec complaints.
-  _amount; // Prevents unused var compiler and natspec complaints.
+function _balance() internal view override returns (uint256) {
+  return address(this).balance;
 }
 ```
 

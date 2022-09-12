@@ -46,8 +46,14 @@ function addToBalanceOf(
     if (address(_token) != JBTokens.ETH) {
       if (msg.value > 0) revert NO_MSG_VALUE_ALLOWED();
 
+      // Get a reference to the balance before receiving tokens.
+      uint256 _balanceBefore = IERC20(_token).balanceOf(address(this));
+
       // Transfer tokens to this contract from the msg sender.
-      IERC20(_token).transferFrom(msg.sender, address(this), _amount);
+      IERC20(_token).safeTransferFrom(msg.sender, address(this), _amount);
+
+      // The amount should reflect the change in balance.
+      _amount = IERC20(_token).balanceOf(address(this)) - _balanceBefore;
     } else {
       // If ETH is being paid, set the amount to the message value, and decimals to 18.
       _amount = msg.value;
@@ -62,7 +68,8 @@ function addToBalanceOf(
       
     _External references:_
 
-    * [`transferFrom`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-transferFrom-address-address-uint256-)
+    * [`balanceOf`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20-balanceOf-address-)
+    * [`safeTransferFrom`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeTransferFrom-contract-IERC20-address-address-uint256-)
 
 2.  Send the funds to the splits and get a reference to the leftover amount.
 
@@ -75,7 +82,7 @@ function addToBalanceOf(
       _token,
       _amount,
       _decimals,
-      defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender
+      defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin
     );
     ```
 
@@ -86,7 +93,7 @@ function addToBalanceOf(
     * [`defaultSplitsGroup`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
     * [`defaultBeneficiary`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
     * [`_payToSplits`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
-3.  If there's any leftover amount, add to balance of the specified project. If no project is specified, send the leftover funds to the beneficiary or the msg.sender.
+3.  If there's any leftover amount, add to balance of the specified project. If no project is specified, send the leftover funds to the beneficiary or the tx.origin.
 
     ```
     // Distribute any leftover amount.
@@ -101,15 +108,15 @@ function addToBalanceOf(
         // Transfer the ETH.
         if (_token == JBTokens.ETH)
           Address.sendValue(
-            // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the msg.sender.
-            defaultBeneficiary != address(0) ? defaultBeneficiary : payable(msg.sender),
+            // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the tx.origin.
+            defaultBeneficiary != address(0) ? defaultBeneficiary : payable(tx.origin),
             _leftoverAmount
           );
           // Or, transfer the ERC20.
         else
           IERC20(_token).transfer(
-            // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the msg.sender.
-            defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender,
+            // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the tx.origin.
+            defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin,
             _leftoverAmount
           );
       }
@@ -137,7 +144,7 @@ function addToBalanceOf(
     ```
     emit AddToBalance(
       _projectId,
-      defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender,
+      defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin,
       _token,
       _amount,
       _decimals,
@@ -179,8 +186,14 @@ function addToBalanceOf(
   if (address(_token) != JBTokens.ETH) {
     if (msg.value > 0) revert NO_MSG_VALUE_ALLOWED();
 
+    // Get a reference to the balance before receiving tokens.
+    uint256 _balanceBefore = IERC20(_token).balanceOf(address(this));
+
     // Transfer tokens to this contract from the msg sender.
-    IERC20(_token).transferFrom(msg.sender, address(this), _amount);
+    IERC20(_token).safeTransferFrom(msg.sender, address(this), _amount);
+
+    // The amount should reflect the change in balance.
+    _amount = IERC20(_token).balanceOf(address(this)) - _balanceBefore;
   } else {
     // If ETH is being paid, set the amount to the message value, and decimals to 18.
     _amount = msg.value;
@@ -195,7 +208,7 @@ function addToBalanceOf(
     _token,
     _amount,
     _decimals,
-    defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender
+    defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin
   );
 
   // Distribute any leftover amount.
@@ -210,15 +223,15 @@ function addToBalanceOf(
       // Transfer the ETH.
       if (_token == JBTokens.ETH)
         Address.sendValue(
-          // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the msg.sender.
-          defaultBeneficiary != address(0) ? defaultBeneficiary : payable(msg.sender),
+          // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the tx.origin.
+          defaultBeneficiary != address(0) ? defaultBeneficiary : payable(tx.origin),
           _leftoverAmount
         );
         // Or, transfer the ERC20.
       else
         IERC20(_token).transfer(
-          // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the msg.sender.
-          defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender,
+          // If there's a default beneficiary, send the funds directly to the beneficiary. Otherwise send to the tx.origin.
+          defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin,
           _leftoverAmount
         );
     }
@@ -226,7 +239,7 @@ function addToBalanceOf(
 
   emit AddToBalance(
     _projectId,
-    defaultBeneficiary != address(0) ? defaultBeneficiary : msg.sender,
+    defaultBeneficiary != address(0) ? defaultBeneficiary : tx.origin,
     _token,
     _amount,
     _decimals,
