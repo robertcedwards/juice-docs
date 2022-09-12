@@ -44,7 +44,7 @@ function _payTo(
 
     ```
     // Settle between all splits.
-    for (uint256 i; i < _splits.length;) {
+    for (uint256 i; i < _splits.length; ) {
       // Get a reference to the split being iterated on.
       JBSplit memory _split = _splits[i];
 
@@ -190,7 +190,7 @@ function _payTo(
   leftoverAmount = _amount;
 
   // Settle between all splits.
-  for (uint256 i; i < _splits.length;) {
+  for (uint256 i; i < _splits.length; ) {
     // Get a reference to the split being iterated on.
     JBSplit memory _split = _splits[i];
 

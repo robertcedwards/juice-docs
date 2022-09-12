@@ -42,7 +42,7 @@ function isTerminalOf(uint256 _projectId, IJBPaymentTerminal _terminal)
 2.  Loop through each of the project's terminals looking for the one specified. If it's found, return true.
 
     ```
-    for (uint256 _i; _i < _numberOfTerminals;) {
+    for (uint256 _i; _i < _numberOfTerminals; ) {
       // If the terminal being iterated on matches the provided terminal, return true.
       if (_terminalsOf[_projectId][_i] == _terminal) return true;
 
@@ -82,7 +82,7 @@ function isTerminalOf(uint256 _projectId, IJBPaymentTerminal _terminal)
   // Keep a reference to the number of terminals the project has.
   uint256 _numberOfTerminals = _terminalsOf[_projectId].length;
 
-  for (uint256 _i; _i < _numberOfTerminals;) {
+  for (uint256 _i; _i < _numberOfTerminals; ) {
     // If the terminal being iterated on matches the provided terminal, return true.
     if (_terminalsOf[_projectId][_i] == _terminal) return true;
 

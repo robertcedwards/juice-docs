@@ -92,8 +92,8 @@ function setTerminalsOf(uint256 _projectId, IJBPaymentTerminal[] calldata _termi
     ```
     // Make sure duplicates were not added.
     if (_terminals.length > 1)
-      for (uint256 _i; _i < _terminals.length;) {
-        for (uint256 _j = _i + 1; _j < _terminals.length;) {
+      for (uint256 _i; _i < _terminals.length; ) {
+        for (uint256 _j = _i + 1; _j < _terminals.length; ) {
           if (_terminals[_i] == _terminals[_j]) revert DUPLICATE_TERMINALS();
 
           unchecked {
@@ -155,8 +155,8 @@ function setTerminalsOf(uint256 _projectId, IJBPaymentTerminal[] calldata _termi
 
   // Make sure duplicates were not added.
   if (_terminals.length > 1)
-    for (uint256 _i; _i < _terminals.length;) {
-      for (uint256 _j = _i + 1; _j < _terminals.length;) {
+    for (uint256 _i; _i < _terminals.length; ) {
+      for (uint256 _j = _i + 1; _j < _terminals.length; ) {
         if (_terminals[_i] == _terminals[_j]) revert DUPLICATE_TERMINALS();
 
         unchecked {

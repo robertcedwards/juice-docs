@@ -36,11 +36,11 @@ function configureFor(
 
 #### Body
 
-1.  Make sure the duration fits in a `uint64`.
+1.  Make sure the duration fits in a `uint32`.
 
     ```
-    // Duration must fit in a uint64.
-    if (_data.duration > type(uint64).max) revert INVALID_DURATION();
+    // Duration must fit in a uint32.
+    if (_data.duration > type(uint32).max) revert INVALID_DURATION();
     ```
 2.  Make sure the `_data.discountRate` is less than the expected maximum value.
 
@@ -59,13 +59,53 @@ function configureFor(
     // Weight must fit into a uint88.
     if (_data.weight > type(uint88).max) revert INVALID_WEIGHT();
     ```
-4.  Get a reference to the time at which the configuration is occurring.
+
+4.  Set the time at which the funding cycle must start on or after as the block's timestamp if a time in the past was specified.
+
+    ```
+    // If the start date is in the past, set it to be the current timestamp.
+    if (_mustStartAtOrAfter < block.timestamp) _mustStartAtOrAfter = block.timestamp;
+    ```
+
+5.  Make sure the soonest time the queued funding cycle can start still fits in a `uint56`.
+    
+    ```
+    // Make sure the min start date fits in a uint56, and that the start date of an upcoming cycle also starts within the max.
+    if (_mustStartAtOrAfter + _data.duration > type(uint56).max) revert INVALID_TIMEFRAME();
+    ```
+
+6.  Make sure the provided ballot is valid.
+    
+    ```
+    // Ballot should be a valid contract, supporting the correct interface
+    if (_data.ballot != IJBFundingCycleBallot(address(0))) {
+      address _ballot = address(_data.ballot);
+
+      // No contract at the address ?
+      if (_ballot.code.length == 0) revert INVALID_BALLOT();
+
+      // Make sure the ballot supports the expected interface.
+      try _data.ballot.supportsInterface(type(IJBFundingCycleBallot).interfaceId) returns (
+        bool _supports
+      ) {
+        if (!_supports) revert INVALID_BALLOT(); // Contract exists at the address but with the wrong interface
+      } catch {
+        revert INVALID_BALLOT(); // No ERC165 support
+      }
+    }
+    ```
+
+    _External references:_
+
+    * [`supportsInterface`](https://docs.openzeppelin.com/contracts/4.x/api/access#AccessControl-supportsInterface-bytes4-)
+
+6.  Get a reference to the time at which the configuration is occurring.
 
     ```
     // The configuration timestamp is now.
     uint256 _configuration = block.timestamp;
     ```
-5.  Configure the intrinsic properties. This'll create a new funding cycle if there isn't a queued one already.
+7.  Configure the intrinsic properties. This'll create a new funding cycle if there isn't a queued one already.
 
     ```
     // Set up a reconfiguration by configuring intrinsic properties.
@@ -81,7 +121,7 @@ function configureFor(
     _Internal references:_
 
     * [`_configureIntrinsicpropertiesFor`](/dev/api/v2/contracts/jbfundingcyclestore/write/-_configureintrinsicpropertiesfor.md)
-6.  Store all of the user configuration properties provided. These properties can all be packed into one `uint256` storage slot. No need to store if the resulting stored value would be 0 since the storage slot defaults to 0.
+8.  Store all of the user configuration properties provided. These properties can all be packed into one `uint256` storage slot. No need to store if the resulting stored value would be 0 since the storage slot defaults to 0.
 
     ```
     // Efficiently stores a funding cycles provided user defined properties.
@@ -94,11 +134,11 @@ function configureFor(
       // ballot in bits 0-159 bytes.
       uint256 packed = uint160(address(_data.ballot));
 
-      // duration in bits 160-223 bytes.
+      // duration in bits 160-191 bytes.
       packed |= _data.duration << 160;
 
-      // discountRate in bits 224-255 bytes.
-      packed |= _data.discountRate << 224;
+      // discountRate in bits 192-223 bytes.
+      packed |= _data.discountRate << 192;
 
       // Set in storage.
       _packedUserPropertiesOf[_projectId][_configuration] = packed;
@@ -108,7 +148,8 @@ function configureFor(
     _Internal references:_
 
     * [`_packedUserPropertiesOf`](/dev/api/v2/contracts/jbfundingcyclestore/properties/-_packeduserpropertiesof.md)
-7.  Store the provided metadata for the configuration. No need to store if the value is 0 since the storage slot defaults to 0.
+
+9.  Store the provided metadata for the configuration. No need to store if the value is 0 since the storage slot defaults to 0.
 
     ```
     // Set the metadata if needed.
@@ -118,7 +159,7 @@ function configureFor(
     _Internal references:_
 
     * [`_metadataOf`](/dev/api/v2/contracts/jbfundingcyclestore/properties/-_metadataof.md)
-8.  Emit a `Configure` event with the relevant parameters.
+10.  Emit a `Configure` event with the relevant parameters.
 
     ```
     emit Configure(_configuration, _projectId, _data, _metadata, _mustStartAtOrAfter, msg.sender);
@@ -127,7 +168,7 @@ function configureFor(
     _Event references:_
 
     * [`Configure`](/dev/api/v2/contracts/jbfundingcyclestore/events/configure.md)
-9.  Return the [`JBFundingCycle`](/dev/api/v2/data-structures/jbfundingcycle.md) struct that carries the new configuration.
+11.  Return the [`JBFundingCycle`](/dev/api/v2/data-structures/jbfundingcycle.md) struct that carries the new configuration.
 
     ```
     // Return the funding cycle for the new configuration.
@@ -163,8 +204,8 @@ function configureFor(
   uint256 _metadata,
   uint256 _mustStartAtOrAfter
 ) external override onlyController(_projectId) returns (JBFundingCycle memory) {
-  // Duration must fit in a uint64.
-  if (_data.duration > type(uint64).max) revert INVALID_DURATION();
+  // Duration must fit in a uint32.
+  if (_data.duration > type(uint32).max) revert INVALID_DURATION();
 
   // Discount rate must be less than or equal to 100%.
   if (_data.discountRate > JBConstants.MAX_DISCOUNT_RATE) revert INVALID_DISCOUNT_RATE();
@@ -172,17 +213,34 @@ function configureFor(
   // Weight must fit into a uint88.
   if (_data.weight > type(uint88).max) revert INVALID_WEIGHT();
 
+  // If the start date is in the past, set it to be the current timestamp.
+  if (_mustStartAtOrAfter < block.timestamp) _mustStartAtOrAfter = block.timestamp;
+
+  // Make sure the min start date fits in a uint56, and that the start date of an upcoming cycle also starts within the max.
+  if (_mustStartAtOrAfter + _data.duration > type(uint56).max) revert INVALID_TIMEFRAME();
+
+  // Ballot should be a valid contract, supporting the correct interface
+  if (_data.ballot != IJBFundingCycleBallot(address(0))) {
+    address _ballot = address(_data.ballot);
+
+    // No contract at the address ?
+    if (_ballot.code.length == 0) revert INVALID_BALLOT();
+
+    // Make sure the ballot supports the expected interface.
+    try _data.ballot.supportsInterface(type(IJBFundingCycleBallot).interfaceId) returns (
+      bool _supports
+    ) {
+      if (!_supports) revert INVALID_BALLOT(); // Contract exists at the address but with the wrong interface
+    } catch {
+      revert INVALID_BALLOT(); // No ERC165 support
+    }
+  }
+
   // The configuration timestamp is now.
   uint256 _configuration = block.timestamp;
 
   // Set up a reconfiguration by configuring intrinsic properties.
-  _configureIntrinsicPropertiesFor(
-    _projectId,
-    _configuration,
-    _data.weight,
-    // Must start on or after the current timestamp.
-    _mustStartAtOrAfter > block.timestamp ? _mustStartAtOrAfter : block.timestamp
-  );
+  _configureIntrinsicPropertiesFor(_projectId, _configuration, _data.weight, _mustStartAtOrAfter);
 
   // Efficiently stores a funding cycles provided user defined properties.
   // If all user config properties are zero, no need to store anything as the default value will have the same outcome.
@@ -194,11 +252,11 @@ function configureFor(
     // ballot in bits 0-159 bytes.
     uint256 packed = uint160(address(_data.ballot));
 
-    // duration in bits 160-223 bytes.
+    // duration in bits 160-191 bytes.
     packed |= _data.duration << 160;
 
-    // discountRate in bits 224-255 bytes.
-    packed |= _data.discountRate << 224;
+    // discountRate in bits 192-223 bytes.
+    packed |= _data.discountRate << 192;
 
     // Set in storage.
     _packedUserPropertiesOf[_projectId][_configuration] = packed;
@@ -223,6 +281,7 @@ function configureFor(
 | **`INVALID_DURATION`**      | Thrown if the provided duration is greater than 2^64 - 1 (1.844E19)          |
 | **`INVALID_DISCOUNT_RATE`** | Thrown if the provided discount rate is greater than the max expected value. |
 | **`INVALID_WEIGHT`**        | Thrown if the provided weight is greater than 2^88 - 1 (3.09E26)             |
+| **`INVALID_TIMEFRAME`**     | Thrown if the provided start time plus duration is greater than 2^56 - 1 (7.2E16)             |
 
 </TabItem>
 

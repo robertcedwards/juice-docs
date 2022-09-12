@@ -67,7 +67,7 @@ function processFees(uint256 _projectId)
     uint256 _heldFeeLength = _heldFees.length;
 
     // Process each fee.
-    for (uint256 _i = 0; _i < _heldFeeLength;) {
+    for (uint256 _i = 0; _i < _heldFeeLength; ) {
       // Get the fee amount.
       uint256 _amount = _feeAmount(
         _heldFees[_i].amount,
@@ -130,7 +130,7 @@ function processFees(uint256 _projectId)
   uint256 _heldFeeLength = _heldFees.length;
 
   // Process each fee.
-  for (uint256 _i = 0; _i < _heldFeeLength;) {
+  for (uint256 _i = 0; _i < _heldFeeLength; ) {
     // Get the fee amount.
     uint256 _amount = _feeAmount(
       _heldFees[_i].amount,

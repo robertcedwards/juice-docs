@@ -37,29 +37,39 @@ function hasPermissions(
 1.  Loop through the provided `_permissionIndexes`.
 
     ```
-    for (uint256 _i = 0; _i < _permissionIndexes.length; _i++) { ... }
-    ```
-2.  Get a reference to the `_permissionIndex` being iterated on.
-
-    ```
-    uint256 _permissionIndex = _permissionIndexes[_i];
-    ```
-3.  Make sure the `_permissionIndex` is one of the 255 indexes in a `uint256`.
-
-    ```
-    if (_permissionIndex > 255) revert PERMISSION_INDEX_OUT_OF_BOUNDS();
-    ```
-4.  If the bit at the specified permission index of the packed permissions of the operator for the specified account and within the specified domain is off, return `false` because all provided permissions are not on.
-
-    ```
-    if (((permissionsOf[_operator][_account][_domain] >> _permissionIndex) & 1) == 0)
-      return false;
+    for (uint256 _i; _i < _permissionIndexes.length; ) { ... }
     ```
 
-    _Internal references:_
+    1.  Get a reference to the `_permissionIndex` being iterated on.
 
-    * [`permissionsOf`](/dev/api/v2/contracts/jboperatorstore/properties/permissionsof.md)
-5.  After the loop, return `true` since the loop checked all specified permissions without returning `false`.
+        ```
+        uint256 _permissionIndex = _permissionIndexes[_i];
+        ```
+    2.  Make sure the `_permissionIndex` is one of the 255 indexes in a `uint256`.
+
+        ```
+        if (_permissionIndex > 255) revert PERMISSION_INDEX_OUT_OF_BOUNDS();
+        ```
+    3.  If the bit at the specified permission index of the packed permissions of the operator for the specified account and within the specified domain is off, return `false` because all provided permissions are not on.
+
+        ```
+        if (((permissionsOf[_operator][_account][_domain] >> _permissionIndex) & 1) == 0)
+          return false;
+        ```
+
+        _Internal references:_
+
+        * [`permissionsOf`](/dev/api/v2/contracts/jboperatorstore/properties/permissionsof.md)
+
+    4.  Increment the loop counter.
+
+        ```
+        unchecked {
+          ++_i;
+        }
+        ```
+
+2.  After the loop, return `true` since the loop checked all specified permissions without returning `false`.
 
     ```
     return true;
@@ -87,13 +97,17 @@ function hasPermissions(
   uint256 _domain,
   uint256[] calldata _permissionIndexes
 ) external view override returns (bool) {
-  for (uint256 _i = 0; _i < _permissionIndexes.length; _i++) {
+  for (uint256 _i; _i < _permissionIndexes.length; ) {
     uint256 _permissionIndex = _permissionIndexes[_i];
 
     if (_permissionIndex > 255) revert PERMISSION_INDEX_OUT_OF_BOUNDS();
 
     if (((permissionsOf[_operator][_account][_domain] >> _permissionIndex) & 1) == 0)
       return false;
+
+    unchecked {
+      ++_i;
+    }
   }
   return true;
 }

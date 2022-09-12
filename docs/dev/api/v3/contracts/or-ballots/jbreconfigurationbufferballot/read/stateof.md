@@ -33,48 +33,31 @@ function stateOf(
 
 #### Body
 
-1.  Return the final state if there is one. 
+1.  The ballot is failed if the start time of the funding cycle is  
 
     ```
-    // If there is a finalized state, return it.
-    if (finalState[_projectId][_configured] != JBBallotState.Active)
-      return finalState[_projectId][_configured];
-    ```
-
-    _Enums used:_
-
-    * [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md)
-      * `.Active`
-
-    _Internal references:_
-
-    * [`finalState`](/dev/api/v2/contracts/or-ballots/jbreconfigurationbufferballot/properties/finalstate.md)
-
-2.  If the ballot's duration has not yet passed since the reconfiguration was proposed, the state is failed if the funding cycle is supposed to have already started. Otherwise it is still active.  
-
-    ```
-    // If the delay hasn't yet passed, the ballot is either failed or active.
-    if (block.timestamp < _configured + duration)
-      // If the current timestamp is past the start, the ballot is failed.
-      return (block.timestamp >= _start) ? JBBallotState.Failed : JBBallotState.Active;
+    // If the provided configured timestamp is after the start timestamp, the ballot is Failed.
+    if (_configured > _start) return JBBallotState.Failed;
     ```
 
     _Enums used:_
 
     * [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md)
       * `.Failed`
-      * `.Active`
 
-3. The ballot is otherwise approved. 
+2.  If the configuration took place before the funding cycle's start with sufficient time to cover this ballot's duration, it is approved. Otherwise, it is failed. 
 
     ```
-    // The ballot is otherwise approved.
-    return JBBallotState.Approved;
+    unchecked {
+      // If there was sufficient time between configuration and the start of the cycle, it is approved. Otherwise, it is failed.
+      return (_start - _configured < duration) ? JBBallotState.Failed : JBBallotState.Approved;
+    }
     ```
 
     _Enums used:_
 
     * [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md)
+      * `.Failed`
       * `.Approved`
 
 </TabItem>
@@ -97,17 +80,15 @@ function stateOf(
   uint256 _configured,
   uint256 _start
 ) public view override returns (JBBallotState) {
-  // If there is a finalized state, return it.
-  if (finalState[_projectId][_configured] != JBBallotState.Active)
-    return finalState[_projectId][_configured];
+  _projectId; // Prevents unused var compiler and natspec complaints.
 
-  // If the delay hasn't yet passed, the ballot is either failed or active.
-  if (block.timestamp < _configured + duration)
-    // If the current timestamp is past the start, the ballot is failed.
-    return (block.timestamp >= _start) ? JBBallotState.Failed : JBBallotState.Active;
+  // If the provided configured timestamp is after the start timestamp, the ballot is Failed.
+  if (_configured > _start) return JBBallotState.Failed;
 
-  // The ballot is otherwise approved.
-  return JBBallotState.Approved;
+  unchecked {
+    // If there was sufficient time between configuration and the start of the cycle, it is approved. Otherwise, it is failed.
+    return (_start - _configured < duration) ? JBBallotState.Failed : JBBallotState.Approved;
+  }
 }
 ```
 

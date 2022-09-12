@@ -61,7 +61,7 @@ function _refundHeldFees(uint256 _projectId, uint256 _amount)
     uint256 _heldFeesLength = _heldFees.length;
 
     // Process each fee.
-    for (uint256 _i = 0; _i < _heldFeesLength;) {
+    for (uint256 _i = 0; _i < _heldFeesLength; ) {
       if (leftoverAmount == 0) _heldFeesOf[_projectId].push(_heldFees[_i]);
       else if (leftoverAmount >= _heldFees[_i].amount) {
         unchecked {

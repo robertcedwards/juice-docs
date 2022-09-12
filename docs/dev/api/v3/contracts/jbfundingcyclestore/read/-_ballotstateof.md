@@ -56,28 +56,26 @@ function _ballotStateOf(
     _Internal references:_
 
     * [`_getStructFor`](/dev/api/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
-3.  If there's no ballot, the funding cycle configuration is implicitly approved. Otherwise if the ballot's duration has not yet expired, it is implicitly active. Otherwise, return the state that the ballot for the provided configuration.
+
+3.  If there's no ballot, the funding cycle configuration is implicitly approved. Otherwise, return the state that the ballot for the provided configuration.
 
     ```
     // If there is no ballot, the ID is auto approved.
-    // Otherwise if the ballot's duration hasn't passed, its still active.
-    // Otherwise, return the ballot's state.
     if (_ballotFundingCycle.ballot == IJBFundingCycleBallot(address(0)))
       return JBBallotState.Approved;
-    else if (_ballotFundingCycle.ballot.duration() >= block.timestamp - _configuration)
-      return JBBallotState.Active;
-    else return _ballotFundingCycle.ballot.stateOf(_projectId, _configuration, _start);
+
+
+    // Return the ballot's state
+    return _ballotFundingCycle.ballot.stateOf(_projectId, _configuration, _start);
     ```
 
     _Enums used:_
 
     * [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md)
       * `.Approved`
-      * `.Active`
 
     _External references:_
 
-    * [`duration`](/dev/api/v2/interfaces/ijbfundingcycleballot.md)
     * [`stateOf`](/dev/api/v2/interfaces/ijbfundingcycleballot.md)
 
 </TabItem>
@@ -112,13 +110,11 @@ function _ballotStateOf(
   );
 
   // If there is no ballot, the ID is auto approved.
-  // Otherwise if the ballot's duration hasn't passed, its still active.
-  // Otherwise, return the ballot's state.
   if (_ballotFundingCycle.ballot == IJBFundingCycleBallot(address(0)))
     return JBBallotState.Approved;
-  else if (_ballotFundingCycle.ballot.duration() >= block.timestamp - _configuration)
-    return JBBallotState.Active;
-  else return _ballotFundingCycle.ballot.stateOf(_projectId, _configuration, _start);
+
+  // Return the ballot's state
+  return _ballotFundingCycle.ballot.stateOf(_projectId, _configuration, _start);
 }
 ```
 

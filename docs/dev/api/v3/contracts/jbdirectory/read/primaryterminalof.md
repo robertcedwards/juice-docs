@@ -73,7 +73,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
 
     ```
     // Return the first terminal which accepts the specified token.
-    for (uint256 _i; _i < _numberOfTerminals;) {
+    for (uint256 _i; _i < _numberOfTerminals; ) {
       // Keep a reference to the terminal being iterated on.
       IJBPaymentTerminal _terminal = _terminalsOf[_projectId][_i];
 
@@ -135,7 +135,7 @@ function primaryTerminalOf(uint256 _projectId, address _token)
   uint256 _numberOfTerminals = _terminalsOf[_projectId].length;
 
   // Return the first terminal which accepts the specified token.
-  for (uint256 _i; _i < _numberOfTerminals;) {
+  for (uint256 _i; _i < _numberOfTerminals; ) {
     // Keep a reference to the terminal being iterated on.
     IJBPaymentTerminal _terminal = _terminalsOf[_projectId][_i];
 

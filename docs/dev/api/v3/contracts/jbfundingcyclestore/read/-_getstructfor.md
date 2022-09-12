@@ -64,10 +64,10 @@ function _getStructFor(uint256 _projectId, uint256 _configuration)
 
     // ballot in bits 0-159 bits.
     fundingCycle.ballot = IJBFundingCycleBallot(address(uint160(_packedUserProperties)));
-    // duration in bits 160-223 bits.
-    fundingCycle.duration = uint256(uint64(_packedUserProperties >> 160));
-    // discountRate in bits 224-255 bits.
-    fundingCycle.discountRate = uint256(uint32(_packedUserProperties >> 224));
+    // duration in bits 160-191 bits.
+    fundingCycle.duration = uint256(uint32(_packedUserProperties >> 160));
+    // discountRate in bits 192-223 bits.
+    fundingCycle.discountRate = uint256(uint32(_packedUserProperties >> 192));
     ```
 
     _Internal references:_
@@ -122,10 +122,10 @@ function _getStructFor(uint256 _projectId, uint256 _configuration)
 
   // ballot in bits 0-159 bits.
   fundingCycle.ballot = IJBFundingCycleBallot(address(uint160(_packedUserProperties)));
-  // duration in bits 160-223 bits.
-  fundingCycle.duration = uint256(uint64(_packedUserProperties >> 160));
-  // discountRate in bits 224-255 bits.
-  fundingCycle.discountRate = uint256(uint32(_packedUserProperties >> 224));
+  // duration in bits 160-191 bits.
+  fundingCycle.duration = uint256(uint32(_packedUserProperties >> 160));
+  // discountRate in bits 192-223 bits.
+  fundingCycle.discountRate = uint256(uint32(_packedUserProperties >> 192));
 
   fundingCycle.metadata = _metadataOf[_projectId][_configuration];
 }

@@ -69,9 +69,12 @@ function _deriveWeightFrom(JBFundingCycle memory _baseFundingCycle, uint256 _sta
 
     ```
     // Apply the base funding cycle's discount rate for each cycle that has passed.
-    uint256 _discountMultiple = _startDistance / _baseFundingCycle.duration;
+    uint256 _discountMultiple;
+    unchecked {
+      _discountMultiple = _startDistance / _baseFundingCycle.duration; // Non-null duration is excluded above
+    }
 
-    for (uint256 i = 0; i < _discountMultiple; i++) {
+    for (uint256 _i; _i < _discountMultiple; )  {
       // The number of times to apply the discount rate.
       // Base the new weight on the specified funding cycle's weight.
       weight = PRBMath.mulDiv(
@@ -79,8 +82,13 @@ function _deriveWeightFrom(JBFundingCycle memory _baseFundingCycle, uint256 _sta
         JBConstants.MAX_DISCOUNT_RATE - _baseFundingCycle.discountRate,
         JBConstants.MAX_DISCOUNT_RATE
       );
+
       // The calculation doesn't need to continue if the weight is 0.
       if (weight == 0) break;
+
+      unchecked {
+        ++_i;
+      }
     }
     ```
 
@@ -129,9 +137,12 @@ function _deriveWeightFrom(JBFundingCycle memory _baseFundingCycle, uint256 _sta
   uint256 _startDistance = _start - _baseFundingCycle.start;
 
   // Apply the base funding cycle's discount rate for each cycle that has passed.
-  uint256 _discountMultiple = _startDistance / _baseFundingCycle.duration;
+  uint256 _discountMultiple;
+  unchecked {
+    _discountMultiple = _startDistance / _baseFundingCycle.duration; // Non-null duration is excluded above
+  }
 
-  for (uint256 i = 0; i < _discountMultiple; i++) {
+  for (uint256 _i; _i < _discountMultiple; )  {
     // The number of times to apply the discount rate.
     // Base the new weight on the specified funding cycle's weight.
     weight = PRBMath.mulDiv(
@@ -139,8 +150,13 @@ function _deriveWeightFrom(JBFundingCycle memory _baseFundingCycle, uint256 _sta
       JBConstants.MAX_DISCOUNT_RATE - _baseFundingCycle.discountRate,
       JBConstants.MAX_DISCOUNT_RATE
     );
+
     // The calculation doesn't need to continue if the weight is 0.
     if (weight == 0) break;
+
+    unchecked {
+      ++_i;
+    }
   }
 }
 ```

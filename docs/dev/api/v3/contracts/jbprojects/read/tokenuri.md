@@ -27,21 +27,29 @@ function tokenURI(uint256 _projectId) public view override returns (string memor
 
 #### Body
 
-1.  Return an empty string if there is no URI resolver set.
-
-    ```
-    // If there's no resolver, there's no URI.
-    if (tokenUriResolver == IJBTokenUriResolver(address(0))) return '';
-    ```
+1. Keep a reference to the resolver.
+ 
+   ```
+    // Keep a reference to the resolver.
+    IJBTokenUriResolver _tokenUriResolver = tokenUriResolver;
+   ```
 
     _Internal references:_
 
     * [`tokenUriResolver`](/dev/api/v2/contracts/jbprojects/properties/tokenuriresolver.md)
-2.  Resolve the URI for the project.
+
+2.  Return an empty string if there is no URI resolver set.
+
+    ```
+    // If there's no resolver, there's no URI.
+    if (_tokenUriResolver == IJBTokenUriResolver(address(0))) return '';
+    ```
+
+3.  Resolve the URI for the project.
 
     ```
     // Return the resolved URI.
-    return tokenUriResolver.getUri(_projectId);
+    return _tokenUriResolver.getUri(_projectId);
     ```
 
     _External references:_
@@ -63,11 +71,14 @@ function tokenURI(uint256 _projectId) public view override returns (string memor
   @return The token URI to use for the provided `_projectId`.
 */
 function tokenURI(uint256 _projectId) public view override returns (string memory) {
+  // Keep a reference to the resolver.
+  IJBTokenUriResolver _tokenUriResolver = tokenUriResolver;
+
   // If there's no resolver, there's no URI.
-  if (tokenUriResolver == IJBTokenUriResolver(address(0))) return '';
+  if (_tokenUriResolver == IJBTokenUriResolver(address(0))) return '';
 
   // Return the resolved URI.
-  return tokenUriResolver.getUri(_projectId);
+  return _tokenUriResolver.getUri(_projectId);
 }
 ```
 

@@ -26,24 +26,33 @@ function _packedPermissions(uint256[] calldata _indexes) private pure returns (u
 1.  Loop through the provided indexes.
 
     ```
-    for (uint256 _i = 0; _i < _indexes.length; _i++) { ... }
+    for (uint256 _i; _i < _indexes.length; ) { ... }
     ```
-2.  Get a reference to the permission index being iterated on.
 
-    ```
-    uint256 _index = _indexes[_i];
-    ```
-3.  Make sure the permission index is one of the 255 indexes in a `uint256`.
+    1.  Get a reference to the permission index being iterated on.
 
-    ```
-    if (_index > 255) revert PERMISSION_INDEX_OUT_OF_BOUNDS();
-    ```
-4.  Flip the bit at the specified index of the packed value being returned to indicate a truthy permission.
+        ```
+        uint256 _index = _indexes[_i];
+        ```
+    2.  Make sure the permission index is one of the 255 indexes in a `uint256`.
 
-    ```
-    // Turn the bit at the index on.
-    packed |= 1 << _index;
-    ```
+        ```
+        if (_index > 255) revert PERMISSION_INDEX_OUT_OF_BOUNDS();
+        ```
+    3.  Flip the bit at the specified index of the packed value being returned to indicate a truthy permission.
+
+        ```
+        // Turn the bit at the index on.
+        packed |= 1 << _index;
+        ```
+    
+    4. Increment the loop counter.
+       
+       ```
+       unchecked {
+        ++_i;
+       }
+       ```
 
 </TabItem>
 
@@ -59,13 +68,17 @@ function _packedPermissions(uint256[] calldata _indexes) private pure returns (u
   @return packed The packed value.
 */
 function _packedPermissions(uint256[] calldata _indexes) private pure returns (uint256 packed) {
-  for (uint256 _i = 0; _i < _indexes.length; _i++) {
+  for (uint256 _i; _i < _indexes.length; ) {
     uint256 _index = _indexes[_i];
 
     if (_index > 255) revert PERMISSION_INDEX_OUT_OF_BOUNDS();
 
     // Turn the bit at the index on.
     packed |= 1 << _index;
+
+    unchecked {
+    ++_i;
+    }
   }
 }
 ```

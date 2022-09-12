@@ -30,7 +30,7 @@ function setOperators(JBOperatorData[] calldata _operatorData) external override
 1.  Loop through the provided operator data.
 
     ```
-    for (uint256 _i = 0; _i < _operatorData.length; _i++) { ... }
+    for (uint256 _i; _i < _operatorData.length; ) { ... }
     ```
 
     1.  Pack the provided permissions into a `uint256`. Each bit of the resulting value represents whether or not permission has been granted for that index.
@@ -68,6 +68,14 @@ function setOperators(JBOperatorData[] calldata _operatorData) external override
         _Event references:_
 
         * [`SetOperator`](../events/setoperator.md)
+    
+    4.  Increment the loop counter.
+        
+        ```
+        unchecked {
+          ++_i;
+        }
+        ```
 
 </TabItem>
 
@@ -84,7 +92,7 @@ function setOperators(JBOperatorData[] calldata _operatorData) external override
   @param _operatorData The data that specify the params for each operator being set.
 */
 function setOperators(JBOperatorData[] calldata _operatorData) external override {
-  for (uint256 _i = 0; _i < _operatorData.length; _i++) {
+  for (uint256 _i; _i < _operatorData.length; ) {
     // Pack the indexes into a uint256.
     uint256 _packed = _packedPermissions(_operatorData[_i].permissionIndexes);
 
@@ -98,6 +106,10 @@ function setOperators(JBOperatorData[] calldata _operatorData) external override
       _operatorData[_i].permissionIndexes,
       _packed
     );
+
+    unchecked {
+      ++_i;
+    }
   }
 }
 ```

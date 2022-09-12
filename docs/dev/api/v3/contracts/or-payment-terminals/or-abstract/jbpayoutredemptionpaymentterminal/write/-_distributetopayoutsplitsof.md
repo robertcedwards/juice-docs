@@ -61,7 +61,7 @@ function _distributeToPayoutSplitsOf(
 
     ```
     // Transfer between all splits.
-    for (uint256 _i = 0; _i < _splits.length;) { ... }
+    for (uint256 _i = 0; _i < _splits.length; ) { ... }
     ```
 
     1.  Get a reference to the current split being iterated on.
@@ -309,7 +309,7 @@ function _distributeToPayoutSplitsOf(
   JBSplit[] memory _splits = splitsStore.splitsOf(_projectId, _domain, _group);
 
   // Transfer between all splits.
-  for (uint256 _i = 0; _i < _splits.length;) {
+  for (uint256 _i = 0; _i < _splits.length; ) {
     // Get a reference to the split being iterated on.
     JBSplit memory _split = _splits[_i];
 
