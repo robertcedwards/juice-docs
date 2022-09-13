@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBFundingCycleStore`](/dev/api/v2/contracts/jbfundingcyclestore/README.md)​
+Contract: [`JBFundingCycleStore`](/dev/api/v3/contracts/jbfundingcyclestore/README.md)​
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,7 +28,7 @@ function _ballotStateOf(
   * `_ballotFundingCycleConfiguration` is the configuration of the funding cycle which is configured with the ballot that should be used.
 * The view function is private to this contract.
 * The view function does not alter state on the blockchain.
-* The function returns the [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md) of the project.
+* The function returns the [`JBBallotState`](/dev/api/v3/enums/jbballotstate.md) of the project.
 
 #### Body
 
@@ -41,7 +41,7 @@ function _ballotStateOf(
 
     _Enums used:_
 
-    * [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md)
+    * [`JBBallotState`](/dev/api/v3/enums/jbballotstate.md)
       * `.Approved`
 2.  Get the funding cycle that has a reference of the ballot that should be used.
 
@@ -55,7 +55,7 @@ function _ballotStateOf(
 
     _Internal references:_
 
-    * [`_getStructFor`](/dev/api/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
+    * [`_getStructFor`](/dev/api/v3/contracts/jbfundingcyclestore/read/-_getstructfor.md)
 
 3.  If there's no ballot, the funding cycle configuration is implicitly approved. Otherwise, return the state that the ballot for the provided configuration.
 
@@ -71,12 +71,12 @@ function _ballotStateOf(
 
     _Enums used:_
 
-    * [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md)
+    * [`JBBallotState`](/dev/api/v3/enums/jbballotstate.md)
       * `.Approved`
 
     _External references:_
 
-    * [`stateOf`](/dev/api/v2/interfaces/ijbfundingcycleballot.md)
+    * [`stateOf`](/dev/api/v3/interfaces/ijbfundingcycleballot.md)
 
 </TabItem>
 

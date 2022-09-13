@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBProjectHandles`](/dev/api/v2/contracts/or-utilities/jbprojecthandles/README.md)​‌
+Contract: [`JBProjectHandles`](/dev/api/v3/contracts/or-utilities/jbprojecthandles/README.md)​‌
 
-Interface: [`IJBProjectHandles`](/dev/api/v2/interfaces/ijbprojecthandles.md)
+Interface: [`IJBProjectHandles`](/dev/api/v3/interfaces/ijbprojecthandles.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -29,8 +29,8 @@ function setEnsNamePartsFor(uint256 _projectId, string[] memory _parts)
   * `_projectId` is the ID of the project to set an ENS handle for.
   * `_parts` is t
 * The function can be accessed externally by anyone.
-* Through the [`requirePermission`](/dev/api/v2/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the token holder, or from an operator that has been given the [`JBOperations2.SET_ENS_NAME_FOR`](/dev/api/v2/libraries/jboperations2.md) permission by the token holder.
-* The resulting function overrides a function definition from the [`IJBProjectHandles`](/dev/api/v2/interfaces/ijbprojecthandles.md) interface.
+* Through the [`requirePermission`](/dev/api/v3/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the token holder, or from an operator that has been given the [`JBOperations2.SET_ENS_NAME_FOR`](/dev/api/v3/libraries/jboperations2.md) permission by the token holder.
+* The resulting function overrides a function definition from the [`IJBProjectHandles`](/dev/api/v3/interfaces/ijbprojecthandles.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -70,7 +70,7 @@ function setEnsNamePartsFor(uint256 _projectId, string[] memory _parts)
 
     _Internal references:_
 
-    * [`_ensNamePartsOf`](/dev/api/v2/contracts/or-utilities/jbprojecthandles/properties/-_ensnamepartsof.md)
+    * [`_ensNamePartsOf`](/dev/api/v3/contracts/or-utilities/jbprojecthandles/properties/-_ensnamepartsof.md)
     
 3.  Emit a `SetEnsNameParts` event with the relevant parameters.
 
@@ -80,7 +80,7 @@ function setEnsNamePartsFor(uint256 _projectId, string[] memory _parts)
 
     _Event references:_
 
-    * [`SetEnsNameParts`](/dev/api/v2/contracts/or-utilities/jbprojecthandles/events/setensnameparts.md)
+    * [`SetEnsNameParts`](/dev/api/v3/contracts/or-utilities/jbprojecthandles/events/setensnameparts.md)
 
 
 </TabItem>

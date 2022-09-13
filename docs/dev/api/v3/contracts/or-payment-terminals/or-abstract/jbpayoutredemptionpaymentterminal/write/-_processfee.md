@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -33,11 +33,11 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
     _Internal references:_
 
-    * [`directory`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
+    * [`directory`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
 
     _External references:_
 
-    * [`primaryTerminalOf`](/dev/api/v2/contracts/jbdirectory/read/primaryterminalof.md)
+    * [`primaryTerminalOf`](/dev/api/v3/contracts/jbdirectory/read/primaryterminalof.md)
 
 2.  If the protocol's terminal is the same as this terminal, save gas by paying the contract internally.
 
@@ -53,7 +53,7 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Internal references:_
 
-        * [`_pay`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md)
+        * [`_pay`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md)
 
 3.  Otherwise if the terminal is different, transfer the fee over.
 
@@ -70,7 +70,7 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Virtual references:_
 
-        * [`_beforeTransferTo`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
+        * [`_beforeTransferTo`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
 
     4.  Get a reference to the ETH amount that should be attached to the transaction. Only attach anything if the token being paid is ETH.
 
@@ -81,7 +81,7 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Library references:_
 
-        * [`JBTokens`](/dev/api/v2/libraries/jbtokens.md)
+        * [`JBTokens`](/dev/api/v3/libraries/jbtokens.md)
           * `.ETH`
     5.  Send the payment.
 
@@ -101,11 +101,11 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Internal references:_
 
-        * [`_PROTOCOL_PROJECT_ID`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_protocol_project_id.md)
+        * [`_PROTOCOL_PROJECT_ID`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_protocol_project_id.md)
         
         _External references:_
 
-        * [`pay`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
+        * [`pay`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
 
 
 </TabItem>

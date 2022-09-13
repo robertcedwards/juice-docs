@@ -2,8 +2,8 @@
 
 Emitted from:
 
-* [`setOperator`](/dev/api/v2/contracts/jboperatorstore/write/setoperator.md)
-* [`setOperators`](/dev/api/v2/contracts/jboperatorstore/write/setoperators.md)
+* [`setOperator`](/dev/api/v3/contracts/jboperatorstore/write/setoperator.md)
+* [`setOperators`](/dev/api/v3/contracts/jboperatorstore/write/setoperators.md)
 
 #### Definition
 

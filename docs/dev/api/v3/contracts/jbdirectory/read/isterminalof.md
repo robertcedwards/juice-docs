@@ -23,7 +23,7 @@ function isTerminalOf(uint256 _projectId, IJBPaymentTerminal _terminal)
   * `_terminal` is the address of the terminal to check for.
 * The view function can be accessed externally by anyone, and internally within this contract.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBDirectory`](/dev/api/v2/interfaces/ijbdirectory.md) interface.
+* The function overrides a function definition from the [`IJBDirectory`](/dev/api/v3/interfaces/ijbdirectory.md) interface.
 * The function returns a flag indicating whether or not the specified terminal is a terminal of the specified project.
 
 #### Body
@@ -37,7 +37,7 @@ function isTerminalOf(uint256 _projectId, IJBPaymentTerminal _terminal)
 
     _Internal references:_
 
-    * [`_terminalsOf`](/dev/api/v2/contracts/jbdirectory/properties/-_terminalsof.md)
+    * [`_terminalsOf`](/dev/api/v3/contracts/jbdirectory/properties/-_terminalsof.md)
 
 2.  Loop through each of the project's terminals looking for the one specified. If it's found, return true.
 

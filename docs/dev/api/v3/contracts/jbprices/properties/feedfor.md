@@ -1,8 +1,8 @@
 # feedFor
 
-Contract: [`JBPrices`](/dev/api/v2/contracts/jbprices/README.md)
+Contract: [`JBPrices`](/dev/api/v3/contracts/jbprices/README.md)
 
-Interface: [`IJBPrices`](/dev/api/v2/interfaces/ijbprices.md)
+Interface: [`IJBPrices`](/dev/api/v3/interfaces/ijbprices.md)
 
 **The available price feeds.**
 
@@ -26,4 +26,4 @@ mapping(uint256 => mapping(uint256 => IJBPriceFeed)) public override feedFor;
   * `uint256` is the currency units the feed's resulting price is in terms of.
   * `uint256` is the base currency unit being priced by the feed.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBPrices`](/dev/api/v2/interfaces/ijbprices.md) interface.
+* The resulting function overrides a function definition from the [`IJBPrices`](/dev/api/v3/interfaces/ijbprices.md) interface.

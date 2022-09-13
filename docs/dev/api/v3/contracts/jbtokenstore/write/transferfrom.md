@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/dev/api/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/dev/api/v3/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,19 +30,43 @@ function transferFrom(
   * `_projectId` is the ID of the project whose tokens are being transferred.
   * `_recipient` is thhe recipient of the tokens.
   * `_amount` is the amount of tokens to transfer.
-* Through the [`requirePermission`](/dev/api/v2/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the token holder, or from an operator that has been given the [`JBOperations.TRANSFER`](/dev/api/v2/libraries/jboperations.md) permission by the token holder. 
-* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md) interface.
+* Through the [`requirePermission`](/dev/api/v3/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the token holder, or from an operator that has been given the [`JBOperations.TRANSFER`](/dev/api/v3/libraries/jboperations.md) permission by the token holder. 
+* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
 
-1.  Make sure a non-zero recipient was specified.
+1.  Get a reference to the project's current funding cycle.
+    
+    ```
+    // Get a reference to the current funding cycle for the project.
+    JBFundingCycle memory _fundingCycle = fundingCycleStore.currentOf(_projectId);
+    ```
+
+    _Internal references:_
+
+    * [`fundingCycleStore`](/dev/api/v3/contracts/jbtokenstore/properties/fundingcyclestore.md)
+
+2.  Make sure the project's current funding cycle is not set to pause transfers.
+
+    ```
+    // Must not be paused.
+    if (_fundingCycle.global().pauseTransfers) revert TRANSFERS_PAUSED();
+    ```
+
+    _Library references:_
+
+    * [`JBFundingCycleMetadataResolver`](/dev/api/v3/libraries/jbfundingcyclemetadataresolver.md)
+      * `.global(...)`
+
+3.  Make sure a non-zero recipient was specified.
 
     ```
     // Can't transfer to the zero address.
     if (_recipient == address(0)) revert RECIPIENT_ZERO_ADDRESS();
     ```
-2.  Get a reference to the amount of unclaimed project tokens the holder has.
+
+4.  Get a reference to the amount of unclaimed project tokens the holder has.
 
     ```
     // Get a reference to the holder's unclaimed project token balance.
@@ -51,24 +75,27 @@ function transferFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
-3.  Make sure the holder has enough unclaimed tokens to transfer.
+    * [`unclaimedBalanceOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+
+5.  Make sure the holder has enough unclaimed tokens to transfer.
 
     ```
     // The holder must have enough unclaimed tokens to transfer.
     if (_amount > _unclaimedBalance) revert INSUFFICIENT_UNCLAIMED_TOKENS();
     ```
-4.  Subtract the amount from the holder's unclaimed balance of project tokens. 
+6.  Subtract the amount from the holder's unclaimed balance of project tokens. 
 
     ```
     // Subtract from the holder's unclaimed token balance.
-    unclaimedBalanceOf[_holder][_projectId] = unclaimedBalanceOf[_holder][_projectId] - _amount;
+    unchecked {
+      unclaimedBalanceOf[_holder][_projectId] = _unclaimedBalance - _amount;
+    }
     ```
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
-5.  Add the amount of unclaimed project tokens to the recipient's balance.
+    * [`unclaimedBalanceOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+7.  Add the amount of unclaimed project tokens to the recipient's balance.
 
     ```
     // Add the unclaimed project tokens to the recipient's balance.
@@ -79,8 +106,8 @@ function transferFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
-6.  Emit a `Transfer` event with the relevant parameters.
+    * [`unclaimedBalanceOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+8.  Emit a `Transfer` event with the relevant parameters.
 
     ```
     emit Transfer(_holder, _projectId, _recipient, _amount, msg.sender);
@@ -88,7 +115,7 @@ function transferFrom(
 
     _Event references:_
 
-    * [`Transfer`](/dev/api/v2/contracts/jbtokenstore/events/transfer.md)
+    * [`Transfer`](/dev/api/v3/contracts/jbtokenstore/events/transfer.md)
 
 </TabItem>
 
@@ -113,6 +140,12 @@ function transferFrom(
   address _recipient,
   uint256 _amount
 ) external override requirePermission(_holder, _projectId, JBOperations.TRANSFER) {
+  // Get a reference to the current funding cycle for the project.
+  JBFundingCycle memory _fundingCycle = fundingCycleStore.currentOf(_projectId);
+
+  // Must not be paused.
+  if (_fundingCycle.global().pauseTransfers) revert TRANSFERS_PAUSED();
+
   // Can't transfer to the zero address.
   if (_recipient == address(0)) revert RECIPIENT_ZERO_ADDRESS();
 
@@ -123,7 +156,9 @@ function transferFrom(
   if (_amount > _unclaimedBalance) revert INSUFFICIENT_UNCLAIMED_TOKENS();
 
   // Subtract from the holder's unclaimed token balance.
-  unclaimedBalanceOf[_holder][_projectId] = unclaimedBalanceOf[_holder][_projectId] - _amount;
+  unchecked {
+    unclaimedBalanceOf[_holder][_projectId] = _unclaimedBalance - _amount;
+  }
 
   // Add the unclaimed project tokens to the recipient's balance.
   unclaimedBalanceOf[_recipient][_projectId] =
@@ -142,6 +177,7 @@ function transferFrom(
 | ----------------------------------- | ------------------------------------------------------------ |
 | **`RECIPIENT_ZERO_ADDRESS`**        | Thrown if no recipient was speicified.                       |
 | **`INSUFFICIENT_UNCLAIMED_TOKENS`** | Thrown if the holder doesn't have enough tokens to transfer. |
+| **`TRANSFERS_PAUSED`** | Thrown if the project has paused transfers. |
 
 </TabItem>
 
@@ -149,7 +185,7 @@ function transferFrom(
 
 | Name                                    | Data                                                                                                                                                                                                                        |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Transfer`**](/dev/api/v2/contracts/jbtokenstore/events/transfer.md)                     | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>address indexed recipient</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                   |
+| [**`Transfer`**](/dev/api/v3/contracts/jbtokenstore/events/transfer.md)                     | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>address indexed recipient</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                   |
 
 </TabItem>
 

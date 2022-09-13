@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`issueFor`](/dev/api/v2/contracts/jbtokenstore/write/issuefor.md)
+* [`issueFor`](/dev/api/v3/contracts/jbtokenstore/write/issuefor.md)
 
 #### Definition
 

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBProjects`](/dev/api/v2/contracts/jbprojects/README.md)
+Contract: [`JBProjects`](/dev/api/v3/contracts/jbprojects/README.md)
 
-Interface: [`IJBProjects`](/dev/api/v2/interfaces/ijbprojects.md)
+Interface: [`IJBProjects`](/dev/api/v3/interfaces/ijbprojects.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -28,8 +28,8 @@ function setMetadataOf(uint256 _projectId, JBProjectMetadata calldata _metadata)
 * Arguments:
   * `_projectId` is the ID of the project who's metadata is being changed.
   * `_metadata` is the struct containing metadata content, and domain within which the metadata applies.
-* Through the [`requirePermission`](/dev/api/v2/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.SET_METADATA`](/dev/api/v2/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
-* The function overrides a function definition from the [`IJBProjects`](/dev/api/v2/interfaces/ijbprojects.md) interface.
+* Through the [`requirePermission`](/dev/api/v3/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.SET_METADATA`](/dev/api/v3/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* The function overrides a function definition from the [`IJBProjects`](/dev/api/v3/interfaces/ijbprojects.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -43,7 +43,7 @@ function setMetadataOf(uint256 _projectId, JBProjectMetadata calldata _metadata)
 
     _Internal references:_
 
-    * [`metadataContentOf`](/dev/api/v2/contracts/jbprojects/properties/metadatacontentof.md)
+    * [`metadataContentOf`](/dev/api/v3/contracts/jbprojects/properties/metadatacontentof.md)
 2.  Emit a `SetMetadataCid` event with the relevant parameters.
 
     ```
@@ -52,7 +52,7 @@ function setMetadataOf(uint256 _projectId, JBProjectMetadata calldata _metadata)
 
     _Event references:_
 
-    * [`SetMetadata`](/dev/api/v2/contracts/jbprojects/events/setmetadata.md)
+    * [`SetMetadata`](/dev/api/v3/contracts/jbprojects/events/setmetadata.md)
 
 </TabItem>
 
@@ -90,7 +90,7 @@ function setMetadataOf(uint256 _projectId, JBProjectMetadata calldata _metadata)
 
 | Name                                             | Data                                                                                                                                        |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetMetadata`**](/dev/api/v2/contracts/jbprojects/events/setmetadata.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>[JBProjectMetadata](/dev/api/v2/data-structures/jbprojectmetadata.md) metadata</code></li><li><code>address caller</code></li></ul>                                                                                                         |
+| [**`SetMetadata`**](/dev/api/v3/contracts/jbprojects/events/setmetadata.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>[JBProjectMetadata](/dev/api/v3/data-structures/jbprojectmetadata.md) metadata</code></li><li><code>address caller</code></li></ul>                                                                                                         |
 
 </TabItem>
 

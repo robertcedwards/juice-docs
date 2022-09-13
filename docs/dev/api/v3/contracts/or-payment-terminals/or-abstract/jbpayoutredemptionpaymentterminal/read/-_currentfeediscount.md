@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -34,16 +34,16 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256 f
 
     _Library references:_
 
-    * [`JBConstants`](/dev/api/v2/libraries/jbconstants.md)
+    * [`JBConstants`](/dev/api/v3/libraries/jbconstants.md)
       * `.MAX_FEE_DISCOUNT`
 
     _Internal references:_
 
-    * [`directory`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
+    * [`directory`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
 
     _External references:_
 
-    * [`primaryTerminalOf`](/dev/api/v2/contracts/jbdirectory/read/primaryterminalof.md)
+    * [`primaryTerminalOf`](/dev/api/v3/contracts/jbdirectory/read/primaryterminalof.md)
 2.  If there's a gauge, ask it for the discount. Otherwise, there is no discount. If the gauge reverts, set the discount to 0.
 
     ```
@@ -61,11 +61,11 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256 f
 
     _Internal references:_
 
-    * [`feeGauge`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/feegauge.md)
+    * [`feeGauge`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/feegauge.md)
 
     _External references:_
 
-    * [`currentDiscountFor`](/dev/api/v2/interfaces/ijbfeegauge.md)
+    * [`currentDiscountFor`](/dev/api/v3/interfaces/ijbfeegauge.md)
 
 3.  If there gauge provided an invalid discount, set the discount to 0.
 
@@ -76,7 +76,7 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256 f
 
     _Library references:_
 
-    * [`JBConstants`](/dev/api/v2/libraries/jbconstants.md)
+    * [`JBConstants`](/dev/api/v3/libraries/jbconstants.md)
       * `.MAX_FEE_DISCOUNT`
 
 </TabItem>

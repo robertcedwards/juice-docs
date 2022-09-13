@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/dev/api/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/dev/api/v3/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,8 +30,8 @@ function mintFor(
   * `_projectId` is the ID of the project to which the tokens belong.
   * `_amount` is the amount of tokens to mint.
   * `_preferClaimedTokens` is a flag indicating whether there's a preference for minted tokens to be claimed automatically into the `_holder`s wallet if the project currently has a token contract attached.
-* Through the [`onlyController`](/dev/api/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md) interface.
+* Through the [`onlyController`](/dev/api/v3/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -45,18 +45,14 @@ function mintFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/dev/api/v2/contracts/jbtokenstore/properties/tokenof.md)
-2.  Check if tokens should be minted using the internal accounting mechanism, or if they should be claimed into the holder's wallet. Tokens should be claimed if the project has issued tokens, and either the project forces tokens to be claimed or if the `_preferClaimedTokens` flag is true. The internal accounting mechanism uses less gas, and tokens issued using it can later be claimed into the holders wallet by anyone who submits a [`claimFor`](/dev/api/v2/contracts/jbtokenstore/write/claimfor.md) transaction.
+    * [`tokenOf`](/dev/api/v3/contracts/jbtokenstore/properties/tokenof.md)
+2.  Check if tokens should be minted using the internal accounting mechanism, or if they should be claimed into the holder's wallet. Tokens should be claimed if the project has issued tokens, and if the `_preferClaimedTokens` flag is true. The internal accounting mechanism uses less gas, and tokens issued using it can later be claimed into the holders wallet by anyone who submits a [`claimFor`](/dev/api/v3/contracts/jbtokenstore/write/claimfor.md) transaction.
 
     ```
-    // Save a reference to whether there exists a token and the caller prefers these claimed tokens or the project requires it.
-    bool _shouldClaimTokens = (requireClaimFor[_projectId] || _preferClaimedTokens) &&
-      _token != IJBToken(address(0));
+    // Save a reference to whether there exists a token and the caller prefers these claimed tokens.
+    bool _shouldClaimTokens = _preferClaimedTokens && _token != IJBToken(address(0));
     ```
 
-    _Internal references:_
-
-    * [`requireClaimFor`](/dev/api/v2/contracts/jbtokenstore/properties/requireclaimfor.md)
 3.  If claimed tokens should be minted, mint the project's token into the holders wallet. Otherwise increment the holder's balance or the unclaimed tokens for the project, and the total supply of unclaimed tokens for the project.
 
     ```
@@ -72,13 +68,25 @@ function mintFor(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
-    * [`unclaimedTotalSupplyOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
+    * [`unclaimedBalanceOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedTotalSupplyOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
 
     _External references:_
 
-    * [`mint`](/dev/api/v2/contracts/jbtoken/write/mint.md)
-4.  Emit a `Mint` event with the relevant parameters.
+    * [`mint`](/dev/api/v3/contracts/jbtoken/write/mint.md)
+
+4.  Make sure the mint doesn't cause an accounting overflow.
+
+    ```
+    // The total supply can't exceed the maximum value storable in a int256.
+    if (totalSupplyOf(_projectId) > type(uint224).max) revert OVERFLOW_ALERT();
+    ```
+
+    _Internal references:_
+
+    * [`totalSupplyOf`](/dev/api/v3/contracts/jbtokenstore/read/totalsupplyof.md)
+
+5.  Emit a `Mint` event with the relevant parameters.
 
     ```
     emit Mint(_holder, _projectId, _amount, _shouldClaimTokens, _preferClaimedTokens, msg.sender);
@@ -86,7 +94,7 @@ function mintFor(
 
     _Event references:_
 
-    * [`Mint`](/dev/api/v2/contracts/jbtokenstore/events/mint.md)
+    * [`Mint`](/dev/api/v3/contracts/jbtokenstore/events/mint.md)
 
 </TabItem>
 
@@ -114,9 +122,8 @@ function mintFor(
   // Get a reference to the project's current token.
   IJBToken _token = tokenOf[_projectId];
 
-  // Save a reference to whether there exists a token and the caller prefers these claimed tokens or the project requires it.
-  bool _shouldClaimTokens = (requireClaimFor[_projectId] || _preferClaimedTokens) &&
-    _token != IJBToken(address(0));
+  // Save a reference to whether there exists a token and the caller prefers these claimed tokens.
+  bool _shouldClaimTokens = _preferClaimedTokens && _token != IJBToken(address(0));
 
   if (_shouldClaimTokens) 
     // If tokens should be claimed, mint tokens into the holder's wallet.
@@ -127,9 +134,20 @@ function mintFor(
     unclaimedTotalSupplyOf[_projectId] = unclaimedTotalSupplyOf[_projectId] + _amount;
   }
 
+  // The total supply can't exceed the maximum value storable in a int256.
+  if (totalSupplyOf(_projectId) > type(uint224).max) revert OVERFLOW_ALERT();
+
   emit Mint(_holder, _projectId, _amount, _shouldClaimTokens, _preferClaimedTokens, msg.sender);
 }
 ```
+
+</TabItem>
+
+<TabItem value="Errors" label="Errors">
+
+| String                     | Description                                        |
+| -------------------------- | -------------------------------------------------- |
+| **`OVERFLOW_ALERT`** | Thrown if the mint leads to overflowed accounting.  |
 
 </TabItem>
 
@@ -137,7 +155,7 @@ function mintFor(
 
 | Name                            | Data                                                                                                                                                                                                                                                                   |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Mint`**](/dev/api/v2/contracts/jbtokenstore/events/mint.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>bool tokensWereClaimed</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul>        |
+| [**`Mint`**](/dev/api/v3/contracts/jbtokenstore/events/mint.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>bool tokensWereClaimed</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul>        |
 
 </TabItem>
 

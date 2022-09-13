@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/dev/api/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/dev/api/v3/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,8 +30,8 @@ function burnFrom(
   * `_projectId` is the ID of the project to which the burned tokens belong.
   * `_amount` is the amount of tokens to burn.
   * `_preferClaimedTokens` is a flag indicating whether there's a preference for tokens to burned from the `_holder`s wallet if the project currently has a token contract attached.
-* Through the [`onlyController`](/dev/api/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md) interface.
+* Through the [`onlyController`](/dev/api/v3/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -45,7 +45,7 @@ function burnFrom(
 
     _Internal references:_
 
-    * [`tokenOf`](/dev/api/v2/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/dev/api/v3/contracts/jbtokenstore/properties/tokenof.md)
 2.  Get a reference to the amount of unclaimed project tokens the holder has.
 
     ```
@@ -55,7 +55,7 @@ function burnFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedBalanceOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
 3.  Get a reference to the amount of the project's tokens the holder has in their wallet. If the project does not yet have tokens issued, the holder must not have a claimed balance.
 
     ```
@@ -67,7 +67,7 @@ function burnFrom(
 
     _External references:_
 
-    * [`balanceOf`](/dev/api/v2/contracts/jbtoken/read/balanceof.md)
+    * [`balanceOf`](/dev/api/v3/contracts/jbtoken/read/balanceof.md)
 4.  Make sure the holder has enough tokens to burn. 
 
     ```
@@ -75,28 +75,35 @@ function burnFrom(
     if (_amount > _claimedBalance + _unclaimedBalance) revert INSUFFICIENT_FUNDS();
     ```
 
-5.  Find the amount of claimed tokens that should be burned. This will be 0 if the holder has no claimed balance, an amount up to the holder's claimed balance if there is a preference for burning claimed tokens, or the difference between the amount being burned and the holder's unclaimed balance otherwise.
+5.  Find the amount of claimed tokens that should be burned. This will remain 0 if the holder has no claimed balance, an amount up to the holder's claimed balance if there is a preference for burning claimed tokens, or the difference between the amount being burned and the holder's unclaimed balance otherwise.
 
     ```
     // The amount of tokens to burn.
     uint256 _claimedTokensToBurn;
 
-    // If there's no balance, redeem no tokens.
-    if (_claimedBalance == 0)
-      _claimedTokensToBurn = 0;
-      // If prefer converted, redeem tokens before redeeming unclaimed tokens.
-    else if (_preferClaimedTokens)
-      _claimedTokensToBurn = _claimedBalance < _amount ? _claimedBalance : _amount;
-      // Otherwise, redeem unclaimed tokens before claimed tokens.
-    else _claimedTokensToBurn = _unclaimedBalance < _amount ? _amount - _unclaimedBalance : 0;
+    // Get a reference to how many claimed tokens should be burned.
+    if (_claimedBalance != 0)
+      if (_preferClaimedTokens)
+        // If prefer converted, redeem tokens before redeeming unclaimed tokens.
+        _claimedTokensToBurn = _claimedBalance < _amount ? _claimedBalance : _amount;
+        // Otherwise, redeem unclaimed tokens before claimed tokens.
+      else {
+        unchecked {
+          _claimedTokensToBurn = _unclaimedBalance < _amount ? _amount - _unclaimedBalance : 0;
+        }
+      }
     ```
 6.  The amount of unclaimed tokens to burn is necessarily the amount of tokens to burn minus the amount of claimed tokens to burn.
 
     ```
     // The amount of unclaimed tokens to redeem.
-    uint256 _unclaimedTokensToBurn = _amount - _claimedTokensToBurn;
+    uint256 _unclaimedTokensToBurn;
+    unchecked {
+      _unclaimedTokensToBurn = _amount - _claimedTokensToBurn;
+    }
     ```
-7.  If there are unclaimed tokens to burn, subtract the amount from the unclaimed balance of the holder for the project, and from the unclaimed total supply of the project.
+
+7.  If there are claimed tokens to burn, get a reference to the quantity. 
 
     ```
     // Subtract the tokens from the unclaimed balance and total supply.
@@ -113,8 +120,8 @@ function burnFrom(
 
     _Internal references:_
 
-    * [`unclaimedBalanceOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
-    * [`unclaimedTotalSupplyOf`](/dev/api/v2/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
+    * [`unclaimedBalanceOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedbalanceof.md)
+    * [`unclaimedTotalSupplyOf`](/dev/api/v3/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
 8.  If there are claimed tokens to burn, burn them from the holder's wallet.
 
     ```
@@ -124,7 +131,7 @@ function burnFrom(
 
     _External references:_
 
-    * [`burn`](/dev/api/v2/contracts/jbtoken/write/burn.md)
+    * [`burn`](/dev/api/v3/contracts/jbtoken/write/burn.md)
 9.  Emit a `Burn` event with the relevant parameters.
 
     ```
@@ -141,7 +148,7 @@ function burnFrom(
 
     _Event references:_
 
-    * [`Burn`](/dev/api/v2/contracts/jbtokenstore/events/burn.md)
+    * [`Burn`](/dev/api/v3/contracts/jbtokenstore/events/burn.md)
 
 </TabItem>
 
@@ -183,17 +190,23 @@ function burnFrom(
   // The amount of tokens to burn.
   uint256 _claimedTokensToBurn;
 
-  // If there's no balance, redeem no tokens.
-  if (_claimedBalance == 0)
-    _claimedTokensToBurn = 0;
-    // If prefer converted, redeem tokens before redeeming unclaimed tokens.
-  else if (_preferClaimedTokens)
-    _claimedTokensToBurn = _claimedBalance < _amount ? _claimedBalance : _amount;
-    // Otherwise, redeem unclaimed tokens before claimed tokens.
-  else _claimedTokensToBurn = _unclaimedBalance < _amount ? _amount - _unclaimedBalance : 0;
+  // Get a reference to how many claimed tokens should be burned.
+  if (_claimedBalance != 0)
+    if (_preferClaimedTokens)
+      // If prefer converted, redeem tokens before redeeming unclaimed tokens.
+      _claimedTokensToBurn = _claimedBalance < _amount ? _claimedBalance : _amount;
+      // Otherwise, redeem unclaimed tokens before claimed tokens.
+    else {
+      unchecked {
+        _claimedTokensToBurn = _unclaimedBalance < _amount ? _amount - _unclaimedBalance : 0;
+      }
+    }
 
   // The amount of unclaimed tokens to redeem.
-  uint256 _unclaimedTokensToBurn = _amount - _claimedTokensToBurn;
+  uint256 _unclaimedTokensToBurn;
+  unchecked {
+    _unclaimedTokensToBurn = _amount - _claimedTokensToBurn;
+  }
 
   // Subtract the tokens from the unclaimed balance and total supply.
   if (_unclaimedTokensToBurn > 0) {
@@ -235,7 +248,7 @@ function burnFrom(
 
 | Name                            | Data                                                                                                                                                                                                                                                                          |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Burn`**](/dev/api/v2/contracts/jbtokenstore/events/burn.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>uint256 initialUnclaimedBalance</code></li><li><code>uint256 initialClaimedBalance</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul> |
+| [**`Burn`**](/dev/api/v3/contracts/jbtokenstore/events/burn.md)                             | <ul><li><code>address indexed holder</code></li><li><code>uint256 indexed projectId</code></li><li><code>uint256 amount</code></li><li><code>uint256 initialUnclaimedBalance</code></li><li><code>uint256 initialClaimedBalance</code></li><li><code>bool preferClaimedTokens</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayer`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/README.md)
+Contract: [`JBETHERC20SplitsPayer`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/README.md)
 
-Interface: [`IJBSplitsPayer`](/dev/api/v2/interfaces/ijbsplitspayer.md)
+Interface: [`IJBSplitsPayer`](/dev/api/v3/interfaces/ijbsplitspayer.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -40,7 +40,7 @@ function pay(
   * `_metadata` are bytes to send along to the data source, delegate, and emitted event, if provided.
 * The function can be accessed externally by anyone, or internally from this contract or one that inherits it.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBProjectPayer`](/dev/api/v2/interfaces/ijbprojectpayer.md) interface.
+* The function overrides a function definition from the [`IJBProjectPayer`](/dev/api/v3/interfaces/ijbprojectpayer.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -69,7 +69,7 @@ function pay(
 
     _Library references:_
 
-    * [`JBTokens`](/dev/api/v2/libraries/jbtokens.md)
+    * [`JBTokens`](/dev/api/v3/libraries/jbtokens.md)
       * `.ETH`
 
     _External references:_
@@ -94,11 +94,11 @@ function pay(
 
     _Internal references:_
 
-    * [`defaultSplitsProjectId`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
-    * [`defaultSplitsDomain`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
-    * [`defaultSplitsGroup`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
-    * [`defaultBeneficiary`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`_payToSplits`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
+    * [`defaultSplitsProjectId`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
+    * [`defaultSplitsDomain`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
+    * [`defaultSplitsGroup`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
+    * [`defaultBeneficiary`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`_payToSplits`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
 
 3.  If there's any leftover amount, pay the specified project. If no project is specified, send the leftover funds to the beneficiary or the tx.origin.
 
@@ -141,14 +141,14 @@ function pay(
 
     _Library references:_
 
-    * [`JBTokens`](/dev/api/v2/libraries/jbtokens.md)
+    * [`JBTokens`](/dev/api/v3/libraries/jbtokens.md)
       * `.ETH`
     * [`Address`](https://docs.openzeppelin.com/contracts/4.x/api/utils#Address)
       * `.sendValue(...)`
 
     _Internal references:_
 
-    * [`_pay`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
+    * [`_pay`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
 
     _External references:_
 
@@ -174,7 +174,7 @@ function pay(
 
     _Event references:_
 
-    * [`Pay`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/events/pay.md)
+    * [`Pay`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/pay.md)
     
 </TabItem>
 
@@ -300,7 +300,7 @@ function pay(
 
 | Name                                                                          | Data                                                                                          |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [**`Pay`**](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/events/pay.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>address beneficiary</code></li><li><code>address token</code></li><li><code>uint256 amount</code></li><li><code>uint256 decimals</code></li><li><code>uint256 leftoverAmount</code></li><li><code>uint256 minReturnedTokens</code></li><li><code>bool preferClaimedTokens</code></li><li><code>string memo</code></li><li><code>bytes metadata</code></li><li><code>address caller</code></li></ul>                  |
+| [**`Pay`**](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/pay.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>address beneficiary</code></li><li><code>address token</code></li><li><code>uint256 amount</code></li><li><code>uint256 decimals</code></li><li><code>uint256 leftoverAmount</code></li><li><code>uint256 minReturnedTokens</code></li><li><code>bool preferClaimedTokens</code></li><li><code>string memo</code></li><li><code>bytes metadata</code></li><li><code>address caller</code></li></ul>                  |
 
 </TabItem>
 

@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`pay`](/dev/api/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/pay.md)
+* [`pay`](/dev/api/v3/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/pay.md)
 
 #### Definition
 

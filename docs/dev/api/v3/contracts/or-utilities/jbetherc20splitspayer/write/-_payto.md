@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayer`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/README.md)
+Contract: [`JBETHERC20SplitsPayer`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/README.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -142,25 +142,25 @@ function _payTo(
 
     _Library references:_
 
-    * [`JBTokens`](/dev/api/v2/libraries/jbtokens.md)
+    * [`JBTokens`](/dev/api/v3/libraries/jbtokens.md)
       * `.ETH`
     * [`Address`](https://docs.openzeppelin.com/contracts/4.x/api/utils#Address)
       * `.sendValue(...)`
 
     _Internal references:_
 
-    * [`_pay`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
-    * [`_addToBalanceOf`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
+    * [`_pay`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
+    * [`_addToBalanceOf`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
 
     _External references:_
 
     * [`safeApprove`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeApprove-contract-IERC20-address-uint256-)
     * [`safeTransfer`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#SafeERC20-safeTransfer-contract-IERC20-address-uint256-)
-    * [`allocate`](/dev/api/v2/interfaces/ijbsplitallocator.md)
+    * [`allocate`](/dev/api/v3/interfaces/ijbsplitallocator.md)
 
     _Event references:_
 
-    * [`DistributeToSplit`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplit.md)
+    * [`DistributeToSplit`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplit.md)
     
 </TabItem>
 
@@ -292,7 +292,7 @@ function _payTo(
 
 | Name                                                                          | Data                                                                                          |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [**`DistributeToSplit`**](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplit.md)                                                                          | <ul><li><code>[JBSplit](/dev/api/v2/data-structures/jbsplit.md) split</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                  |
+| [**`DistributeToSplit`**](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplit.md)                                                                          | <ul><li><code>[JBSplit](/dev/api/v3/data-structures/jbsplit.md) split</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                  |
 
 </TabItem>
 

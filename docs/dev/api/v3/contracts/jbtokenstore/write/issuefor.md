@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/dev/api/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/dev/api/v3/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -14,7 +14,7 @@ Interface: [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md)
 
 _Deploys a project's ERC-20 token contract._
 
-_Only a project's current controller can issue its token._
+_Only a project's owner or operator can issue its token._
 
 ### Definition
 
@@ -23,15 +23,20 @@ function issueFor(
   uint256 _projectId,
   string calldata _name,
   string calldata _symbol
-) external override onlyController(_projectId) returns (IJBToken token) { ... }
+)
+  external
+  override
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.ISSUE)
+  returns (IJBToken token)
+{ ... }
 ```
 
 * Arguments:
   * `_projectId` is the ID of the project being issued tokens.
   * `_name` is the ERC-20's name.
   * `_symbol` is the ERC-20's symbol.
-* Through the [`onlyController`](/dev/api/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md) interface.
+* Through the [`requirePermission`](/dev/api/v3/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.ISSUE`](/dev/api/v3/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md) interface.
 * The function returns the token that was issued.
 
 #### Body
@@ -57,12 +62,12 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/dev/api/v2/contracts/jbtokenstore/properties/tokenof.md)
-4.  Deploy a new instance of a [`JBToken`](/dev/api/v2/contracts/jbtoken/) contract. Assign it to the return value.
+    * [`tokenOf`](/dev/api/v3/contracts/jbtokenstore/properties/tokenof.md)
+4.  Deploy a new instance of a [`JBToken`](/dev/api/v3/contracts/jbtoken/) contract. Assign it to the return value.
 
     ```
     // Deploy the token contract.
-    token = new JBToken(_name, _symbol);
+    token = new JBToken(_name, _symbol, _projectId);
     ```
 5.  Store the newly deployed token contract as the token of the project.
 
@@ -73,18 +78,8 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/dev/api/v2/contracts/jbtokenstore/properties/tokenof.md)
-6.  Store the project the token is being used for.
-
-    ```
-    // Store the project for the token.
-    projectOf[token] = _projectId;
-    ```
-
-    _Internal references:_
-
-    * [`projectOf`](/dev/api/v2/contracts/jbtokenstore/properties/projectof.md)
-7.  Emit an `Issue` event with the relevant parameters.
+    * [`tokenOf`](/dev/api/v3/contracts/jbtokenstore/properties/tokenof.md)
+6.  Emit an `Issue` event with the relevant parameters.
 
     ```
     emit Issue(_projectId, token, _name, _symbol, msg.sender);
@@ -92,7 +87,7 @@ function issueFor(
 
     _Event references:_
 
-    * [`Issue`](/dev/api/v2/contracts/jbtokenstore/events/issue.md)
+    * [`Issue`](/dev/api/v3/contracts/jbtokenstore/events/issue.md)
 
 </TabItem>
 
@@ -107,7 +102,7 @@ function issueFor(
   Deploys a project's ERC-20 token contract.
 
   @dev
-  Only a project's current controller can issue its token.
+  Only a project's owner or operator can issue its token.
 
   @param _projectId The ID of the project being issued tokens.
   @param _name The ERC-20's name.
@@ -119,7 +114,12 @@ function issueFor(
   uint256 _projectId,
   string calldata _name,
   string calldata _symbol
-) external override onlyController(_projectId) returns (IJBToken token) {
+)
+  external
+  override
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.ISSUE)
+  returns (IJBToken token)
+{
   // There must be a name.
   if (bytes(_name).length == 0) revert EMPTY_NAME();
 
@@ -130,13 +130,10 @@ function issueFor(
   if (tokenOf[_projectId] != IJBToken(address(0))) revert PROJECT_ALREADY_HAS_TOKEN();
 
   // Deploy the token contract.
-  token = new JBToken(_name, _symbol);
+  token = new JBToken(_name, _symbol, _projectId);
 
   // Store the token contract.
   tokenOf[_projectId] = token;
-
-  // Store the project for the token.
-  projectOf[token] = _projectId;
 
   emit Issue(_projectId, token, _name, _symbol, msg.sender);
 }
@@ -158,7 +155,7 @@ function issueFor(
 
 | Name                              | Data                                                                                                                                                                                                         |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`Issue`**](/dev/api/v2/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/dev/api/v2/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
+| [**`Issue`**](/dev/api/v3/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/dev/api/v3/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
 
 </TabItem>
 

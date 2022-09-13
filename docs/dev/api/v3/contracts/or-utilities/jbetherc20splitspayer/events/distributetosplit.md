@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_payTo`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_payto.md)
+* [`_payTo`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/write/-_payto.md)
 
 #### Definition
 
@@ -15,7 +15,7 @@ event DistributeToSplit(
 );
 ```
 
-* `split` is the [`JBSplit`](/dev/api/v2/data-structures/jbsplit.md) to which the distribution was made.
+* `split` is the [`JBSplit`](/dev/api/v3/data-structures/jbsplit.md) to which the distribution was made.
 * `amount` is the total token amount that was distributed to the split.
 * `defaultBeneficiary` is the address that'll be sent tokens if the split doesn't specify a recipient.
 * `caller` is the address that issued the transaction within which the event was emitted.

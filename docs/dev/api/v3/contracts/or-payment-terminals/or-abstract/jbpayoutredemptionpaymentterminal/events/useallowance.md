@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_useAllowanceOf`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_useallowanceof.md)
+* [`_useAllowanceOf`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_useallowanceof.md)
 
 #### Definition
 

@@ -3,7 +3,7 @@
 
 Emitted from:
 
-* [`releaseV1TokensOf`](/dev/api/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/pay.md)
+* [`releaseV1TokensOf`](/dev/api/v3/contracts/or-payment-terminals/jbv1tokenpaymentterminal/write/pay.md)
 
 #### Definition
 

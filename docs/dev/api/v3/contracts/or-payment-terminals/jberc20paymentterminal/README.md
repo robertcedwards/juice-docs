@@ -14,7 +14,7 @@ Ethereum mainnet: _Not yet deployed_
 
 | Contract                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/api/v2/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
+| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/api/v3/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
 
 #### Constructor
 
@@ -63,20 +63,13 @@ constructor(
 ```
 
 * `_token` is the ERC20 token that this terminal manages.
-* `_currency` is the currency that this terminal's token adheres to for price feeds. From [`JBCurrencies`](/dev/api/v2/libraries/jbcurrencies.md).
-* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/dev/api/v2/libraries/jbcurrencies.md).
-* `_payoutSplitsGroup` is the group that denotes payout splits from this terminal in the splits store. From [`JBSplitGroups`](/dev/api/v2/libraries/jbsplitsgroups.md).
-* `_operatorStore` is an [`IJBOperatorStore`](/dev/api/v2/interfaces/ijboperatorstore.md) contract storing operator assignments.
-* `_projects` is an [`IJBProjects`](/dev/api/v2/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
-* `_directory` is an [`IJBDirectory`](/dev/api/v2/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
-* `_splitsStore` is an [`IJBSplitsStore`](/dev/api/v2/interfaces/ijbsplitsstore/) contract that stores splits for each project.
-* `_prices` is an [`IJBPrices`](/dev/api/v2/interfaces/ijbprices.md) contract that exposes price feeds.
+* `_currency` is the currency that this terminal's token adheres to for price feeds. From [`JBCurrencies`](/dev/api/v3/libraries/jbcurrencies.md).
+* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/dev/api/v3/libraries/jbcurrencies.md).
+* `_payoutSplitsGroup` is the group that denotes payout splits from this terminal in the splits store. From [`JBSplitGroups`](/dev/api/v3/libraries/jbsplitsgroups.md).
+* `_operatorStore` is an [`IJBOperatorStore`](/dev/api/v3/interfaces/ijboperatorstore.md) contract storing operator assignments.
+* `_projects` is an [`IJBProjects`](/dev/api/v3/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
+* `_directory` is an [`IJBDirectory`](/dev/api/v3/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
+* `_splitsStore` is an [`IJBSplitsStore`](/dev/api/v3/interfaces/ijbsplitsstore/) contract that stores splits for each project.
+* `_prices` is an [`IJBPrices`](/dev/api/v3/interfaces/ijbprices.md) contract that exposes price feeds.
 * `_store` is a contract that stores the terminal's data.
 * `_owner` is the address that will own this contract.
-
-#### Write
-
-| Function                                                  | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`_transferFrom`**](/dev/api/v2/contracts/or-payment-terminals/jberc20paymentterminal/write/-_transferfrom.md) | <p><strong>Traits</strong></p><ul><li><code>internal</code></li></ul> <p><strong>Params</strong></p><ul><li><code>address _from</code></li><li><code>address payable _to</code></li><li><code>uint256 _amount</code></li></ul>                                                                                                                                                                                                                  |
-| [**`_beforeTransferTo`**](/dev/api/v2/contracts/or-payment-terminals/jberc20paymentterminal/write/-_beforetransferto.md) | <p><strong>Traits</strong></p><ul><li><code>internal</code></li><li><code>virtual</code></li></ul> <p><strong>Params</strong></p><ul><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul>                                                                                                                                                                                                                  |

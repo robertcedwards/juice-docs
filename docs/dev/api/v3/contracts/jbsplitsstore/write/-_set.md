@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSplitsStore`](/dev/api/v2/contracts/jbsplitsstore/README.md)​‌
+Contract: [`JBSplitsStore`](/dev/api/v3/contracts/jbsplitsstore/README.md)​‌
 
-Interface: [`IJBSplitsStore`](/dev/api/v2/interfaces/ijbsplitsstore.md)
+Interface: [`IJBSplitsStore`](/dev/api/v3/interfaces/ijbsplitsstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -29,7 +29,7 @@ function _set(
   * `_projectId` is the ID of the project for which splits are being added.
   * `_domain` is an identifier within which the splits should be considered active.
   * `_group` is an identifier between of splits being set. All splits within this `_group` must add up to within 100%.
-  * `_splits` are the [`JBSplit`](/dev/api/v2/data-structures/jbsplit.md)s to set.
+  * `_splits` are the [`JBSplit`](/dev/api/v3/data-structures/jbsplit.md)s to set.
 * The resulting function is internal to this contract and its inheriters. 
 * The function doesn't return anything.
 
@@ -44,7 +44,7 @@ function _set(
 
     _Internal references:_
 
-    * [`_getStructsFor`](/dev/api/v2/contracts/jbsplitsstore/read/-_getstructsfor.md)
+    * [`_getStructsFor`](/dev/api/v3/contracts/jbsplitsstore/read/-_getstructsfor.md)
 
 2.  Keep a reference to the number of current splits.
 
@@ -71,7 +71,7 @@ function _set(
 
         _Internal references:_
 
-        * [`_includesLocked`](/dev/api/v2/contracts/jbsplitsstore/read/-_includeslocked.md)
+        * [`_includesLocked`](/dev/api/v3/contracts/jbsplitsstore/read/-_includeslocked.md)
 
     2.  Increment the loop counter.
 
@@ -128,7 +128,7 @@ function _set(
 
         _Library references:_
 
-        * [`JBConstants`](/dev/api/v2/libraries/jbconstants.md)
+        * [`JBConstants`](/dev/api/v3/libraries/jbconstants.md)
           * `.SPLITS_TOTAL_PERCENT`
     5.  Pack common split properties into a storage slot.
 
@@ -153,7 +153,7 @@ function _set(
 
         _Internal references:_
 
-        * [`_packedSplitParts1Of`](/dev/api/v2/contracts/jbsplitsstore/properties/-_packedsplitparts1of.md)
+        * [`_packedSplitParts1Of`](/dev/api/v3/contracts/jbsplitsstore/properties/-_packedsplitparts1of.md)
     6.  Pack less common split properties into another storage slot if needed. Otherwise, delete any content in storage at the index being iterated on.
 
        ```
@@ -177,7 +177,7 @@ function _set(
 
        _Internal references:_
 
-       * [`_packedSplitParts2Of`](/dev/api/v2/contracts/jbsplitsstore/properties/-_packedsplitparts2of.md)
+       * [`_packedSplitParts2Of`](/dev/api/v3/contracts/jbsplitsstore/properties/-_packedsplitparts2of.md)
     7.  For each added split, emit a `SetSplit` event with all relevant parameters.
 
         ```
@@ -186,7 +186,7 @@ function _set(
 
         _Event references:_
 
-        * [`SetSplit`](/dev/api/v2/contracts/jbsplitsstore/events/setsplit.md)
+        * [`SetSplit`](/dev/api/v3/contracts/jbsplitsstore/events/setsplit.md)
       
     8.  Increment the loop counter.
         
@@ -205,7 +205,7 @@ function _set(
 
     _Internal references:_
 
-    * [`_splitCountOf`](/dev/api/v2/contracts/jbsplitsstore/properties/-_splitcountof.md)
+    * [`_splitCountOf`](/dev/api/v3/contracts/jbsplitsstore/properties/-_splitcountof.md)
 
 </TabItem>
 
@@ -331,7 +331,7 @@ function _set(
 
 | Name                                    | Data                                                                                                                                                                                                                 |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetSplit`**](/dev/api/v2/contracts/jbsplitsstore/events/setsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/dev/api/v2/data-structures/jbsplit.md) split</code></li><li><code>address caller</code></li></ul> |
+| [**`SetSplit`**](/dev/api/v3/contracts/jbsplitsstore/events/setsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/dev/api/v3/data-structures/jbsplit.md) split</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

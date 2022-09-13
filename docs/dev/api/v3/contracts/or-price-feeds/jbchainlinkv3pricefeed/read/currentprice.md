@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBChainlinkV3PriceFeed`](/dev/api/v2/contracts/or-price-feeds/jbchainlinkv3pricefeed/README.md)​‌
+Contract: [`JBChainlinkV3PriceFeed`](/dev/api/v3/contracts/or-price-feeds/jbchainlinkv3pricefeed/README.md)​‌
 
-Interface: [`IJBPriceFeed`](/dev/api/v2/interfaces/ijbpricefeed.md)
+Interface: [`IJBPriceFeed`](/dev/api/v3/interfaces/ijbpricefeed.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -22,7 +22,7 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
   * `_decimals` is the number of decimals the returned fixed point price should include.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBPriceFeed`](/dev/api/v2/interfaces/ijbpricefeed.md) interface.
+* The function overrides a function definition from the [`IJBPriceFeed`](/dev/api/v3/interfaces/ijbpricefeed.md) interface.
 * The function returns the current price of the feed, as a fixed point number with the specified number of decimals.
 
 #### Body
@@ -37,7 +37,7 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
 
     _Internal references:_
 
-    * [`feed`](/dev/api/v2/contracts/or-price-feeds/jbchainlinkv3pricefeed/properties/feed.md)
+    * [`feed`](/dev/api/v3/contracts/or-price-feeds/jbchainlinkv3pricefeed/properties/feed.md)
 
     _External references:_
 
@@ -72,7 +72,7 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
 
     _Internal references:_
 
-    * [`feed`](/dev/api/v2/contracts/or-price-feeds/jbchainlinkv3pricefeed/properties/feed.md)
+    * [`feed`](/dev/api/v3/contracts/or-price-feeds/jbchainlinkv3pricefeed/properties/feed.md)
 
     _External references:_
 
@@ -86,7 +86,7 @@ function currentPrice(uint256 _decimals) external view override returns (uint256
 
     _Library references:_
 
-    * [`JBFixedPointNumber`](/dev/api/v2/libraries/jbfixedpointnumber.md)
+    * [`JBFixedPointNumber`](/dev/api/v3/libraries/jbfixedpointnumber.md)
       * `.adjustDecimals(...)`
 
 </TabItem>

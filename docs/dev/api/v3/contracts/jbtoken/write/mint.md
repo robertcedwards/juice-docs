@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBToken`](/dev/api/v2/contracts/jbtoken/README.md)​‌
+Contract: [`JBToken`](/dev/api/v3/contracts/jbtoken/README.md)​‌
 
-Interface: [`IJBToken`](/dev/api/v2/interfaces/ijbtoken.md)
+Interface: [`IJBToken`](/dev/api/v3/interfaces/ijbtoken.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -29,7 +29,7 @@ function mint(
   * `_account` is the account to mint the tokens for.
   * `_amount` is the amount of tokens to mint, as a fixed point number with 18 decimals.
 * Through the [`onlyOwner`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--) modifier, this function can only be accessed by the address that owns this contract.
-* The function overrides a function definition from the [`IJBToken`](/dev/api/v2/interfaces/ijbtoken.md) interface.
+* The function overrides a function definition from the [`IJBToken`](/dev/api/v3/interfaces/ijbtoken.md) interface.
 * The function doesn't return anything.
 
 #### Body

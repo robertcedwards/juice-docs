@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPrices`](/dev/api/v2/contracts/jbprices/README.md)​‌
+Contract: [`JBPrices`](/dev/api/v3/contracts/jbprices/README.md)​‌
 
-Interface: [`IJBPrices`](/dev/api/v2/interfaces/ijbprices.md)
+Interface: [`IJBPrices`](/dev/api/v3/interfaces/ijbprices.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -27,9 +27,9 @@ function addFeedFor(
 * Arguments:
   * `_currency` is the currency that the price feed is for.
   * `_base` is the currency that the price feed is based on.
-  * `_feed` is the [`IJBPriceFeed`](/dev/api/v2/interfaces/ijbpricefeed.md) contract being added.
+  * `_feed` is the [`IJBPriceFeed`](/dev/api/v3/interfaces/ijbpricefeed.md) contract being added.
 * Through the [`onlyOwner`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--) modifier, this function can only be accessed by the address that owns this contract.
-* The function overrides a function definition from the [`IJBPrices`](/dev/api/v2/interfaces/ijbprices.md) interface.
+* The function overrides a function definition from the [`IJBPrices`](/dev/api/v3/interfaces/ijbprices.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -46,7 +46,7 @@ function addFeedFor(
 
     _Internal references:_
 
-    * [`feedFor`](/dev/api/v2/contracts/jbprices/properties/feedfor.md)
+    * [`feedFor`](/dev/api/v3/contracts/jbprices/properties/feedfor.md)
 2.  Store the provided feed for the currency base pair.
 
     ```
@@ -56,7 +56,7 @@ function addFeedFor(
 
     _Internal references:_
 
-    * [`feedFor`](/dev/api/v2/contracts/jbprices/properties/feedfor.md)
+    * [`feedFor`](/dev/api/v3/contracts/jbprices/properties/feedfor.md)
 3.  Emit an `AddFeed` event with the relevant parameters.
 
     ```
@@ -65,7 +65,7 @@ function addFeedFor(
 
     _Event references:_
 
-    * [`AddFeed`](/dev/api/v2/contracts/jbprices/events/addfeed.md)
+    * [`AddFeed`](/dev/api/v3/contracts/jbprices/events/addfeed.md)
 
 </TabItem>
 
@@ -115,7 +115,7 @@ function addFeedFor(
 
 | Name                                  | Data                                                                                                                                                                                                                                                                                           |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`AddFeed`**](/dev/api/v2/contracts/jbprices/events/addfeed.md) | <ul><li><code>uint256 indexed currency</code></li><li><code>uint256 indexed base</code></li><li><code>[IJBPriceFeed](/dev/api/v2/interfaces/ijbpricefeed.md) feed</code></li></ul> |
+| [**`AddFeed`**](/dev/api/v3/contracts/jbprices/events/addfeed.md) | <ul><li><code>uint256 indexed currency</code></li><li><code>uint256 indexed base</code></li><li><code>[IJBPriceFeed](/dev/api/v3/interfaces/ijbpricefeed.md) feed</code></li></ul> |
 
 </TabItem>
 
