@@ -149,7 +149,7 @@ function _distributePayoutsOf(
     5.  Take the fee if needed.
 
         ```
-        // Take the fee
+        // Take the fee.
         _fee = _feeEligibleDistributionAmount != 0
           ? _takeFeeFrom(
             _projectId,
@@ -173,7 +173,7 @@ function _distributePayoutsOf(
     6.  Calculate what the net value of the leftover distribution will be, and send it.
 
         ```
-        // Transfer any remaining balance to the project owner and update returned leftover accordingly
+        // Transfer any remaining balance to the project owner and update returned leftover accordingly.
         if (_leftoverDistributionAmount != 0) {
           // Subtract the fee from the net leftover amount.
           netLeftoverDistributionAmount =
@@ -297,7 +297,7 @@ function _distributePayoutsOf(
       }
     }
 
-    // Take the fee
+    // Take the fee.
     _fee = _feeEligibleDistributionAmount != 0
       ? _takeFeeFrom(
         _projectId,
@@ -308,7 +308,7 @@ function _distributePayoutsOf(
       )
       : 0;
 
-    // Transfer any remaining balance to the project owner and update returned leftover accordingly
+    // Transfer any remaining balance to the project owner and update returned leftover accordingly.
     if (_leftoverDistributionAmount != 0) {
       // Subtract the fee from the net leftover amount.
       netLeftoverDistributionAmount =
