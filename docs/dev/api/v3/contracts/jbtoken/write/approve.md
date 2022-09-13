@@ -31,7 +31,18 @@ function approve(
 
 #### Body
 
-1.  Forward the call to the ERC20 implementation.
+1.  Make sure the project IDs match, or this contract's project ID is 0.
+    
+    ```
+    // Can't approve for a wrong project.
+    if (projectId != 0 && _projectId != projectId) revert BAD_PROJECT();
+    ```
+
+    _Internal references:_
+
+    * [`projectId`](/dev/api/v3/contracts/jbtoken/properties/projectid.md)
+
+2.  Forward the call to the ERC20 implementation.
 
     ```
     approve(_spender, _amount);
@@ -59,11 +70,20 @@ function approve(
   address _spender,
   uint256 _amount
 ) external override {
-  _projectId; // Prevents unused var compiler and natspec complaints.
+  // Can't approve for a wrong project.
+  if (projectId != 0 && _projectId != projectId) revert BAD_PROJECT();
 
   approve(_spender, _amount);
 }
 ```
+
+</TabItem>
+
+<TabItem value="Errors" label="Errors">
+
+| String                                       | Description                                                                     |
+| -------------------------------------------- | ------------------------------------------------------------------------------- |
+| **`BAD_PROJECT`**    | Thrown if the project being approved for is not compatible with this contract.  |
 
 </TabItem>
 

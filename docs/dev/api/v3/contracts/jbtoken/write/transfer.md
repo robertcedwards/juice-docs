@@ -31,7 +31,18 @@ function transfer(
 
 #### Body
 
-1.  Forward the call to the ERC20 implementation.
+1.  Make sure the project IDs match, or this contract's project ID is 0.
+    
+    ```
+    // Can't transfer for a wrong project.
+    if (projectId != 0 && _projectId != projectId) revert BAD_PROJECT();
+    ```
+
+    _Internal references:_
+
+    * [`projectId`](/dev/api/v3/contracts/jbtoken/properties/projectid.md)
+
+2.  Forward the call to the ERC20 implementation.
 
     ```
     transfer(_to, _amount);
@@ -59,11 +70,20 @@ function transfer(
   address _to,
   uint256 _amount
 ) external override {
-  _projectId; // Prevents unused var compiler and natspec complaints.
+  // Can't transfer for a wrong project.
+  if (projectId != 0 && _projectId != projectId) revert BAD_PROJECT();
 
   transfer(_to, _amount);
 }
 ```
+
+</TabItem>
+
+<TabItem value="Errors" label="Errors">
+
+| String                                       | Description                                                                     |
+| -------------------------------------------- | ------------------------------------------------------------------------------- |
+| **`BAD_PROJECT`**    | Thrown if the project being transfered for is not compatible with this contract.  |
 
 </TabItem>
 

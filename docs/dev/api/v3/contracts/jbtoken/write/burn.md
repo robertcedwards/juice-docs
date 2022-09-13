@@ -34,7 +34,18 @@ function burn(
 
 #### Body
 
-1.  Forward the call to the ERC20 implementation.
+1.  Make sure the project IDs match, or this contract's project ID is 0.
+    
+    ```
+    // Can't burn for a wrong project.
+    if (projectId != 0 && _projectId != projectId) revert BAD_PROJECT();
+    ```
+
+    _Internal references:_
+
+    * [`projectId`](/dev/api/v3/contracts/jbtoken/properties/projectid.md)
+
+2.  Forward the call to the ERC20 implementation.
 
     ```
     return _burn(_account, _amount);
@@ -65,11 +76,20 @@ function burn(
   address _account,
   uint256 _amount
 ) external override onlyOwner {
-  _projectId; // Prevents unused var compiler and natspec complaints.
+  // Can't burn for a wrong project.
+  if (projectId != 0 && _projectId != projectId) revert BAD_PROJECT();
 
   return _burn(_account, _amount);
 }
 ```
+
+</TabItem>
+
+<TabItem value="Errors" label="Errors">
+
+| String                                       | Description                                                                     |
+| -------------------------------------------- | ------------------------------------------------------------------------------- |
+| **`BAD_PROJECT`**    | Thrown if the project being burned from is not compatible with this contract.  |
 
 </TabItem>
 

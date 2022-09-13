@@ -17,7 +17,7 @@ https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBToken.s
 
 | Contract                                                         | Description                                                                                                                                                                        |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`ERC20Permit`**](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Permit) | General token standard for fungible accounting. |
+| [**`ERC20Votes`**](https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Votes) | General token standard for fungible membership with snapshot capabilities sufficient to interact with standard governance contracts. |
 | [**`Ownable`**](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable) | Includes convenience functionality for specifying an address that owns the contract, with modifiers that only allow access by the owner. |
 
 #### Constructor
@@ -26,14 +26,30 @@ https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBToken.s
 /** 
   @param _name The name of the token.
   @param _symbol The symbol that the token should be represented by.
+  @param _projectId The ID of the project that this token should be exclusively used for. Send 0 to support any project.
 */
-constructor(string memory _name, string memory _symbol)
-  ERC20(_name, _symbol) ERC20Permit(_name) {}
+constructor(
+  string memory _name,
+  string memory _symbol,
+  uint256 _projectId
+)
+  ERC20(_name, _symbol)
+  ERC20Permit(_name)
+{
+  projectId = _projectId;
+}
 ```
 
 * `_name` is the name of the token.
 * `_symbol` is the symbol that the token should be represented by.
+* `_projectId` is the ID of the project that this token should be exclusively used for. Send 0 to support any project.
 
+
+#### Properties
+
+| Function                                   | Definition                                                                         |
+| ------------------------------------------ | ---------------------------------------------------------------------------------- |
+| [**`projectId`**](/dev/api/v3/contracts/jbtoken/properties/projectid.md)   | <p><strong>Returns</strong></p><ul><li><code>uint256</code></li></ul> |
 
 #### Read
 
@@ -52,4 +68,3 @@ constructor(string memory _name, string memory _symbol)
 | [**`approve`**](/dev/api/v2/contracts/jbtoken/write/approve.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _spender</code></li><li><code>uint256 _amount</code></li></ul> |
 | [**`transfer`**](/dev/api/v2/contracts/jbtoken/write/transfer.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul> |
 | [**`transferFrom`**](/dev/api/v2/contracts/jbtoken/write/transferfrom.md)                                 | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>address _from</code></li><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul> |
-| [**`transferOwnership`**](/dev/api/v2/contracts/jbtoken/write/transferownership.md)                                 | <p><strong>Traits</strong></p><ul><li><code>[onlyOwner](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--)</code></li></ul><p><strong>Params</strong></p><ul><li><code>address _newOwner</code></li></ul> |
