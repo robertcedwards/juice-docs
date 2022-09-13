@@ -12,7 +12,7 @@ Interface: [`IJBSingleTokenPaymentTerminalStore`](/dev/api/v2/interfaces/ijbsing
 
 **Records newly contributed tokens to a project.**
 
-_Mint's the project's tokens according to values provided by a configured data source. If no data source is configured, mints tokens proportional to the amount of the contribution._
+_Mints the project's tokens according to values provided by a configured data source. If no data source is configured, mints tokens proportional to the amount of the contribution._
 
 _The msg.sender must be an [`IJBSingleTokenPaymentTerminal`](/dev/api/v2/interfaces/ijbpaymentterminal.md). The amount specified in the params is in terms of the msg.sender's tokens._
 
@@ -34,7 +34,7 @@ function recordPaymentFrom(
   returns (
     JBFundingCycle memory fundingCycle,
     uint256 tokenCount,
-    IJBPayDelegate delegate,
+    JBPayDelegateAllocation[] memory delegateAllocations,,
     string memory memo
   ) { ... }
 ```
@@ -51,7 +51,7 @@ function recordPaymentFrom(
 * The function returns:
   * `fundingCycle` is the project's funding cycle during which payment was made.
   * `tokenCount` is the number of project tokens that were minted, as a fixed point number with 18 decimals.
-  * `delegate` is a delegate contract to use for subsequent calls.
+  * `delegateAllocations` is the amount to send to delegates instead of adding to the local balance.
   * `memo` is a memo that should be passed along to the emitted event.
 
 #### Body
@@ -66,12 +66,14 @@ function recordPaymentFrom(
     _External references:_
 
     * [`currentOf`](/dev/api/v2/contracts/jbfundingcyclestore/read/currentof.md)
+
 2.  Make sure the project has a funding cycle configured. This is done by checking if the project's current funding cycle number is non-zero.
 
     ```
     // The project must have a funding cycle configured.
     if (fundingCycle.number == 0) revert INVALID_FUNDING_CYCLE();
     ```
+
 3.  Make sure the project's funding cycle isn't configured to pause payments.
 
     ```
@@ -83,17 +85,19 @@ function recordPaymentFrom(
 
     * [`JBFundingCycleMetadataResolver`](/dev/api/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.payPaused(...)`
+
 4.  Create a variable where the weight to use in subsquent calculations will be saved.
 
     ```
     // The weight according to which new token supply is to be minted, as a fixed point number with 18 decimals.
     uint256 _weight;
     ```
+
 5.  If the project's current funding cycle is configured to use a data source when receiving payments, ask the data source for the parameters that should be used throughout the rest of the function given provided contextual values in a [`JBPayParamsData`](/dev/api/v2/data-structures/jbpayparamsdata.md) structure. Otherwise default parameters are used.
 
     ```
     // If the funding cycle has configured a data source, use it to derive a weight and memo.
-    if (fundingCycle.useDataSourceForPay()) {
+    if (fundingCycle.useDataSourceForPay() && fundingCycle.dataSource() != address(0)) {
       // Create the params that'll be sent to the data source.
       JBPayParamsData memory _data = JBPayParamsData(
         IJBSingleTokenPaymentTerminal(msg.sender),
@@ -107,9 +111,8 @@ function recordPaymentFrom(
         _memo,
         _metadata
       );
-      (_weight, memo, delegate) = IJBFundingCycleDataSource(fundingCycle.dataSource()).payParams(
-        _data
-      );
+      (_weight, memo, delegateAllocations) = IJBFundingCycleDataSource(fundingCycle.dataSource())
+        .payParams(_data);
     }
     // Otherwise use the funding cycle's weight
     else {
@@ -128,31 +131,74 @@ function recordPaymentFrom(
     _External references:_
 
     * [`payParams`](/dev/api/v2/interfaces/ijbfundingcycledatasource.md)
-6.  If there is no amount being recorded, there's nothing left to do so the current values can be returned.
+6.  The following scoped block is a bit of a hack to prevent a "Stack too deep" error. 
 
     ```
-    // If there's no amount being recorded, there's nothing left to do.
-    if (_amount.value == 0) return (fundingCycle, 0, delegate, memo);
+    // Scoped section prevents stack too deep. `_balanceDiff` only used within scope.
+    { ... }
     ```
-7.  Add the amount being paid to the stored balance.
+    
+    1.  Keep a reference the amount difference to apply to the balance. Initially this is the full value. 
 
-    ```
-    // Add the amount to the token balance of the project.
-    balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
-      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] +
-      _amount.value;
-    ```
+        ```
+        // Keep a reference to the amount that should be added to the project's balance.
+        uint256 _balanceDiff = _amount.value;
+        ```
 
-    _Internal references:_
+    2.  If delegate allocations were returned by the data source, make sure their sum does not exceed the amount paid. Decrement each delegated allocation from the amount that will get subtracted from the project's balance.  
 
-    * [`balanceOf`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
-8.  If there is no weight, the resulting token count will be 0. There's nothing left to do so the current values can be returned.
+        ```
+        // Validate all delegated amounts. This needs to be done before returning the delegate allocations to ensure valid delegated amounts.
+        if (delegateAllocations.length != 0) {
+          for (uint256 _i; _i < delegateAllocations.length; ) {
+            // Get a reference to the amount to be delegated.
+            uint256 _delegatedAmount = delegateAllocations[_i].amount;
+
+            // Validate if non-zero.
+            if (_delegatedAmount != 0) {
+              // Can't delegate more than was paid.
+              if (_delegatedAmount > _balanceDiff) revert INVALID_AMOUNT_TO_SEND_DELEGATE();
+
+              // Decrement the total amount being added to the balance.
+              _balanceDiff = _balanceDiff - _delegatedAmount;
+            }
+
+            unchecked {
+              ++_i;
+            }
+          }
+        }
+        ```
+  
+    3.  If there is no amount being recorded, there's nothing left to do so the current validated values can be returned.
+
+        ```
+        // If there's no amount being recorded, there's nothing left to do.
+        if (_amount.value == 0) return (fundingCycle, 0, delegateAllocations, memo);
+        ``` 
+    
+    4.  Add the appropriate amount to the stored balance.
+
+        ```
+        // Add the correct balance difference to the token balance of the project.
+        if (_balanceDiff != 0)
+          balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
+            balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] +
+            _balanceDiff;
+        ```
+
+        _Internal references:_
+
+        * [`balanceOf`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
+
+7.  If there is no weight, the resulting token count will be 0. There's nothing left to do so the current values can be returned.
 
     ```
     // If there's no weight, token count must be 0 so there's nothing left to do.
-    if (_weight == 0) return (fundingCycle, 0, delegate, memo);
+    if (_weight == 0) return (fundingCycle, 0, delegateAllocations, memo);
     ```
-9.  Calculate the weight ratio. This allows a project to get paid in a certain token, but issue project tokens relative to a different base currency. The weight ratio will be used to divide the product of the paid amount and the weight to determine the number of tokens that should be distributed. Since the number of distributed tokens should be a fixed point number with 18 decimals, the weight ratio must have the same number of decimals as the amount to cancel it out and leave only the fidelity of the 18 decimal fixed point weight.
+
+8.  Calculate the weight ratio. This allows a project to get paid in a certain token, but issue project tokens relative to a different base currency. The weight ratio will be used to divide the product of the paid amount and the weight to determine the number of tokens that should be distributed. Since the number of distributed tokens should be a fixed point number with 18 decimals, the weight ratio must have the same number of decimals as the amount to cancel it out and leave only the fidelity of the 18 decimal fixed point weight.
 
     ```
     // Get a reference to the number of decimals in the amount. (prevents stack too deep).
@@ -169,7 +215,7 @@ function recordPaymentFrom(
 
     * [`priceFor`](/dev/api/v2/contracts/jbprices/read/pricefor.md)
 
-10. Determine the number of tokens to mint.
+9.  Determine the number of tokens to mint.
 
     ```
     // Find the number of tokens to mint, as a fixed point number with as many decimals as `weight` has.
@@ -191,7 +237,7 @@ function recordPaymentFrom(
   Records newly contributed tokens to a project.
 
   @dev
-  Mint's the project's tokens according to values provided by a configured data source. If no data source is configured, mints tokens proportional to the amount of the contribution.
+  Mints the project's tokens according to values provided by a configured data source. If no data source is configured, mints tokens proportional to the amount of the contribution.
 
   @dev
   The msg.sender must be an IJBSingleTokenPaymentTerminal. The amount specified in the params is in terms of the msg.sender's tokens.
@@ -206,7 +252,7 @@ function recordPaymentFrom(
 
   @return fundingCycle The project's funding cycle during which payment was made.
   @return tokenCount The number of project tokens that were minted, as a fixed point number with 18 decimals.
-  @return delegate A delegate contract to use for subsequent calls.
+  @return delegateAllocations The amount to send to delegates instead of adding to the local balance.
   @return memo A memo that should be passed along to the emitted event.
 */
 function recordPaymentFrom(
@@ -224,7 +270,7 @@ function recordPaymentFrom(
   returns (
     JBFundingCycle memory fundingCycle,
     uint256 tokenCount,
-    IJBPayDelegate delegate,
+    JBPayDelegateAllocation[] memory delegateAllocations,
     string memory memo
   )
 {
@@ -241,23 +287,22 @@ function recordPaymentFrom(
   uint256 _weight;
 
   // If the funding cycle has configured a data source, use it to derive a weight and memo.
-  if (fundingCycle.useDataSourceForPay()) {
+  if (fundingCycle.useDataSourceForPay() && fundingCycle.dataSource() != address(0)) {
     // Create the params that'll be sent to the data source.
     JBPayParamsData memory _data = JBPayParamsData(
       IJBSingleTokenPaymentTerminal(msg.sender),
       _payer,
       _amount,
       _projectId,
-      _beneficiary,
       fundingCycle.configuration,
+      _beneficiary,
       fundingCycle.weight,
       fundingCycle.reservedRate(),
       _memo,
       _metadata
     );
-    (_weight, memo, delegate) = IJBFundingCycleDataSource(fundingCycle.dataSource()).payParams(
-      _data
-    );
+    (_weight, memo, delegateAllocations) = IJBFundingCycleDataSource(fundingCycle.dataSource())
+      .payParams(_data);
   }
   // Otherwise use the funding cycle's weight
   else {
@@ -265,16 +310,44 @@ function recordPaymentFrom(
     memo = _memo;
   }
 
-  // If there's no amount being recorded, there's nothing left to do.
-  if (_amount.value == 0) return (fundingCycle, 0, delegate, memo);
+  // Scoped section prevents stack too deep. `_balanceDiff` only used within scope.
+  {
+    // Keep a reference to the amount that should be added to the project's balance.
+    uint256 _balanceDiff = _amount.value;
 
-  // Add the amount to the token balance of the project.
-  balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
-    balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] +
-    _amount.value;
+    // Validate all delegated amounts. This needs to be done before returning the delegate allocations to ensure valid delegated amounts.
+    if (delegateAllocations.length != 0) {
+      for (uint256 _i; _i < delegateAllocations.length; ) {
+        // Get a reference to the amount to be delegated.
+        uint256 _delegatedAmount = delegateAllocations[_i].amount;
+
+        // Validate if non-zero.
+        if (_delegatedAmount != 0) {
+          // Can't delegate more than was paid.
+          if (_delegatedAmount > _balanceDiff) revert INVALID_AMOUNT_TO_SEND_DELEGATE();
+
+          // Decrement the total amount being added to the balance.
+          _balanceDiff = _balanceDiff - _delegatedAmount;
+        }
+
+        unchecked {
+          ++_i;
+        }
+      }
+    }
+
+    // If there's no amount being recorded, there's nothing left to do.
+    if (_amount.value == 0) return (fundingCycle, 0, delegateAllocations, memo);
+
+    // Add the correct balance difference to the token balance of the project.
+    if (_balanceDiff != 0)
+      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
+        balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] +
+        _balanceDiff;
+  }
 
   // If there's no weight, token count must be 0 so there's nothing left to do.
-  if (_weight == 0) return (fundingCycle, 0, delegate, memo);
+  if (_weight == 0) return (fundingCycle, 0, delegateAllocations, memo);
 
   // Get a reference to the number of decimals in the amount. (prevents stack too deep).
   uint256 _decimals = _amount.decimals;
@@ -298,6 +371,8 @@ function recordPaymentFrom(
 | ---------------------------------- | ---------------------------------------------------------------------------------------------- |
 | **`INVALID_FUNDING_CYCLE`**        | Thrown if the project doesn't have a funding cycle.                                            |
 | **`FUNDING_CYCLE_PAYMENT_PAUSED`** | Thrown if the project has configured its current funding cycle to pause payments.              |
+| **`INVALID_AMOUNT_TO_SEND_DELEGATE`** | Thrown if the sum of delegated amounts is greater than the amount being paid.               |
+
 
 </TabItem>
 

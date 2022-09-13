@@ -32,7 +32,7 @@ function recordRedemptionFor(
   returns (
     JBFundingCycle memory fundingCycle,
     uint256 reclaimAmount,
-    IJBRedemptionDelegate delegate,
+    JBRedemptionDelegateAllocation[] memory delegateAllocations,
     string memory memo
   ) { ... }
 ```
@@ -47,7 +47,7 @@ function recordRedemptionFor(
 * The function returns:
   * `fundingCycle` is the funding cycle during which the redemption was made.
   * `reclaimAmount` is the amount of terminal tokens reclaimed, as a fixed point number with 18 decimals.
-  * `delegate` is a delegate contract to use for subsequent calls.
+  * `delegateAllocations` is the amount to send to delegates instead of sending to the beneficiary.
   * `memo` is a memo that should be passed along to the emitted event.
 
 #### Body
@@ -80,7 +80,7 @@ function recordRedemptionFor(
     { ... }
     ```
     
-    1.  Keep a reference to the reclaimed token amount, current overflow amount, and total supply variables to use outside of the subsequent scoped block
+    1.  Keep a reference to the reclaimed token amount, current overflow amount, and total supply variables to use outside of the subsequent scoped block.
 
         ```
         // Get a reference to the reclaimed token amount struct, the current overflow, and the total token supply.
@@ -172,7 +172,7 @@ function recordRedemptionFor(
         5.  Get a reference to the reclaimable overflow if there is overflow. 
 
             ```
-            if (_currentOverflow > 0)
+            if (_currentOverflow != 0)
               // Calculate reclaim amount using the current overflow amount.
               reclaimAmount = _reclaimableOverflowDuring(
                 _projectId,
@@ -196,26 +196,33 @@ function recordRedemptionFor(
     3.  If the project's current funding cycle is configured to use a data source when making redemptions, ask the data source for the parameters that should be used throughout the rest of the function given provided contextual values in a [`JBRedeemParamsData`](/dev/api/v2/data-structures/jbredeemparamsdata.md) structure. Otherwise default parameters are used.
 
         ```
-        // If the funding cycle has configured a data source, use it to derive a claim amount and memo.
-        if (fundingCycle.useDataSourceForRedeem()) {
-          // Create the params that'll be sent to the data source.
-          JBRedeemParamsData memory _data = JBRedeemParamsData(
-            IJBSingleTokenPaymentTerminal(msg.sender),
-            _holder,
-            _projectId,
-            fundingCycle.configuration,
-            _tokenCount,
-            _totalSupply,
-            _currentOverflow,
-            _reclaimedTokenAmount,
-            fundingCycle.useTotalOverflowForRedemptions(),
-            fundingCycle.redemptionRate(),
-            fundingCycle.ballotRedemptionRate(),
-            _memo,
-            _metadata
-          );
-          (reclaimAmount, memo, delegate) = IJBFundingCycleDataSource(fundingCycle.dataSource())
-            .redeemParams(_data);
+        if (fundingCycle.useDataSourceForRedeem() && fundingCycle.dataSource() != address(0)) {
+          // Yet another scoped section prevents stack too deep. `_state`  only used within scope.
+          {
+            // Get a reference to the ballot state.
+            JBBallotState _state = fundingCycleStore.currentBallotStateOf(_projectId);
+
+            // Create the params that'll be sent to the data source.
+            JBRedeemParamsData memory _data = JBRedeemParamsData(
+              IJBSingleTokenPaymentTerminal(msg.sender),
+              _holder,
+              _projectId,
+              fundingCycle.configuration,
+              _tokenCount,
+              _totalSupply,
+              _currentOverflow,
+              _reclaimedTokenAmount,
+              fundingCycle.useTotalOverflowForRedemptions(),
+              _state == JBBallotState.Active
+                ? fundingCycle.ballotRedemptionRate()
+                : fundingCycle.redemptionRate(),
+              _memo,
+              _metadata
+            );
+            (reclaimAmount, memo, delegateAllocations) = IJBFundingCycleDataSource(
+              fundingCycle.dataSource()
+            ).redeemParams(_data);
+          }
         } else {
           memo = _memo;
         }
@@ -230,25 +237,57 @@ function recordRedemptionFor(
           * `.ballotRedemptionRate(...)`
           * `.useTotalOverflowForRedemptions(...)`
 
-4.  Make sure the amount being claimed is within the bounds of the project's balance.
+4.  Keep a reference the amount difference to apply to the balance. Initially this is the full reclaim value. 
+
+    ```
+    // Keep a reference to the amount that should be subtracted from the project's balance.
+    uint256 _balanceDiff = reclaimAmount;
+    ```
+
+5.  If delegate allocations were returned by the data source, increment the amount that will get subtracted from the project's balance by each delegated allocation.    
+
+    ```
+    if (delegateAllocations.length != 0) {
+      // Validate all delegated amounts.
+      for (uint256 _i; _i < delegateAllocations.length; ) {
+        // Get a reference to the amount to be delegated.
+        uint256 _delegatedAmount = delegateAllocations[_i].amount;
+
+        // Validate if non-zero.
+        if (_delegatedAmount != 0)
+          // Increment the total amount being subtracted from the balance.
+          _balanceDiff = _balanceDiff + _delegatedAmount;
+
+        unchecked {
+          ++_i;
+        }
+      }
+    }
+    ```
+
+6.  Make sure the amount being decremented from the balance is within the bounds of the project's balance.
 
     ```
     // The amount being reclaimed must be within the project's balance.
-    if (reclaimAmount > balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId])
+    if (_balanceDiff > balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId])
       revert INADEQUATE_PAYMENT_TERMINAL_STORE_BALANCE();
     ```
 
     _Internal references:_
 
     * [`balanceOf`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/properties/balanceof.md)
-5.  Decrement any claimed funds from the project's balance if needed.
+
+7.  Decrement any claimed funds from the project's balance if needed.
 
     ```
     // Remove the reclaimed funds from the project's balance.
-    if (reclaimAmount > 0)
-      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
-        balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
-        reclaimAmount;
+    if (_balanceDiff != 0) {
+      unchecked {
+        balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
+          balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
+          _balanceDiff;
+      }
+    }
     ```
 
     _Internal references:_
@@ -268,7 +307,7 @@ function recordRedemptionFor(
   Redeems the project's tokens according to values provided by a configured data source. If no data source is configured, redeems tokens along a redemption bonding curve that is a function of the number of tokens being burned.
 
   @dev
-  The msg.sender must be an IJBSingleTokenPaymentTerminal. 
+  The msg.sender must be an IJBSingleTokenPaymentTerminal. The amount specified in the params is in terms of the msg.senders tokens.
 
   @param _holder The account that is having its tokens redeemed.
   @param _projectId The ID of the project to which the tokens being redeemed belong.
@@ -278,15 +317,13 @@ function recordRedemptionFor(
 
   @return fundingCycle The funding cycle during which the redemption was made.
   @return reclaimAmount The amount of terminal tokens reclaimed, as a fixed point number with 18 decimals.
-  @return delegate A delegate contract to use for subsequent calls.
+  @return delegateAllocations The amount to send to delegates instead of sending to the beneficiary.
   @return memo A memo that should be passed along to the emitted event.
 */
 function recordRedemptionFor(
   address _holder,
   uint256 _projectId,
   uint256 _tokenCount,
-  uint256 _balanceDecimals,
-  uint256 _balanceCurrency,
   string memory _memo,
   bytes memory _metadata
 )
@@ -296,7 +333,7 @@ function recordRedemptionFor(
   returns (
     JBFundingCycle memory fundingCycle,
     uint256 reclaimAmount,
-    IJBRedemptionDelegate delegate,
+    JBRedemptionDelegateAllocation[] memory delegateAllocations,
     string memory memo
   )
 {
@@ -344,7 +381,7 @@ function recordRedemptionFor(
       // Can't redeem more tokens that is in the supply.
       if (_tokenCount > _totalSupply) revert INSUFFICIENT_TOKENS();
 
-      if (_currentOverflow > 0)
+      if (_currentOverflow != 0)
         // Calculate reclaim amount using the current overflow amount.
         reclaimAmount = _reclaimableOverflowDuring(
           _projectId,
@@ -358,39 +395,70 @@ function recordRedemptionFor(
     }
 
     // If the funding cycle has configured a data source, use it to derive a claim amount and memo.
-    if (fundingCycle.useDataSourceForRedeem()) {
-      // Create the params that'll be sent to the data source.
-      JBRedeemParamsData memory _data = JBRedeemParamsData(
-        IJBSingleTokenPaymentTerminal(msg.sender),
-        _holder,
-        _projectId,
-        fundingCycle.configuration,
-        _tokenCount,
-        _totalSupply,
-        _currentOverflow,
-        _reclaimedTokenAmount,
-        fundingCycle.useTotalOverflowForRedemptions(),
-        fundingCycle.redemptionRate(),
-        fundingCycle.ballotRedemptionRate(),
-        _memo,
-        _metadata
-      );
-      (reclaimAmount, memo, delegate) = IJBFundingCycleDataSource(fundingCycle.dataSource())
-        .redeemParams(_data);
+    if (fundingCycle.useDataSourceForRedeem() && fundingCycle.dataSource() != address(0)) {
+      // Yet another scoped section prevents stack too deep. `_state`  only used within scope.
+      {
+        // Get a reference to the ballot state.
+        JBBallotState _state = fundingCycleStore.currentBallotStateOf(_projectId);
+
+        // Create the params that'll be sent to the data source.
+        JBRedeemParamsData memory _data = JBRedeemParamsData(
+          IJBSingleTokenPaymentTerminal(msg.sender),
+          _holder,
+          _projectId,
+          fundingCycle.configuration,
+          _tokenCount,
+          _totalSupply,
+          _currentOverflow,
+          _reclaimedTokenAmount,
+          fundingCycle.useTotalOverflowForRedemptions(),
+          _state == JBBallotState.Active
+            ? fundingCycle.ballotRedemptionRate()
+            : fundingCycle.redemptionRate(),
+          _memo,
+          _metadata
+        );
+        (reclaimAmount, memo, delegateAllocations) = IJBFundingCycleDataSource(
+          fundingCycle.dataSource()
+        ).redeemParams(_data);
+      }
     } else {
       memo = _memo;
     }
   }
 
+  // Keep a reference to the amount that should be subtracted from the project's balance.
+  uint256 _balanceDiff = reclaimAmount;
+
+  if (delegateAllocations.length != 0) {
+    // Validate all delegated amounts.
+    for (uint256 _i; _i < delegateAllocations.length; ) {
+      // Get a reference to the amount to be delegated.
+      uint256 _delegatedAmount = delegateAllocations[_i].amount;
+
+      // Validate if non-zero.
+      if (_delegatedAmount != 0)
+        // Increment the total amount being subtracted from the balance.
+        _balanceDiff = _balanceDiff + _delegatedAmount;
+
+      unchecked {
+        ++_i;
+      }
+    }
+  }
+
   // The amount being reclaimed must be within the project's balance.
-  if (reclaimAmount > balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId])
+  if (_balanceDiff > balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId])
     revert INADEQUATE_PAYMENT_TERMINAL_STORE_BALANCE();
 
   // Remove the reclaimed funds from the project's balance.
-  if (reclaimAmount > 0)
-    balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
-      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
-      reclaimAmount;
+  if (_balanceDiff != 0) {
+    unchecked {
+      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
+        balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
+        _balanceDiff;
+    }
+  }
 }
 ```
 

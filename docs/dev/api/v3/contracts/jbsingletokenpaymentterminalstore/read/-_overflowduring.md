@@ -104,7 +104,10 @@ function _overflowDuring(
 
     ```
     // Overflow is the balance of this project minus the amount that can still be distributed.
-    return _balanceOf > _distributionLimitRemaining ? _balanceOf - _distributionLimitRemaining : 0;
+    unchecked {
+      return
+        _balanceOf > _distributionLimitRemaining ? _balanceOf - _distributionLimitRemaining : 0;
+    }
     ```
 
 </TabItem>
@@ -156,7 +159,10 @@ function _overflowDuring(
     );
 
   // Overflow is the balance of this project minus the amount that can still be distributed.
-  return _balanceOf > _distributionLimitRemaining ? _balanceOf - _distributionLimitRemaining : 0;
+  unchecked {
+    return
+      _balanceOf > _distributionLimitRemaining ? _balanceOf - _distributionLimitRemaining : 0;
+  }
 }
 ```
 

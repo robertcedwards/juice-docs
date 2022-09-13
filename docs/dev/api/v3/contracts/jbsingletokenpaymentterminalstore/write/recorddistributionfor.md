@@ -166,9 +166,11 @@ function recordDistributionFor(
 
     ```
     // Removed the distributed funds from the project's token balance.
-    balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
-      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
-      distributedAmount;
+    unchecked {
+      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
+        balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
+        distributedAmount;
+    }
     ```
 
     _Internal references:_
@@ -254,9 +256,11 @@ function recordDistributionFor(
   ] = _newUsedDistributionLimitOf;
 
   // Removed the distributed funds from the project's token balance.
-  balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
-    balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
-    distributedAmount;
+  unchecked {
+    balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] =
+      balanceOf[IJBSingleTokenPaymentTerminal(msg.sender)][_projectId] -
+      distributedAmount;
+  }
 }
 ```
 
