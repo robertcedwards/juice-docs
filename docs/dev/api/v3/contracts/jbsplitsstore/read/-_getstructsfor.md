@@ -40,17 +40,19 @@ function _getStructsFor(
     _Internal references:_
 
     * [`_splitCountOf`](/dev/api/v2/contracts/jbsplitsstore/properties/-_splitcountof.md)
+
 2.  Inititalize an array of [`JBSplit`](/dev/api/v2/data-structures/jbsplit.md) with length equal to the number of splits expected.
 
     ```
     // Initialize an array to be returned that has the set length.
     JBSplit[] memory _splits = new JBSplit[](_splitCount);
     ```
+
 3.  For each index, parse out the packed split parts into [`JBSplit`](/dev/api/v2/data-structures/jbsplit.md) structs and add to the array. The packed splits are stored in two different `uint256` slots, the second of which contains info that is populated way less frequently.
 
     ```
     // Loop through each split and unpack the values into structs.
-    for (uint256 _i = 0; _i < _splitCount; _i++) {
+    for (uint256 _i; _i < _splitCount; ) {
       // Get a reference to the fist packed data.
       uint256 _packedSplitPart1 = _packedSplitParts1Of[_projectId][_domain][_group][_i];
 
@@ -81,6 +83,10 @@ function _getStructsFor(
 
       // Add the split to the value being returned.
       _splits[_i] = _split;
+
+      unchecked {
+        ++_i;
+      }
     }
     ```
 
@@ -122,7 +128,7 @@ function _getStructsFor(
   JBSplit[] memory _splits = new JBSplit[](_splitCount);
 
   // Loop through each split and unpack the values into structs.
-  for (uint256 _i = 0; _i < _splitCount; _i++) {
+  for (uint256 _i; _i < _splitCount; ) {
     // Get a reference to the fist packed data.
     uint256 _packedSplitPart1 = _packedSplitParts1Of[_projectId][_domain][_group][_i];
 
@@ -153,6 +159,10 @@ function _getStructsFor(
 
     // Add the split to the value being returned.
     _splits[_i] = _split;
+
+    unchecked {
+      ++_i;
+    }
   }
 
   return _splits;

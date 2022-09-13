@@ -45,52 +45,60 @@ function _set(
     _Internal references:_
 
     * [`_getStructsFor`](/dev/api/v2/contracts/jbsplitsstore/read/-_getstructsfor.md)
-2.  Loop through each current split to make sure the new splits being set respect any current split bound by a lock constraint.
+
+2.  Keep a reference to the number of current splits.
+
+    ```
+    // Keep a reference to the number of splits.
+    uint256 _currentSplitsLength = _currentSplits.length;
+    ```
+
+3.  Loop through each current split to make sure the new splits being set respect any current split bound by a lock constraint.
 
     ```
     // Check to see if all locked splits are included.
-    for (uint256 _i = 0; _i < _currentSplits.length; _i++) { ... }
+    for (uint256 _i; _i < _currentSplitsLength; ) {
     ```
 
-    1.  If the current split isn't locked, move on to the next one.
+    1.  Make sure the current split isn't locked if it's being removed.
 
         ```
-        // If not locked, continue.
-        if (block.timestamp >= _currentSplits[_i].lockedUntil) continue;
+        if (
+          block.timestamp < _currentSplits[_i].lockedUntil &&
+          !_includesLocked(_splits, _currentSplits[_i])
+        ) revert PREVIOUS_LOCKED_SPLITS_NOT_INCLUDED();
         ```
-    2.  If the current split is locked, check to make sure the new splits includes it. The only property of a locked split that can have changed is its locked deadline, which can be extended.
+
+        _Internal references:_
+
+        * [`_includesLocked`](/dev/api/v2/contracts/jbsplitsstore/read/-_includeslocked.md)
+
+    2.  Increment the loop counter.
 
         ```
-        // Keep a reference to whether or not the locked split being iterated on is included.
-        bool _includesLocked = false;
-
-        for (uint256 _j = 0; _j < _splits.length; _j++) {
-          // Check for sameness.
-          if (
-            _splits[_j].percent == _currentSplits[_i].percent &&
-            _splits[_j].beneficiary == _currentSplits[_i].beneficiary &&
-            _splits[_j].allocator == _currentSplits[_i].allocator &&
-            _splits[_j].projectId == _currentSplits[_i].projectId &&
-            // Allow lock extention.
-            _splits[_j].lockedUntil >= _currentSplits[_i].lockedUntil
-          ) _includesLocked = true;
+        unchecked {
+          ++_i;
         }
         ```
-    3.  Check to make sure the provided splits includes any locked current splits.
 
-        ```
-        if (!_includesLocked) revert PREVIOUS_LOCKED_SPLITS_NOT_INCLUDED();
-        ```
 4.  Store a local variable to keep track of all the percents from the splits.
 
     ```
     // Add up all the percents to make sure they cumulative are under 100%.
-    uint256 _percentTotal = 0;
+    uint256 _percentTotal;
     ```
-5.  Loop through each newly provided splits to validate the provided properties.
+
+5.  Keep a reference to the number of splits being set.
+    
+    ```
+    // Keep a reference to the number of splits.
+    uint256 _splitsLength = _splits.length;
+    ```
+
+6.  Loop through each newly provided splits to validate the provided properties.
 
     ```
-    for (uint256 _i = 0; _i < _splits.length; _i++) { ... }
+    for (uint256 _i; _i < _splitsLength; ) { ... }
     ```
 
     1.  Check that the percent for the current split is not zero.
@@ -179,11 +187,20 @@ function _set(
         _Event references:_
 
         * [`SetSplit`](/dev/api/v2/contracts/jbsplitsstore/events/setsplit.md)
-6.  Store the new array length.
+      
+    8.  Increment the loop counter.
+        
+        ```
+        unchecked {
+          ++_i;
+        }
+        ```
+
+7.  Store the new array length.
 
     ```
     // Set the new length of the splits.
-    _splitCountOf[_projectId][_domain][_group] = _splits.length;
+    _splitCountOf[_projectId][_domain][_group] = _splitsLength;
     ```
 
     _Internal references:_
@@ -216,33 +233,29 @@ function _set(
   // Get a reference to the project's current splits.
   JBSplit[] memory _currentSplits = _getStructsFor(_projectId, _domain, _group);
 
+  // Keep a reference to the number of splits.
+  uint256 _currentSplitsLength = _currentSplits.length;
+
   // Check to see if all locked splits are included.
-  for (uint256 _i = 0; _i < _currentSplits.length; _i++) {
+  for (uint256 _i; _i < _currentSplitsLength; ) {
     // If not locked, continue.
-    if (block.timestamp >= _currentSplits[_i].lockedUntil) continue;
+    if (
+      block.timestamp < _currentSplits[_i].lockedUntil &&
+      !_includesLocked(_splits, _currentSplits[_i])
+    ) revert PREVIOUS_LOCKED_SPLITS_NOT_INCLUDED();
 
-    // Keep a reference to whether or not the locked split being iterated on is included.
-    bool _includesLocked = false;
-
-    for (uint256 _j = 0; _j < _splits.length; _j++) {
-      // Check for sameness.
-      if (
-        _splits[_j].percent == _currentSplits[_i].percent &&
-        _splits[_j].beneficiary == _currentSplits[_i].beneficiary &&
-        _splits[_j].allocator == _currentSplits[_i].allocator &&
-        _splits[_j].projectId == _currentSplits[_i].projectId &&
-        // Allow lock extention.
-        _splits[_j].lockedUntil >= _currentSplits[_i].lockedUntil
-      ) _includesLocked = true;
+    unchecked {
+      ++_i;
     }
-
-    if (!_includesLocked) revert PREVIOUS_LOCKED_SPLITS_NOT_INCLUDED();
   }
 
-  // Add up all the percents to make sure they cumulative are under 100%.
-  uint256 _percentTotal = 0;
+  // Add up all the percents to make sure they cumulatively are under 100%.
+  uint256 _percentTotal;
 
-  for (uint256 _i = 0; _i < _splits.length; _i++) {
+  // Keep a reference to the number of splits.
+  uint256 _splitsLength = _splits.length;
+
+  for (uint256 _i; _i < _splitsLength; ) {
     // The percent should be greater than 0.
     if (_splits[_i].percent == 0) revert INVALID_SPLIT_PERCENT();
 
@@ -255,9 +268,8 @@ function _set(
     // Validate the total does not exceed the expected value.
     if (_percentTotal > JBConstants.SPLITS_TOTAL_PERCENT) revert INVALID_TOTAL_PERCENT();
 
-    // Pack the first split part properties.
     uint256 _packedSplitParts1;
-    
+
     // prefer claimed in bit 0.
     if (_splits[_i].preferClaimed) _packedSplitParts1 = 1;
     // prefer add to balance in bit 1.
@@ -290,10 +302,14 @@ function _set(
       delete _packedSplitParts2Of[_projectId][_domain][_group][_i];
 
     emit SetSplit(_projectId, _domain, _group, _splits[_i], msg.sender);
+
+    unchecked {
+      ++_i;
+    }
   }
 
   // Set the new length of the splits.
-  _splitCountOf[_projectId][_domain][_group] = _splits.length;
+  _splitCountOf[_projectId][_domain][_group] = _splitsLength;
 }
 ```
 

@@ -51,7 +51,7 @@ function set(
     uint256 _groupedSplitsLength = _groupedSplits.length;
 
     // Set each grouped splits.
-    for (uint256 _i = 0; _i < _groupedSplitsLength; ) {
+    for (uint256 _i; _i < _groupedSplitsLength; ) {
       // Get a reference to the grouped split being iterated on.
       JBGroupedSplits memory _groupedSplit = _groupedSplits[_i];
 
@@ -105,7 +105,7 @@ function set(
   uint256 _groupedSplitsLength = _groupedSplits.length;
 
   // Set each grouped splits.
-  for (uint256 _i = 0; _i < _groupedSplitsLength; ) {
+  for (uint256 _i; _i < _groupedSplitsLength; ) {
     // Get a reference to the grouped split being iterated on.
     JBGroupedSplits memory _groupedSplit = _groupedSplits[_i];
 
