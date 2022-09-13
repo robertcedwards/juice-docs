@@ -8,7 +8,7 @@ Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
 
-**Takes a fee into the platform's project, which has an id of _PROTOCOL_PROJECT_ID.**
+**Takes a fee into the platform's project, which has an id of _FEE_BENEFICIARY_PROJECT_ID.**
 
 #### Definition
 
@@ -78,7 +78,7 @@ function _takeFeeFrom(
 ```
 /**
   @notice
-  Takes a fee into the platform's project, which has an id of _PROTOCOL_PROJECT_ID.
+  Takes a fee into the platform's project, which has an id of _FEE_BENEFICIARY_PROJECT_ID.
 
   @param _projectId The ID of the project having fees taken from.
   @param _fundingCycle The funding cycle during which the fee is being taken.

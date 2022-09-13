@@ -28,12 +28,13 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
     ```
     // Get the terminal for the protocol project.
-    IJBPaymentTerminal _terminal = directory.primaryTerminalOf(_PROTOCOL_PROJECT_ID, token);
+    IJBPaymentTerminal _terminal = directory.primaryTerminalOf(_FEE_BENEFICIARY_PROJECT_ID, token);
     ```
 
     _Internal references:_
 
     * [`directory`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
+    * [`_FEE_BENEFICIARY_PROJECT_ID`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
 
     _External references:_
 
@@ -48,12 +49,14 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
     1.  Pay the protocol using the internal pay function.
 
         ```
-        _pay(_amount, address(this), _PROTOCOL_PROJECT_ID, _beneficiary, 0, false, '', bytes('')); // Use the local pay call.
+        _pay(_amount, address(this), _FEE_BENEFICIARY_PROJECT_ID, _beneficiary, 0, false, '', bytes('')); // Use the local pay call.
         ```
 
         _Internal references:_
 
         * [`_pay`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md)
+        * [`_FEE_BENEFICIARY_PROJECT_ID`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
+
 
 3.  Otherwise if the terminal is different, transfer the fee over.
 
@@ -88,7 +91,7 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
         ```
         // Send the payment.
         _terminal.pay{value: _payableValue}(
-          _PROTOCOL_PROJECT_ID,
+          _FEE_BENEFICIARY_PROJECT_ID,
           _amount,
           token,
           _beneficiary,
@@ -101,7 +104,7 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 
         _Internal references:_
 
-        * [`_PROTOCOL_PROJECT_ID`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_protocol_project_id.md)
+        * [`_FEE_BENEFICIARY_PROJECT_ID`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
         
         _External references:_
 
@@ -122,11 +125,11 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
 */
 function _processFee(uint256 _amount, address _beneficiary) private {
   // Get the terminal for the protocol project.
-  IJBPaymentTerminal _terminal = directory.primaryTerminalOf(_PROTOCOL_PROJECT_ID, token);
+  IJBPaymentTerminal _terminal = directory.primaryTerminalOf(_FEE_BENEFICIARY_PROJECT_ID, token);
 
   // When processing the admin fee, save gas if the admin is using this contract as its terminal.
   if (_terminal == this)
-    _pay(_amount, address(this), _PROTOCOL_PROJECT_ID, _beneficiary, 0, false, '', bytes('')); // Use the local pay call.
+    _pay(_amount, address(this), _FEE_BENEFICIARY_PROJECT_ID, _beneficiary, 0, false, '', bytes('')); // Use the local pay call.
   else {
     // Trigger any inherited pre-transfer logic.
     _beforeTransferTo(address(_terminal), _amount);
@@ -136,7 +139,7 @@ function _processFee(uint256 _amount, address _beneficiary) private {
 
     // Send the payment.
     _terminal.pay{value: _payableValue}(
-      _PROTOCOL_PROJECT_ID,
+      _FEE_BENEFICIARY_PROJECT_ID,
       _amount,
       token,
       _beneficiary,

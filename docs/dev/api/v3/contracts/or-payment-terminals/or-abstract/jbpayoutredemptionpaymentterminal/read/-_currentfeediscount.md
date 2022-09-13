@@ -28,7 +28,7 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256 f
 
     ```
     // Can't take a fee if the protocol project doesn't have a terminal that accepts the token.
-    if (directory.primaryTerminalOf(_PROTOCOL_PROJECT_ID, token) == IJBPaymentTerminal(address(0)))
+    if (directory.primaryTerminalOf(_FEE_BENEFICIARY_PROJECT_ID, token) == IJBPaymentTerminal(address(0)))
       return JBConstants.MAX_FEE_DISCOUNT;
     ```
 
@@ -40,6 +40,7 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256 f
     _Internal references:_
 
     * [`directory`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
+    * [`_FEE_BENEFICIARY_PROJECT_ID`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/-_fee_beneficiary_project_id.md)
 
     _External references:_
 
@@ -94,7 +95,7 @@ function _currentFeeDiscount(uint256 _projectId) private view returns (uint256 f
 */
 function _currentFeeDiscount(uint256 _projectId) private view returns (uint256 feeDiscount) {
   // Can't take a fee if the protocol project doesn't have a terminal that accepts the token.
-  if (directory.primaryTerminalOf(_PROTOCOL_PROJECT_ID, token) == IJBPaymentTerminal(address(0)))
+  if (directory.primaryTerminalOf(_FEE_BENEFICIARY_PROJECT_ID, token) == IJBPaymentTerminal(address(0)))
     return JBConstants.MAX_FEE_DISCOUNT;
 
   // Get the fee discount.
