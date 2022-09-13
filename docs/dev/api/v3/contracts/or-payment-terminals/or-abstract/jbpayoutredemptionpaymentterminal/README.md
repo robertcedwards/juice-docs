@@ -124,7 +124,6 @@ constructor( // payable constructor save the gas used to check msg.value==0
 | [**`fee`**](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/fee.md)                                        | <p><strong>Returns</strong></p><ul><li><code>uint256</code></li></ul> |
 | [**`feeGauge`**](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/feegauge.md)                                        | <p><strong>Params</strong></p><ul><li><code>[IJBPaymentTerminal](/dev/api/v3/interfaces/ijbpaymentterminal.md) terminal</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[IJBFeeGauge](/dev/api/v3/interfaces/ijbfeegauge.md)</code></li></ul> |
 | [**`isFeelessAddress`**](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/isfeelessaddress.md)                                        | <p><strong>returns</strong></p><ul><li><code>bool</code></li></ul> |
-| [**`_FEE_BENEFICIARY_PROJECT_ID`**](dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/_fee_beneficiary_project_id.md)                                        | <p><strong>returns</strong></p><ul><li><code>bool</code></li></ul> |
 
 
 #### Read

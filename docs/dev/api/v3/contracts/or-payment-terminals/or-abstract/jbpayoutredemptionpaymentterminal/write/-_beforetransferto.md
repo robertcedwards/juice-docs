@@ -14,7 +14,10 @@ Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment
   @param _to The address to which the transfer is going.
   @param _amount The amount of the transfer, as a fixed point number with the same number of decimals as this terminal.
 */
-function _beforeTransferTo(address _to, uint256 _amount) internal virtual;
+function _beforeTransferTo(address _to, uint256 _amount) internal virtual {
+  _to; // Prevents unused var compiler and natspec complaints.
+  _amount; // Prevents unused var compiler and natspec complaints.
+}
 ```
 
 * Arguments:

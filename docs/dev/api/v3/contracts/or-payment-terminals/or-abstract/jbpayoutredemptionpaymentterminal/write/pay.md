@@ -52,8 +52,14 @@ function pay(
     if (token != JBTokens.ETH) {
       if (msg.value > 0) revert NO_MSG_VALUE_ALLOWED();
 
+      // Get a reference to the balance before receiving tokens.
+      uint256 _balanceBefore = _balance();
+
       // Transfer tokens to this terminal from the msg sender.
       _transferFrom(msg.sender, payable(address(this)), _amount);
+
+      // The amount should reflect the change in balance.
+      _amount = _balance() - _balanceBefore;
     }
     // If this terminal's token is ETH, override _amount with msg.value.
     else _amount = msg.value;
@@ -66,6 +72,7 @@ function pay(
 
     _Virtual references:_
 
+    * [`_balance`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_balance.md)
     * [`_transferFrom`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
 
 1.  Forward the call to the internal version of the function that is also used by other operations.
@@ -124,8 +131,14 @@ function pay(
   if (token != JBTokens.ETH) {
     if (msg.value > 0) revert NO_MSG_VALUE_ALLOWED();
 
+    // Get a reference to the balance before receiving tokens.
+    uint256 _balanceBefore = _balance();
+
     // Transfer tokens to this terminal from the msg sender.
     _transferFrom(msg.sender, payable(address(this)), _amount);
+
+    // The amount should reflect the change in balance.
+    _amount = _balance() - _balanceBefore;
   }
   // If this terminal's token is ETH, override _amount with msg.value.
   else _amount = msg.value;

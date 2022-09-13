@@ -14,8 +14,6 @@ Interface: [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/v3/interfaces/ijbpayo
 
 _Only the owner of this contract can change the fee gauge._
 
-_If the fee gauge reverts when called upon while a project is attempting to distribute its funds, a project's funds will be locked. This is a known risk._
-
 #### Definition
 
 ```
@@ -61,9 +59,6 @@ function setFeeGauge(IJBFeeGauge _feeGauge) external virtual override onlyOwner 
 
   @dev
   Only the owner of this contract can change the fee gauge.
-
-  @dev
-  If the fee gauge reverts when called upon while a project is attempting to distribute its funds, a project's funds will be locked. This is a known risk.
 
   @param _feeGauge The new fee gauge.
 */

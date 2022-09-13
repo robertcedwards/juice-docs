@@ -19,7 +19,11 @@ function _transferFrom(
   address _from,
   address payable _to,
   uint256 _amount
-) internal virtual;
+) internal virtual {
+  _from; // Prevents unused var compiler and natspec complaints.
+  _to; // Prevents unused var compiler and natspec complaints.
+  _amount; // Prevents unused var compiler and natspec complaints.
+}
 ```
 
 * Arguments:

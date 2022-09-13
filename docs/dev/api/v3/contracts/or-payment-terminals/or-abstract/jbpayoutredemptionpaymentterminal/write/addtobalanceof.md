@@ -47,8 +47,14 @@ function addToBalanceOf(
       // Amount must be greater than 0.
       if (msg.value > 0) revert NO_MSG_VALUE_ALLOWED();
 
+      // Get a reference to the balance before receiving tokens.
+      uint256 _balanceBefore = _balance();
+
       // Transfer tokens to this terminal from the msg sender.
       _transferFrom(msg.sender, payable(address(this)), _amount);
+
+      // The amount should reflect the change in balance.
+      _amount = _balance() - _balanceBefore;
     }
     // If the terminal's token is ETH, override `_amount` with msg.value.
     else _amount = msg.value;
@@ -61,6 +67,7 @@ function addToBalanceOf(
 
     _Virtual references:_
 
+    * [`_balance`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_balance.md)
     * [`_transferFrom`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
 2.  Forward to the internal function to properly account for the added balance. If the message sender is a feeless address, don't refund held fees.
 
@@ -101,8 +108,14 @@ function addToBalanceOf(
     // Amount must be greater than 0.
     if (msg.value > 0) revert NO_MSG_VALUE_ALLOWED();
 
+    // Get a reference to the balance before receiving tokens.
+    uint256 _balanceBefore = _balance();
+
     // Transfer tokens to this terminal from the msg sender.
     _transferFrom(msg.sender, payable(address(this)), _amount);
+
+    // The amount should reflect the change in balance.
+    _amount = _balance() - _balanceBefore;
   }
   // If the terminal's token is ETH, override `_amount` with msg.value.
   else _amount = msg.value;

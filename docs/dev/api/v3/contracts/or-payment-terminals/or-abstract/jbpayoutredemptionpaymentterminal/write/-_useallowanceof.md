@@ -96,7 +96,7 @@ function _useAllowanceOf(
 
         ```
         // Get the amount of discount that should be applied to any fees taken.
-        // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convinience.
+        // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convenience.
         uint256 _feeDiscount = fee == 0 || isFeelessAddress[msg.sender]
           ? JBConstants.MAX_FEE_DISCOUNT
           : _currentFeeDiscount(_projectId);
@@ -219,7 +219,7 @@ function useAllowanceOf(
     address _projectOwner = projects.ownerOf(_projectId);
 
     // Get the amount of discount that should be applied to any fees taken.
-    // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convinience.
+    // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convenience.
     uint256 _feeDiscount = fee == 0 || isFeelessAddress[msg.sender]
       ? JBConstants.MAX_FEE_DISCOUNT
       : _currentFeeDiscount(_projectId);

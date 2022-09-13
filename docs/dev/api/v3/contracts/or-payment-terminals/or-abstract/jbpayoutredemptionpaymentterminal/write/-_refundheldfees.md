@@ -61,7 +61,7 @@ function _refundHeldFees(uint256 _projectId, uint256 _amount)
     uint256 _heldFeesLength = _heldFees.length;
 
     // Process each fee.
-    for (uint256 _i = 0; _i < _heldFeesLength; ) {
+    for (uint256 _i; _i < _heldFeesLength; ) {
       if (leftoverAmount == 0) _heldFeesOf[_projectId].push(_heldFees[_i]);
       else if (leftoverAmount >= _heldFees[_i].amount) {
         unchecked {
@@ -73,16 +73,16 @@ function _refundHeldFees(uint256 _projectId, uint256 _amount)
           );
         }
       } else {
-        _heldFeesOf[_projectId].push(
-          JBFee(
-            _heldFees[_i].amount - leftoverAmount,
-            _heldFees[_i].fee,
-            _heldFees[_i].feeDiscount,
-            _heldFees[_i].beneficiary
-          )
-        );
-
         unchecked {
+          _heldFeesOf[_projectId].push(
+            JBFee(
+              _heldFees[_i].amount - leftoverAmount,
+              _heldFees[_i].fee,
+              _heldFees[_i].feeDiscount,
+              _heldFees[_i].beneficiary
+            )
+          );
+
           refundedFees += _feeAmount(leftoverAmount, _heldFees[_i].fee, _heldFees[_i].feeDiscount);
         }
 
@@ -140,7 +140,7 @@ function _refundHeldFees(uint256 _projectId, uint256 _amount)
   uint256 _heldFeesLength = _heldFees.length;
 
   // Process each fee.
-  for (uint256 _i = 0; _i < _heldFeesLength) {
+  for (uint256 _i; _i < _heldFeesLength) {
     if (leftoverAmount == 0) _heldFeesOf[_projectId].push(_heldFees[_i]);
     else if (leftoverAmount >= _heldFees[_i].amount) {
       unchecked {
@@ -152,16 +152,16 @@ function _refundHeldFees(uint256 _projectId, uint256 _amount)
         );
       }
     } else {
-      _heldFeesOf[_projectId].push(
-        JBFee(
-          _heldFees[_i].amount - leftoverAmount,
-          _heldFees[_i].fee,
-          _heldFees[_i].feeDiscount,
-          _heldFees[_i].beneficiary
-        )
-      );
-
       unchecked {
+        _heldFeesOf[_projectId].push(
+          JBFee(
+            _heldFees[_i].amount - leftoverAmount,
+            _heldFees[_i].fee,
+            _heldFees[_i].feeDiscount,
+            _heldFees[_i].beneficiary
+          )
+        );
+
         refundedFees += _feeAmount(leftoverAmount, _heldFees[_i].fee, _heldFees[_i].feeDiscount);
       }
 

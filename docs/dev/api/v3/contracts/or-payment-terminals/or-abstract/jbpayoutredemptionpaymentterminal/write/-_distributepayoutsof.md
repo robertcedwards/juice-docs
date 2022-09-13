@@ -90,8 +90,8 @@ function _distributePayoutsOf(
 
         ```
         // Get the amount of discount that should be applied to any fees taken.
-        // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convinience.
-        uint256 _feeDiscount = fee == 0 || isFeelessAddress[msg.sender]
+        // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convenience.
+        uint256 _feeDiscount = fee == 0
           ? JBConstants.MAX_FEE_DISCOUNT
           : _currentFeeDiscount(_projectId);
         ```
@@ -138,26 +138,27 @@ function _distributePayoutsOf(
     4.  Add the leftover distribution amount to the amount from which fees should be taken since those funds will be leaving the ecosystem to the project owner's address.
 
         ```
-        // Leftover distribution amount is also eligible for a fee since the funds are going out of the ecosystem to _beneficiary.
-        unchecked {
-          _feeEligibleDistributionAmount += _leftoverDistributionAmount;
+        if (_feeDiscount != JBConstants.MAX_FEE_DISCOUNT) {
+          // Leftover distribution amount is also eligible for a fee since the funds are going out of the ecosystem to _beneficiary.
+          unchecked {
+            _feeEligibleDistributionAmount += _leftoverDistributionAmount;
+          }
         }
         ```
 
     5.  Take the fee if needed.
 
         ```
-        // Take the fee.
-        _fee = _feeDiscount == JBConstants.MAX_FEE_DISCOUNT ||
-          _feeEligibleDistributionAmount == 0
-          ? 0
-          : _takeFeeFrom(
+        // Take the fee
+        _fee = _feeEligibleDistributionAmount != 0
+          ? _takeFeeFrom(
             _projectId,
             _fundingCycle,
             _feeEligibleDistributionAmount,
             _projectOwner,
             _feeDiscount
-          );
+          )
+          : 0;
         ```
 
         _Library references:_
@@ -169,14 +170,18 @@ function _distributePayoutsOf(
 
         * [`_takeFeeFrom`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_takefeefrom.md)
 
-    6.  Calculate what the net value of the leftover distribution will be.
+    6.  Calculate what the net value of the leftover distribution will be, and send it.
 
         ```
-        // Get a reference to how much to distribute to the project owner, which is the leftover amount minus any fees.
-        unchecked {
-          netLeftoverDistributionAmount = _leftoverDistributionAmount == 0
-            ? 0
-            : _leftoverDistributionAmount - _feeAmount(_leftoverDistributionAmount, fee, _feeDiscount);
+        // Transfer any remaining balance to the project owner and update returned leftover accordingly
+        if (_leftoverDistributionAmount != 0) {
+          // Subtract the fee from the net leftover amount.
+          netLeftoverDistributionAmount =
+            _leftoverDistributionAmount -
+            _feeAmount(_leftoverDistributionAmount, fee, _feeDiscount);
+
+          // Transfer the amount to the project owner.
+          _transferFrom(address(this), _projectOwner, netLeftoverDistributionAmount);
         }
         ```
 
@@ -184,14 +189,6 @@ function _distributePayoutsOf(
 
         * [`fee`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/fee.md)
         * [`_feeAmount`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/read/-_feeamount.md)
-
-    7.  Transfer any leftover amount to the project owner if needed.
-
-        ```
-        // Transfer any remaining balance to the project owner.
-        if (netLeftoverDistributionAmount > 0)
-          _transferFrom(address(this), _projectOwner, netLeftoverDistributionAmount);
-        ```
 
         _Virtual references:_
 
@@ -272,8 +269,8 @@ function _distributePayoutsOf(
   // Scoped section prevents stack too deep. `_feeDiscount`, `_feeEligibleDistributionAmount`, and `_leftoverDistributionAmount` only used within scope.
   {
     // Get the amount of discount that should be applied to any fees taken.
-    // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convinience.
-    uint256 _feeDiscount = fee == 0 || isFeelessAddress[msg.sender]
+    // If the fee is zero or if the fee is being used by an address that doesn't incur fees, set the discount to 100% for convenience.
+    uint256 _feeDiscount = fee == 0
       ? JBConstants.MAX_FEE_DISCOUNT
       : _currentFeeDiscount(_projectId);
 
@@ -293,33 +290,34 @@ function _distributePayoutsOf(
       _feeDiscount
     );
 
-    // Leftover distribution amount is also eligible for a fee since the funds are going out of the ecosystem to _beneficiary.
-    unchecked {
-      _feeEligibleDistributionAmount += _leftoverDistributionAmount;
+    if (_feeDiscount != JBConstants.MAX_FEE_DISCOUNT) {
+      // Leftover distribution amount is also eligible for a fee since the funds are going out of the ecosystem to _beneficiary.
+      unchecked {
+        _feeEligibleDistributionAmount += _leftoverDistributionAmount;
+      }
     }
 
-    // Take the fee.
-    _fee = _feeDiscount == JBConstants.MAX_FEE_DISCOUNT ||
-      _feeEligibleDistributionAmount == 0
-      ? 0
-      : _takeFeeFrom(
+    // Take the fee
+    _fee = _feeEligibleDistributionAmount != 0
+      ? _takeFeeFrom(
         _projectId,
         _fundingCycle,
         _feeEligibleDistributionAmount,
         _projectOwner,
         _feeDiscount
-      );
+      )
+      : 0;
 
-    // Get a reference to how much to distribute to the project owner, which is the leftover amount minus any fees.
-    unchecked {
-      netLeftoverDistributionAmount = _leftoverDistributionAmount == 0
-        ? 0
-        : _leftoverDistributionAmount - _feeAmount(_leftoverDistributionAmount, _feeDiscount);
-    }
+    // Transfer any remaining balance to the project owner and update returned leftover accordingly
+    if (_leftoverDistributionAmount != 0) {
+      // Subtract the fee from the net leftover amount.
+      netLeftoverDistributionAmount =
+        _leftoverDistributionAmount -
+        _feeAmount(_leftoverDistributionAmount, fee, _feeDiscount);
 
-    // Transfer any remaining balance to the project owner.
-    if (netLeftoverDistributionAmount > 0)
+      // Transfer the amount to the project owner.
       _transferFrom(address(this), _projectOwner, netLeftoverDistributionAmount);
+    }
   }
 
   emit DistributePayouts(

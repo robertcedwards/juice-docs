@@ -49,7 +49,16 @@ function _processFee(uint256 _amount, address _beneficiary) { ... }
     1.  Pay the protocol using the internal pay function.
 
         ```
-        _pay(_amount, address(this), _FEE_BENEFICIARY_PROJECT_ID, _beneficiary, 0, false, '', bytes('')); // Use the local pay call.
+        _pay(
+          _amount,
+          address(this),
+          _FEE_BENEFICIARY_PROJECT_ID,
+          _beneficiary,
+          0,
+          false,
+          '',
+          bytes('')
+        ); // Use the local pay call.
         ```
 
         _Internal references:_
@@ -129,7 +138,16 @@ function _processFee(uint256 _amount, address _beneficiary) private {
 
   // When processing the admin fee, save gas if the admin is using this contract as its terminal.
   if (_terminal == this)
-    _pay(_amount, address(this), _FEE_BENEFICIARY_PROJECT_ID, _beneficiary, 0, false, '', bytes('')); // Use the local pay call.
+    _pay(
+      _amount,
+      address(this),
+      _FEE_BENEFICIARY_PROJECT_ID,
+      _beneficiary,
+      0,
+      false,
+      '',
+      bytes('')
+    ); // Use the local pay call.
   else {
     // Trigger any inherited pre-transfer logic.
     _beforeTransferTo(address(_terminal), _amount);

@@ -53,14 +53,14 @@ function _pay(
     // Keep a reference to the funding cycle during which the payment is being made.
     JBFundingCycle memory _fundingCycle;
 
-    // Scoped section prevents stack too deep. `_delegate` and `_tokenCount` only used within scope.
+    // Scoped section prevents stack too deep. `_delegateAllocations` and `_tokenCount` only used within scope.
     { ... }
     ```
 
-    1.  Keep references to the delegate and token count that'll be returned from the subsequent function.
+    1.  Keep references to the delegate allocations and token count that'll be returned from the subsequent function.
 
         ```
-        IJBPayDelegate _delegate;
+        JBPayDelegateAllocation[] memory _delegateAllocations;
         uint256 _tokenCount;
         ```
 
@@ -71,11 +71,11 @@ function _pay(
         JBTokenAmount memory _bundledAmount = JBTokenAmount(token, _amount, decimals, currency);
         ```
 
-    3.  Record the payment, and get a reference to the funding cycle during which the payment was made, the number of project tokens that should be minted as a result, a delegate to callback to, and an updated memo. 
+    3.  Record the payment, and get a reference to the funding cycle during which the payment was made, the number of project tokens that should be minted as a result, delegate amounts to fulfill, and an updated memo. 
 
         ```
         // Record the payment.
-        (_fundingCycle, _tokenCount, _delegate, _memo) = store.recordPaymentFrom(
+        (_fundingCycle, _tokenCount, _delegateAllocations, _memo) = store.recordPaymentFrom(
           _payer,
           _bundledAmount,
           _projectId,
@@ -126,16 +126,20 @@ function _pay(
         if (beneficiaryTokenCount < _minReturnedTokens) revert INADEQUATE_TOKEN_COUNT();
         ```
 
-    6.  If a delegate was provided, callback to its `didPay` function, and emit an event with the relevant parameters..
+    6.  If delegated amounts were provided, fulfill each of their `didPay` functions, and emit an event with the relevant parameters.
 
         ```
-        // If a delegate was returned by the data source, issue a callback to it.
-        if (_delegate != IJBPayDelegate(address(0))) {
+        // If delegate allocations were specified by the data source, fulfill them.
+        if (_delegateAllocations.length != 0) {
+          // Keep a reference to the token amount being forwarded to the delegate.
+          JBTokenAmount memory _forwardedAmount = JBTokenAmount(token, _amount, decimals, currency);
+
           JBDidPayData memory _data = JBDidPayData(
             _payer,
             _projectId,
             _fundingCycle.configuration,
             _bundledAmount,
+            _forwardedAmount,
             beneficiaryTokenCount,
             _beneficiary,
             _preferClaimedTokens,
@@ -143,10 +147,44 @@ function _pay(
             _metadata
           );
 
-          _delegate.didPay(_data);
-          emit DelegateDidPay(_delegate, _data, msg.sender);
+          // Get a reference to the number of delegates to allocate to.
+          uint256 _numDelegates = _delegateAllocations.length;
+
+          for (uint256 _i; _i < _numDelegates; ) {
+            // Get a reference to the delegate being iterated on.
+            JBPayDelegateAllocation memory _delegateAllocation = _delegateAllocations[_i];
+
+            // Trigger any inherited pre-transfer logic.
+            _beforeTransferTo(address(_delegateAllocation.delegate), _delegateAllocation.amount);
+
+            // Keep track of the msg.value to use in the delegate call
+            uint256 _payableValue;
+
+            // If this terminal's token is ETH, send it in msg.value.
+            if (token == JBTokens.ETH) _payableValue = _delegateAllocation.amount;
+
+            // Pass the correct token forwardedAmount to the delegate
+            _data.forwardedAmount.value = _delegateAllocation.amount;
+
+            _delegateAllocation.delegate.didPay{value: _payableValue}(_data);
+
+            emit DelegateDidPay(
+              _delegateAllocation.delegate,
+              _data,
+              _delegateAllocation.amount,
+              msg.sender
+            );
+
+            unchecked {
+              ++_i;
+            }
+          }
         }
         ```
+
+        _Virtual references:_
+
+        * [`_beforeTransferTo`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
 
         _External references:_
 
@@ -213,16 +251,16 @@ function _pay(
   // Keep a reference to the funding cycle during which the payment is being made.
   JBFundingCycle memory _fundingCycle;
 
-  // Scoped section prevents stack too deep. `_delegate` and `_tokenCount` only used within scope.
+  // Scoped section prevents stack too deep. `_delegateAllocations` and `_tokenCount` only used within scope.
   {
-    IJBPayDelegate _delegate;
+    JBPayDelegateAllocation[] memory _delegateAllocations;
     uint256 _tokenCount;
 
     // Bundle the amount info into a JBTokenAmount struct.
     JBTokenAmount memory _bundledAmount = JBTokenAmount(token, _amount, decimals, currency);
 
     // Record the payment.
-    (_fundingCycle, _tokenCount, _delegate, _memo) = store.recordPaymentFrom(
+    (_fundingCycle, _tokenCount, _delegateAllocations, _memo) = store.recordPaymentFrom(
       _payer,
       _bundledAmount,
       _projectId,
@@ -247,13 +285,17 @@ function _pay(
     // The token count for the beneficiary must be greater than or equal to the minimum expected.
     if (beneficiaryTokenCount < _minReturnedTokens) revert INADEQUATE_TOKEN_COUNT();
 
-    // If a delegate was returned by the data source, issue a callback to it.
-    if (_delegate != IJBPayDelegate(address(0))) {
+    // If delegate allocations were specified by the data source, fulfill them.
+    if (_delegateAllocations.length != 0) {
+      // Keep a reference to the token amount being forwarded to the delegate.
+      JBTokenAmount memory _forwardedAmount = JBTokenAmount(token, _amount, decimals, currency);
+
       JBDidPayData memory _data = JBDidPayData(
         _payer,
         _projectId,
         _fundingCycle.configuration,
         _bundledAmount,
+        _forwardedAmount,
         beneficiaryTokenCount,
         _beneficiary,
         _preferClaimedTokens,
@@ -261,8 +303,38 @@ function _pay(
         _metadata
       );
 
-      _delegate.didPay(_data);
-      emit DelegateDidPay(_delegate, _data, msg.sender);
+      // Get a reference to the number of delegates to allocate to.
+      uint256 _numDelegates = _delegateAllocations.length;
+
+      for (uint256 _i; _i < _numDelegates; ) {
+        // Get a reference to the delegate being iterated on.
+        JBPayDelegateAllocation memory _delegateAllocation = _delegateAllocations[_i];
+
+        // Trigger any inherited pre-transfer logic.
+        _beforeTransferTo(address(_delegateAllocation.delegate), _delegateAllocation.amount);
+
+        // Keep track of the msg.value to use in the delegate call
+        uint256 _payableValue;
+
+        // If this terminal's token is ETH, send it in msg.value.
+        if (token == JBTokens.ETH) _payableValue = _delegateAllocation.amount;
+
+        // Pass the correct token forwardedAmount to the delegate
+        _data.forwardedAmount.value = _delegateAllocation.amount;
+
+        _delegateAllocation.delegate.didPay{value: _payableValue}(_data);
+
+        emit DelegateDidPay(
+          _delegateAllocation.delegate,
+          _data,
+          _delegateAllocation.amount,
+          msg.sender
+        );
+
+        unchecked {
+          ++_i;
+        }
+      }
     }
   }
 

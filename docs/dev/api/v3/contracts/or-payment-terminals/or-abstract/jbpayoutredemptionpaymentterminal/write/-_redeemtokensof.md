@@ -55,21 +55,21 @@ function _redeemTokensOf(
 3.  The following scoped block is a bit of a hack to prevent a "Stack too deep" error. 
 
     ```
-    // Scoped section prevents stack too deep. `_delegate` only used within scope.
+    // Scoped section prevents stack too deep. `_delegateAllocations` only used within scope.
     { ... }
     ```
 
     1.  Get a reference to the redemption delegate that. 
 
         ```
-        IJBRedemptionDelegate _delegate;
+        JBRedemptionDelegateAllocation[] memory _delegateAllocations;
         ```
 
-    2.  Record the redemption and get a reference to the funding cycle during which the redemption was made, the terminal token amount that should be reclaimed, a delegate to callback to, and an updated memo.
+    2.  Record the redemption and get a reference to the funding cycle during which the redemption was made, the terminal token amount that should be reclaimed, the delegate allocations to fulfill, and an updated memo.
 
         ```
         // Record the redemption.
-        (_fundingCycle, reclaimAmount, _delegate, _memo) = store.recordRedemptionFor(
+        (_fundingCycle, reclaimAmount, _delegateAllocations, _memo) = store.recordRedemptionFor(
           _holder,
           _projectId,
           _tokenCount,
@@ -115,23 +115,57 @@ function _redeemTokensOf(
         * [`controllerOf`](/dev/api/v3/contracts/jbdirectory/properties/controllerof.md)
         * [`burnTokensOf`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/burntokensof.md)
 
-    5.  If a delegate was provided, callback to its `didRedeem` function, and emit an event with the relevant parameters..
+    5.  If delegate allocations were specified, fulfill each of their `didRedeem` functions, and emit an event with the relevant parameters.
 
         ```
-        // If a delegate was returned by the data source, issue a callback to it.
-        if (_delegate != IJBRedemptionDelegate(address(0))) {
+        // If delegate allocations were specified by the data source, fulfill them.
+        if (_delegateAllocations.length != 0) {
+          // Keep a reference to the token amount being forwarded to the delegate.
+          JBTokenAmount memory _forwardedAmount = JBTokenAmount(token, 0, decimals, currency);
+
           JBDidRedeemData memory _data = JBDidRedeemData(
             _holder,
             _projectId,
             _tokenCount,
             _fundingCycle.configuration,
             JBTokenAmount(token, reclaimAmount, decimals, currency),
+            _forwardedAmount,
             _beneficiary,
             _memo,
             _metadata
           );
-          _delegate.didRedeem(_data);
-          emit DelegateDidRedeem(_delegate, _data, msg.sender);
+
+          uint256 _numDelegates = _delegateAllocations.length;
+
+          for (uint256 _i; _i < _numDelegates; ) {
+            // Get a reference to the delegate being iterated on.
+            JBRedemptionDelegateAllocation memory _delegateAllocation = _delegateAllocations[_i];
+
+            // Trigger any inherited pre-transfer logic.
+            _beforeTransferTo(address(_delegateAllocation.delegate), _delegateAllocation.amount);
+
+            // Keep track of the msg.value to use in the delegate call
+            uint256 _payableValue;
+
+            // If this terminal's token is ETH, send it in msg.value.
+            if (token == JBTokens.ETH) _payableValue = _delegateAllocation.amount;
+
+            // Pass the correct token forwardedAmount to the delegate
+            _data.forwardedAmount.value = _delegateAllocation.amount;
+
+            _delegateAllocation.delegate.didRedeem{value: _payableValue}(_data);
+
+            emit DelegateDidRedeem(
+              _delegateAllocation.delegate,
+              _data,
+              _delegateAllocation.amount,
+              msg.sender
+            );
+
+            unchecked {
+              ++_i;
+            }
+          }
         }
         ```
 
@@ -140,6 +174,10 @@ function _redeemTokensOf(
         * [`token`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/token.md)
         * [`decimals`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/decimals.md)
         * [`currency`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/currency.md)
+
+        _Virtual references:_
+
+        * [`_beforeTransferTo`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
 
         _External references:_
 
@@ -194,7 +232,7 @@ function _redeemTokensOf(
   @param _holder The account to redeem tokens for.
   @param _projectId The ID of the project to which the tokens being redeemed belong.
   @param _tokenCount The number of project tokens to redeem, as a fixed point number with 18 decimals.
-  @param _minReturnedTokens The minimum amount of terminal tokens expected in return, as a fixed point number with the same amount of decimals as this terminal.
+  @param _minReturnedTokens The minimum amount of terminal tokens expected in return, as a fixed point number with the same amount of decimals as the terminal.
   @param _beneficiary The address to send the terminal tokens to.
   @param _memo A memo to pass along to the emitted event.
   @param _metadata Bytes to send along to the data source, delegate, and emitted event, if provided.
@@ -209,20 +247,20 @@ function _redeemTokensOf(
   address payable _beneficiary,
   string memory _memo,
   bytes memory _metadata
-) private returns (uint256 reclaimAmount) {
+) internal returns (uint256 reclaimAmount) {
   // Can't send reclaimed funds to the zero address.
   if (_beneficiary == address(0)) revert REDEEM_TO_ZERO_ADDRESS();
 
-    // Define variables that will be needed outside the scoped section below.
+  // Define variables that will be needed outside the scoped section below.
   // Keep a reference to the funding cycle during which the redemption is being made.
   JBFundingCycle memory _fundingCycle;
 
-  // Scoped section prevents stack too deep. `_delegate` only used within scope.
+  // Scoped section prevents stack too deep. `_delegateAllocations` only used within scope.
   {
-    IJBRedemptionDelegate _delegate;
+    JBRedemptionDelegateAllocation[] memory _delegateAllocations;
 
     // Record the redemption.
-    (_fundingCycle, reclaimAmount, _delegate, _memo) = store.recordRedemptionFor(
+    (_fundingCycle, reclaimAmount, _delegateAllocations, _memo) = store.recordRedemptionFor(
       _holder,
       _projectId,
       _tokenCount,
@@ -243,20 +281,53 @@ function _redeemTokensOf(
         false
       );
 
-    // If a delegate was returned by the data source, issue a callback to it.
-    if (_delegate != IJBRedemptionDelegate(address(0))) {
+    // If delegate allocations were specified by the data source, fulfill them.
+    if (_delegateAllocations.length != 0) {
+      // Keep a reference to the token amount being forwarded to the delegate.
+      JBTokenAmount memory _forwardedAmount = JBTokenAmount(token, 0, decimals, currency);
+
       JBDidRedeemData memory _data = JBDidRedeemData(
         _holder,
         _projectId,
         _fundingCycle.configuration,
         _tokenCount,
         JBTokenAmount(token, reclaimAmount, decimals, currency),
+        _forwardedAmount,
         _beneficiary,
         _memo,
         _metadata
       );
-      _delegate.didRedeem(_data);
-      emit DelegateDidRedeem(_delegate, _data, msg.sender);
+
+      uint256 _numDelegates = _delegateAllocations.length;
+
+      for (uint256 _i; _i < _numDelegates; ) {
+        // Get a reference to the delegate being iterated on.
+        JBRedemptionDelegateAllocation memory _delegateAllocation = _delegateAllocations[_i];
+
+        // Trigger any inherited pre-transfer logic.
+        _beforeTransferTo(address(_delegateAllocation.delegate), _delegateAllocation.amount);
+
+        // Keep track of the msg.value to use in the delegate call
+        uint256 _payableValue;
+
+        // If this terminal's token is ETH, send it in msg.value.
+        if (token == JBTokens.ETH) _payableValue = _delegateAllocation.amount;
+
+        // Pass the correct token forwardedAmount to the delegate
+        _data.forwardedAmount.value = _delegateAllocation.amount;
+
+        _delegateAllocation.delegate.didRedeem{value: _payableValue}(_data);
+
+        emit DelegateDidRedeem(
+          _delegateAllocation.delegate,
+          _data,
+          _delegateAllocation.amount,
+          msg.sender
+        );
+        unchecked {
+          ++_i;
+        }
+      }
     }
   }
 
