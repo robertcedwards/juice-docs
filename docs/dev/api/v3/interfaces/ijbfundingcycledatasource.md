@@ -13,7 +13,7 @@ interface IJBFundingCycleDataSource is IERC165 {
     returns (
       uint256 weight,
       string memory memo,
-      IJBPayDelegate delegate
+      JBPayDelegateAllocation[] memory delegateAllocations
     );
 
   function redeemParams(JBRedeemParamsData calldata _data)
@@ -21,7 +21,7 @@ interface IJBFundingCycleDataSource is IERC165 {
     returns (
       uint256 reclaimAmount,
       string memory memo,
-      IJBRedemptionDelegate delegate
+      JBRedemptionDelegateAllocation[] memory delegateAllocations
     );
 }
 ```

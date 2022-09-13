@@ -18,7 +18,6 @@ https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/structs/J
   @member reclaimAmount The amount that should be reclaimed by the redeemer using the protocol's standard bonding curve redemption formula. Includes the token being reclaimed, the reclaim value, the number of decimals included, and the currency of the reclaim amount.
   @member useTotalOverflow If overflow across all of a project's terminals is being used when making redemptions.
   @member redemptionRate The redemption rate of the funding cycle during which the redemption is being made.
-  @member ballotRedemptionRate The ballot redemption rate of the funding cycle during which the redemption is being made.
   @member memo The proposed memo that is being emitted alongside the redemption.
   @member metadata Arbitrary metadata provided by the redeemer.
 */
@@ -33,7 +32,6 @@ struct JBRedeemParamsData {
   JBTokenAmount reclaimAmount;
   bool useTotalOverflow;
   uint256 redemptionRate;
-  uint256 ballotRedemptionRate;
   string memo;
   bytes metadata;
 }

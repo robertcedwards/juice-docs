@@ -8,6 +8,8 @@ https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/interface
 
 ```
 interface IJBToken {
+  function projectId() external view returns (uint256);
+
   function decimals() external view returns (uint8);
 
   function totalSupply(uint256 _projectId) external view returns (uint256);
@@ -44,7 +46,5 @@ interface IJBToken {
     address _to,
     uint256 _amount
   ) external;
-
-  function transferOwnership(uint256 _projectId, address _newOwner) external;
 }
 ```

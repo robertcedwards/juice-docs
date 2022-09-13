@@ -91,7 +91,12 @@ interface IJBPayoutRedemptionPaymentTerminal is
     address caller
   );
 
-  event DelegateDidPay(IJBPayDelegate indexed delegate, JBDidPayData data, address caller);
+  event DelegateDidPay(
+    IJBPayDelegate indexed delegate,
+    JBDidPayData data,
+    uint256 delegatedAmount,
+    address caller
+  );
 
   event RedeemTokens(
     uint256 indexed fundingCycleConfiguration,
@@ -108,6 +113,7 @@ interface IJBPayoutRedemptionPaymentTerminal is
   event DelegateDidRedeem(
     IJBRedemptionDelegate indexed delegate,
     JBDidRedeemData data,
+    uint256 delegatedAmount,
     address caller
   );
 

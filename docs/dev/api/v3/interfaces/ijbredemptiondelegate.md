@@ -8,6 +8,6 @@ https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/interface
 
 ```
 interface IJBRedemptionDelegate is IERC165 {
-  function didRedeem(JBDidRedeemData calldata _data) external;
+  function didRedeem(JBDidRedeemData calldata _data) external payable;
 }
 ```

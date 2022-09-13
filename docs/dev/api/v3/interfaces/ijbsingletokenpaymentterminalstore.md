@@ -69,7 +69,7 @@ interface IJBSingleTokenPaymentTerminalStore {
     returns (
       JBFundingCycle memory fundingCycle,
       uint256 tokenCount,
-      IJBPayDelegate delegate,
+      JBPayDelegateAllocation[] memory delegateAllocations,
       string memory memo
     );
 
@@ -84,7 +84,7 @@ interface IJBSingleTokenPaymentTerminalStore {
     returns (
       JBFundingCycle memory fundingCycle,
       uint256 reclaimAmount,
-      IJBRedemptionDelegate delegate,
+      JBRedemptionDelegateAllocation[] memory delegateAllocations,
       string memory memo
     );
 
