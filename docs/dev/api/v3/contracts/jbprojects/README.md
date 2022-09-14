@@ -4,13 +4,13 @@ _Stores project ownership and metadata._
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBProjects.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBProjects.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0xD8B4359143eda5B2d763E127Ed27c77addBc47d3`](https://etherscan.io/address/0xD8B4359143eda5B2d763E127Ed27c77addBc47d3)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x2d8e361f8F1B5daF33fDb2C99971b33503E60EEE`](https://rinkeby.etherscan.io/address/0x2d8e361f8F1B5daF33fDb2C99971b33503E60EEE)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

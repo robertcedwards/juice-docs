@@ -4,13 +4,13 @@ _Stitches together funding cycles and project tokens, making sure all activity i
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBController.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBController.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0x4e3ef8AFCC2B52E4e704f4c8d9B7E7948F651351`](https://etherscan.io/address/0x4e3ef8AFCC2B52E4e704f4c8d9B7E7948F651351)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0xd96ecf0E07eB197587Ad4A897933f78A00B21c9a`](https://rinkeby.etherscan.io/address/0xd96ecf0E07eB197587Ad4A897933f78A00B21c9a)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

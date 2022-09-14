@@ -495,10 +495,10 @@ function addToBalanceOf(
 
 By default the protocol uses an internal accounting mechanism to account for projects' tokens. At any time after the project has been created, its owner can issue ERC-20 tokens for the protocol to use as its community token by calling [`JBController.issueTokenFor(...)`](/dev/api/v3/contracts/jbtokenstore/write/issuefor.md).
 
-A project can instead bring their own token, so long as the token adheres to the [`IJBToken`](/dev/api/v3/interfaces/ijbtoken.md) interface, uses 18 decimals fixed point accounting, and isn't already being used by another project. They can do so by calling [`JBController.changeTokenFor(...)`](/dev/api/v3/contracts/jbtokenstore/write/changefor.md) This makes it easy to use ERC-1155s or custom contracts, or to change tokens over time to achieve a more creative design.
+A project can instead bring their own token, so long as the token adheres to the [`IJBToken`](/dev/api/v3/interfaces/ijbtoken.md) interface, uses 18 decimals fixed point accounting, and isn't already being used by another project. They can do so by calling [`JBController.setFor(...)`](/dev/api/v3/contracts/jbtokenstore/write/setfor.md) This makes it easy to use ERC-1155s or custom contracts, or to change tokens over time to achieve a more creative design.
 
 ```
-function issueTokenFor(
+function issueFor(
   uint256 _projectId,
   string calldata _name,
   string calldata _symbol
@@ -510,14 +510,13 @@ function issueTokenFor(
 ```
 
 ```
-function changeTokenOf(
+function setFor(
   uint256 _projectId,
-  IJBToken _token,
-  address _newOwner
+  IJBToken _token
 )
   external
   nonReentrant
-  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.CHANGE_TOKEN) { ... }
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.SET_TOKEN) { ... }
 ```
 
 <details>

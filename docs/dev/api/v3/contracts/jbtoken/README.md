@@ -4,7 +4,7 @@ _An ERC-20 token that can be used by a project in the [`JBTokenStore`](/dev/api/
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBToken.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBToken.sol
 
 #### Interfaces
 

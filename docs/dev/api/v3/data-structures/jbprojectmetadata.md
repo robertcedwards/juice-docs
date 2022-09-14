@@ -2,7 +2,7 @@
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/structs/JBPayParamsData.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/structs/JBPayParamsData.sol
 
 #### Definition
 

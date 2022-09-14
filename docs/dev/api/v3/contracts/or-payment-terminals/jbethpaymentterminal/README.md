@@ -4,13 +4,13 @@ _Manages all inflows and outflows of ETH into the protocol ecosystem._
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBETHPaymentTerminal.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBETHPaymentTerminal.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0x7Ae63FBa045Fec7CaE1a75cF7Aa14183483b8397`](https://etherscan.io/address/0x7Ae63FBa045Fec7CaE1a75cF7Aa14183483b8397)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x765A8b9a23F58Db6c8849315C04ACf32b2D55cF8`](https://rinkeby.etherscan.io/address/0x765A8b9a23F58Db6c8849315C04ACf32b2D55cF8)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Inheritance
 

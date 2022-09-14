@@ -4,13 +4,13 @@ _Manages all bookkeeping for inflows and outflows of funds from any [`IJBSingleT
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBSingleTokenPaymentTerminalStore.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBSingleTokenPaymentTerminalStore.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0x96a594ABE6B910E05E486b63B32fFe29DA5d33f7`](https://etherscan.io/address/0x96a594ABE6B910E05E486b63B32fFe29DA5d33f7)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x5d4eb71749DD9984118EBdF96aaF3CF6EAE1A745`](https://rinkeby.etherscan.io/address/0x5d4eb71749DD9984118EBdF96aaF3CF6EAE1A745)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

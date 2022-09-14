@@ -4,13 +4,13 @@ _Deploys [`JBETHERC20SplitsPayer`](/dev/api/v3/contracts/or-utilities/jbetherc20
 
 #### Code 
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBETHERC20SplitsPayerDeployer.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBETHERC20SplitsPayerDeployer.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0x5c3b3a616ce33653AF9fCE1b97823790884aCc04`](https://etherscan.io/address/0x5c3b3a616ce33653AF9fCE1b97823790884aCc04)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x2d7E2f769C22f40e8c8EBFF16677A3f4f0c8bB09`](https://rinkeby.etherscan.io/address/0x2d7E2f769C22f40e8c8EBFF16677A3f4f0c8bB09)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

@@ -4,13 +4,13 @@ _Deploys [`JBETHERC20ProjectPayer`](/dev/api/v3/contracts/or-utilities/jbetherc2
 
 #### Code 
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBETHERC20ProjectPayerDeployer.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBETHERC20ProjectPayerDeployer.sol
 
 ### Addresses
 
-Ethereum mainnet: [`0x9E84bEcA3E4d3cfE5C3b5E1b534363E8D7468ABc`](https://etherscan.io/address/0x9E84bEcA3E4d3cfE5C3b5E1b534363E8D7468ABc)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x3247df1bdC849f69Ba7dA4faf71d1e5850A6Fbb8`](https://rinkeby.etherscan.io/address/0x3247df1bdC849f69Ba7dA4faf71d1e5850A6Fbb8)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

@@ -4,13 +4,13 @@ _Manages and normalizes price feeds._
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBChainlinkV3PriceFeed.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBChainlinkV3PriceFeed.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0x729eE70bfdF65bEc7A530Fd49F644d07D0b2c087`](https://etherscan.io/address/0x729eE70bfdF65bEc7A530Fd49F644d07D0b2c087)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x59F6aEE20d746708539B4f2E75CA50F9dDCFdC70`](https://rinkeby.etherscan.io/address/0x59F6aEE20d746708539B4f2E75CA50F9dDCFdC70)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

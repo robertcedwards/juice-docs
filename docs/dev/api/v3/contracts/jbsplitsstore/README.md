@@ -5,13 +5,13 @@ _Stores splits for each project._
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBSplitsStore.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBSplitsStore.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0xFBE1075826B7FFd898cf8D944885ba6a8D714A7F`](https://etherscan.io/address/0xFBE1075826B7FFd898cf8D944885ba6a8D714A7F)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x5918B60672f53D504881C63AB04c65338ff185d7`](https://rinkeby.etherscan.io/address/0x5918B60672f53D504881C63AB04c65338ff185d7)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

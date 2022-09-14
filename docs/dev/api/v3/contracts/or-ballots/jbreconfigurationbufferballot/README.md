@@ -4,13 +4,13 @@ _Manages approving funding cycle reconfigurations automatically after a buffer p
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBReconfigurationBufferBallot.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBReconfigurationBufferBallot.sol
 
 #### Interfaces
 
 | Name                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBFundingCycleBallot`**](/dev/api/v3/interfaces/ijbfundingcyclebufferballot.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
+| [**`IJBFundingCycleBallot`**](/dev/api/v3/interfaces/ijbfundingcycleballot.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
 
 #### Inheritance
 

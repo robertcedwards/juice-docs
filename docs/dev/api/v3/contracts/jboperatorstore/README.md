@@ -4,13 +4,13 @@ _Stores operator permissions for all addresses. Addresses can give permissions t
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBOperatorStore.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBOperatorStore.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0x6F3C5afCa0c9eDf3926eF2dDF17c8ae6391afEfb`](https://etherscan.io/address/0x6F3C5afCa0c9eDf3926eF2dDF17c8ae6391afEfb)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0xEDB2db4b82A4D4956C3B4aA474F7ddf3Ac73c5AB`](https://rinkeby.etherscan.io/address/0xEDB2db4b82A4D4956C3B4aA474F7ddf3Ac73c5AB)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

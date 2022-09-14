@@ -6,7 +6,7 @@ _Inherit from this contract or borrow from its logic to forward ETH or ERC20's t
 
 #### Code 
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBETHERC20SplitsPayer.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBETHERC20SplitsPayer.sol
 
 #### Addresses
 

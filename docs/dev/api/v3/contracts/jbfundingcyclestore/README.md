@@ -5,13 +5,13 @@ _Manages funding cycle configurations and scheduling._
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBFundingCycleStore.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBFundingCycleStore.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0x6B8e01DAA8A61b544F96d2738893E05D04BF1D12`](https://etherscan.io/address/0x6B8e01DAA8A61b544F96d2738893E05D04BF1D12)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x8b3e0af1f7ee6C5a3fab969b5cAdD9347B009F1a`](https://rinkeby.etherscan.io/address/0x8b3e0af1f7ee6C5a3fab969b5cAdD9347B009F1a)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 

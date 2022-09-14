@@ -4,13 +4,13 @@ _Keeps a reference of which terminal contracts each project is currently accepti
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v2/blob/main/contracts/JBDirectory.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBDirectory.sol
 
 #### Addresses
 
-Ethereum mainnet: [`0xCc8f7a89d89c2AB3559f484E0C656423E979ac9C`](https://etherscan.io/address/0xCc8f7a89d89c2AB3559f484E0C656423E979ac9C)
+Ethereum mainnet: [``](https://etherscan.io/address/)
 
-Ethereum rinkeby: [`0x1A9b04A9617ba5C9b7EBfF9668C30F41db6fC21a`](https://rinkeby.etherscan.io/address/0x1A9b04A9617ba5C9b7EBfF9668C30F41db6fC21a)
+Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 #### Interfaces
 
