@@ -4,7 +4,7 @@ Before implementing, learn about delegates [here](/dev/learn/glossary/delegate.m
 
 #### Specs
 
-A contract can become a treasury redemption delegate by adhering to [`IJBRedemptionDelegate`](/dev/api/v2/interfaces/ijbredemptiondelegate.md):
+A contract can become a treasury redemption delegate by adhering to [`IJBRedemptionDelegate`](/dev/api/v3/interfaces/ijbredemptiondelegate.md):
 
 ```
 interface IJBRedemptionDelegate {
@@ -12,7 +12,7 @@ interface IJBRedemptionDelegate {
 }
 ```
 
-When extending the redemption functionality with a delegate, the protocol will pass a [`JBDidRedeemData`](/dev/api/v2/data-structures/jbdidredeemdata.md) to the `didRedeem(...)` function:
+When extending the redemption functionality with a delegate, the protocol will pass a [`JBDidRedeemData`](/dev/api/v3/data-structures/jbdidredeemdata.md) to the `didRedeem(...)` function:
 
 ```
 struct JBDidRedeemData {
@@ -38,7 +38,7 @@ struct JBTokenAmount {
 
 The `msg.sender` to the delegate will be the payment terminal that facilitated the redemption. 
 
-In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal), such as [`JBETHPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/jbethpaymentterminal/README.md)'s and [`JBERC20PaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/jberc20paymentterminal/README.md)'s, the redemption delegate hook gets called *before* the reclaimed amount is sent to the redemption beneficiary, but after all internal accounting has been updated.  [View the docs](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/redeemtokensof.md). 
+In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal), such as [`JBETHPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/jbethpaymentterminal/README.md)'s and [`JBERC20PaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/jberc20paymentterminal/README.md)'s, the redemption delegate hook gets called *before* the reclaimed amount is sent to the redemption beneficiary, but after all internal accounting has been updated.  [View the docs](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/redeemtokensof.md). 
 
 Make sure to only allow trusted contracts to access the `didPay(...)` transaction.
 

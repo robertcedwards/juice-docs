@@ -8,4 +8,4 @@
 
 #### What you'll want to know if you're building
 
-* A discount rate can be specified in a funding cycle through the [`JBController.launchProjectFor(...)`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/launchprojectfor.md) or [`JBController.reconfigureFundingCyclesOf(...)`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof.md) transactions.
+* A discount rate can be specified in a funding cycle through the [`JBController.launchProjectFor(...)`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/launchprojectfor.md) or [`JBController.reconfigureFundingCyclesOf(...)`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof.md) transactions.

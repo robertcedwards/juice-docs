@@ -8,7 +8,7 @@
 
 #### What you'll want to know if you're building
 
-* An allocator contract must adhere to the [`IJBSplitsAllocator`](/dev/api/v2/interfaces/ijbsplitallocator.md) interface. 
-* An allocator can be specified in a split through the [`JBController.launchProjectFor(...)`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/launchprojectfor.md), [`JBController.reconfigureFundingCyclesOf(...)`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof.md), or [`JBSplitStore.set(...)`](/dev/api/v2/contracts/jbsplitsstore/write/set.md).
+* An allocator contract must adhere to the [`IJBSplitsAllocator`](/dev/api/v3/interfaces/ijbsplitallocator.md) interface. 
+* An allocator can be specified in a split through the [`JBController.launchProjectFor(...)`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/launchprojectfor.md), [`JBController.reconfigureFundingCyclesOf(...)`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof.md), or [`JBSplitStore.set(...)`](/dev/api/v3/contracts/jbsplitsstore/write/set.md).
 
 [Get started building split allocators](/dev/build/treasury-extensions/split-allocator.md).
