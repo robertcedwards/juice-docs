@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBToken`](/dev/api/v3/contracts/jbtoken/README.md)​‌
+Contract: [`JBToken`](/dev/api/contracts/jbtoken/README.md)​‌
 
-Interface: [`IJBToken`](/dev/api/v3/interfaces/ijbtoken.md)
+Interface: [`IJBToken`](/dev/api/interfaces/ijbtoken.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -20,7 +20,7 @@ function decimals() public view override(ERC20, IJBToken) returns (uint8) { ... 
 
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBToken`](/dev/api/v3/interfaces/ijbtoken.md) interface.
+* The function overrides a function definition from the [`IJBToken`](/dev/api/interfaces/ijbtoken.md) interface.
 * The function returns the number of decimals.
 
 #### Body

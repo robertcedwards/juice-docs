@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayer`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/README.md)
+Contract: [`JBETHERC20SplitsPayer`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/README.md)
 
-Interface: [`IJBSplitsPayer`](/dev/api/v3/interfaces/ijbsplitspayer.md)
+Interface: [`IJBSplitsPayer`](/dev/api/interfaces/ijbsplitspayer.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -34,7 +34,7 @@ function addToBalanceOf(
   * `_metadata` is @param extra data to pass along to the terminal.
 * The function can be accessed externally by anyone, or internally from this contract or one that inherits it.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBSplitsPayer`](/dev/api/v3/interfaces/ijbsplitspayer.md) interface.
+* The function overrides a function definition from the [`IJBSplitsPayer`](/dev/api/interfaces/ijbsplitspayer.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -63,7 +63,7 @@ function addToBalanceOf(
 
     _Library references:_
 
-    * [`JBTokens`](/dev/api/v3/libraries/jbtokens.md)
+    * [`JBTokens`](/dev/api/libraries/jbtokens.md)
       * `.ETH`
       
     _External references:_
@@ -88,11 +88,11 @@ function addToBalanceOf(
 
     _Internal references:_
 
-    * [`defaultSplitsProjectId`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
-    * [`defaultSplitsDomain`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
-    * [`defaultSplitsGroup`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
-    * [`defaultBeneficiary`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`_payToSplits`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
+    * [`defaultSplitsProjectId`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
+    * [`defaultSplitsDomain`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
+    * [`defaultSplitsGroup`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
+    * [`defaultBeneficiary`](/dev/api/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`_payToSplits`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
 3.  If there's any leftover amount, add to balance of the specified project. If no project is specified, send the leftover funds to the beneficiary or the tx.origin.
 
     ```
@@ -125,15 +125,15 @@ function addToBalanceOf(
 
     _Library references:_
 
-    * [`JBTokens`](/dev/api/v3/libraries/jbtokens.md)
+    * [`JBTokens`](/dev/api/libraries/jbtokens.md)
       * `.ETH`
     * [`Address`](https://docs.openzeppelin.com/contracts/4.x/api/utils#Address)
       * `.sendValue(...)`
 
     _Internal references:_
 
-    * [`defaultBeneficiary`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`_addToBalanceOf`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
+    * [`defaultBeneficiary`](/dev/api/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`_addToBalanceOf`](/dev/api/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
 
     _External references:_
 
@@ -156,7 +156,7 @@ function addToBalanceOf(
 
     _Event references:_
 
-    * [`AddToBalance`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/addtobalance.md)
+    * [`AddToBalance`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/events/addtobalance.md)
     
 </TabItem>
 
@@ -265,7 +265,7 @@ function addToBalanceOf(
 
 | Name                                                                          | Data                                                                                          |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [**`AddToBalance`**](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/addtobalance.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>address beneficiary</code></li><li><code>address token</code></li><li><code>uint256 amount</code></li><li><code>uint256 decimals</code></li><li><code>uint256 leftoverAmount</code></li><li><code>string memo</code></li><li><code>bytes metadata</code></li><li><code>address caller</code></li></ul>                  |
+| [**`AddToBalance`**](/dev/api/contracts/or-utilities/jbetherc20splitspayer/events/addtobalance.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>address beneficiary</code></li><li><code>address token</code></li><li><code>uint256 amount</code></li><li><code>uint256 decimals</code></li><li><code>uint256 leftoverAmount</code></li><li><code>string memo</code></li><li><code>bytes metadata</code></li><li><code>address caller</code></li></ul>                  |
 
 </TabItem>
 

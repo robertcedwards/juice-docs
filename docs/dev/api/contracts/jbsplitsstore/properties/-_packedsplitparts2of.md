@@ -1,6 +1,6 @@
 # _packedsplitParts2Of
 
-Contract: [`JBSplitsStore`](/dev/api/v3/contracts/jbsplitsstore/README.md)​‌
+Contract: [`JBSplitsStore`](/dev/api/contracts/jbsplitsstore/README.md)​‌
 
 **More packed data of splits for each project ID's configurations.**
 

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/dev/api/v3/contracts/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/dev/api/contracts/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/v3/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/api/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -25,7 +25,7 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
   * `_from` is the controller being migrated from.
 * The function can be accessed externally by anyone.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/dev/api/v3/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/api/interfaces/ijbcontroller.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -40,11 +40,11 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
 
     _Internal references:_
 
-    * [`directory`](/dev/api/v3/contracts/or-controllers/jbcontroller/properties/directory.md)
+    * [`directory`](/dev/api/contracts/or-controllers/jbcontroller/properties/directory.md)
 
     _External references:_
 
-    * [`controllerOf`](/dev/api/v3/contracts/jbdirectory/properties/controllerof.md)
+    * [`controllerOf`](/dev/api/contracts/jbdirectory/properties/controllerof.md)
 2.  Update the processed token tracker to equal the current total supply of tokens. This prevents any inadvertant outstanding reserved tokens from being distributable upon migrating to this controller.
 
     ```
@@ -59,12 +59,12 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
 
     _Internal references:_
 
-    * [`tokenStore`](/dev/api/v3/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
-    * [`_processedTokenTrackerOf`](/dev/api/v3/contracts/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
+    * [`tokenStore`](/dev/api/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
+    * [`_processedTokenTrackerOf`](/dev/api/contracts/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
 
     _External references:_
 
-    * [`totalSupplyOf`](/dev/api/v3/contracts/jbtokenstore/read/totalsupplyof.md)
+    * [`totalSupplyOf`](/dev/api/contracts/jbtokenstore/read/totalsupplyof.md)
 
 3.  Emit a `PrepMigration` event with the relevant parameters.
 
@@ -74,7 +74,7 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
 
     _Event references:_
 
-    * [`PrepMigration`](/dev/api/v3/contracts/or-controllers/jbcontroller/events/prepmigration.md)
+    * [`PrepMigration`](/dev/api/contracts/or-controllers/jbcontroller/events/prepmigration.md)
 
 </TabItem>
 
@@ -117,7 +117,7 @@ function prepForMigrationOf(uint256 _projectId, address _from) external virtual 
 
 | Name                                        | Data                                                                                                                                                                                                                                                       |
 | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`PrepMigration`**](/dev/api/v3/contracts/or-controllers/jbcontroller/events/prepmigration.md)                                               | <ul><li><code>uint256 projectId</code></li><li><code>[IJBController](/dev/api/v3/interfaces/ijbcontroller.md) from</code></li><li><code>address caller</code></li></ul>                                                                                                                  |
+| [**`PrepMigration`**](/dev/api/contracts/or-controllers/jbcontroller/events/prepmigration.md)                                               | <ul><li><code>uint256 projectId</code></li><li><code>[IJBController](/dev/api/interfaces/ijbcontroller.md) from</code></li><li><code>address caller</code></li></ul>                                                                                                                  |
 {
 
 </TabItem>

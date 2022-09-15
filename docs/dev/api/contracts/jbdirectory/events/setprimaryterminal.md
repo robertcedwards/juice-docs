@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`setPrimaryTerminalOf`](/dev/api/v3/contracts/jbdirectory/write/setprimaryterminalof.md)
+* [`setPrimaryTerminalOf`](/dev/api/contracts/jbdirectory/write/setprimaryterminalof.md)
 
 Definition:
 

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBDirectory`](/dev/api/v3/contracts/jbdirectory/README.md)​‌
+Contract: [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md)​‌
 
-Interface: [`IJBDirectory`](/dev/api/v3/interfaces/ijbdirectory.md)
+Interface: [`IJBDirectory`](/dev/api/interfaces/ijbdirectory.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -33,7 +33,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Internal references:_
 
-    * [`isTerminalOf`](/dev/api/v3/contracts/jbdirectory/read/isterminalof.md)
+    * [`isTerminalOf`](/dev/api/contracts/jbdirectory/read/isterminalof.md)
 
 2.  Get a reference to the project's current funding cycle.
 
@@ -44,11 +44,11 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/dev/api/v3/contracts/jbdirectory/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/dev/api/contracts/jbdirectory/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`currentOf`](/dev/api/v3/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/dev/api/contracts/jbfundingcyclestore/read/currentof.md)
 
 3.  Make sure the project's current funding cycle is set to allow setting its terminals, or the request to set the controller is coming from the project's current controller.
 
@@ -61,12 +61,12 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/dev/api/v3/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/dev/api/libraries/jbfundingcyclemetadataresolver.md)
       * `.global(...)`
 
     _Internal references:_
 
-    * [`controllerOf`](/dev/api/v3/contracts/jbdirectory/properties/controllerof.md)
+    * [`controllerOf`](/dev/api/contracts/jbdirectory/properties/controllerof.md)
 
 4.  Add the terminal.
     ```
@@ -76,7 +76,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Internal references:_
 
-    * [`_terminalsOf`](/dev/api/v3/contracts/jbdirectory/properties/-_terminalsof.md)
+    * [`_terminalsOf`](/dev/api/contracts/jbdirectory/properties/-_terminalsof.md)
 5.  Emit a `AddTerminal` event with the relevant parameters.
 
     ```
@@ -85,7 +85,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
     _Event references:_
 
-    * [`AddTerminal`](/dev/api/v3/contracts/jbdirectory/events/addterminal.md)
+    * [`AddTerminal`](/dev/api/contracts/jbdirectory/events/addterminal.md)
 
 </TabItem>
 
@@ -131,7 +131,7 @@ function _addTerminalIfNeeded(uint256 _projectId, IJBPaymentTerminal _terminal) 
 
 | Name                                          | Data                                                                                                                                                                                                        |
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`AddTerminal`**](/dev/api/v3/contracts/jbdirectory/events/addterminal.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code><a href="/dev/api/v3/interfaces/ijbpaymentterminal">IJBPaymentTerminal</a> indexed terminal</code></li><li><code>address caller</code></li></ul> |
+| [**`AddTerminal`**](/dev/api/contracts/jbdirectory/events/addterminal.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code><a href="/dev/api/interfaces/ijbpaymentterminal">IJBPaymentTerminal</a> indexed terminal</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

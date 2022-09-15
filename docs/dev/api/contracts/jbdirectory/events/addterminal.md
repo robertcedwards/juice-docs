@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_addTerminalIfNeeded`](/dev/api/v3/contracts/jbdirectory/write/-_addterminalifneeded.md)
+* [`_addTerminalIfNeeded`](/dev/api/contracts/jbdirectory/write/-_addterminalifneeded.md)
 
 Definition:
 

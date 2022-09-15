@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_refundHeldFees`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_refundheldfees.md)
+* [`_refundHeldFees`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_refundheldfees.md)
 
 #### Definition
 

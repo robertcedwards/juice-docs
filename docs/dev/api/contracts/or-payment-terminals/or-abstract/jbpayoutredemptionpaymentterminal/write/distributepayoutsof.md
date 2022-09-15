@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
-Interface: [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/v3/interfaces/ijbpayoutredemptionpaymentterminal.md)
+Interface: [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -40,7 +40,7 @@ function distributePayoutsOf(
   * `_memo` is a memo to pass along to the emitted event.
 * The function can be accessed externally by anyone.
 * The function can be overriden by inheriting contracts.
-* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/v3/interfaces/ijbpayoutredemptionpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md) interface.
 * The function returns the amount that was sent to the project owner, as a fixed point number with the same amount of decimals as this terminal.
 
 #### Body
@@ -53,7 +53,7 @@ function distributePayoutsOf(
 
     _Internal references:_
 
-    * [`_distributePayoutsOf`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_distributepayoutsof.md)
+    * [`_distributePayoutsOf`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_distributepayoutsof.md)
 
 </TabItem>
 

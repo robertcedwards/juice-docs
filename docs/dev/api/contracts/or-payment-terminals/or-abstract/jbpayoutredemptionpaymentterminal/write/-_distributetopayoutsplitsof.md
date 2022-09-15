@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -52,7 +52,7 @@ function _distributeToPayoutSplitsOf(
 
     _Library references:_
 
-    * [`JBConstants`](/dev/api/v3/libraries/jbconstants.md)
+    * [`JBConstants`](/dev/api/libraries/jbconstants.md)
       * `.SPLITS_TOTAL_PERCENT`
 
 3.  Get a reference to payout splits for the current funding cycle configuration of the project.
@@ -64,11 +64,11 @@ function _distributeToPayoutSplitsOf(
 
     _Internal references:_
 
-    * [`splitsStore`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/splitsstore.md)
+    * [`splitsStore`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/splitsstore.md)
 
     _External references:_
 
-    * [`splitsOf`](/dev/api/v3/contracts/jbsplitsstore/read/splitsof.md)
+    * [`splitsOf`](/dev/api/contracts/jbsplitsstore/read/splitsof.md)
 4.  Loop through each split.
 
     ```
@@ -95,7 +95,7 @@ function _distributeToPayoutSplitsOf(
 
         * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
           * `.mulDiv(...)`
-        * [`JBConstants`](/dev/api/v3/libraries/jbconstants.md)
+        * [`JBConstants`](/dev/api/libraries/jbconstants.md)
           * `.SPLITS_TOTAL_PERCENT`
     
     3.  Decrement the leftover percentage.
@@ -257,27 +257,27 @@ function _distributeToPayoutSplitsOf(
 
         _Library references:_
 
-        * [`JBConstants`](/dev/api/v3/libraries/jbconstants.md)
+        * [`JBConstants`](/dev/api/libraries/jbconstants.md)
           * `.MAX_FEE_DISCOUNT`
-        * [`JBTokens`](/dev/api/v3/libraries/jbtokens.md)
+        * [`JBTokens`](/dev/api/libraries/jbtokens.md)
           * `.ETH`
 
         _Internal references:_
 
-        * [`fee`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/fee.md)
-        * [`decimals`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/decimals.md)
-        * [`isFeelessAddress`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/isfeelessaddress.md)
-        * [`pay`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
-        * [`_pay`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md)
-        * [`_feeAmount`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/read/-_feeamount.md)
-        * [`_transferFrom`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
-        * [`_beforeTransferTo`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
-        * [`_addtobalanceof`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_addtobalanceof.md)
+        * [`fee`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/fee.md)
+        * [`decimals`](/dev/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/decimals.md)
+        * [`isFeelessAddress`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/isfeelessaddress.md)
+        * [`pay`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
+        * [`_pay`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md)
+        * [`_feeAmount`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/read/-_feeamount.md)
+        * [`_transferFrom`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
+        * [`_beforeTransferTo`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
+        * [`_addtobalanceof`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_addtobalanceof.md)
 
         _External references:_
 
-        * [`allocate`](/dev/api/v3/interfaces/ijbsplitallocator.md)
-        * [`primaryTerminalOf`](/dev/api/v3/contracts/jbdirectory/read/primaryterminalof.md)
+        * [`allocate`](/dev/api/interfaces/ijbsplitallocator.md)
+        * [`primaryTerminalOf`](/dev/api/contracts/jbdirectory/read/primaryterminalof.md)
     3.  Emit a `DistributeToPayoutSplit` event for the split being iterated on with the relevant parameters.
 
         ```
@@ -293,7 +293,7 @@ function _distributeToPayoutSplitsOf(
 
         _Event references:_
 
-        * [`DistributeToPayoutSplit`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/distributetopayoutsplit.md)
+        * [`DistributeToPayoutSplit`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/distributetopayoutsplit.md)
 
     4. Increment the loop counter in the most gas efficient way.
 
@@ -525,7 +525,7 @@ function _distributeToPayoutSplitsOf(
 
 | Name                                                                  | Data                                                                                                                                                                                                                                                                                     |
 | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`DistributeToPayoutSplit`**](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/distributetopayoutsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/dev/api/v3/data-structures/jbsplit.md) split</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                                                                                                                                                           |
+| [**`DistributeToPayoutSplit`**](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/distributetopayoutsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/dev/api/data-structures/jbsplit.md) split</code></li><li><code>uint256 amount</code></li><li><code>address caller</code></li></ul>                                                                                                                                                                                           |
 
 </TabItem>
 

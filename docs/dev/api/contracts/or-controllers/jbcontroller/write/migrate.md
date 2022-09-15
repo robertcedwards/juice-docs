@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/dev/api/v3/contracts/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/dev/api/contracts/or-controllers/jbcontroller/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -24,8 +24,8 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
 * Arguments:
   * `_projectId` is the ID of the project that will be migrated from this controller.
-  * `_to` is the [`IJBMigratable`](/dev/api/v3/interfaces/ijbmigratable.md) controller to which the project is migrating.
-* Through the [`requirePermission`](/dev/api/v3/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.MIGRATE_CONTROLLER`](/dev/api/v3/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+  * `_to` is the [`IJBMigratable`](/dev/api/interfaces/ijbmigratable.md) controller to which the project is migrating.
+* Through the [`requirePermission`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.MIGRATE_CONTROLLER`](/dev/api/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
 * The function can be overriden by inheriting contracts.
 * The function doesn't return anything.
 
@@ -40,7 +40,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _Internal references:_
 
-    * [`directory`](/dev/api/v3/contracts/or-controllers/jbcontroller/properties/directory.md)
+    * [`directory`](/dev/api/contracts/or-controllers/jbcontroller/properties/directory.md)
 
 2.  Make sure this controller is the project's current controller. 
 
@@ -51,7 +51,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _External references:_
 
-    * [`controllerOf`](/dev/api/v3/contracts/jbdirectory/properties/controllerof.md)
+    * [`controllerOf`](/dev/api/contracts/jbdirectory/properties/controllerof.md)
 3.  Get a reference to the current funding cycle for the project.
 
     ```
@@ -61,11 +61,11 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/dev/api/v3/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/dev/api/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`currentOf`](/dev/api/v3/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currentOf`](/dev/api/contracts/jbfundingcyclestore/read/currentof.md)
 4.  Make sure the project's current funding cycle is configured to allow controller migrations.
 
     ```
@@ -75,7 +75,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/dev/api/v3/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/dev/api/libraries/jbfundingcyclemetadataresolver.md)
       * `.controllerMigrationAllowed(...)`
 5.  Distribute any outstanding reserved tokens. There are reserved tokens to be distributed if the tracker does not equal the token's total supply.
 
@@ -89,13 +89,13 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _Internal references:_
 
-    * [`tokenStore`](/dev/api/v3/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
-    * [`_processedTokenTrackerOf`](/dev/api/v3/contracts/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
-    * [`_distributeReservedTokensOf`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/-_distributereservedtokensof.md)
+    * [`tokenStore`](/dev/api/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
+    * [`_processedTokenTrackerOf`](/dev/api/contracts/or-controllers/jbcontroller/properties/-_processedtokentrackerof.md)
+    * [`_distributeReservedTokensOf`](/dev/api/contracts/or-controllers/jbcontroller/write/-_distributereservedtokensof.md)
 
     _External references:_
 
-    * [`totalSupplyOf`](/dev/api/v3/contracts/jbtokenstore/read/totalsupplyof.md)
+    * [`totalSupplyOf`](/dev/api/contracts/jbtokenstore/read/totalsupplyof.md)
 6.  Let the new controller know that a migration to it is happening.
 
     ```
@@ -105,7 +105,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _External references:_
 
-    * [`prepForMigrationOf`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/prepformigrationof.md)
+    * [`prepForMigrationOf`](/dev/api/contracts/or-controllers/jbcontroller/write/prepformigrationof.md)
 7.  Set the new controller of the project.
 
     ```
@@ -115,7 +115,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _External references:_
 
-    * [`setControllerOf`](/dev/api/v3/contracts/jbdirectory/write/setcontrollerof.md)
+    * [`setControllerOf`](/dev/api/contracts/jbdirectory/write/setcontrollerof.md)
 8.  Emit a `Migrate` event with the relevant parameters.
 
     ```
@@ -124,7 +124,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
     _Event references:_
 
-    * [`Migrate`](/dev/api/v3/contracts/or-controllers/jbcontroller/events/migrate.md)
+    * [`Migrate`](/dev/api/contracts/or-controllers/jbcontroller/events/migrate.md)
 
 </TabItem>
 
@@ -190,7 +190,7 @@ function migrate(uint256 _projectId, IJBMigratable _to)
 
 | Name                                                                                | Data                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`Migrate`**](/dev/api/v3/contracts/or-controllers/jbcontroller/events/migrate.md)                                               | <ul><li><code>uint256 projectId</code></li><li><code>[IJBController](/dev/api/v3/interfaces/ijbcontroller.md) to</code></li><li><code>address caller</code></li></ul>                                                                                                                  |
+| [**`Migrate`**](/dev/api/contracts/or-controllers/jbcontroller/events/migrate.md)                                               | <ul><li><code>uint256 projectId</code></li><li><code>[IJBController](/dev/api/interfaces/ijbcontroller.md) to</code></li><li><code>address caller</code></li></ul>                                                                                                                  |
 
 </TabItem>
 

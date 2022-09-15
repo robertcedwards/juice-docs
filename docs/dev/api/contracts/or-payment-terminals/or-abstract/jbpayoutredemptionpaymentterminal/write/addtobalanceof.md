@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/dev/api/v3/interfaces/ijbtokenstore.md)
+Interface: [`IJBPaymentTerminal`](/dev/api/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -32,9 +32,9 @@ function addToBalanceOf(
   * `_metadata` is metadata to pass along to the emitted event.
 * The function can be accessed externally by anyone.
 * The function can be overriden by inheriting contracts.
-* Through the [`isTerminalOf`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/modifiers/isterminalof.md) modifier, this transaction reverts if this terminal is not one of the project's terminals.
+* Through the [`isTerminalOf`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/modifiers/isterminalof.md) modifier, this transaction reverts if this terminal is not one of the project's terminals.
 * The function accepts ETH. The transaction reverts if receives ETH but the terminal's token type isn't ETH.
-* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/dev/api/v3/interfaces/ijbpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal.md) interface.
 * The function doesn't return anything.
 
 #### Body
@@ -62,13 +62,13 @@ function addToBalanceOf(
 
     _Library references:_
 
-    * [`JBTokens`](/dev/api/v3/libraries/jbcurrencies.md)
+    * [`JBTokens`](/dev/api/libraries/jbcurrencies.md)
       * `.ETH`
 
     _Virtual references:_
 
-    * [`_balance`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_balance.md)
-    * [`_transferFrom`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
+    * [`_balance`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_balance.md)
+    * [`_transferFrom`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
 2.  Forward to the internal function to properly account for the added balance. If the message sender is a feeless address, don't refund held fees.
 
     ```
@@ -77,7 +77,7 @@ function addToBalanceOf(
 
     _Internal references:_
 
-    * [`_addToBalanceOf`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_addtobalanceof.md)
+    * [`_addToBalanceOf`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_addtobalanceof.md)
 
 </TabItem>
 

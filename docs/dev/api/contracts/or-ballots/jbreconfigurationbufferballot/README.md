@@ -10,7 +10,7 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBReconfi
 
 | Name                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBFundingCycleBallot`**](/dev/api/v3/interfaces/ijbfundingcycleballot.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
+| [**`IJBFundingCycleBallot`**](/dev/api/interfaces/ijbfundingcycleballot.md) | General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
 
 #### Inheritance
 
@@ -35,11 +35,11 @@ constructor(uint256 _duration) {
 
 | Function                                                          | Definition                                                                                                                                                                                                |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`duration`**](/dev/api/v3/contracts/or-ballots/jbreconfigurationbufferballot/properties/duration.md)                            | <p><strong>Traits</strong></p><ul><li><code>immutable</code></li></ul><p><strong>Returns</strong></p><ul><li><code>uint256</code></li></ul> |
+| [**`duration`**](/dev/api/contracts/or-ballots/jbreconfigurationbufferballot/properties/duration.md)                            | <p><strong>Traits</strong></p><ul><li><code>immutable</code></li></ul><p><strong>Returns</strong></p><ul><li><code>uint256</code></li></ul> |
 
 #### Read
 
 | Function                                 | Definition                                                                                                                                                                                   |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`stateOf`**](/dev/api/v3/contracts/or-ballots/jbreconfigurationbufferballot/read/stateof.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _configured</code></li><li><code>uint256 _start</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[JBBallotState](/dev/api/v3/enums/jbballotstate.md) ballotState</code></li></ul> |
-| [**`supportsInterface`**](/dev/api/v3/contracts/or-ballots/jbreconfigurationbufferballot/read/supportsinterface.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _interfaceId</code></li></ul><p><strong>Returns</strong></p><ul><li><code>bool</code></li></ul> |
+| [**`stateOf`**](/dev/api/contracts/or-ballots/jbreconfigurationbufferballot/read/stateof.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _configured</code></li><li><code>uint256 _start</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[JBBallotState](/dev/api/enums/jbballotstate.md) ballotState</code></li></ul> |
+| [**`supportsInterface`**](/dev/api/contracts/or-ballots/jbreconfigurationbufferballot/read/supportsinterface.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _interfaceId</code></li></ul><p><strong>Returns</strong></p><ul><li><code>bool</code></li></ul> |

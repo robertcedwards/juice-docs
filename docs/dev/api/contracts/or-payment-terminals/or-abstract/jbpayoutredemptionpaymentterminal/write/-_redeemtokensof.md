@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -80,11 +80,11 @@ function _redeemTokensOf(
 
         _Internal references:_
 
-        * [`store`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/store.md)
+        * [`store`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/store.md)
 
         _External references:_
 
-        * [`recordRedemptionFor`](/dev/api/v3/contracts/jbsingletokenpaymentterminalstore/write/recordredemptionfor.md)
+        * [`recordRedemptionFor`](/dev/api/contracts/jbsingletokenpaymentterminalstore/write/recordredemptionfor.md)
 
     3.  Make sure the amount of terminal tokens being reclaimed is at least as much as the specified minimum.
 
@@ -108,12 +108,12 @@ function _redeemTokensOf(
         ```
         _Internal references:_
 
-        * [`directory`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
+        * [`directory`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/directory.md)
 
         _External references:_
 
-        * [`controllerOf`](/dev/api/v3/contracts/jbdirectory/properties/controllerof.md)
-        * [`burnTokensOf`](/dev/api/v3/contracts/or-controllers/jbcontroller/write/burntokensof.md)
+        * [`controllerOf`](/dev/api/contracts/jbdirectory/properties/controllerof.md)
+        * [`burnTokensOf`](/dev/api/contracts/or-controllers/jbcontroller/write/burntokensof.md)
 
     5.  If delegate allocations were specified, fulfill each of their `didRedeem` functions, and emit an event with the relevant parameters.
 
@@ -171,21 +171,21 @@ function _redeemTokensOf(
 
         _Internal references:_
 
-        * [`token`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/token.md)
-        * [`decimals`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/decimals.md)
-        * [`currency`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/currency.md)
+        * [`token`](/dev/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/token.md)
+        * [`decimals`](/dev/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/decimals.md)
+        * [`currency`](/dev/api/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/currency.md)
 
         _Virtual references:_
 
-        * [`_beforeTransferTo`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
+        * [`_beforeTransferTo`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_beforetransferto.md)
 
         _External references:_
 
-        * [`didRedeem`](/dev/api/v3/interfaces/ijbredemptiondelegate.md)
+        * [`didRedeem`](/dev/api/interfaces/ijbredemptiondelegate.md)
 
         _Event references:_
 
-        * [`DelegateDidRedeem`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/delegatedidredeem.md)
+        * [`DelegateDidRedeem`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/delegatedidredeem.md)
 
 4.  If an amount is being reclaimed, send the funds to the beneficiary.
 
@@ -196,7 +196,7 @@ function _redeemTokensOf(
 
     _Internal references:_
 
-    * [`_transferFrom`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
+    * [`_transferFrom`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_transferfrom.md)
 5.  Emit a `RedeemTokens` event with the relevant parameters.
 
     ```
@@ -215,7 +215,7 @@ function _redeemTokensOf(
 
     _Event references:_
 
-    * [`RedeemTokens`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/redeemtokens.md)
+    * [`RedeemTokens`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/redeemtokens.md)
 
 </TabItem>
 
@@ -364,7 +364,7 @@ function _redeemTokensOf(
 
 | Name                                           | Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`RedeemTokens`**](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/redeemtokens.md)                       | <ul><li><code>uint256 indexed fundingCycleConfiguration</code></li><li><code>uint256 indexed fundingCycleNumber</code></li><li><code>uint256 indexed projectId</code></li><li><code>address holder</code></li><li><code>address beneficiary</code></li><li><code>uint256 tokenCount</code></li><li><code>uint256 claimedAmount</code></li><li><code>string memo</code></li><li><code>bytes metadata</code></li><li><code>address caller</code></li></ul> |
+| [**`RedeemTokens`**](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/redeemtokens.md)                       | <ul><li><code>uint256 indexed fundingCycleConfiguration</code></li><li><code>uint256 indexed fundingCycleNumber</code></li><li><code>uint256 indexed projectId</code></li><li><code>address holder</code></li><li><code>address beneficiary</code></li><li><code>uint256 tokenCount</code></li><li><code>uint256 claimedAmount</code></li><li><code>string memo</code></li><li><code>bytes metadata</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

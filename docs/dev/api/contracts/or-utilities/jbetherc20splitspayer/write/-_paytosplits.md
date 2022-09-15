@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayer`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/README.md)
+Contract: [`JBETHERC20SplitsPayer`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/README.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -52,12 +52,12 @@ function _payToSplits(
     
     _Internal references:_
 
-    * [`_payTo`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/write/-_payto.md)
+    * [`_payTo`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/write/-_payto.md)
 
     _External references:_
 
-    * [`splitsStore`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/properties/splitsstore.md)
-    * [`splitsOf`](/dev/api/v3/contracts/jbsplitsstore/read/splitsof.md)
+    * [`splitsStore`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/properties/splitsstore.md)
+    * [`splitsOf`](/dev/api/contracts/jbsplitsstore/read/splitsof.md)
 
 2.  Emit a `DistributeToSplitGroup` event with the relevant parameters.
 
@@ -67,7 +67,7 @@ function _payToSplits(
 
     _Event references:_
 
-    * [`DistributeToSplitGroup`](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplitgroup.md)
+    * [`DistributeToSplitGroup`](/dev/api/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplitgroup.md)
     
 </TabItem>
 
@@ -114,7 +114,7 @@ function _payToSplits(
 
 | Name                                                                          | Data                                                                                          |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [**`DistributeToSplitGroup`**](/dev/api/v3/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplitgroup.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>address caller</code></li></ul>                  |
+| [**`DistributeToSplitGroup`**](/dev/api/contracts/or-utilities/jbetherc20splitspayer/events/distributetosplitgroup.md)                                                                          | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>address caller</code></li></ul>                  |
 
 </TabItem>
 

@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`migrate`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/migrate.md)
+* [`migrate`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/migrate.md)
 
 #### Definition
 

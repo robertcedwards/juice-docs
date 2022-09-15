@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`setDefaultValues`](/dev/api/v3/contracts/or-utilities/jbetherc20projectpayer/write/setdefaultvalues.md)
+* [`setDefaultValues`](/dev/api/contracts/or-utilities/jbetherc20projectpayer/write/setdefaultvalues.md)
 
 #### Definition
 

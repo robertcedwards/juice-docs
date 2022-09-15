@@ -1,8 +1,8 @@
 # fundingCycleStore
 
-Contract: [`JBTokenStore`](/dev/api/v3/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/dev/api/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/dev/api/interfaces/ijbtokenstore.md)
 
 **The contract storing all funding cycle configurations.**
 
@@ -18,4 +18,4 @@ IJBFundingCycleStore public immutable fundingCycleStore;
 
 * Once set the value cannot be changed.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBTokenStore`](/dev/api/v3/interfaces/ijbtokenstore.md) interface.
+* The resulting function overrides a function definition from the [`IJBTokenStore`](/dev/api/interfaces/ijbtokenstore.md) interface.

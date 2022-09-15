@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`configureFor`](/dev/api/v3/contracts/jbfundingcyclestore/write/configurefor.md)
+* [`configureFor`](/dev/api/contracts/jbfundingcyclestore/write/configurefor.md)
 
 #### Definition
 

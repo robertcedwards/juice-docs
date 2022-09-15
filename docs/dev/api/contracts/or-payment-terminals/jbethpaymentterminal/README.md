@@ -16,7 +16,7 @@ Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 | Contract                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/api/v3/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
+| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
 
 #### Constructor
 
@@ -58,11 +58,11 @@ constructor(
 {}
 ```
 
-* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/dev/api/v3/libraries/jbcurrencies.md).
-* `_operatorStore` is an [`IJBOperatorStore`](/dev/api/v3/interfaces/ijboperatorstore.md) contract storing operator assignments.
-* `_projects` is an [`IJBProjects`](/dev/api/v3/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
-* `_directory` is an [`IJBDirectory`](/dev/api/v3/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
-* `_splitsStore` is an [`IJBSplitsStore`](/dev/api/v3/interfaces/ijbsplitsstore/) contract that stores splits for each project.
-* `_prices` is an [`IJBPrices`](/dev/api/v3/interfaces/ijbprices.md) contract that exposes price feeds.
+* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/dev/api/libraries/jbcurrencies.md).
+* `_operatorStore` is an [`IJBOperatorStore`](/dev/api/interfaces/ijboperatorstore.md) contract storing operator assignments.
+* `_projects` is an [`IJBProjects`](/dev/api/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
+* `_directory` is an [`IJBDirectory`](/dev/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
+* `_splitsStore` is an [`IJBSplitsStore`](/dev/api/interfaces/ijbsplitsstore/) contract that stores splits for each project.
+* `_prices` is an [`IJBPrices`](/dev/api/interfaces/ijbprices.md) contract that exposes price feeds.
 * `_store` is a contract that stores the terminal's data.
 * `_owner` is the address that will own this contract.

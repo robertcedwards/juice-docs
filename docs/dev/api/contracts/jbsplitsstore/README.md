@@ -17,13 +17,13 @@ Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
 
 | Name                                                 | Description                                                                                                                              |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBSplitsStore`**](/dev/api/v3/interfaces/ijbsplitsstore.md) |General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
+| [**`IJBSplitsStore`**](/dev/api/interfaces/ijbsplitsstore.md) |General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules. |
 
 #### Inheritance
 
 | Contract                                                                     | Description                                                                                                           |
 | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| [**`JBOperatable`**](/dev/api/v3/contracts/or-abstract/jboperatable/)                           | Includes convenience functionality for checking a message sender's permissions before executing certain transactions. |
+| [**`JBOperatable`**](/dev/api/contracts/or-abstract/jboperatable/)                           | Includes convenience functionality for checking a message sender's permissions before executing certain transactions. |
 
 #### Constructor
 
@@ -43,31 +43,31 @@ constructor(
 }
 ```
 
-* `_operatorStore` is an [`IJBOperatorStore`](/dev/api/v3/interfaces/ijboperatorstore.md) contract storing operator assignments.
-* `_projects` is an [`IJBProjects`](/dev/api/v3/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
-* `_directory` is an [`IJBDirectory`](/dev/api/v3/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
+* `_operatorStore` is an [`IJBOperatorStore`](/dev/api/interfaces/ijboperatorstore.md) contract storing operator assignments.
+* `_projects` is an [`IJBProjects`](/dev/api/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
+* `_directory` is an [`IJBDirectory`](/dev/api/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
 
 #### Events
 
 | Name                                 | Data                                                                                                                                                                                                                 |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetSplit`**](/dev/api/v3/contracts/jbsplitsstore/events/setsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/dev/api/v3/data-structures/jbsplit.md) split</code></li><li><code>address caller</code></li></ul> |
+| [**`SetSplit`**](/dev/api/contracts/jbsplitsstore/events/setsplit.md) | <ul><li><code>uint256 indexed projectId</code></li><li><code>uint256 indexed domain</code></li><li><code>uint256 indexed group</code></li><li><code>[JBSplit](/dev/api/data-structures/jbsplit.md) split</code></li><li><code>address caller</code></li></ul> |
 
 #### Properties
 
 | Function                                   | Definition                                                                         |
 | ------------------------------------------ | ---------------------------------------------------------------------------------- |
-| [**`projects`**](/dev/api/v3/contracts/jbsplitsstore/properties/projects.md)   | <p><strong>Returns</strong></p><ul><li><code>IJBProjects</code></li></ul> |
-| [**`directory`**](/dev/api/v3/contracts/jbsplitsstore/properties/directory.md) | <p><strong>Returns</strong></p><ul><li><code>IJBPaymentTerminal</code></li></ul> |
+| [**`projects`**](/dev/api/contracts/jbsplitsstore/properties/projects.md)   | <p><strong>Returns</strong></p><ul><li><code>IJBProjects</code></li></ul> |
+| [**`directory`**](/dev/api/contracts/jbsplitsstore/properties/directory.md) | <p><strong>Returns</strong></p><ul><li><code>IJBPaymentTerminal</code></li></ul> |
 
 #### Read
 
 | Function                           | Definition                                                                                                                                                                                                                                                                                         |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`splitsOf`**](/dev/api/v3/contracts/jbsplitsstore/read/splitsof.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>[JBGroupedSplits](/dev/api/v3/data-structures/jbgroupedsplits.md)[] calldata _groupedSplits</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[JBSplit](/dev/api/v3/data-structures/jbsplit.md)[] splits</code></li></ul> |
+| [**`splitsOf`**](/dev/api/contracts/jbsplitsstore/read/splitsof.md) | <p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>[JBGroupedSplits](/dev/api/data-structures/jbgroupedsplits.md)[] calldata _groupedSplits</code></li></ul><p><strong>Returns</strong></p><ul><li><code>[JBSplit](/dev/api/data-structures/jbsplit.md)[] splits</code></li></ul> |
 
 #### Write
 
 | Function                  | Definition                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`set`**](/dev/api/v3/contracts/jbsplitsstore/write/set.md) | <p><strong>Traits</strong></p><ul><li><code>[requirePermissionAllowingOverride](/dev/api/v3/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>uint256 _group</code></li><li><code>[JBSplit](/dev/api/v3/data-structures/jbsplit.md)[] _splits</code></li></ul> |
+| [**`set`**](/dev/api/contracts/jbsplitsstore/write/set.md) | <p><strong>Traits</strong></p><ul><li><code>[requirePermissionAllowingOverride](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride.md)</code></li></ul><p><strong>Params</strong></p><ul><li><code>uint256 _projectId</code></li><li><code>uint256 _domain</code></li><li><code>uint256 _group</code></li><li><code>[JBSplit](/dev/api/data-structures/jbsplit.md)[] _splits</code></li></ul> |
