@@ -16,7 +16,7 @@ Ethereum rinkeby: [`0x765A8b9a23F58Db6c8849315C04ACf32b2D55cF8`](https://rinkeby
 
 | Contract                                             | Description                                                                                                                              |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/api/v2/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
+| [**`IJBPayoutRedemptionPaymentTerminal`**](/dev/deprecated/v2/interfaces/ijbpayoutredemptionpaymentterminal.md) | Generic terminal managing all inflows and outflows of funds into the protocol ecosystem. |
 
 #### Constructor
 
@@ -58,12 +58,12 @@ constructor(
 {}
 ```
 
-* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/dev/api/v2/libraries/jbcurrencies.md).
-* `_operatorStore` is an [`IJBOperatorStore`](/dev/api/v2/interfaces/ijboperatorstore.md) contract storing operator assignments.
-* `_projects` is an [`IJBProjects`](/dev/api/v2/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
-* `_directory` is an [`IJBDirectory`](/dev/api/v2/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
-* `_splitsStore` is an [`IJBSplitsStore`](/dev/api/v2/interfaces/ijbsplitsstore/) contract that stores splits for each project.
-* `_prices` is an [`IJBPrices`](/dev/api/v2/interfaces/ijbprices.md) contract that exposes price feeds.
+* `_baseWeightCurrency` is the currency to base token issuance on. From [`JBCurrencies`](/dev/deprecated/v2/libraries/jbcurrencies.md).
+* `_operatorStore` is an [`IJBOperatorStore`](/dev/deprecated/v2/interfaces/ijboperatorstore.md) contract storing operator assignments.
+* `_projects` is an [`IJBProjects`](/dev/deprecated/v2/interfaces/ijbprojects.md) contract which mints ERC-721's that represent project ownership and transfers.
+* `_directory` is an [`IJBDirectory`](/dev/deprecated/v2/interfaces/ijbdirectory.md) contract storing directories of terminals and controllers for each project.
+* `_splitsStore` is an [`IJBSplitsStore`](/dev/deprecated/v2/interfaces/ijbsplitsstore/) contract that stores splits for each project.
+* `_prices` is an [`IJBPrices`](/dev/deprecated/v2/interfaces/ijbprices.md) contract that exposes price feeds.
 * `_store` is a contract that stores the terminal's data.
 * `_owner` is the address that will own this contract.
 
@@ -71,5 +71,5 @@ constructor(
 
 | Function                                                  | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`_transferFrom`**](/dev/api/v2/contracts/or-payment-terminals/jbethpaymentterminal/write/-_transferfrom.md) | <p><strong>Traits</strong></p><ul><li><code>internal</code></li></ul> <p><strong>Params</strong></p><ul><li><code>address _from</code></li><li><code>address payable _to</code></li><li><code>uint256 _amount</code></li></ul>                                                                                                                                                                                                                  |
-| [**`_beforeTransferTo`**](/dev/api/v2/contracts/or-payment-terminals/jbethpaymentterminal/write/-_beforetransferto.md) | <p><strong>Traits</strong></p><ul><li><code>internal</code></li><li><code>virtual</code></li></ul> <p><strong>Params</strong></p><ul><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul>                                                                                                                                                                                                                  |
+| [**`_transferFrom`**](/dev/deprecated/v2/contracts/or-payment-terminals/jbethpaymentterminal/write/-_transferfrom.md) | <p><strong>Traits</strong></p><ul><li><code>internal</code></li></ul> <p><strong>Params</strong></p><ul><li><code>address _from</code></li><li><code>address payable _to</code></li><li><code>uint256 _amount</code></li></ul>                                                                                                                                                                                                                  |
+| [**`_beforeTransferTo`**](/dev/deprecated/v2/contracts/or-payment-terminals/jbethpaymentterminal/write/-_beforetransferto.md) | <p><strong>Traits</strong></p><ul><li><code>internal</code></li><li><code>virtual</code></li></ul> <p><strong>Params</strong></p><ul><li><code>address _to</code></li><li><code>uint256 _amount</code></li></ul>                                                                                                                                                                                                                  |

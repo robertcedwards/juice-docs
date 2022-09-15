@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
+Contract: [`JBPayoutRedemptionPaymentTerminal`](/dev/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/README.md)​‌
 
-Interface: [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/v2/interfaces/ijbpayoutredemptionpaymentterminal.md)
+Interface: [`IJBPayoutRedemptionPaymentTerminal`](/dev/deprecated/v2/interfaces/ijbpayoutredemptionpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -39,7 +39,7 @@ function setFeeGauge(IJBFeeGauge _feeGauge) external virtual override onlyOwner 
 
     _Internal references:_
 
-    * [`feeGauge`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/feegauge.md)
+    * [`feeGauge`](/dev/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/properties/feegauge.md)
 2.  Emit a `SetFeeGauge` event with the relevant parameters.
 
     ```
@@ -48,7 +48,7 @@ function setFeeGauge(IJBFeeGauge _feeGauge) external virtual override onlyOwner 
 
     _Event references:_
 
-    * [`SetFeeGauge`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/setfeegauge.md)
+    * [`SetFeeGauge`](/dev/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/setfeegauge.md)
 
 </TabItem>
 
@@ -81,7 +81,7 @@ function setFeeGauge(IJBFeeGauge _feeGauge) external virtual override onlyOwner 
 
 | Name                                          | Data                                                                                                                                                    |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**`SetFeeGauge`**](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/setfeegauge.md) | <ul><li><code>[IJBFeeGauge](/dev/api/v2/interfaces/ijbfeegauge.md) indexed feeGauge</code></li><li><code>address caller</code></li></ul> |
+| [**`SetFeeGauge`**](/dev/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/events/setfeegauge.md) | <ul><li><code>[IJBFeeGauge](/dev/deprecated/v2/interfaces/ijbfeegauge.md) indexed feeGauge</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

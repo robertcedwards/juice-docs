@@ -1,8 +1,8 @@
 # directory
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
-Interface: [`IJBSingleTokenPaymentTerminalStore`](/dev/api/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
+Interface: [`IJBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
 
 **The directory of terminals and controllers for projects.**
 
@@ -18,4 +18,4 @@ IJBDirectory public immutable override directory;
 
 * Once set the value cannot be changed.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/dev/api/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
+* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.

@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -58,22 +58,22 @@ function _reclaimableOverflowDuring(
 
     _Enums used:_
 
-    * [`JBBallotState`](/dev/api/v2/enums/jbballotstate.md)
+    * [`JBBallotState`](/dev/deprecated/v2/enums/jbballotstate.md)
       * `.Active`
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/dev/api/v2/libraries/jbfundingcyclemetadataresolver.md)
+    * [`JBFundingCycleMetadataResolver`](/dev/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)
       * `.ballotRedemptionRate(...)`
       * `.redemptionRate(...)`
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/dev/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`currentBallotStateOf`](/dev/api/v2/contracts/jbfundingcyclestore/read/currentballotstateof.md)
+    * [`currentBallotStateOf`](/dev/deprecated/v2/contracts/jbfundingcyclestore/read/currentballotstateof.md)
 4.  If the redemption rate is 0%, nothing is claimable regardless of the amount of tokens.
 
     ```
@@ -114,7 +114,7 @@ function _reclaimableOverflowDuring(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBConstants`](/dev/api/v2/libraries/jbconstants.md)
+    * [`JBConstants`](/dev/deprecated/v2/libraries/jbconstants.md)
       * `.MAX_REDEMPTION_RATE`
 
 </TabItem>

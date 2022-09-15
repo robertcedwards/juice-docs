@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -41,7 +41,7 @@ function _currentTotalOverflowOf(
 
     _Internal references:_
 
-    * [`terminalsOf`](/dev/api/v2/contracts/jbdirectory/read/terminalsof.md)
+    * [`terminalsOf`](/dev/deprecated/v2/contracts/jbdirectory/read/terminalsof.md)
 2.  Create a reference where the total balance across all terminals is be stored in terms of ETH.
 
     ```
@@ -58,7 +58,7 @@ function _currentTotalOverflowOf(
 
     _External references:_
 
-    * [`currentEthOverflowOf`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/read/currentethoverflowof.md)
+    * [`currentEthOverflowOf`](/dev/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/read/currentethoverflowof.md)
 4.  If the total overflow is to be returned in a currency other than ETH, make the conversion while maintaining 18 decimals of fidelity.
 
     ```
@@ -72,12 +72,12 @@ function _currentTotalOverflowOf(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBCurrencies`](/dev/api/v2/libraries/jbcurrencies.md)
+    * [`JBCurrencies`](/dev/deprecated/v2/libraries/jbcurrencies.md)
       * `.ETH`
 
     _External references:_
 
-    * [`priceFor`](/dev/api/v2/contracts/jbprices/read/pricefor.md)
+    * [`priceFor`](/dev/deprecated/v2/contracts/jbprices/read/pricefor.md)
 5.  If the fixed point overflow is to be returned with a number of decimals other than 18, adjust the number accordingly. 
 
     ```
@@ -92,7 +92,7 @@ function _currentTotalOverflowOf(
 
     * [`PRBMath`](https://github.com/hifi-finance/prb-math/blob/main/contracts/PRBMath.sol)
       * `.mulDiv(...)`
-    * [`JBFixedPointNumber`](/dev/api/v2/libraries/jbfixedpointnumber.md)
+    * [`JBFixedPointNumber`](/dev/deprecated/v2/libraries/jbfixedpointnumber.md)
       * `.adjustDecimals(...)`
 
 </TabItem>

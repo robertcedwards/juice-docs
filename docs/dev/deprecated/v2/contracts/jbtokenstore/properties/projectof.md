@@ -1,8 +1,8 @@
 # projectOf
 
-Contract: [`JBTokenStore`](/dev/api/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/dev/deprecated/v2/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/dev/deprecated/v2/interfaces/ijbtokenstore.md)
 
 **The ID of the project that each token belongs to.**
 
@@ -21,4 +21,4 @@ mapping(IJBToken => uint256) public override projectOf;
 * Arguments:
   * `_token` is token to check the project association of.
 * The resulting view function can be accessed externally by anyone.
-* The resulting function overrides a function definition from the [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md) interface.
+* The resulting function overrides a function definition from the [`IJBTokenStore`](/dev/deprecated/v2/interfaces/ijbtokenstore.md) interface.

@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`setBaseUri`](/dev/api/v2/contracts/or-delegates/or-abstract/jbnftrewarddelegate/write/setbaseuri.md)
+* [`setBaseUri`](/dev/deprecated/v2/contracts/or-delegates/or-abstract/jbnftrewarddelegate/write/setbaseuri.md)
 
 #### Definition
 

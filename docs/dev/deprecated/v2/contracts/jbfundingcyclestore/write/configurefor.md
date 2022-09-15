@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBFundingCycleStore`](/dev/api/v2/contracts/jbfundingcyclestore/README.md)​‌
+Contract: [`JBFundingCycleStore`](/dev/deprecated/v2/contracts/jbfundingcyclestore/README.md)​‌
 
-Interface: [`IJBFundingCycleStore`](/dev/api/v2/interfaces/ijbfundingcyclestore.md)
+Interface: [`IJBFundingCycleStore`](/dev/deprecated/v2/interfaces/ijbfundingcyclestore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -27,12 +27,12 @@ function configureFor(
 
 * Arguments:
   * `_projectId` is the ID of the project being configured.
-  * `_data` is the [`JBFundingCycleData`](/dev/api/v2/data-structures/jbfundingcycledata.md) for the configuration.
+  * `_data` is the [`JBFundingCycleData`](/dev/deprecated/v2/data-structures/jbfundingcycledata.md) for the configuration.
   * `_metadata` is arbitrary extra data to associate with this funding cycle configuration that's not used within.
   * `_mustStartAtOrAfter` is the time before which the initialized funding cycle cannot start.
-* Through the [`onlyController`](/dev/api/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBFundingCycleStore`](/dev/api/v2/interfaces/ijbfundingcyclestore.md) interface.
-* Returns the [`JBFundingCycle`](/dev/api/v2/data-structures/jbfundingcycle.md) that the configuration will take effect during..
+* Through the [`onlyController`](/dev/deprecated/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBFundingCycleStore`](/dev/deprecated/v2/interfaces/ijbfundingcyclestore.md) interface.
+* Returns the [`JBFundingCycle`](/dev/deprecated/v2/data-structures/jbfundingcycle.md) that the configuration will take effect during..
 
 #### Body
 
@@ -51,7 +51,7 @@ function configureFor(
 
     _Library references:_
 
-    * [`JBConstants`](/dev/api/v2/libraries/jbconstants.md)
+    * [`JBConstants`](/dev/deprecated/v2/libraries/jbconstants.md)
       * `.MAX_DISCOUNT_RATE`
 3.  Make sure the `_data.weight` fits in a `uint80`.
 
@@ -80,7 +80,7 @@ function configureFor(
 
     _Internal references:_
 
-    * [`_configureIntrinsicpropertiesFor`](/dev/api/v2/contracts/jbfundingcyclestore/write/-_configureintrinsicpropertiesfor.md)
+    * [`_configureIntrinsicpropertiesFor`](/dev/deprecated/v2/contracts/jbfundingcyclestore/write/-_configureintrinsicpropertiesfor.md)
 6.  Store all of the user configuration properties provided. These properties can all be packed into one `uint256` storage slot. No need to store if the resulting stored value would be 0 since the storage slot defaults to 0.
 
     ```
@@ -107,7 +107,7 @@ function configureFor(
 
     _Internal references:_
 
-    * [`_packedUserPropertiesOf`](/dev/api/v2/contracts/jbfundingcyclestore/properties/-_packeduserpropertiesof.md)
+    * [`_packedUserPropertiesOf`](/dev/deprecated/v2/contracts/jbfundingcyclestore/properties/-_packeduserpropertiesof.md)
 7.  Store the provided metadata for the configuration. No need to store if the value is 0 since the storage slot defaults to 0.
 
     ```
@@ -117,7 +117,7 @@ function configureFor(
 
     _Internal references:_
 
-    * [`_metadataOf`](/dev/api/v2/contracts/jbfundingcyclestore/properties/-_metadataof.md)
+    * [`_metadataOf`](/dev/deprecated/v2/contracts/jbfundingcyclestore/properties/-_metadataof.md)
 8.  Emit a `Configure` event with the relevant parameters.
 
     ```
@@ -126,8 +126,8 @@ function configureFor(
 
     _Event references:_
 
-    * [`Configure`](/dev/api/v2/contracts/jbfundingcyclestore/events/configure.md)
-9.  Return the [`JBFundingCycle`](/dev/api/v2/data-structures/jbfundingcycle.md) struct that carries the new configuration.
+    * [`Configure`](/dev/deprecated/v2/contracts/jbfundingcyclestore/events/configure.md)
+9.  Return the [`JBFundingCycle`](/dev/deprecated/v2/data-structures/jbfundingcycle.md) struct that carries the new configuration.
 
     ```
     // Return the funding cycle for the new configuration.
@@ -136,7 +136,7 @@ function configureFor(
 
     _Internal references:_
 
-    * [`_getStructFor`](/dev/api/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
+    * [`_getStructFor`](/dev/deprecated/v2/contracts/jbfundingcyclestore/read/-_getstructfor.md)
 
 </TabItem>
 
@@ -230,7 +230,7 @@ function configureFor(
 
 | Name                                      | Data                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`Configure`**](/dev/api/v2/contracts/jbfundingcyclestore/events/configure.md) | <ul><li><code>uint256 indexed configuration</code></li><li><code>uint256 indexed projectId</code></li><li><code>[JBFundingCycleData](/dev/api/v2/data-structures/jbfundingcycledata.md)data</code></li><li><code>uint256 metadata</code></li><li><code>uint256 mustStartAtOrAfter</code></li><li><code>address caller</code></li></ul> |
+| [**`Configure`**](/dev/deprecated/v2/contracts/jbfundingcyclestore/events/configure.md) | <ul><li><code>uint256 indexed configuration</code></li><li><code>uint256 indexed projectId</code></li><li><code>[JBFundingCycleData](/dev/deprecated/v2/data-structures/jbfundingcycledata.md)data</code></li><li><code>uint256 metadata</code></li><li><code>uint256 mustStartAtOrAfter</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

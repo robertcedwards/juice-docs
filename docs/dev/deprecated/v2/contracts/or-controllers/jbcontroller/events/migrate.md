@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`migrate`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/migrate.md)
+* [`migrate`](/dev/deprecated/v2/contracts/or-controllers/jbcontroller/write/migrate.md)
 
 #### Definition
 

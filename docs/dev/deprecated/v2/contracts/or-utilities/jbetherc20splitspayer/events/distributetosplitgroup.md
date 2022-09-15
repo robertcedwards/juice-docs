@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`_payToSplits`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
+* [`_payToSplits`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
 
 #### Definition
 

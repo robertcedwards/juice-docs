@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBTokenStore`](/dev/api/v2/contracts/jbtokenstore/README.md)​‌
+Contract: [`JBTokenStore`](/dev/deprecated/v2/contracts/jbtokenstore/README.md)​‌
 
-Interface: [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md)
+Interface: [`IJBTokenStore`](/dev/deprecated/v2/interfaces/ijbtokenstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,8 +30,8 @@ function issueFor(
   * `_projectId` is the ID of the project being issued tokens.
   * `_name` is the ERC-20's name.
   * `_symbol` is the ERC-20's symbol.
-* Through the [`onlyController`](/dev/api/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
-* The function overrides a function definition from the [`IJBTokenStore`](/dev/api/v2/interfaces/ijbtokenstore.md) interface.
+* Through the [`onlyController`](/dev/deprecated/v2/contracts/or-abstract/jbcontrollerutility/modifiers/onlycontroller.md) modifier, the function can only be accessed by the controller of the `_projectId`.
+* The function overrides a function definition from the [`IJBTokenStore`](/dev/deprecated/v2/interfaces/ijbtokenstore.md) interface.
 * The function returns the token that was issued.
 
 #### Body
@@ -57,8 +57,8 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/dev/api/v2/contracts/jbtokenstore/properties/tokenof.md)
-4.  Deploy a new instance of a [`JBToken`](/dev/api/v2/contracts/jbtoken/) contract. Assign it to the return value.
+    * [`tokenOf`](/dev/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
+4.  Deploy a new instance of a [`JBToken`](/dev/deprecated/v2/contracts/jbtoken/) contract. Assign it to the return value.
 
     ```
     // Deploy the token contract.
@@ -73,7 +73,7 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenOf`](/dev/api/v2/contracts/jbtokenstore/properties/tokenof.md)
+    * [`tokenOf`](/dev/deprecated/v2/contracts/jbtokenstore/properties/tokenof.md)
 6.  Store the project the token is being used for.
 
     ```
@@ -83,7 +83,7 @@ function issueFor(
 
     _Internal references:_
 
-    * [`projectOf`](/dev/api/v2/contracts/jbtokenstore/properties/projectof.md)
+    * [`projectOf`](/dev/deprecated/v2/contracts/jbtokenstore/properties/projectof.md)
 7.  Emit an `Issue` event with the relevant parameters.
 
     ```
@@ -92,7 +92,7 @@ function issueFor(
 
     _Event references:_
 
-    * [`Issue`](/dev/api/v2/contracts/jbtokenstore/events/issue.md)
+    * [`Issue`](/dev/deprecated/v2/contracts/jbtokenstore/events/issue.md)
 
 </TabItem>
 
@@ -158,7 +158,7 @@ function issueFor(
 
 | Name                              | Data                                                                                                                                                                                                         |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [**`Issue`**](/dev/api/v2/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/dev/api/v2/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
+| [**`Issue`**](/dev/deprecated/v2/contracts/jbtokenstore/events/issue.md)                           | <ul><li><code>uint256 indexed projectId</code></li><li><code>[IJBToken](/dev/deprecated/v2/interfaces/ijbtoken.md) indexed token</code></li><li><code>string name</code></li><li><code>string symbol</code></li><li><code>address caller</code></li></ul>                                                                  |
 
 </TabItem>
 

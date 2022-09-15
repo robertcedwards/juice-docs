@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`distributeReservedTokensOf`](/dev/api/v2/contracts/or-controllers/jbcontroller/write/distributereservedtokensof.md)
+* [`distributeReservedTokensOf`](/dev/deprecated/v2/contracts/or-controllers/jbcontroller/write/distributereservedtokensof.md)
 
 #### Definition
 

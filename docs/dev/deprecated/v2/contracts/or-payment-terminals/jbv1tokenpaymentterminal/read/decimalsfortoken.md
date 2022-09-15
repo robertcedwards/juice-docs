@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBV1TokenPaymentTerminal`](/dev/api/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
+Contract: [`JBV1TokenPaymentTerminal`](/dev/deprecated/v2/contracts/or-payment-terminals/jbv1tokenpaymentterminal/README.md)​‌
 
-Interface: [`IJBPaymentTerminal`](/dev/api/v2/interfaces/ijbpaymentterminal.md)
+Interface: [`IJBPaymentTerminal`](/dev/deprecated/v2/interfaces/ijbpaymentterminal.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -22,7 +22,7 @@ function decimalsForToken(address _token) external view override returns (uint25
   * `_token` is the token to check for the decimals of.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/dev/api/v2/interfaces/ijbpaymentterminal.md) interface.
+* The resulting function overrides a function definition from the [`IJBPaymentTerminal`](/dev/deprecated/v2/interfaces/ijbpaymentterminal.md) interface.
 * The function returns the number of decimals for the token.
 
 #### Body

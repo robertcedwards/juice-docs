@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBDirectory`](/dev/api/v2/contracts/jbdirectory/README.md)​‌
+Contract: [`JBDirectory`](/dev/deprecated/v2/contracts/jbdirectory/README.md)​‌
 
-Interface: [`IJBDirectory`](/dev/api/v2/interfaces/ijbdirectory.md)
+Interface: [`IJBDirectory`](/dev/deprecated/v2/interfaces/ijbdirectory.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -30,7 +30,7 @@ function setIsAllowedToSetFirstController(address _address, bool _flag)
   * `_address` is the address to allow or revoke allowance from.
   * `_flag` is whether allowance is being added or revoked.
 * Through the [`onlyOwner`](https://docs.openzeppelin.com/contracts/4.x/api/access#Ownable-onlyOwner--) modifier, this function can only be accessed by the address that owns this contract.
-* The function overrides a function definition from the [`IJBDirectory`](/dev/api/v2/interfaces/ijbdirectory.md) interface.
+* The function overrides a function definition from the [`IJBDirectory`](/dev/deprecated/v2/interfaces/ijbdirectory.md) interface.
 * The function returns nothing.
 
 #### Body
@@ -44,7 +44,7 @@ function setIsAllowedToSetFirstController(address _address, bool _flag)
 
     _Internal references:_
 
-    * [`isAllowedToSetFirstController`](/dev/api/v2/contracts/jbdirectory/properties/isallowedtosetfirstcontroller.md)
+    * [`isAllowedToSetFirstController`](/dev/deprecated/v2/contracts/jbdirectory/properties/isallowedtosetfirstcontroller.md)
 2.  Emit a `SetIsAllowedToSetFirstController` event with the relevant parameters.
 
     ```
@@ -53,7 +53,7 @@ function setIsAllowedToSetFirstController(address _address, bool _flag)
 
     _Event references:_
 
-    * [`SetIsAllowedToSetFirstController`](/dev/api/v2/contracts/jbdirectory/events/setisallowedtosetfirstcontroller.md)
+    * [`SetIsAllowedToSetFirstController`](/dev/deprecated/v2/contracts/jbdirectory/events/setisallowedtosetfirstcontroller.md)
 
 </TabItem>
 
@@ -93,7 +93,7 @@ function setIsAllowedToSetFirstController(address _address, bool _flag)
 
 | Name                                                                          | Data                                                                                          |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [**`SetIsAllowedToSetFirstController`**](/dev/api/v2/contracts/jbdirectory/events/setisallowedtosetfirstcontroller.md) | <ul><li><code>address indexed addr</code></li><li><code>bool indexed flag</code></li><li><code>address caller</code></li></ul> |
+| [**`SetIsAllowedToSetFirstController`**](/dev/deprecated/v2/contracts/jbdirectory/events/setisallowedtosetfirstcontroller.md) | <ul><li><code>address indexed addr</code></li><li><code>bool indexed flag</code></li><li><code>address caller</code></li></ul> |
 
 </TabItem>
 

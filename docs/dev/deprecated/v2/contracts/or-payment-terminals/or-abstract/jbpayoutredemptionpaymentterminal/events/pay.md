@@ -2,7 +2,7 @@
 
 Emitted from:
 
-* [`pay`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
+* [`pay`](/dev/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/pay.md)
 
 #### Definition
 

@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20ProjectPayer`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/README.md)
+Contract: [`JBETHERC20ProjectPayer`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/README.md)
 
-Interface: [`IJBProjectPayer`](/dev/api/v2/interfaces/ijbprojectpayer.md)
+Interface: [`IJBProjectPayer`](/dev/deprecated/v2/interfaces/ijbprojectpayer.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -57,16 +57,16 @@ receive() external payable virtual override { ... }
 
     _Library references:_
 
-    * [`JBTokens`](/dev/api/v2/libraries/jbtokens.md)
+    * [`JBTokens`](/dev/deprecated/v2/libraries/jbtokens.md)
       * `.ETH`
       
     _Internal references:_
 
-    * [`defaultPreferClaimedTokens`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultpreferclaimedtokens.md)
-    * [`defaultBeneficiary`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`defaultProjectId`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultprojectid.md)
-    * [`_addToBalanceOf`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
-    * [`_pay`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
+    * [`defaultPreferClaimedTokens`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultpreferclaimedtokens.md)
+    * [`defaultBeneficiary`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`defaultProjectId`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultprojectid.md)
+    * [`_addToBalanceOf`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
+    * [`_pay`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
 
 </TabItem>
 

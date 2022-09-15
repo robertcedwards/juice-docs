@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
+Contract: [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/README.md)​‌
 
-Interface: [`IJBSingleTokenPaymentTerminalStore`](/dev/api/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
+Interface: [`IJBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -29,7 +29,7 @@ function currentOverflowOf(IJBSingleTokenPaymentTerminal _terminal, uint256 _pro
   * `_projectId` is the ID of the project to get overflow for.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/dev/api/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
+* The resulting function overrides a function definition from the [`JBSingleTokenPaymentTerminalStore`](/dev/deprecated/v2/interfaces/ijbsingletokenpaymentterminalstore.md) interface.
 * The function returns the current amount of overflow that project has in the specified terminal.
 
 #### Body
@@ -49,12 +49,12 @@ function currentOverflowOf(IJBSingleTokenPaymentTerminal _terminal, uint256 _pro
 
     _Internal references:_
 
-    * [`_overflowDuring`](/dev/api/v2/contracts/jbsingletokenpaymentterminalstore/read/-_overflowduring.md)
+    * [`_overflowDuring`](/dev/deprecated/v2/contracts/jbsingletokenpaymentterminalstore/read/-_overflowduring.md)
 
     _External references:_
 
-    * [`currentOf`](/dev/api/v2/contracts/jbfundingcyclestore/read/currentof.md)
-    * [`currency`](/dev/api/v2/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/currency.md)
+    * [`currentOf`](/dev/deprecated/v2/contracts/jbfundingcyclestore/read/currentof.md)
+    * [`currency`](/dev/deprecated/v2/contracts/or-payment-terminals/or-abstract/jbsingletokenpaymentterminal/properties/currency.md)
 
 </TabItem>
 

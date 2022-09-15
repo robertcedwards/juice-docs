@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/dev/api/v2/contracts/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/dev/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/v2/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/deprecated/v2/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -27,7 +27,7 @@ function getFundingCycleOf(uint256 _projectId, uint256 _configuration)
 * `_projectId` is the ID of the project to which the funding cycle belongs.
 * The view function can be accessed externally by anyone.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBController`](/dev/api/v2/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/deprecated/v2/interfaces/ijbcontroller.md) interface.
 * The function returns:
   * `fundingCycle` is the funding cycle.
   * `metadata` is the funding cycle's metadata.
@@ -42,11 +42,11 @@ function getFundingCycleOf(uint256 _projectId, uint256 _configuration)
 
     _Internal references:_
 
-    * [`fundingCycleStore`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
+    * [`fundingCycleStore`](/dev/deprecated/v2/contracts/or-controllers/jbcontroller/properties/fundingcyclestore.md)
 
     _External references:_
 
-    * [`get`](/dev/api/v2/contracts/jbfundingcyclestore/read/get.md)
+    * [`get`](/dev/deprecated/v2/contracts/jbfundingcyclestore/read/get.md)
 2.  Expand the metadata of the funding cycle.
 
     ```
@@ -55,7 +55,7 @@ function getFundingCycleOf(uint256 _projectId, uint256 _configuration)
 
     _Library references:_
 
-    * [`JBFundingCycleMetadataResolver`](/dev/api/v2/libraries/jbfundingcyclemetadataresolver.md)<br/>
+    * [`JBFundingCycleMetadataResolver`](/dev/deprecated/v2/libraries/jbfundingcyclemetadataresolver.md)<br/>
       * `.expandMetadata(...)`
       
 </TabItem>

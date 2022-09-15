@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBController`](/dev/api/v2/contracts/or-controllers/jbcontroller/README.md)​‌
+Contract: [`JBController`](/dev/deprecated/v2/contracts/or-controllers/jbcontroller/README.md)​‌
 
-Interface: [`IJBController`](/dev/api/v2/interfaces/ijbcontroller.md)
+Interface: [`IJBController`](/dev/deprecated/v2/interfaces/ijbcontroller.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -35,9 +35,9 @@ function issueFor(
   * `_projectId` is the ID of the project being issued tokens.
   * `_name` is the ERC20's name.
   * `_symbol` is the ERC20's symbol.
-* Through the [`requirePermission`](/dev/api/v2/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.ISSUE`](/dev/api/v2/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
+* Through the [`requirePermission`](/dev/deprecated/v2/contracts/or-abstract/jboperatable/modifiers/requirepermission.md) modifier, the function is only accessible by the project's owner, or from an operator that has been given the [`JBOperations.ISSUE`](/dev/deprecated/v2/libraries/jboperations.md) permission by the project owner for the provided `_projectId`.
 * The function can be overriden by inheriting contracts.
-* The function overrides a function definition from the [`IJBController`](/dev/api/v2/interfaces/ijbcontroller.md) interface.
+* The function overrides a function definition from the [`IJBController`](/dev/deprecated/v2/interfaces/ijbcontroller.md) interface.
 * The function returns the address of the token that was issued.
 
 #### Body
@@ -51,11 +51,11 @@ function issueFor(
 
     _Internal references:_
 
-    * [`tokenStore`](/dev/api/v2/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
+    * [`tokenStore`](/dev/deprecated/v2/contracts/or-controllers/jbcontroller/properties/tokenstore.md)
 
     _External references:_
 
-    * [`issueFor`](/dev/api/v2/contracts/jbtokenstore/write/issuefor.md)
+    * [`issueFor`](/dev/deprecated/v2/contracts/jbtokenstore/write/issuefor.md)
     
 </TabItem>
 

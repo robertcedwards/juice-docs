@@ -3,7 +3,7 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBProjects`](/dev/api/v2/contracts/jbprojects/README.md)​‌
+Contract: [`JBProjects`](/dev/deprecated/v2/contracts/jbprojects/README.md)​‌
 
 Interface: [`IERC721Metadata`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721Metadata)​‌
 
@@ -36,7 +36,7 @@ function tokenURI(uint256 _projectId) public view override returns (string memor
 
     _Internal references:_
 
-    * [`tokenUriResolver`](/dev/api/v2/contracts/jbprojects/properties/tokenuriresolver.md)
+    * [`tokenUriResolver`](/dev/deprecated/v2/contracts/jbprojects/properties/tokenuriresolver.md)
 2.  Resolve the URI for the project.
 
     ```
@@ -46,7 +46,7 @@ function tokenURI(uint256 _projectId) public view override returns (string memor
 
     _External references:_
 
-    * [`getUri`](/dev/api/v2/interfaces/ijbtokenuriresolver.md)
+    * [`getUri`](/dev/deprecated/v2/interfaces/ijbtokenuriresolver.md)
 
 
 </TabItem>

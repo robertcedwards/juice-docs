@@ -3,9 +3,9 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Contract: [`JBETHERC20SplitsPayer`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/README.md)
+Contract: [`JBETHERC20SplitsPayer`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/README.md)
 
-Interface: [`IJBSplitsPayer`](/dev/api/v2/interfaces/ijbsplitspayer.md)
+Interface: [`IJBSplitsPayer`](/dev/deprecated/v2/interfaces/ijbsplitspayer.md)
 
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
@@ -44,11 +44,11 @@ receive() external payable virtual override { ... }
 
     _Internal references:_
 
-    * [`defaultSplitsProjectId`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
-    * [`defaultSplitsDomain`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
-    * [`defaultSplitsGroup`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
-    * [`defaultBeneficiary`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`_payToSplits`](/dev/api/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
+    * [`defaultSplitsProjectId`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsprojectid.md)
+    * [`defaultSplitsDomain`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsdomain.md)
+    * [`defaultSplitsGroup`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/properties/defaultsplitsgroup.md)
+    * [`defaultBeneficiary`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`_payToSplits`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20splitspayer/write/-_paytosplits.md)
 
 2.  If there's no leftover amount, there's nothing left to do.
 
@@ -97,19 +97,19 @@ receive() external payable virtual override { ... }
 
     * [`Address`](https://docs.openzeppelin.com/contracts/4.x/api/utils#Address)
       * `.sendValue(...)`
-    * [`JBTokens`](/dev/api/v2/libraries/jbtokens.md)
+    * [`JBTokens`](/dev/deprecated/v2/libraries/jbtokens.md)
       * `.ETH`
       
     _Internal references:_
 
 
-    * [`defaultProjectId`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultprojectid.md)
-    * [`defaultPreferClaimedTokens`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultpreferclaimedtokens.md)
-    * [`defaultMemo`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmemo.md)
-    * [`defaultMetadata`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmetadata.md)
-    * [`defaultBeneficiary`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
-    * [`_addToBalanceOf`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
-    * [`_pay`](/dev/api/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
+    * [`defaultProjectId`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultprojectid.md)
+    * [`defaultPreferClaimedTokens`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultpreferclaimedtokens.md)
+    * [`defaultMemo`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmemo.md)
+    * [`defaultMetadata`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultmetadata.md)
+    * [`defaultBeneficiary`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/properties/defaultbeneficiary.md)
+    * [`_addToBalanceOf`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_addtobalanceof.md)
+    * [`_pay`](/dev/deprecated/v2/contracts/or-utilities/jbetherc20projectpayer/write/-_pay.md)
 
 </TabItem>
 
