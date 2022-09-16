@@ -16,7 +16,7 @@ The protocol is nuanced, however. The goal of the protocol docs is for you to fi
 
 [Learn](learn/overview.md) - General info on how the protocol works.<br/>
 [Build](build/getting-started.md) - Guides to launch, program, and extend a treasury.<br/>
-[API](api/v3/contracts/README.md) - Specifications of each contract and function, and a deep dive through each line of code.
+[API](api/contracts/README.md) - Specifications of each contract and function, and a deep dive through each line of code.
 
 Documentation for Juicebox Protocol V1 (live on mainnet since July 2021) is available [here](protocol-v1/).
 
