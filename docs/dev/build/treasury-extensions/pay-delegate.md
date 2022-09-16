@@ -3,7 +3,7 @@
 Before implementing, learn about delegates [here](/dev/learn/glossary/delegate.md).
 #### Specs
 
-A contract can become a treasury pay delegate by adhering to [`IJBPayDelegate`](/dev/api/v3/interfaces/ijbpaydelegate.md):
+A contract can become a treasury pay delegate by adhering to [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate.md):
 
 ```
 interface IJBPayDelegate {
@@ -11,7 +11,7 @@ interface IJBPayDelegate {
 }
 ```
 
-When extending pay functionality with a delegate, the protocol will pass a [`JBDidPayData`](/dev/api/v3/data-structures/jbdidpaydata.md) to the `didPay(...)` function:
+When extending pay functionality with a delegate, the protocol will pass a [`JBDidPayData`](/dev/api/data-structures/jbdidpaydata.md) to the `didPay(...)` function:
 
 ```
 struct JBDidPayData {
@@ -38,7 +38,7 @@ struct JBTokenAmount {
 
 The `msg.sender` to the delegate will be the payment terminal that facilitated the payment. 
 
-In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal), such as [`JBETHPaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/jbethpaymentterminal/README.md)'s and [`JBERC20PaymentTerminal`](/dev/api/v3/contracts/or-payment-terminals/jberc20paymentterminal/README.md)'s, the pay delegate hook gets called *after* the project's tokens have been minted and distributed. [View the docs](/dev/api/v3/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md). 
+In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal), such as [`JBETHPaymentTerminal`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal/README.md)'s and [`JBERC20PaymentTerminal`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal/README.md)'s, the pay delegate hook gets called *after* the project's tokens have been minted and distributed. [View the docs](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal/write/-_pay.md). 
 
 Make sure to only allow trusted contracts to access the `didPay(...)` transaction.
 
