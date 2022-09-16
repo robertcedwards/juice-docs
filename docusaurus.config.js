@@ -10,11 +10,11 @@ const config = {
   tagline: 'Fund your thing.',
   url: 'https://info.juicebox.money',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.svg',
   organizationName: 'Juicebox', // Usually your GitHub org/user name.
-  projectName: 'Juicebox Protocol', // Usually your repo name.
+  projectName: 'juice-docs', // Usually your repo name.
 
   presets: [
     [
@@ -24,11 +24,11 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/jbx-protocol/juice-docs-v2/blob/main',
+          editUrl: 'https://github.com/jbx-protocol/juice-docs/blob/main',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/jbx-protocol/juice-docs-v2/blob/main',
+          editUrl: 'https://github.com/jbx-protocol/juice-docs/blob/main',
           blogSidebarTitle: 'Articles',
           blogSidebarCount: 'ALL',
           feedOptions: {
