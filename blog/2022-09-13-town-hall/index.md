@@ -1,4 +1,3 @@
-
 ---
 slug: 2022-09-13-town-hall
 title: Juicebox DAO Town Hall Summary Sep. 13, 2022
