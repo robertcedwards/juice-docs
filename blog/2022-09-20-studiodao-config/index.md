@@ -2,6 +2,7 @@
 slug: 2022-09-20-studiodao-config
 title: How StudioDAO and its sub-projects are configured on Juicebox
 description: Building a network of projects on Juicebox.
+image: https://info.juicebox.money/assets/images/studiodao-project-map-b44b3a14ffe8965ffa1cdfb5fc679934.png
 authors: [matthew, brileigh]
 tags: [studiodao, decentralized movie studio, film financing, netflix, NFTs, utility, juicebox, ethereum, crypto]
 ---
