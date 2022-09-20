@@ -9,9 +9,9 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBSplitsS
 
 #### Addresses
 
-Ethereum mainnet: [``](https://etherscan.io/address/)
+Ethereum mainnet: [`0x0D25194ABE95185Db8e4B0294F5669E21C534785`](https://etherscan.io/address/0x0D25194ABE95185Db8e4B0294F5669E21C534785)
 
-Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
+Goerli testnet: [`0xce2Ce2F37fE5B2C2Dd047908B2F61c9c3f707272`](https://goerli.etherscan.io/address/0xce2Ce2F37fE5B2C2Dd047908B2F61c9c3f707272)
 
 #### Interfaces
 

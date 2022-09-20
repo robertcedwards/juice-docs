@@ -8,9 +8,9 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBETHPaym
 
 #### Addresses
 
-Ethereum mainnet: [``](https://etherscan.io/address/)
+Ethereum mainnet: [`0x594Cb208b5BB48db1bcbC9354d1694998864ec63`](https://etherscan.io/address/0x594Cb208b5BB48db1bcbC9354d1694998864ec63)
 
-Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
+Goerli testnet: [`0x55d4dfb578daA4d60380995ffF7a706471d7c719`](https://goerli.etherscan.io/address/0x55d4dfb578daA4d60380995ffF7a706471d7c719)
 
 #### Inheritance
 

@@ -8,9 +8,9 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBSingleT
 
 #### Addresses
 
-Ethereum mainnet: [``](https://etherscan.io/address/)
+Ethereum mainnet: [`0xdF7Ca703225c5da79A86E08E03A206c267B7470C`](https://etherscan.io/address/0xdF7Ca703225c5da79A86E08E03A206c267B7470C)
 
-Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
+Goerli testnet: [`0x5b62ccB7fdA139185374c8f36FAa388c20E1387F`](https://goerli.etherscan.io/address/0x5b62ccB7fdA139185374c8f36FAa388c20E1387F)
 
 #### Interfaces
 

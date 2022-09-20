@@ -8,9 +8,9 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBDirecto
 
 #### Addresses
 
-Ethereum mainnet: [``](https://etherscan.io/address/)
+Ethereum mainnet: [`0x65572FB928b46f9aDB7cfe5A4c41226F636161ea`](https://etherscan.io/address/0x65572FB928b46f9aDB7cfe5A4c41226F636161ea)
 
-Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
+Goerli testnet: [`0x8E05bcD2812E1449f0EC3aE24E2C395F533d9A99`](https://goerli.etherscan.io/address/0x8E05bcD2812E1449f0EC3aE24E2C395F533d9A99)
 
 #### Interfaces
 

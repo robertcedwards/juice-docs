@@ -9,9 +9,9 @@ https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/JBFunding
 
 #### Addresses
 
-Ethereum mainnet: [``](https://etherscan.io/address/)
+Ethereum mainnet: [`0x6f18cF9173136c0B5A6eBF45f19D58d3ff2E17e6`](https://etherscan.io/address/0x6f18cF9173136c0B5A6eBF45f19D58d3ff2E17e6)
 
-Ethereum rinkeby: [``](https://rinkeby.etherscan.io/address/)
+Goerli testnet: [`0xB9Ee9d8203467f6EC0eAC81163d210bd1a7d3b55`](https://goerli.etherscan.io/address/0xB9Ee9d8203467f6EC0eAC81163d210bd1a7d3b55)
 
 #### Interfaces
 
