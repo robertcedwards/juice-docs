@@ -47,15 +47,13 @@ As an experiment in on-chain avatar communities, Nouns DAO’s mission is to spr
 
 > While projects such as CryptoPunks have attempted to bootstrap digital community and identity, Nouns attempt to bootstrap identity, community, governance, and a treasury that can be used by the community for the creation of long-term value.
 >
-
-— [Punk 4156](https://twitter.com/punk4156)
+>— [Punk 4156](https://twitter.com/punk4156)
 
 Holding only 6/300+ votes might not seem like much, but lurking beneath the waters SharkDAO is active in discussions, pushing ideas through the ecosystem, and able to get a lot more done than what their voting power implies. Since Nouns has no roadmap from the Nounders (founders), Nouns is community-owned which gives power to holders to propose initiatives and decide how to use treasury funds. In other words, the task of building community and shaping the future of Nouns belongs to community members who hold Nouns, rather than the founders. SharkDAO, as one of only a handful of sub-DAOs within Nouns DAO, is one of the groups building this roadmap on-the-fly.
 
 > “In short, sub-DAOs participation in a DAO is shaping and contributing a voice to that community so that the best ideas get surfaced, voted on, and make an impact in the world.”
 >
-
-— [Dropnerd](https://twitter.com/dropnerdETH)
+>— [Dropnerd](https://twitter.com/dropnerdETH)
 
 ![SharkDAO and NounsDAO infographic from sharsk.wtf](sharkdao-infographic.png)  
 <p class="subtitle">SharkDAO and NounsDAO visualization from <a href="https://sharks.wtf">sharks.wtf</a></p>
@@ -69,8 +67,7 @@ It all started with a small group of frens helping Nouns DAO test out their auct
 
 > SharkDAO is a meme that jumped from Rinkeby to mainnet.”  
 >  
-
-— [Kenbot](https://twitter.com/kenbot) in a [Twitter Space](https://twitter.com/i/spaces/1BRKjnZpLdjKw?s=20) hosted by [nnnnicholas](https://twitter.com/nnnnicholas)  
+>— [Kenbot](https://twitter.com/kenbot) in a [Twitter Space](https://twitter.com/i/spaces/1BRKjnZpLdjKw?s=20) hosted by [nnnnicholas](https://twitter.com/nnnnicholas)  
 
 When it came to figuring out how to fundraise in order to bid on the first Noun, [Kenny](https://twitter.com/kenbot) dives into the Discord and suggests a cool project he heard of called Juicebox. Building a treasury on Juicebox would allow the group to trustlessly raise funds and manage their treasury, without the risks of YOLO’ing ETH into a multi-sig.  
 
@@ -122,8 +119,7 @@ What’s next for SharkDAO? Stay tuned for future NounsDAO proposals like the [M
 
 > The value of SHARK is derived not only from its ETH stored in the Juicebox contracts, but also from the NFTs the DAO has deployed treasury funds to acquire, from the JBX that the DAO has begun accumulating by paying platform fees, and perhaps most importantly from the productive community forming within the project that gives it boundless potential moving forward.
 >  
-
-– [Jango](https://twitter.com/me_jango), from [Juicebox V2: Protocol adjustments useful for adding treasury tokens to AMMs](https://info.juicebox.money/blog/adding-juicebox-treasury-tokens-to-amms)  
+>— [Jango](https://twitter.com/me_jango), from [Juicebox V2: Protocol adjustments useful for adding treasury tokens to AMMs](https://info.juicebox.money/blog/adding-juicebox-treasury-tokens-to-amms)  
 
 ### Relevant links  
 
