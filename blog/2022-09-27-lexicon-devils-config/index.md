@@ -2,6 +2,7 @@
 slug: 2022-09-27-lexicon-devils-config
 title: How Lexicon Devils is configured on Juicebox
 description: Managing a metaverse architecture guild on Juicebox.
+image: https://info.juicebox.money/assets/images/JBParcel-cbf58e6790d78461e7ff0072a3b6ad0c.png
 authors: [matthew, brileigh]
 tags: [lexicon devils, metaverse, architecture, guild, cryptovoxels, voxels, juicebox, ethereum, crypto]
 ---
