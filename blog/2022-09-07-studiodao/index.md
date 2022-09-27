@@ -35,7 +35,7 @@ Rather than relying on a centralized financier, StudioDAO is a decentralized mov
 
 > Our goal is to have a million people come together to fund a movie for the price of a movie ticket
 >
->— Kenny
+>— [Kenny](https://twitter.com/kenbot)
 
 ### 💸 StudioDAO’s hybrid funding model
 
@@ -77,7 +77,7 @@ The idea of crowdfunding films isn’t new: [Kickstarter](https://www.kickstarte
 
 > There is a two trillion dollar entertainment market and there is a clear scenario for a decentralized studio to do one billion dollars of production 3-4 years from now.
 >
->— Kenny
+>— [Kenny](https://twitter.com/kenbot)
 
 ### Relevant links
 
