@@ -9,7 +9,7 @@ tags: [lexicon devils, metaverse, architecture, guild, cryptovoxels, voxels, jui
 
 ***Managing a metaverse architecture guild on Juicebox***
 
-Lexicon Devils is a metaverse guild running on Juicebox. To learn more about how Lexicon Devils is building the metaverse and getting paid to do it, **check out this [deep dive on the JB blog](https://info.juicebox.money/blog/2022-07-14-lexicon-devils/) and listen to episode 8 of the Juicecast with [Wackozacco](https://twitter.com/wackozacco420) and [Peacenode](https://twitter.com/peace_node) on [Spotify](https://open.spotify.com/episode/3dVbEegY8abnQSbejulgiL?si=9f3a2106287d4a59) and [Apple Podcasts](https://podcasts.apple.com/ca/podcast/ep-8-peacenode-and-wackozacco-from-lexicon-devils/id1599885493?i=1000569582815).
+Lexicon Devils is a metaverse guild running on Juicebox. To learn more about how Lexicon Devils is building the metaverse and getting paid to do it, check out this [deep dive on the JB blog](https://info.juicebox.money/blog/2022-07-14-lexicon-devils/) and listen to episode 8 of the Juicecast with [Wackozacco](https://twitter.com/wackozacco420) and [Peacenode](https://twitter.com/peace_node) on [Spotify](https://open.spotify.com/episode/3dVbEegY8abnQSbejulgiL?si=9f3a2106287d4a59) and [Apple Podcasts](https://podcasts.apple.com/ca/podcast/ep-8-peacenode-and-wackozacco-from-lexicon-devils/id1599885493?i=1000569582815).
 
 ![Juicebox Learning Center in Voxels](Juicecast-Voxels.jpg)
 
