@@ -11,6 +11,10 @@ image: https://info.juicebox.money/assets/images/studiodao-25a8b3e8c725cf93b5d15
 
 ***How StudioDAO is building the first million person green-light committee on Juicebox.***
 
+:::tip
+To learn more about how StudioDAO and its sub-projects are configured on Juicebox, read this [companion article](https://info.juicebox.money/blog/2022-09-07-studiodao/).
+:::
+
 ### 🥱 Prequels, sequels, reboots  
 
 If you’ve streamed movies recently, you might have noticed that everything is starting to become homogenized. Superhero mix and match, cinderella with the latest celebrity, maybe an apocalypse or two. It’s becoming increasingly clear that we are no longer paving new roads but rather returning to the same old well-trodden paths. The traditional studio model behind film production is, at least, partly to blame for this. And StudioDAO is trying to fix it.
