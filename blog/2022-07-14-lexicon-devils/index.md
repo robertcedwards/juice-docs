@@ -11,6 +11,10 @@ image: https://info.juicebox.money/assets/images/juicebox-v2-343f182edb8f0084282
 
 ***How Lexicon Devils is building the metaverse, getting paid to do it, and managing their treasury on Juicebox.***  
 
+:::tip
+To learn more about how the Lexicon Devils project is configured on Juicebox, read this [companion article](https://info.juicebox.money/blog/2022-09-27-lexicon-devils-config/).
+:::
+
 ### Metaverse architecture and video games  
 
 I spent the majority of my childhood exploring the internet and playing classic computer games like *Age of the Empires*, *The Secret of Monkey Island*, and especially *The Sims*. For hours and hours I would build, design, and arrange anything I could think up. Unbound by the limits of gravity, money, or even common sense, *The Sims* was an excuse to imagine what was possible rather than what was realistic. At the time this maybe seemed like a silly diversion, but like many of our early internet activities this turned out to be great practice for the future that was hurdling towards us. Spending hours customizing a Myspace page was, in retrospect, a great introduction to frontend development. And perhaps The Sims was the perfect introduction to metaverse architecture.
@@ -27,7 +31,7 @@ Around the time that Shark DAO was making waves, [Peacenode](https://twitter.com
 
 > I’ll never forget meeting Wacko, he was rocking the most insane wearables every 30 seconds. We just had to ask if he could join us and put him on the payroll.
 >
-> — Peacenode
+> — [Peacenode](https://twitter.com/peace_node)
 
 Rather than sending funds p2p, Peacenode explained that the [Lexicon Devils project on Juicebox](https://juicebox.money/#/p/lexicondevils) would issue payouts to a team of contributors on a set schedule. In other words: “I know you don’t know us, but let’s hang out.” Building in the open with a trustless, transparent treasury means easily building friendships and communities regardless of identity or credentials. Find your community, bring the good vibes.
 
@@ -69,13 +73,13 @@ left to right: [3 Schism Street](https://www.voxels.com/parcels/7968/visit), [7 
 
 > *I never would have imagined [becoming a metaverse architect]. I was designing video game skins when I was younger, not really thinking about it. As I was growing up, I felt like I needed to do something more meaningful and then I found out that you could paid for doing stuff like this. It was a re-discovery of a passion and realizing that it can produce value.*
 >
-> — Wackozacco
+> — [Wackozacco](https://twitter.com/wackozacco420)
 
 Whether referencing the physical world or playing with what defies reality, Voxels and other metaverses allow for architects to focus on design and function rather than costs, materials, or bureaucratic mazes like zoning laws. Anyone is able to learn to build in the metaverse, regardless of their education or previous knowledge of architecture. Coming from a wide range of backgrounds, the team at [Lexicon Devils](https://juicebox.money/#/p/lexicondevils) has spent the last year creating metaverse experiences and custom builds for other orgs, all while managing their treasury on Juicebox.
 
 > *If you had asked me in January 2020, I couldn’t have anticipated where I am today with my friends. It’s pretty amazing. Actually, when I was a kid, there was a stint where I wanted to be an architect. I was a Lincoln Log kid, so maybe it makes sense.*
 >
-> — Peacenode
+> — [Peacenode](https://twitter.com/peace_node)
 
 ![Lincoln Logs, a popular children's toy](lincoln-logs.jpg)  
 
@@ -86,7 +90,7 @@ Whether referencing the physical world or playing with what defies reality, Voxe
 As the pinnacle of their monthly Juicebox event series Lexicon Devils is hosting [FORMING](http://forming.lexicondevils.xyz/), an experimental hyperverse concert with a curated lineup of performances by web3 musicians. Lexicon Devils has created and funded [a new Juicebox project](https://juicebox.money/#/v2/p/66) through which all participating artists will be paid in ETH. By paying musicians through the project, artists also get a chance to learn first-hand about the Juicebox protocol and how it works.  
 
 > “That’s the synthesis of our experience of learning about Juicebox. It’s not just an event at JB, but an event that gets people to learn about JB through our events”.  
-> — Wackozacco  
+> — [Wackozacco](https://twitter.com/wackozacco420)  
 
 ### Relevant links  
 
