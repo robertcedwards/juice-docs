@@ -17,7 +17,7 @@ Start by connecting your wallet to [juicebox.money](https://juicebox.money) and 
 **[Learn about configuring your project here →](/user/project-guide/details/)**
 
 :::info
-Consider creating a test project on the [Rinkeby testnet version of Juicebox](https://rinkeby.juicebox.money) before creating a mainnet project. If you need help deciding how to configure your project, ask in the [Juicebox DAO Discord](https://discord.gg/juicebox).
+Consider creating a test project on the [Goerli testnet version of Juicebox](https://goerli.juicebox.money/) before creating a mainnet project. If you need help deciding how to configure your project, ask in the [Juicebox DAO Discord](https://discord.gg/juicebox).
 :::
 
 ## Video Guides
