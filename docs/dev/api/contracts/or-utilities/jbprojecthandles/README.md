@@ -10,7 +10,7 @@ https://github.com/jbx-protocol/juice-project-handles/blob/main/contracts/JBProj
 
 Ethereum mainnet: [`0xe3c01e9fd2a1dcc6edf0b1058b5757138ef9ffb6`](https://etherscan.io/address/0xe3c01e9fd2a1dcc6edf0b1058b5757138ef9ffb6)
 
-Ethereum rinkeby: [`0xd0b970348dfc7ae57e81b4f069ed0e06127be85d`](https://rinkeby.etherscan.io/address/0xd0b970348dfc7ae57e81b4f069ed0e06127be85d)
+Goerli testnet: [`0x3ff1f0583a41CE8B9463F74a1227C75FC13f7C27`](https://goerli.etherscan.io/address/0x3ff1f0583a41ce8b9463f74a1227c75fc13f7c27)
 
 #### Interfaces
 
