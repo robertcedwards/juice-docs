@@ -1,0 +1,62 @@
+.description {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.description li {
+  font-size: 40px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.description li {
+  list-style-type: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 375px;
+  padding: 40px;
+}
+
+.card:hover {
+  background-color: #d0d0d0;
+  transition: color 300s ease-in;
+}
+
+.card h2 {
+  font-family: "Varsity Team";
+  font-size: 30px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #7d7d7d;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+}

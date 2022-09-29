@@ -12,14 +12,16 @@ hide_table_of_contents: true
       <div class="col col--6">
         <h1 style={{fontSize: "3rem"}}>Juicebox Docs</h1>
         <p style={{fontSize: "2rem"}}>Fund your thing.</p>
-        <a class="button button--primary" href="/user/" style={{marginBottom: "5px"}}>Learn the basics</a>
+        <a class="button button--primary" href="/jbhigh/" style={{marginBottom: "5px"}}>Learn the basics</a>
         <a class="button button--link" href="https://juicebox.money" style={{marginBottom: "5px"}}>Use Juicebox →</a>
       </div>
     </div>
   </div>
 </div>
 
-<style>{"\
+<style>
+  
+  {"\
   .apple{\
     max-height: 250px;\
   }\
@@ -59,7 +61,7 @@ hide_table_of_contents: true
           </p>
         </div>
         <div class="card__footer">
-          <a class="button button--primary button--block" href="/user">Project Creators →</a>
+          <a class="button button--primary button--block" href="/jbhigh">Project Creators →</a>
         </div>
       </div>
     </div>
