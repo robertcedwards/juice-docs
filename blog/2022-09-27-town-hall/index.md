@@ -1,4 +1,13 @@
-# JuiceboxDAO Town Hall Sept. 27, 2022
+---
+slug: 2022-09-27-town-hall
+title: Juicebox DAO Town Hall Summary Sep. 27, 2022
+authors: [zhape]
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+tags: [dao, town hall, news]
+---
+
+![Town Hall banner by Sage Kellyn](townhall.png)  
+Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Tech update with jango
 
@@ -6,7 +15,7 @@
 **jango:**
 A week ago, we deployed the V3 contracts. We need to set up the juiceboxDAO funding cycles on V3, which will be a transaction that all the multi-signers have to sign for, and we have to synchronize it with the V2 and V1 funding cycles. So we're going to queue up this transaction to kick off V3 funding cycles this Saturday, run a quick 7-day funding cycle and then reconfigure it to align with the 14-day cycles of V2 and V1.
 
-![](gSt2Dyu.png)
+![launch of 1st V3 FC](gSt2Dyu.png)
 
 The V3 cycle won't have any payouts from it, nor have any redemptions. It'll basically just be a place for fees to come into from projects operating there. All is looking good. 
 
