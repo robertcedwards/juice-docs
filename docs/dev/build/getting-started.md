@@ -9,17 +9,17 @@ sidebar_position: 1
 Add the protocol files to the project.
 ```bash
 # command line
-npm install @jbx-protocol/contracts-v2
+npm install @jbx-protocol/juice-contracts-v3/
 ```
 
 If referencing from typescript:
 ```typescript
-const contract = require(`@jbx-protocol/contracts-v2/deployments/${network}/${contractName}.json`)
+const contract = require(`@jbx-protocol/juice-contracts-v3/deployments/${network}/${contractName}.json`)
 ```
 
 If referencing from a contract:
 ```
-import '@jbx-protocol/contracts-v2/contracts/[file-path].sol'
+import '@jbx-protocol/juice-contracts-v3/contracts/[file-path].sol'
 ```
 
 #### Now what
