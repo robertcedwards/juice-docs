@@ -2,7 +2,7 @@
 slug: juicebox-thirdweb
 title: Create an NFT on Thirdweb and forward proceeds to a Juicebox project
 authors: [nicholas]
-tags: [guide, project creator]
+tags: [guide, project creator, jbh-tooling]
 image: "/img/thirdweb.png"
 ---
 
