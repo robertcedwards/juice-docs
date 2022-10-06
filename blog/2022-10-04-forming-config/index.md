@@ -4,7 +4,7 @@ title: How FORMING is configured on Juicebox
 description: Running a metaverse concert series on Juicebox.
 image: https://info.juicebox.money/assets/images/FORMING-vol1-2-64f1550549f8ab9d9d003db09839e43e.png
 authors: [matthew, brileigh]
-tags: [lexicon devils, metaverse, architecture, guild, cryptovoxels, voxels, juicebox, ethereum, crypto, configuration]
+tags: [lexicon devils, metaverse, architecture, guild, cryptovoxels, voxels, juicebox, ethereum, crypto, configuration, jbh-project creators]
 ---
 
 ***How Lexicon Devils is running a metaverse concert series on Juicebox***
