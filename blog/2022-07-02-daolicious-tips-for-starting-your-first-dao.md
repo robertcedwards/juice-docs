@@ -2,7 +2,7 @@
 slug: daolicious-tips-for-starting-your-first-dao
 title: DAOlicious tips for starting your first DAO
 authors: [felixander]
-tags: [dao, news, juicebox]
+tags: [dao, news, juicebox, jbh-project creators]
 ---
 
 
