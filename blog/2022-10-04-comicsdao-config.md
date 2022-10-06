@@ -2,7 +2,7 @@
 slug: comicsdao-config-article
 title: Config-Clinic - An ongoing fundraiser and web3 business in ComicsDAO
 authors: [felixander]
-tags: [dao, configuration, juicebox]
+tags: [dao, configuration, juicebox, jbh-project creators]
 ---
 
 # Config-Clinic - An ongoing fundraiser and web3 business in ComicsDAO
