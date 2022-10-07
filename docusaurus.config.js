@@ -133,6 +133,10 @@ const config = {
               label: 'Bookkeeping',
               to: 'https://drive.google.com/drive/folders/1JsMOMXz6Z684DsTsLiJu3mo7jNAwjYwQ',
             },
+            {
+              label: 'Brand Kit',
+              to: 'https://juicebox.notion.site/Brand-Kit-b1036dfdae1448cc82f1b9be863694b5',
+            },
           ],
         },
         {
