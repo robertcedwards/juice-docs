@@ -19,7 +19,7 @@ JuiceboxDAO contributors build in the open—to participate, [join our Discord](
 
 #### Website
 [Juicebox](https://juicebox.money/#/)<br/>
-[Rinkeby Juicebox](https://rinkeby.juicebox.money/)<br/>
+[Goerli Juicebox](https://goerli.juicebox.money/)<br/>
 [JuiceboxDAO](https://juicebox.money/#/p/juicebox)
 
 #### Community

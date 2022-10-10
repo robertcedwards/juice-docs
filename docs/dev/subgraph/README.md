@@ -12,8 +12,9 @@ Multiple subgraphs are maintained by [Peel](https://discord.gg/b4rpjgGPHX) in a 
 | Name        | URL                                                                                                            | Description                                                                    |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | juicebox    | [View on Graph explorer](https://thegraph.com/explorer/subgraph?id=FVmuv3TndQDNd2BWARV8Y27yuKKukryKXPzvAS5E7htC&view=Overview) | The primary mainnet subgraph used by [juicebox.money](https://juicebox.money). |
-| mainnet-dev | Queries: https://api.studio.thegraph.com/query/30654/mainnet-dev/0.3.0                                      | Indexes mainnet Juicebox protocol contracts.                                   |
-| rinkeby-dev | Queries: https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.3.0                                      | Indexes rinkeby Juicebox protocol contracts.                                   |
+| mainnet-dev | Queries: https://api.studio.thegraph.com/query/30654/mainnet-dev/0.4.0                                      | Indexes mainnet Juicebox protocol contracts.                                   |
+| goerli-dev | Queries: https://api.studio.thegraph.com/query/30654/goerli-dev/0.1.0                                      | Indexes goerli Juicebox protocol contracts. (Does not include v1 & v2 contracts)                                  |
+| rinkeby-dev | Queries: https://api.studio.thegraph.com/query/30654/rinkeby-dev/0.3.0                                      | Indexes rinkeby Juicebox protocol contracts. (Does not include v3 contracts)                                  |
 
 <br/>
 
