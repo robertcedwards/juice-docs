@@ -15,9 +15,9 @@ In this tutorial, I'll show you how to configure an ENS address to forward ETH t
 ## Before you start
 ### Have a Juicebox Project
 Before you can receive donations, you'll need a Juicebox Project. Learn how to [Make Your Juicebox Project](/user).
+
 ### Have an ENS Domain
 You'll need to own or be the controller of an ENS address (such as yourname.eth) to follow the rest of this tutorial. Register an address at [ENS Domains](https://app.ens.domains). 
-
 
 ### Optional: Set up your Juicebox Project Handle
 It's not necessary to complete this tutorial, but it's also a good idea to set up your project handle. Project handles gives your project a vanity url like `juicebox.money/@auditfund`, rather than the default `juicebox.money/v2/p/256`, and will make your project appear in the site's search. They're free and only cost a little gas for the setup transactions.
@@ -42,10 +42,9 @@ If you insert text or a link to an image (https or ipfs) in the payment memo, th
 
 
 ## 2. Configure the Payment Address in the ENS address's records
-Go to https://app.ens.domains/name/YOURNAME.eth/details. You'll have to substitute *YOURNAME* for the .eth address you're trying to configure.
+Go to https://app.ens.domains/name/YOURNAME.eth/details. You'll have to substitute `YOURNAME` for the .eth address you're trying to configure.
 
 ![](4.png)
-
 
 Click `Add/Edit Record`, paste the payment address you generated into the Addresses: ETH input. Click save and confirm the transaction in your wallet.
 
@@ -53,6 +52,7 @@ Click `Add/Edit Record`, paste the payment address you generated into the Addres
 
 The ETH record is now set. ETH transactions sent to this ENS address will be directed to the payment address, which will in turn forward the ETH to the Juicebox project and issue the project's tokens to the address that sent the original ETH transaction, if the project payer was configured to do so.
 
+## Conclusion
 In this tutorial you've learned how to configure an ENS address to receive donations at a Juicebox project. Let potential supporters know that they can simply send ETH to yourname.eth to pay your project, and receive membership tokens, too.
 
-Advanced Note: This approach works great for receiving ETH donations. To accept other tokens sent to the ENS address, your project will need to configure Payment Terminals for the tokens you would like to receive. If you're interested in this, say hello in the #Project-Creators channel in the [Discord](https://discord.gg/juicebox).
+Advanced Note: This approach works great for receiving ETH donations. To accept other tokens sent to the ENS address, your project will need to configure Payment Terminals for the tokens you would like to receive. If you're interested in this, say hello in the `#🚀｜project-creators` channel in the [Discord](https://discord.gg/juicebox).
