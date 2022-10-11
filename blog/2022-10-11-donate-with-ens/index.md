@@ -2,7 +2,7 @@
 slug: juicebox-donate-with-ens
 title: Receive Juicebox donations at a .eth address
 authors: [nicholas]
-tags: [guide, project creator, jbh-tooling]
+tags: [guide, project creator, jb-tooling]
 image: "/img/donatewithens.png"
 ---
 
