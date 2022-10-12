@@ -7,17 +7,17 @@ tags: [observations, dao]
 
 JBX membership is currently represented by **602,065,173** tokens:
 
-**Jango** has **118,891,959** (19.74%) 
-**Peri** has **100,255,206** (16.65%)
-**DragonFly Capital** has **48,048,000** (7.98%)
-**SharkDAO** has **30,063,667** (4.99%)
-**JuiceboxDAO** has **27,827,807** (4.62%)
-**4** addresses each have around **18,500,000** (3%)
-**13** addresses have between **5,000,000 - 15,000,000** (1-3%)
-**7** addresses have between **2,500,000 - 5,000,000** (0.5-1%) 
-**28** addresses have between **500,000 - 5,000,000** (0.1-0.5%)
-**64** addresses have between **100,000 - 500,000** (0.01-0.1%) 
-**56** addresses have less than 0.01%
+**Jango** has **118,891,959** (19.74%)       
+**Peri** has **100,255,206** (16.65%)   
+**DragonFly Capital** has **48,048,000** (7.98%)   
+**SharkDAO** has **30,063,667** (4.99%)   
+**JuiceboxDAO** has **27,827,807** (4.62%)   
+**4** addresses each have around **18,500,000** (3%)   
+**13** addresses have between **5,000,000 - 15,000,000** (1-3%)   
+**7** addresses have between **2,500,000 - 5,000,000** (0.5-1%)    
+**28** addresses have between **500,000 - 5,000,000** (0.1-0.5%)   
+**64** addresses have between **100,000 - 500,000** (0.01-0.1%)    
+**56** addresses have less than 0.01%   
 
 Membership has been given to those who have helped build the protocol and the DAO, and to those who have supported the efforts by sending ETH to the treasury, with a preference for those who helped in any capacity in earlier funding cycles. Membership has been open to all since the protocol was deployed.
 
@@ -25,13 +25,13 @@ Currently in Funding Cycle #8, each 10 ETH contributed to the treasury by new or
 
 **2,579,260** for the contributing member
 
-**416,649** for **JuiceboxDAO**
-**333,319** for **Peri**
-**333,319** for **Jango**
-**97,218** for **Nicholas**
-**97,218** for **Exekias**
-**55,553** for **WAGMI Studios**
-**55,553** for **CanuDAO**
+**416,649** for **JuiceboxDAO**   
+**333,319** for **Peri**   
+**333,319** for **Jango**   
+**97,218** for **Nicholas**    
+**97,218** for **Exekias**   
+**55,553** for **WAGMI Studios**   
+**55,553** for **CanuDAO**   
 
 Today, it would take a contribution of **278** ETH for the contributing member to get 10% of the total membership tokens.
 
