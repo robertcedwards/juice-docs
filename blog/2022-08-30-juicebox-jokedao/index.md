@@ -4,6 +4,7 @@ title: Create JokeDAO Contests for Juicebox Projects
 authors: [nicholas]
 tags: [guide, project creator, jbh-tooling]
 image: "/img/jokedao.png"
+youtubeId: KIL8MpcqpVY
 ---
 
 # How to Create JokeDAO Contests for Juicebox Projects

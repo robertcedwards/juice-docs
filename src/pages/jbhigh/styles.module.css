@@ -1,5 +1,4 @@
 .description {
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
   margin-top: 40px;
   display: flex;
@@ -7,14 +6,11 @@
   gap: 10px;
 }
 
-.description li {
+.description p {
+  font-family: "Raleway";
   font-size: 40px;
   line-height: 35px;
   text-transform: uppercase;
-}
-
-.description li {
-  list-style-type: none;
 }
 
 .grid {
@@ -36,11 +32,6 @@
   padding: 40px;
 }
 
-.card:hover {
-  background-color: #d0d0d0;
-  transition: color 300s ease-in;
-}
-
 .card h2 {
   font-family: "Varsity Team";
   font-size: 30px;
@@ -49,14 +40,17 @@
 }
 
 .card p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
-  color: #7d7d7d;
 }
 
 .card img {
   width: 80px;
   height: 80px;
+}
+
+.card a {
+  color: inherit;
 }

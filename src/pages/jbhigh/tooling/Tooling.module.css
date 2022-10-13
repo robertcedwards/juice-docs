@@ -1,0 +1,66 @@
+.hero {
+  display: grid;
+  grid-template-columns: auto;
+  height: 360px;
+  background-color: #f5f3e8;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.heroContent h3 {
+  font-family: "KCHand";
+  font-size: 96px;
+  line-height: 90px;
+  text-transform: uppercase;
+}
+
+.heroContent p {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.heroImageWrapper {
+  align-self: start;
+}
+
+.container {
+  padding: 50px 5% 100px 5%;
+}
+
+.searchContainer {
+  font-family: "Raleway";
+  display: flex;
+  width: 295px;
+  height: 52px;
+  border: 1.12px solid #d0d0d0;
+  padding-right: 15px;
+}
+
+.search {
+  padding: 15px 18px 15px 18px;
+  width: 100%;
+  border: 0;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #8b8b8b;
+  background: url("/img/jbhigh/icons/tooling/search.svg") no-repeat right;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.postsContainer {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 10px;
+}

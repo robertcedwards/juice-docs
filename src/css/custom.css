@@ -5,14 +5,20 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto:wght@400;500&display=swap");
 @font-face {
   font-family: "Varsity Team";
   font-style: normal;
   font-weight: normal;
   src: local("Varsity Team"),
     url("/fonts/VarsityTeam-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "KCHand";
+  font-style: normal;
+  font-weight: normal;
+  src: local("KCHand"), url("/fonts/KCHand.otf") format("truetype");
 }
 :root {
   --ifm-link-color: #18b4c7;

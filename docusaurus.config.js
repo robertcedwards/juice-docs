@@ -26,20 +26,26 @@ const config = {
           routeBasePath: "/",
           editUrl: "https://github.com/jbx-protocol/juice-docs/blob/main",
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: "https://github.com/jbx-protocol/juice-docs/blob/main",
-          blogSidebarTitle: "Articles",
-          blogSidebarCount: "ALL",
-          feedOptions: {
-            type: "all",
-            copyright: `Licensed under the MIT License`,
-          },
-        },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       }),
+    ],
+  ],
+  plugins: [
+    [
+      "./plugins/blog-plugin",
+      {
+        showReadingTime: true,
+        editUrl: "https://github.com/jbx-protocol/juice-docs/blob/main",
+        blogSidebarTitle: "Articles",
+        blogSidebarCount: "ALL",
+        feedOptions: {
+          type: "all",
+          copyright: `Licensed under the MIT License`,
+        },
+      },
     ],
   ],
   i18n: {
@@ -87,8 +93,8 @@ const config = {
         },
         {
           to: "/jbhigh",
+          siderbarId: "user",
           label: "Project Creators",
-          position: "left",
         },
         {
           type: "docSidebar",
@@ -139,8 +145,8 @@ const config = {
               to: "https://drive.google.com/drive/folders/1JsMOMXz6Z684DsTsLiJu3mo7jNAwjYwQ",
             },
             {
-              label: 'Brand Kit',
-              to: 'https://juicebox.notion.site/Brand-Kit-b1036dfdae1448cc82f1b9be863694b5',
+              label: "Brand Kit",
+              to: "https://juicebox.notion.site/Brand-Kit-b1036dfdae1448cc82f1b9be863694b5",
             },
           ],
         },
@@ -183,6 +189,7 @@ const config = {
       defaultLanguage: "solidity",
       additionalLanguages: ["solidity"],
     },
+    // @ts-ignore
     metadata: [
       {
         name: "google-site-verification",
