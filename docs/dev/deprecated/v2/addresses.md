@@ -28,6 +28,8 @@ JBPrices: [`0xCDE93bdA2a706Fc652F7e75241bA949aCB9f4Fe5`](https://etherscan.io/ad
 
 JBProjects: [`0xD8B4359143eda5B2d763E127Ed27c77addBc47d3`](https://etherscan.io/address/0xD8B4359143eda5B2d763E127Ed27c77addBc47d3)
 
+JB1DayReconfigurationBufferBallot: [`0x60eE3eE8523d1019CA73c954eE5a574577CD5be0`](https://etherscan.io/address/0x60ee3ee8523d1019ca73c954ee5a574577cd5be0#code)
+
 JB3DayReconfigurationBufferBallot: [`0x4b9f876c7Fc5f6DEF8991fDe639b2C812a85Fb12`](https://etherscan.io/address/0x4b9f876c7Fc5f6DEF8991fDe639b2C812a85Fb12)
 
 JB7DayReconfigurationBufferBallot: [`0x642EFF5259624FD09D021AB764a4b47d1DbD5770`](https://etherscan.io/address/0x642EFF5259624FD09D021AB764a4b47d1DbD5770)
