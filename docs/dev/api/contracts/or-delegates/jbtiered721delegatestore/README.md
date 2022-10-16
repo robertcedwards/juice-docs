@@ -53,12 +53,29 @@ Goerli Testnet: *Not deployed*
 |[**`tierVotingUnitsOf`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>`address _nft`</li><li>`address _account`</li><li>`uint256 _tierId`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
 |[**`encodedTierIPFSUriOf`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256 _tokenId`</li></ul>**Returns**<ul><li>`bytes32`</li></ul>|
 |[**`flagsOf`**](.)|**Params**<ul><li>`address _nft`</li></ul>**Returns**<ul><li>[`JBTiered721Flags`](/dev/api/data-structures/jbtiered721flags) `memory`</li></ul>|
+|[**`isTierRemoved`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256 _tierId`</li></ul>**Returns**<ul><li>`bool`</li></ul>|
+|[**`balanceOf`**](.)|**Params**<ul><li>`address _nft`</li><li>`address _owner`</li></ul>**Returns**<ul><li>`uint256 balance`</li></ul>|
+|[**`redemptionWeightOf`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256[] calldata _tokenIds`</li></ul>**Returns**<ul><li>`uint256 weight`</li></ul>|
+|[**`totalRedemptionWeight`**](.)|**Params**<ul><li>`address _nft`</li></ul>**Returns**<ul><li>`uint256 weight`</li></ul>|
+|[**`tierIdOfToken`**](.)|**Traits**<ul><li>`pure`</li></ul>**Params**<ul><li>`uint256 _tokenId`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
+|[**`reservedTokenBeneficiaryOf`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256 _tierId`</li></ul>**Returns**<ul><li>`address`</li></ul>|
 
 
 #### Write
 
 |Function|Definition|
 |-|-|
-|||
-
-
+|[**`recordAddTiers`**](.)|**Params**<ul><li>[`JB721TierParams[]`](/dev/api/data-structures/jb721tierparams) `memory _tiersToAdd`</li></ul>**Returns**<ul><li>`uint256[] memory tierIds`</li></ul>|
+|[**`recordMintReservesFor`**](.)|**Params**<ul><li>`uint256 _tierId`</li><li>`uint256 _count`</li></ul>**Returns**<ul><li>`uint256[] memory tokenIds`</li></ul>|
+|[**`recordSetDefaultReservedTokenBeneficiary`**](.)|**Params**<ul><li>`address _beneficiary`</li></ul>|
+|[**`recordTransferForTier`**](.)|**Params**<ul><li>`uint256 _tierId`</li><li>`address _from`</li><li>`address _to`</li></ul>|
+|[**`recordRemoveTierIds`**](.)|**Params**<ul><li>`uint256[] calldata _tierIds`</li></ul>|
+|[**`recordMintBestAvailableTier`**](.)|**Params**<ul><li>`uint256 _amount`</li></ul>**Returns**<ul><li>`uint256 tokenId`</li><li>`uint256 tierId`</li><li>`uint256 leftoverAmount`</li></ul>|
+|[**`recordMint`**](.)|**Params**<ul><li>`uint256 _amount`</li><li>`uint16[] calldata _tierIds`</li><li>`bool _isManualMint`</li></ul>**Returns**<ul><li>`uint256[] memory tokenIds`</li><li>`uint256 leftoverAmount`</li></ul>|
+|[**`recordBurn`**](.)|**Params**<ul><li>`uint256[] memory _tokenIds`</li></ul>|
+|[**`recordSetFirstOwnerOf`**](.)|**Params**<ul><li>`uint256 _tokenId`</li><li>`address _owner`</li></ul>|
+|[**`recordSetBaseUri`**](.)|**Params**<ul><li>`string calldata _uri`</li></ul>|
+|[**`recordSetContractUri`**](.)|**Params**<ul><li>`string calldata _uri`</li></ul>|
+|[**`recordSetTokenUriResolver`**](.)|**Params**<ul><li>[`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver) `_resolver`</li></ul>|
+|[**`recordFlags`**](.)|**Params**<ul><li>[`JBTiered721Flags`](/dev/api/data-structures/jbtiered721flags) `calldata _flags`</li></ul>|
+|[**`cleanTiers`**](.)|**Params**<ul><li>`address _nft`</li></ul>|
