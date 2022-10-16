@@ -8,7 +8,11 @@ https://github.com/jbx-protocol/juice-nft-rewards/blob/main/contracts/interfaces
 
 ```
 interface IJBTiered721DelegateDeployer {
-  event DelegateDeployed(uint256 indexed projectId, IJBTiered721Delegate newDelegate);
+  event DelegateDeployed(
+    uint256 indexed projectId,
+    IJBTiered721Delegate newDelegate,
+    JB721GovernanceType governanceType
+  );
 
   function deployDelegateFor(
     uint256 _projectId,

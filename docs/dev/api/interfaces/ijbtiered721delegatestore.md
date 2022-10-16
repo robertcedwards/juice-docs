@@ -14,7 +14,7 @@ interface IJBTiered721DelegateStore {
 
   function balanceOf(address _nft, address _owner) external view returns (uint256);
 
-  function maxTierId(address _nft) external view returns (uint256);
+  function maxTierIdOf(address _nft) external view returns (uint256);
 
   function tiers(
     address _nft,
@@ -59,11 +59,7 @@ interface IJBTiered721DelegateStore {
 
   function isTierRemoved(address _nft, uint256 _tierId) external view returns (bool);
 
-  function lockVotingUnitChangesFor(address _nft) external view returns (bool);
-
-  function lockReservedTokenChangesFor(address _nft) external view returns (bool);
-
-  function lockPricingResolverChangesFor(address _nft) external view returns (bool);
+  function flagsOf(address _nft) external view returns (JBTiered721Flags memory);
 
   function votingUnitsOf(address _nft, address _account) external view returns (uint256 units);
 
@@ -111,8 +107,7 @@ interface IJBTiered721DelegateStore {
   function recordMint(
     uint256 _amount,
     uint16[] calldata _tierIds,
-    address _beneficiary,
-    uint256 _currency
+    bool _isManualMint
   ) external returns (uint256[] memory tokenIds, uint256 leftoverAmount);
 
   function recordTransferForTier(
@@ -131,11 +126,7 @@ interface IJBTiered721DelegateStore {
 
   function recordSetTokenUriResolver(IJBTokenUriResolver _resolver) external;
 
-  function recordLockVotingUnitChanges(bool _flag) external;
-
-  function recordLockReservedTokenChanges(bool _flag) external;
-
-  function recordLockPricingResolverChanges(bool _flag) external;
+  function recordFlags(JBTiered721Flags calldata _flag) external;
 
   function cleanTiers(address _nft) external;
 }

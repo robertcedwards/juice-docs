@@ -23,22 +23,6 @@ interface IJBTiered721Delegate {
     address caller
   );
 
-  event TierDelegateChanged(
-    address indexed delegator,
-    address indexed fromDelegate,
-    address indexed toDelegate,
-    uint256 tierId,
-    address caller
-  );
-
-  event TierDelegateVotesChanged(
-    address indexed delegate,
-    uint256 indexed tierId,
-    uint256 previousBalance,
-    uint256 newBalance,
-    address callre
-  );
-
   event AddTier(uint256 indexed tierId, JB721TierParams data, address caller);
 
   event RemoveTier(uint256 indexed tierId, address caller);
@@ -61,33 +45,34 @@ interface IJBTiered721Delegate {
 
   function firstOwnerOf(uint256 _tokenId) external view returns (address);
 
-  function getTierDelegate(address _account, uint256 _tier) external view returns (address);
-
-  function getTierVotes(address _account, uint256 _tier) external view returns (uint256);
-
-  function getPastTierVotes(
-    address _account,
-    uint256 _tier,
-    uint256 _blockNumber
-  ) external view returns (uint256);
-
-  function getTierTotalVotes(uint256 _tier) external view returns (uint256);
-
-  function getPastTierTotalVotes(uint256 _tier, uint256 _blockNumber)
-    external
-    view
-    returns (uint256);
-
   function adjustTiers(JB721TierParams[] memory _tierDataToAdd, uint256[] memory _tierIdsToRemove)
     external;
-
-  function setTierDelegate(address _delegatee, uint256 _tierId) external;
 
   function mintReservesFor(JBTiered721MintReservesForTiersData[] memory _mintReservesForTiersData)
     external;
 
   function mintReservesFor(uint256 _tierId, uint256 _count) external;
 
+  function mintFor(JBTiered721MintForTiersData[] memory _mintForTiersData) external;
+
+  function mintFor(uint16[] calldata _tierIds, address _beneficiary)
+    external
+    returns (uint256[] memory tokenIds);
+
   function setDefaultReservedTokenBeneficiary(address _beneficiary) external;
+
+  function initialize(
+    uint256 _projectId,
+    IJBDirectory _directory,
+    string memory _name,
+    string memory _symbol,
+    IJBFundingCycleStore _fundingCycleStore,
+    string memory _baseUri,
+    IJBTokenUriResolver _tokenUriResolver,
+    string memory _contractUri,
+    JB721PricingParams memory _pricing,
+    IJBTiered721DelegateStore _store,
+    JBTiered721Flags memory _flags
+  ) external;
 }
 ```
