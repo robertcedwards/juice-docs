@@ -29,7 +29,7 @@ Goerli Testnet: *Not deployed*
 
 |Contract|Description|
 |-|-|
-|[**`ERC721`**](/dev/api/contracts/or-abstract/erc721/)|Implementation of [ERC721](https://eips.ethereum.org/EIPS/eip-721) Non-Fungible Token Standard, including the Metadata extension, but not including the Enumerable extension, which is available separately as {ERC721Enumerable}.|
+|[**`ERC721`**](/dev/api/contracts/or-delegates/or-abstract/erc721/)|Implementation of [ERC721](https://eips.ethereum.org/EIPS/eip-721) Non-Fungible Token Standard, including the Metadata extension, but not including the Enumerable extension, which is available separately as {ERC721Enumerable}.|
 
 #### Constructor
 
@@ -40,12 +40,14 @@ Goerli Testnet: *Not deployed*
   @param _name The name of the token.
   @param _symbol The symbol that the token should be represented by.
 */
-constructor(
+function _initialize(
   uint256 _projectId,
   IJBDirectory _directory,
   string memory _name,
   string memory _symbol
-) ERC721(_name, _symbol) {
+) internal {
+  ERC721._initialize(_name, _symbol);
+
   projectId = _projectId;
   directory = _directory;
 }
@@ -67,13 +69,13 @@ constructor(
 
 |Function|Definition|
 |-|-|
-|[**`payParams`**](.)|**Params**<ul><li>`JBPayParamsData calldata _data`</li></ul>**Returns**<ul><li>`uint256 weight`</li><li>`string memory memo`</li><li>`JBPayDelegateAllocation[] memory delegateAllocations`</li></ul>|
-|[**`redeemParams`**](.)|**Params**<ul><li>`JBRedeemParamsData calldata _data`</li></ul>**Returns**<ul><li>`uint256 reclaimAmount`</li><li>`string memory memo`</li><li>`JBRedemptionDelegateAllocation[] memory delegateAllocations`</li></ul>|
+|[**`payParams`**](.)|**Params**<ul><li>`JBPayParamsData calldata _data`</li></ul>**Returns**<ul><li>`uint256 weight`</li><li>`string memory memo`</li><li>[`JBPayDelegateAllocation[]`](/dev/api/data-structures/jbpaydelegateallocation) `memory delegateAllocations`</li></ul>|
+|[**`redeemParams`**](.)|**Params**<ul><li>[`JBRedeemParamsData`](/dev/api/data-structures/jbredeemparamsdata) `calldata _data`</li></ul>**Returns**<ul><li>`uint256 reclaimAmount`</li><li>`string memory memo`</li><li>[`JBRedemptionDelegateAllocation[]`](/dev/api/data-structures/jbredemptiondelegateallocation) `memory delegateAllocations`</li></ul>|
 |[**`supportsInterface`**](.)|**Traits**<ul><li>virtual</li></ul>**Params**<ul><li>`bytes4 _interfaceId`</li></ul>**Returns**<ul><li>`bool`</li></ul>|
 
 #### Write
 
 |Function|Definition|
 |-|-|
-|[**`didPay`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>`JBDidPayData calldata _data`</li></ul>|
-|[**`didRedeem`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>`JBPayParamsData calldata _data`</li></ul>|
+|[**`didPay`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>[`JBDidPayData`](/dev/api/data-structures/jbdidpaydata) `calldata _data`</li></ul>|
+|[**`didRedeem`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>[`JBDidRedeemData`](/dev/api/data-structures/jbdidredeemdata) `calldata _data`</li></ul>|
