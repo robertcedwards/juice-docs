@@ -7,6 +7,10 @@ https://github.com/jbx-protocol/juice-nft-rewards/blob/main/contracts/libraries/
 #### Definition
 
 ```
+/**
+  @notice
+  Utilities to decode an IPFS hash.
+*/
 library JBIpfsDecoder {
   //*********************************************************************//
   // ------------------- internal constant properties ------------------ //
