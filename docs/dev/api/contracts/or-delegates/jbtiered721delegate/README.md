@@ -17,17 +17,21 @@ Goerli Testnet: *Not deployed*
 |Name|Description|
 |-|-|
 |[**`IJBTiered721Delegate`**](/dev/api/interfaces/ijbtiered721delegate)|General interface for the methods in this contract that interact with the blockchain's state according to the protocol's rules.|
+
 #### Inheritance
 
 |Contract|Description|
 |-|-|
 |[**`JB721Delegate`**](/dev/api/contracts/or-delegates/or-abstract/jb721delegate/)|Delegate that offers project contributors NFTs upon payment and the ability to redeem NFTs for treasury assets.|
-|[**`Votes`**](/dev/api/contracts/or-delegates/or-abstract/votes/)|Customized implementation of OpenZeppelin's [IVotes](https://docs.openzeppelin.com/contracts/4.x/api/governance#Votes)|
 |[**`Ownable`**](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol)|Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions.|
 
 #### Constructor
 
 ```
+constructor() {
+  _codeOrigin = address(this);
+}
+
 /**
   @param _projectId The ID of the project this contract's functionality applies to.
   @param _directory The directory of terminals and controllers for projects.
@@ -41,7 +45,7 @@ Goerli Testnet: *Not deployed*
   @param _store A contract that stores the NFT's data.
   @param _flags A set of flags that help define how this contract works.
 */
-constructor(
+function initialize(
   uint256 _projectId,
   IJBDirectory _directory,
   string memory _name,
@@ -53,7 +57,15 @@ constructor(
   JB721PricingParams memory _pricing,
   IJBTiered721DelegateStore _store,
   JBTiered721Flags memory _flags
-) JB721Delegate(_projectId, _directory, _name, _symbol) EIP712(_name, '1') {
+) public override {
+  // Make the original un-initializable.
+  require(address(this) != _codeOrigin);
+  // Stop re-initialization.
+  require(address(store) == address(0));
+
+  // Initialize the sub class.
+  JB721Delegate._initialize(_projectId, _directory, _name, _symbol);
+
   fundingCycleStore = _fundingCycleStore;
   store = _store;
   pricingCurrency = _pricing.currency;
@@ -80,6 +92,9 @@ constructor(
     _flags.lockManualMintingChanges ||
     _flags.pausable
   ) _store.recordFlags(_flags);
+
+  // Transfer ownership to the initializer.
+  _transferOwnership(msg.sender);
 }
 ```
 
@@ -95,8 +110,6 @@ constructor(
 |[**`SetTokenUriResolver`**](.)|<ul><li>[`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver) `indexed newResolver`</li><li>`address caller`</li></ul>|
 |[**`MintReservedToken`**](.)|<ul><li>`uint256 indexed tokenId`</li><li>`uint256 indexed tierId`</li><li>`address indexed beneficiary`</li><li>`address caller`</li></ul>|
 |[**`Mint`**](.)|<ul><li>`uint256 indexed tokenId`</li><li>`uint256 indexed tierId`</li><li>`address indexed beneficiary`</li><li>`uint256 totalAmountContributed`</li><li>`address caller`</li></ul>|
-|[**`DelegateChanged`**](.)|<ul><li>`address indexed delegator`</li><li>`address indexed fromDelegate`</li><li>`address indexed toDelegate`</li></ul>|
-|[**`TierDelegateVotesChanged`**](.)|<ul><li>`address indexed delegate`</li><li>`uint256 indexed tierId`</li><li>`uint256 previousBalance`</li><li>`uint256 newBalance`</li><li>`address callre`</li></ul>|
 
 #### Properties
 
