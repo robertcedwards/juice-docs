@@ -20,6 +20,7 @@ https://github.com/jbx-protocol/juice-nft-rewards/blob/main/contracts/structs/JB
   @member reservedTokenBeneficiary The address receiving the reserved token
   @member store The store contract to use.
   @member flags A set of flags that help define how this contract works.
+  @member governanceType The type of governance to allow the NFTs to be used for.
 */
 struct JBDeployTiered721DelegateData {
   IJBDirectory directory;
@@ -34,5 +35,6 @@ struct JBDeployTiered721DelegateData {
   address reservedTokenBeneficiary;
   IJBTiered721DelegateStore store;
   JBTiered721Flags flags;
+  JB721GovernanceType governanceType;
 }
 ```

@@ -2,7 +2,7 @@
 
 #### Code
 
-https://github.com/jbx-protocol/juice-nft-rewards/blob/main/contracts/structs/JBLaunchFundingCyclesData .sol
+https://github.com/jbx-protocol/juice-nft-rewards/blob/main/contracts/structs/JBLaunchFundingCyclesData.sol
 
 #### Definition
 

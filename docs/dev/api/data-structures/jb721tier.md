@@ -17,6 +17,7 @@ https://github.com/jbx-protocol/juice-nft-rewards/blob/main/contracts/structs/JB
   @member reservedRate The number of minted tokens needed in the tier to allow for minting another reserved token.
   @member reservedRateBeneficiary The beneificary of the reserved tokens for this tier.
   @member encodedIPFSUri The URI to use for each token within the tier.
+  @member allowManualMint A flag indicating if the contract's owner can mint from this tier on demand.
 */
 struct JB721Tier {
   uint256 id;
@@ -28,5 +29,6 @@ struct JB721Tier {
   uint256 reservedRate;
   address reservedTokenBeneficiary;
   bytes32 encodedIPFSUri;
+  bool allowManualMint;
 }
 ```
