@@ -28,7 +28,7 @@ function queuedOf(uint256 _projectId)
   * `_projectId` is the ID of the project to get the queued funding cycle of.
 * The view function can be accessed externally by anyone, and internally by the contract.
 * The view function does not alter state on the blockchain.
-* The function overrides a function definition from the [`IJBFundingCycleStore`](/dev/api/interfaces/README.md) interface.
+* The function overrides a function definition from the [`IJBFundingCycleStore`](/dev/api/interfaces/ijbfundingcyclestore) interface.
 * The function returns a [`JBFundingCycle`](/dev/api/data-structures/jbfundingcycle.md).
 
 #### Body
