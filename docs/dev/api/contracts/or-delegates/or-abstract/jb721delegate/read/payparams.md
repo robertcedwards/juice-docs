@@ -25,6 +25,14 @@ Interface: [`IJBFundingCycleDataSource`](/dev/api/interfaces/ijbfundingcycledata
   { ... }
 ```
 
+- Arguments:
+  - `_data` is the Juicebox standard [`JBPayParamsData`](/dev/api/data-structures/jbpayparamsdata) project payment data.
+- The resulting function overrides a function definition from the [`IJBFundingCycleDataSource`](/dev/api/interfaces/ijbfundingcycledatasource) interface.
+- The function returns:
+  - `weight` is the `uint256` weight that tokens should get minted in accordance with.
+  - `memo` is the memo `string` that should be forwarded to the event.
+  - `delegateAllocations` is an array of [`JBPayDelegateAllocation`](/dev/api/data-structures/jbpaydelegateallocation) structures which represent the amount to send to delegates instead of adding to the local balance.
+
 #### Body
 
 </TabItem>

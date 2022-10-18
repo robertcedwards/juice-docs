@@ -16,6 +16,11 @@ Interface: [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate/)
 function didPay(JBDidPayData calldata _data) external payable virtual override { ... }
 ```
 
+- Arguments:
+  - `_data` is the Juicebox standard [`JBPayParamsData`](/dev/api/data-structures/jbpayparamsdata) project payment data.
+- The resulting function overrides a function definition from the [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate) interface.
+- The function doesn't return anything.
+
 #### Body
 
 </TabItem>
@@ -24,27 +29,24 @@ function didPay(JBDidPayData calldata _data) external payable virtual override {
 
 ```
 /**
-  @notice
-  Indicates if this contract adheres to the specified interface.
+  @notice 
+  Part of IJBPayDelegate, this function gets called when the project receives a payment. It will mint an NFT to the contributor (_data.beneficiary) if conditions are met.
 
-  @dev
-  See {IERC165-supportsInterface}.
+  @dev 
+  This function will revert if the contract calling is not one of the project's terminals. 
 
-  @param _interfaceId The ID of the interface to check for adherance to.
+  @param _data The Juicebox standard project payment data.
 */
-function supportsInterface(bytes4 _interfaceId)
-  public
-  view
-  virtual
-  override(ERC721, IERC165)
-  returns (bool)
-{
-  return
-    _interfaceId == type(IJB721Delegate).interfaceId ||
-    _interfaceId == type(IJBFundingCycleDataSource).interfaceId ||
-    _interfaceId == type(IJBPayDelegate).interfaceId ||
-    _interfaceId == type(IJBRedemptionDelegate).interfaceId ||
-    super.supportsInterface(_interfaceId);
+function didPay(JBDidPayData calldata _data) external payable virtual override {
+  // Make sure the caller is a terminal of the project, and the call is being made on behalf of an interaction with the correct project.
+  if (
+    msg.value != 0 ||
+    !directory.isTerminalOf(projectId, IJBPaymentTerminal(msg.sender)) ||
+    _data.projectId != projectId
+  ) revert INVALID_PAYMENT_EVENT();
+
+  // Process the payment.
+  _processPayment(_data);
 }
 ```
 

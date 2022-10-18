@@ -69,13 +69,13 @@ function _initialize(
 
 |Function|Definition|
 |-|-|
-|[**`payParams`**](.)|**Params**<ul><li>`JBPayParamsData calldata _data`</li></ul>**Returns**<ul><li>`uint256 weight`</li><li>`string memory memo`</li><li>[`JBPayDelegateAllocation[]`](/dev/api/data-structures/jbpaydelegateallocation) `memory delegateAllocations`</li></ul>|
-|[**`redeemParams`**](.)|**Params**<ul><li>[`JBRedeemParamsData`](/dev/api/data-structures/jbredeemparamsdata) `calldata _data`</li></ul>**Returns**<ul><li>`uint256 reclaimAmount`</li><li>`string memory memo`</li><li>[`JBRedemptionDelegateAllocation[]`](/dev/api/data-structures/jbredemptiondelegateallocation) `memory delegateAllocations`</li></ul>|
-|[**`supportsInterface`**](.)|**Traits**<ul><li>virtual</li></ul>**Params**<ul><li>`bytes4 _interfaceId`</li></ul>**Returns**<ul><li>`bool`</li></ul>|
+|[**`payParams`**](.)|**Params**<ul><li><code>[JBPayParamsData](/api/data-structures/jbpayparamsdata) calldata _data</code></li></ul>**Returns**<ul><li>`uint256 weight`</li><li>`string memory memo`</li><li><code>[JBPayDelegateAllocation](/dev/api/data-structures/jbpaydelegateallocation)[] memory delegateAllocations</code></li></ul>|
+|[**`redeemParams`**](.)|**Params**<ul><li><code>[JBRedeemParamsData](/dev/api/data-structures/jbredeemparamsdata) calldata _data</code></li></ul>**Returns**<ul><li>`uint256 reclaimAmount`</li><li>`string memory memo`</li><li><code>[JBRedemptionDelegateAllocation](/dev/api/data-structures/jbredemptiondelegateallocation)[] memory delegateAllocations</code></li></ul>|
+|[**`supportsInterface`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>`bytes4 _interfaceId`</li></ul>**Returns**<ul><li>`bool`</li></ul>|
 
 #### Write
 
 |Function|Definition|
 |-|-|
-|[**`didPay`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>[`JBDidPayData`](/dev/api/data-structures/jbdidpaydata) `calldata _data`</li></ul>|
-|[**`didRedeem`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>[`JBDidRedeemData`](/dev/api/data-structures/jbdidredeemdata) `calldata _data`</li></ul>|
+|[**`didPay`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li><code>[JBDidPayData](/dev/api/data-structures/jbdidpaydata) calldata _data</code></li></ul>|
+|[**`didRedeem`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li><code>[JBDidRedeemData](/dev/api/data-structures/jbdidredeemdata) calldata _data</code></li></ul>|

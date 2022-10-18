@@ -16,6 +16,11 @@ Interface: [`IJBRedemptionDelegate`](/dev/api/interfaces/ijbredemptiondelegate)
 function didRedeem(JBDidRedeemData calldata _data) external payable virtual override { ... }
 ```
 
+- Arguments:
+  - `_data` is the Juicebox standard [`JBPayParamsData`](/dev/api/data-structures/jbpayparamsdata) project payment data.
+- The resulting function overrides a function definition from the [`IJBRedemptionDelegate`](/dev/api/interfaces/ijbredemptiondelegate) interface.
+- The function doesn't return anything.
+
 #### Body
 
 </TabItem>
@@ -23,6 +28,15 @@ function didRedeem(JBDidRedeemData calldata _data) external payable virtual over
 <TabItem value="Code" label="Code">
 
 ```
+/**
+  @notice
+  Part of IJBRedeemDelegate, this function gets called when the token holder redeems. It will burn the specified NFTs to reclaim from the treasury to the _data.beneficiary.
+
+  @dev
+  This function will revert if the contract calling is not one of the project's terminals.
+
+  @param _data The Juicebox standard project redemption data.
+*/
 function didRedeem(JBDidRedeemData calldata _data) external payable virtual override {
   // Make sure the caller is a terminal of the project, and the call is being made on behalf of an interaction with the correct project.
   if (

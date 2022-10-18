@@ -22,6 +22,12 @@ function supportsInterface(bytes4 _interfaceId)
 { ... }
 ```
 
+- Arguments:
+  - `_interfaceId` is the `bytes4` ID of the interface to check for adherance to.
+- The resulting function overrides a function definition from the [`IERC165`](https://docs.openzeppelin.com/contracts/2.x/api/introspection#IERC165) interface.
+- The function returns:
+  - A `bool` indicating whether this contract adheres to the specified interface.
+
 #### Body
 
 </TabItem>

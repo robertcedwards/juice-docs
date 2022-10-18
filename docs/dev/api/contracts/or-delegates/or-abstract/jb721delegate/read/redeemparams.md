@@ -25,6 +25,14 @@ function redeemParams(JBRedeemParamsData calldata _data)
 { ... }
 ```
 
+- Arguments:
+  - `_data` is the Juicebox standard [`JBPayParamsData`](/dev/api/data-structures/jbpayparamsdata) project payment data.
+- The resulting function overrides a function definition from the [`IJBFundingCycleDataSource`](/dev/api/interfaces/ijbfundingcycledatasource) interface.
+- The function returns:
+  - `reclaimAmount` is a `uint256` which denotes the amount that should be reclaimed from the treasury.
+  - `memo` is the memo `string` that should be forwarded to the event.
+  - `delegateAllocations` is an array of [`JBRedemptionDelegateAllocation`](/dev/api/data-structures/jbredemptiondelegateallocation) structures which represent the amount to send to delegates instead of adding to the beneficiary.
+
 #### Body
 
 </TabItem>
