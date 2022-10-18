@@ -2,13 +2,14 @@
 slug: 2022-10-18-moondao-config
 title: How MoonDAO was configured on Juicebox
 description: Raising funds to decentralize space research and exploration.
+image: https://info.juicebox.money/assets/images/MoonDAO-one-small-step-230f6e4f2866a2ccb31303d5fa3683a3.png
 authors: [matthew, brileigh]
 tags: [moondao, nasa, blue origin, spaceflight, dao, crowdfunding, juicebox, ethereum, crypto, configuration,  jbh-project creators]
 ---
 
 ***Raising funds to decentralize space research and exploration***
 
-[MoonDAO](https://twitter.com/OfficialMoonDAO) is a worldwide collective of people working together to decentralize access to space research and exploration. To learn more about how MoonDAO is uniting all earthlings to have a say in how the Moon and other planetery systems should be governed, check out this [deep dive on the JB blog](https://info.juicebox.money/blog/2022-10-11-moondao/) as well as episode 7 of the Juicecast with [Pablo](https://twitter.com/LarrotizPablo) and [Kori](https://twitter.com/korigrogers) on [Spotify](https://open.spotify.com/episode/7iLdXSTNSrCGcI4kWxtK2B?si=a76fca74c72a4cbc) and [Apple Podcasts](https://podcasts.apple.com/ca/podcast/ep-7-pablo-and-kori-from-moon-dao/id1623504302?i=1000564945862).
+[MoonDAO](https://twitter.com/OfficialMoonDAO) is a worldwide collective of people working together to decentralize access to space research and exploration. To learn more about how MoonDAO is uniting all earthlings to have a say in how the Moon and other planetery systems should be governed, check out this [deep dive on the JB blog](https://info.juicebox.money/blog/2022-10-11-moondao/) as well as episode 7 of the Juicecast with co-founders Pablo and Kori on [Spotify](https://open.spotify.com/episode/7iLdXSTNSrCGcI4kWxtK2B?si=a76fca74c72a4cbc) and [Apple Podcasts](https://podcasts.apple.com/ca/podcast/ep-7-pablo-and-kori-from-moon-dao/id1623504302?i=1000564945862).
 
 In this article, we’ll cover how MoonDAO used Juicebox to fundraise ~ $8.3 million (2600+ ETH) to buy two Blue Origin tickets.
 
