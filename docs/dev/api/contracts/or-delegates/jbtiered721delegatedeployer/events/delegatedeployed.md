@@ -13,7 +13,3 @@ event DelegateDeployed(
   JB721GovernanceType governanceType
 );
 ```
-
-- `projectId` is
-- `newDelegate` is
-- `governanceType` is

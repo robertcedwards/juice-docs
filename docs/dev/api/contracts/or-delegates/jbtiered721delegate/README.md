@@ -102,52 +102,46 @@ function initialize(
 
 |Name|Data|
 |-|-|
-|[**`RemoveTier`**](.)|<ul><li>`uint256 indexed tierId`</li><li>`address caller`</li></ul>|
-|[**`AddTier`**](.)|<ul><li>`uint256 indexed tierId`</li><li>[`JB721TierParams`](/dev/api/data-structures/jb721tierparams) `data`</li><li>`address caller`</li></ul>|
-|[**`SetDefaultReservedTokenBeneficiary`**](.)|<ul><li>`address indexed beneficiary`</li><li>`address caller`</li></ul>|
-|[**`SetBaseUri`**](.)|<ul><li>`string indexed baseUri`</li><li>`address caller`</li></ul>|
-|[**`SetContractUri`**](.)|<ul><li>`string indexed contractUri`</li><li>`address caller`</li></ul>|
-|[**`SetTokenUriResolver`**](.)|<ul><li>[`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver) `indexed newResolver`</li><li>`address caller`</li></ul>|
-|[**`MintReservedToken`**](.)|<ul><li>`uint256 indexed tokenId`</li><li>`uint256 indexed tierId`</li><li>`address indexed beneficiary`</li><li>`address caller`</li></ul>|
-|[**`Mint`**](.)|<ul><li>`uint256 indexed tokenId`</li><li>`uint256 indexed tierId`</li><li>`address indexed beneficiary`</li><li>`uint256 totalAmountContributed`</li><li>`address caller`</li></ul>|
+|[**`RemoveTier`**](events/removetier)|<ul><li>`uint256 indexed tierId`</li><li>`address caller`</li></ul>|
+|[**`AddTier`**](events/addtier)|<ul><li>`uint256 indexed tierId`</li><li>[`JB721TierParams`](/dev/api/data-structures/jb721tierparams) `data`</li><li>`address caller`</li></ul>|
+|[**`SetDefaultReservedTokenBeneficiary`**](events/setdefaultreservedtokenbeneficiary)|<ul><li>`address indexed beneficiary`</li><li>`address caller`</li></ul>|
+|[**`SetBaseUri`**](events/setbaseuri)|<ul><li>`string indexed baseUri`</li><li>`address caller`</li></ul>|
+|[**`SetContractUri`**](events/setcontracturi)|<ul><li>`string indexed contractUri`</li><li>`address caller`</li></ul>|
+|[**`SetTokenUriResolver`**](events/settokenuriresolver)|<ul><li>[`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver) `indexed newResolver`</li><li>`address caller`</li></ul>|
+|[**`MintReservedToken`**](events/mintreservedtoken)|<ul><li>`uint256 indexed tokenId`</li><li>`uint256 indexed tierId`</li><li>`address indexed beneficiary`</li><li>`address caller`</li></ul>|
+|[**`Mint`**](events/mint)|<ul><li>`uint256 indexed tokenId`</li><li>`uint256 indexed tierId`</li><li>`address indexed beneficiary`</li><li>`uint256 totalAmountContributed`</li><li>`address caller`</li></ul>|
 
 #### Properties
 
 |Name|Definition|
 |-|-|
-|[**`store`**](.)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>[`IJBTiered721DelegateStore`](/dev/api/interfaces/ijbtiered721delegatestore)</li></ul>|
-|[**`fundingCycleStore`**](.)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>[`IJBFundingCycleStore`](/dev/api/interfaces/ijbfundingcyclestore)</li></ul>|
-|[**`prices`**](.)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>[`IJBPrices`](/dev/api/interfaces/ijbprices)</li></ul>|
-|[**`pricingCurrency`**](.)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
-|[**`pricingDecimals`**](.)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
-|[**`creditsOf`**](.)|**Params**<ul><li>`address _address`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
+|[**`store`**](properties/store)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>[`IJBTiered721DelegateStore`](/dev/api/interfaces/ijbtiered721delegatestore)</li></ul>|
+|[**`fundingCycleStore`**](properties/fundingcyclestore)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>[`IJBFundingCycleStore`](/dev/api/interfaces/ijbfundingcyclestore)</li></ul>|
+|[**`prices`**](properties/prices)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>[`IJBPrices`](/dev/api/interfaces/ijbprices)</li></ul>|
+|[**`pricingCurrency`**](properties/pricingcurrency)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
+|[**`pricingDecimals`**](properties/pricingdecimals)|**Traits**<ul><li>`immutable`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
+|[**`creditsOf`**](properties/creditsof)|**Params**<ul><li>`address _address`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
 
 #### Read
 
 |Function|Definition|
 |-|-|
-|[**`balanceOf`**](.)|**Params**<ul><li>`address _owner`</li></ul>**Returns**<ul><li>`uint256 balance`</li></ul>|
-|[**`firstOwnerOf`**](.)|**Params**<ul><li>`uint256 _tokenId`</li></ul>**Returns**<ul><li>`address`</li></ul>|
-|[**`tokenURI`**](.)|**Params**<ul><li>`uint256 _tokenId`</li></ul>**Returns**<ul><li>`string memory`</li></ul>|
-|[**`contractURI`**](.)|**Returns**<ul><li>`string memory`</li></ul>|
-|[**`getTierDelegate`**](.)|**Params**<ul><li>`address _account`</li><li>`uint256 _tier`</li></ul>**Returns**<ul><li>`address`</li></ul>|
-|[**`getTierVotes`**](.)|**Params**<ul><li>`address _account`</li><li>`uint256 _tier`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
-|[**`getPastTierVotes`**](.)|**Params**<ul><li>`address _account`</li><li>`uint256 _tier`</li><li>`uint256 _blockNumber`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
-|[**`getTierTotalVotes`**](.)|**Params**<ul><li>`uint256 _tier`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
-|[**`getPastTierTotalVotes`**](.)|**Params**<ul><li>`uint256 _tier`</li><li>`uint256 _blockNumber`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
-|[**`supportsInterface`**](.)|**Params**<ul><li>`bytes4 _interfaceId`</li></ul>**Returns**<ul><li>`bool`</li></ul>|
+|[**`firstOwnerOf`**](read/firstownerof)|**Params**<ul><li>`uint256 _tokenId`</li></ul>**Returns**<ul><li>`address`</li></ul>|
+|[**`balanceOf`**](read/balanceof)|**Params**<ul><li>`address _owner`</li></ul>**Returns**<ul><li>`uint256 balance`</li></ul>|
+|[**`tokenURI`**](read/tokenuri)|**Params**<ul><li>`uint256 _tokenId`</li></ul>**Returns**<ul><li>`string memory`</li></ul>|
+|[**`contractURI`**](read/contracturi)|**Returns**<ul><li>`string memory`</li></ul>|
+|[**`supportsInterface`**](read/supportsinterface)|**Params**<ul><li>`bytes4 _interfaceId`</li></ul>**Returns**<ul><li>`bool`</li></ul>|
 
 #### Write
 
 |Function|Definition|
 |-|-|
-|[**`mintReservesFor`**](.)|**Params**<ul><li>[`JBTiered721MintReservesForTiersData[]`](/dev/api/data-structures/jbtiered721mintreservesfortiersdata) `memory _mintReservesForTiersData`</li></ul>|
-|[**`mintFor`**](.)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>[`JBTiered721MintReservesForTiersData[]`](/dev/api/data-structures/jbtiered721mintreservesfortiersdata) `memory _mintForTiersData`</li></ul>|
-|[**`adjustTiers`**](.)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>[`JB721TierParams[]`](/dev/api/data-structures/jb721tierparams) `calldata _tiersToAdd`</li><li>`uint256[] calldata _tierIdsToRemove`</li></ul>|
-|[**`setDefaultReservedTokenBeneficiary`**](.)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`address _beneficiary`</li></ul>|
-|[**`setBaseUri`**](.)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`string memory _baseUri`</li></ul>|
-|[**`setContractUri`**](.)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`string calldata _contractUri`</li></ul>|
-|[**`setTokenUriResolver`**](.)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>[`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver) `_tokenUriResolver`</li></ul>|
-|[**`mintReservesFor`**](.)|**Params**<ul><li>`uint256 _tierId`</li><li>`uint256 _count`</li></ul>|
-|[**`mintFor`**](.)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`uint16[] memory _tierIds`</li><li>`address _beneficiary`</li></ul>**Returns**<ul><li>`uint256[] memory tokenIds`</li></ul>|
-|[**`setTierDelegate`**](.)|**Traits**<ul><li>`virtual`</li></ul>**Params**<ul><li>`address _delegatee`</li><li>`uint256 _tierId`</li></ul>|
+|[**`mintReservesFor`**](write/mintreservesfore)|**Params**<ul><li>[`JBTiered721MintReservesForTiersData[]`](/dev/api/data-structures/jbtiered721mintreservesfortiersdata) `memory _mintReservesForTiersData`</li></ul>|
+|[**`mintFor`**](write/mintfor)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>[`JBTiered721MintReservesForTiersData[]`](/dev/api/data-structures/jbtiered721mintreservesfortiersdata) `memory _mintForTiersData`</li></ul>|
+|[**`adjustTiers`**](write/adjusttiers)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>[`JB721TierParams[]`](/dev/api/data-structures/jb721tierparams) `calldata _tiersToAdd`</li><li>`uint256[] calldata _tierIdsToRemove`</li></ul>|
+|[**`setDefaultReservedTokenBeneficiary`**](write/setdefaultreservedtokenbeneficiary)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`address _beneficiary`</li></ul>|
+|[**`setBaseUri`**](write/setbaseuri)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`string memory _baseUri`</li></ul>|
+|[**`setContractUri`**](write/setcontracturi)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`string calldata _contractUri`</li></ul>|
+|[**`setTokenUriResolver`**](write/settokenuriresolver)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>[`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver) `_tokenUriResolver`</li></ul>|
+|[**`mintReservesFor`**](write/mintreservesfor)|**Params**<ul><li>`uint256 _tierId`</li><li>`uint256 _count`</li></ul>|
+|[**`mintFor`**](write/mintfor)|**Traits**<ul><li>[`onlyOwner`](.)</li></ul>**Params**<ul><li>`uint16[] memory _tierIds`</li><li>`address _beneficiary`</li></ul>**Returns**<ul><li>`uint256[] memory tokenIds`</li></ul>|
