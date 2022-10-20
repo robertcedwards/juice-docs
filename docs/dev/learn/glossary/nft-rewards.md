@@ -11,7 +11,7 @@
   * A URI, overridable by a URI resolver that can return dynamic values for each unit with the tier.
   * A flag specifying if the contract's owner can manually mint from the tier on-demand.
   * A lock date, before which the tier must remain accessible.
-* The NFT Rewards contract's owner can add and remove tiers on demand, subject to flags passed in at the time of it's creation:
+* The NFT Rewards contract's owner can add and remove tiers on demand, subject to flags passed in at the time of its creation:
   * If the contract is set to lock reserved token changes, new tiers cannot have a reserved rate.
   * If the contract is set to lock voting unit changes, new tiers cannot have voting units.
   * If the contract is set to lock manual minting changes, new tiers cannot allow manual minting.
