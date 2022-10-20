@@ -9,6 +9,10 @@ tags: [moondao, nasa, blue origin, spaceflight, dao, crowdfunding, juicebox, eth
 
 ***How MoonDAO raised over $8 million (2600+ ETH) on Juicebox to send someone to space***
 
+:::tip
+To learn more about how MoonDAO was configured on Juicebox for its fundraiser, read this [companion article](https://info.juicebox.money/blog/2022-10-18-moondao-config/).
+:::
+
 There are nearly eight billion people on Earth and [fewer than seven hundred](https://www.nytimes.com/2021/11/10/science/600-astronauts-space.html) of them have been to space. We all share a curiosity to better understand space but only the wealthy have the ability to actually experience it firsthand. What started as a space race between nation states is now a game being played out by corporations, excluding 99.9% of humanity from having a voice in how we explore and research outer space… that is, until [MoonDAO](https://moondao.com/).
 
 > Our whole world is divided up into nations and historically they have competed over space, but we now have tools that enable people to easily collaborate across borders. It doesn’t matter where you’re from, as long as you have an internet connection you can join the [MoonDAO] Discord.
