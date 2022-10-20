@@ -4,8 +4,8 @@
 
 * NFT Rewards can be attached to a project's funding cycles, allowing any payment made to the project to also qualify for the minting of an NFT along any number of tiers.
 * Each project can deploy NFT rewards with customizable parameters. Each tier can be specified to have:
-  * Contribution floor specified in ETH or USD, specifying the minimum contribution necessary to mint an NFT from the tier.
-  * Initial quantity, specifying the maximum amount of NFTs mintable in the tier.
+  * Contribution floor specified in ETH or USD, the minimum contribution necessary to mint an NFT from the tier.
+  * Max quantity.
   * Reserved rate, specifying the number of NFTs from the tier that can be minted to a predefined beneficiary address as a proportion of NFTs minted to contributors.
   * Voting units, specifying a number to associate with NFTs from each tier that can be used in on-chain or off-chain governance.
   * A URI, overridable by a URI resolver that can return dynamic values for each unit with the tier.
