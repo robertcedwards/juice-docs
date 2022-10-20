@@ -58,6 +58,7 @@ Here are some examples, starting with the simplest version:
       global: {
         allowSetTerminals: false,
         allowSetController: false,
+        pauseTransfers: false
       },
       reservedRate: 0,
       redemptionRate: 0,
@@ -70,10 +71,12 @@ Here are some examples, starting with the simplest version:
       allowTerminalMigration: false, 
       allowControllerMigration: false, 
       holdFees: false, 
+      preferClaimedTokenOverride: false,
       useTotalOverflowForRedemptions: false,
       useDataSourceForPay: false, 
       useDataSourceForRedeem: false, 
       dataSource: 0x0000000000000000000000000000000000000000, 
+      metadata: 0
     }
     ```
 * For `_mustStartAtOrAfter` send current timestamp.
