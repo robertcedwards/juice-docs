@@ -53,7 +53,7 @@ The context of this event is as follows:
 
 *The Thirsty Thirsty community and I are curating programming in a house in Bogota for ceremony, celebration of our agricultural lineage, and design sprints focused around how we might sustainably fund land-based projects using Web3 primitives, around the time of DevCon.“*
 
-<p style="text-align:right">- Abstract from this proposal </p>
+<p style={{textAlign: "right"}}>- Abstract from this proposal </p>
 
 **Jango's first-day-back reflections:**
 
