@@ -1,6 +1,6 @@
-import Link from "@docusaurus/Link";
 import { Content } from "@theme/BlogPostPage";
 import React from "react";
+import { YOUTUBE_EMBEED } from "../../constants/links";
 import styles from "./BlogPost.module.css";
 
 interface BlogPostProps {
@@ -16,15 +16,21 @@ const BlogPost = ({ content }: BlogPostProps) => {
   };
 
   return (
-    <div className={styles.post} key={content.metadata.permalink}>
-      <iframe
-        height="300"
-        width="100%"
-        src="https://www.youtube.com/embed/GXqQh64Ah5Q"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      />
+    <div className={styles.post}>
+      <div className={styles.mediaContainer}>
+        {content.metadata.frontMatter.youtubeId ? (
+          <iframe
+            height="300"
+            width="100%"
+            src={`${YOUTUBE_EMBEED + content.metadata.frontMatter.youtubeId}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          />
+        ) : (
+          <img src="/img/apple.svg" className={styles.apple} />
+        )}
+      </div>
 
       <div className={styles.info}>
         <div

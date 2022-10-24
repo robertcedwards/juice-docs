@@ -1,7 +1,8 @@
 import { Content } from "@theme/BlogPostPage";
 import Layout from "@theme/Layout";
-import React from "react";
+import React, { useState } from "react";
 import BlogPost from "../../../components/Blog/BlogPost";
+import Search from "../../../components/UI/Search";
 import styles from "./Tooling.module.css";
 
 interface JBHighToolingProps {
@@ -9,6 +10,18 @@ interface JBHighToolingProps {
 }
 
 const JBHighTooling = ({ toolingPosts }: JBHighToolingProps) => {
+  const [posts, setPosts] =
+    useState<readonly { readonly content: Content }[]>(toolingPosts);
+
+  const searchPosts = (value: string) => {
+    if (!value) return setPosts(toolingPosts);
+
+    const filtered = posts.filter((post) =>
+      post.content.contentTitle.toLowerCase().includes(value)
+    );
+
+    setPosts(filtered);
+  };
   return (
     <Layout>
       <div className={styles.hero}>
@@ -23,13 +36,14 @@ const JBHighTooling = ({ toolingPosts }: JBHighToolingProps) => {
         </div>
       </div>
       <div className={styles.container}>
-        <div className={styles.searchContainer}>
-          <input type="text" className={styles.search} placeholder="SEARCH" />
-        </div>
+        <Search onChange={searchPosts} />
 
         <div className={styles.postsContainer}>
-          {toolingPosts.map((post) => (
-            <BlogPost content={post.content} />
+          {posts.map((post) => (
+            <BlogPost
+              content={post.content}
+              key={post.content.metadata.permalink}
+            />
           ))}
         </div>
       </div>

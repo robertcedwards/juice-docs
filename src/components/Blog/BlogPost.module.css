@@ -2,10 +2,22 @@
   border: 1.12px solid #d0d0d0;
 }
 
+.apple {
+  max-height: 200px;
+}
+
+.mediaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-bottom: 1px solid black;
+}
+
 .info {
   display: flex;
   flex-direction: column;
-  padding: 0 3% 3% 3%;
+  padding: 3%;
   gap: 10px;
   height: 300px;
 }

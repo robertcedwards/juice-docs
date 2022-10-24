@@ -3,6 +3,7 @@ slug: how-a-treasury-can-make-or-break-your-dao
 title: How a treasury can make or break your DAO
 authors: [felixander]
 tags: [dao, news, juicebox, jbh-tooling]
+
 ---
 
 # How a treasury can make or break your DAO
