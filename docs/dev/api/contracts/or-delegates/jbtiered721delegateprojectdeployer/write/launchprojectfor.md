@@ -23,7 +23,7 @@ function launchProjectFor(
 - Arguments:
   - `_owner` is the `address` to set as the owner of the project. The project ERC-721 will be owned by this address.
   - `_deployTiered721DelegateData` is the [`JBDeployTiered721DelegateData`](/dev/api/data-structures/jbdeploytiered721delegatedata) data necessary to fulfill the transaction to deploy a delegate.
-  - `_launchProjectData is the [`JBLaunchProjectData`](/dev/api/data-structures/jblaunchprojectdata) data necessary to fulfill the transaction to launch a project.
+  - `_launchProjectData` is the [`JBLaunchProjectData`](/dev/api/data-structures/jblaunchprojectdata) data necessary to fulfill the transaction to launch a project.
 - The resulting function overrides a function definition from the [`IJBTiered721DelegateProjectDeployer`](/dev/api/interfaces/ijbtiered721delegateprojectdeployer) interface.
 - The function returns:
   - `projectId` is the `uint256` ID of the newly configured project.
