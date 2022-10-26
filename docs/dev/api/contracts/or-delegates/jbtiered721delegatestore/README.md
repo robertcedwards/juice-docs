@@ -32,7 +32,6 @@ Goerli Testnet: *Not deployed*
 |[**`tierBalanceOf`**](.)|**Params**<ul><li>`address _nft`</li><li>`address _owner`</li><li>`uint256 _tierId`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
 |[**`numberOfReservesMintedFor`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256 _tierId`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
 |[**`numberOfBurnedFor`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256 _tierId`</li></ul>**Returns**<ul><li>`uint256`</li></ul>|
-|[**`isTierRemoved`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256 _tierId`</li></ul>**Returns**<ul><li>`bool`</li></ul>|
 |[**`defaultReservedTokenBeneficiaryOf`**](.)|**Params**<ul><li>`address _nft`</li></ul>**Returns**<ul><li>`address`</li></ul>|
 |[**`firstOwnerOf`**](.)|**Params**<ul><li>`address _nft`</li><li>`uint256 _tokenId`</li></ul>**Returns**<ul><li>`address`</li></ul>|
 |[**`baseUriOf`**](.)|**Params**<ul><li>`address _nft`</li></ul>**Returns**<ul><li>`string`</li></ul>|
