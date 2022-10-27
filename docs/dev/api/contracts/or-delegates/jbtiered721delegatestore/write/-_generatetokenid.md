@@ -5,6 +5,8 @@ import TabItem from '@theme/TabItem';
 
 Contract: [`JBTiered721DelegateStore`](/dev/api/contracts/or-delegates/jbtiered721delegatestore)
 
+**Finds the token ID and tier given a contribution amount.**
+
 <Tabs>
 <TabItem value="Step by step" label="Step by step">
 
