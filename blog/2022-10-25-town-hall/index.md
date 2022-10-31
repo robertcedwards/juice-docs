@@ -1,5 +1,5 @@
 ---
-slug: 2022-10-25-town-hall
+slug: town-hall-2022-10-25
 title: Juicebox DAO Town Hall Summary Oct. 25, 2022
 authors: [zhape]
 image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
