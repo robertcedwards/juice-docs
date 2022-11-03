@@ -2,7 +2,7 @@
 slug: how-to-fundraise-on-JB
 title: How to fundraise on JB
 authors: [felixander]
-tags: [dao, info, juicebox]
+tags: [fundraise, project-profiles]
 ---
 
 
