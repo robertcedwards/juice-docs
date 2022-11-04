@@ -20,7 +20,7 @@ Where it gets it exciting is when the World Cup starts. From the first kick-off,
 
 ### A protocol more flexible than an olympic gymnast
 
-The entire [defifa.net](http://defifa.net) is run on the very same protocol that ran ConstitutionDAO last year, and that is currently bringing [Art Gobblers](https://artgobblers.com/) to the market (the new project by Rick and Morty co-Founder Justin Roiland). But for Defifa, there were some important tweaks.
+The entire [defifa.net](http://defifa.net) is run on the very same protocol that ran ConstitutionDAO last year, and that is currently home to a variety of projects including, including [MoonDAO](https://www.moondao.com/) and JuiceboxDAO. But for Defifa, there were some important tweaks.
 
 The protocol has no idea who will win or lose in the world cup, and who will get knocked out. While one obvious solution is to appeal to an off-chain oracle, a much more interesting one was to have the NFT holders participate themselves. When a new game has happened, anybody can submit a scorecard which NFT holders must then vote on to ratify. Doing this allows the protocol to run more purely, but it also introduces some interesting dynamics.
 
