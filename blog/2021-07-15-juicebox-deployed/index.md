@@ -45,13 +45,11 @@ Project owners can re-asses their funding needs and cycle configuration over tim
 There are several ways to configure your Juicebox projects. Here are few cool things you can do:
 
 1. You can route your income stream through the Juicebox contracts.
-
-For example, you can make a version of Uniswap that explicitly only needs **$X** per month to be sustainably run (labor, ops), where each swap transaction incurs a fee **($Y)** that goes towards sustaining the service. If there are enough swaps that month **(N)** such that **N * $Y > $X**, then for each subsequent swap, all accounts that have swapped (and therefor paid fees) receive a dividend from the overflowed revenue that is proportional to the amount they've contributed to the project's sustainability thus far. So if **N * $Y** grows unjustifiably faster than **$X** — which is the underlying market rent-seeking inefficiency that Juicebox projects try to out-compete — then instead of compounded shareholder wealth aggregation, everyone's price tends towards zero.
-
-Meaning people get a nearly-free, community-driven product with no ads, guaranteed data integrity, full business operation accountability, and an open source code base that runs reliably. All built by motivated punks that are getting paid what they ask for and are rewarded alongside the community as overflow grows.
-2. It's easy to program financial dependencies, so your Juicebox project's funding target can be contractually hooked up to those of people and projects it depends on.
-3. You can run a recurring/one-time fundraising campaign and return extra funds to your community, or to other causes.
-4. As the project owner, you can earn some of your own tokens with every payment you receives. You'll "unlock" these tokens at the rate with which your overflow grows, not according to some arbitrary multi-year vesting schedule. These reserved tokens can then be contractually distributed to staff, or to other causes.
+    For example, you can make a version of Uniswap that explicitly only needs **$X** per month to be sustainably run (labor, ops), where each swap transaction incurs a fee **($Y)** that goes towards sustaining the service. If there are enough swaps that month **(N)** such that **N * $Y > $X**, then for each subsequent swap, all accounts that have swapped (and therefor paid fees) receive a dividend from the overflowed revenue that is proportional to the amount they've contributed to the project's sustainability thus far. So if **N * $Y** grows unjustifiably faster than **$X** — which is the underlying market rent-seeking inefficiency that Juicebox projects try to out-compete — then instead of compounded shareholder wealth aggregation, everyone's price tends towards zero.
+    Meaning people get a nearly-free, community-driven product with no ads, guaranteed data integrity, full business operation accountability, and an open source code base that runs reliably. All built by motivated punks that are getting paid what they ask for and are rewarded alongside the community as overflow grows.  
+2. It's easy to program financial dependencies, so your Juicebox project's funding target can be contractually hooked up to those of people and projects it depends on.      
+3. You can run a recurring/one-time fundraising campaign and return extra funds to your community, or to other causes.     
+4. As the project owner, you can earn some of your own tokens with every payment you receives. You'll "unlock" these tokens at the rate with which your overflow grows, not according to some arbitrary multi-year vesting schedule. These reserved tokens can then be contractually distributed to staff, or to other causes.   
 
 ---
 
