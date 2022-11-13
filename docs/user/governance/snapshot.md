@@ -14,6 +14,102 @@ From the [Snapshot Docs](https://docs.snapshot.org/):
 
 You can easily set up [Snapshot](https://snapshot.org/) voting with a Juicebox project token by using the strategies below. Make sure you follow the TODO notes, and delete the notes once you do. If you need help customizing your parameters, send a message in the [Juicebox Discord](https://discord.gg/juicebox).
 
+## Strategies For v3 Projects
+
+### Project Token Voting
+
+*This strategy takes both claimed ERC-20s and unclaimed tokens into account.*
+
+1. Use a `contract-call` strategy.
+2. Use these parameters:
+
+```json
+{
+	"args": [
+		"%{address}",
+		"0x01" // TODO: REPLACE WITH YOUR PROJECT ID HEX ENCODED.
+	],
+	"symbol": "JBX", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
+	"address": "0x6FA996581D7edaABE62C15eaE19fEeD4F1DdDfE7",
+	"decimals": 18,
+	"methodABI": {
+	"name": "balanceOf",
+	"type": "function",
+	"inputs": [
+		{
+			"name": "",
+			"type": "address",
+			"internalType": "address"
+		},
+		{
+			"name": "",
+			"type": "uint256",
+			"internalType": "uint256"
+		}
+	],
+	"outputs": [
+		{
+			"name": "",
+			"type": "uint256",
+			"internalType": "uint256"
+		}
+	],
+	"stateMutability": "view"
+	}
+}
+```
+
+### Project Token Delegation
+
+*This strategy takes both claimed ERC-20s and unclaimed tokens into account.*
+
+1. Use a `delegation` strategy.
+2. Use these parameters:
+
+```json
+{
+  "symbol": "JBX (delegated)", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
+  "strategies": [
+    {
+      "name": "contract-call",
+      "params": {
+        "args": [
+          "%{address}",
+          "0x01" // TODO: REPLACE WITH YOUR PROJECT ID HEX ENCODED.
+        ],
+        "symbol": "JBX", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
+        "address": "0x6FA996581D7edaABE62C15eaE19fEeD4F1DdDfE7",
+        "decimals": 18,
+        "methodABI": {
+          "name": "balanceOf",
+          "type": "function",
+          "inputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        }
+      }
+    }
+  ]
+}
+```
+
 ## Strategies For v2 Projects
 
 ### Project Token Voting
