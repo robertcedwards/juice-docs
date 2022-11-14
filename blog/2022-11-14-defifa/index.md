@@ -2,6 +2,7 @@
 slug: 2022-11-14-defifa
 title: Defifa, a pop-up NFT game for the 2022 FIFA World Cup
 authors: [jango]
+image: https://info.juicebox.money/assets/images/defifa-banner-b1ddcf3da3ce5e090689bc83a774c470.png
 tags: [defifa, fifa world cup, defi, crypto, ethereum, juicebox]
 ---
 
