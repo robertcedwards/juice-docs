@@ -17,7 +17,11 @@ Over the past five months, engineering contributors at Juicebox DAO have been de
 
 Defifa uses this system to define 32 tiers corresponding to the 32 teams competing at the World Cup. All tiers are contained within the same NFT collection. Each tier has no max supply and requires a contribution of 0.022 ETH into the Defifa treasury. All contributions to this treasury qualify and must specify the desired teams from which to mint. Clients can specify if the payment’s value must be used in full towards mints — if the payment is not quantified in 0.022 ETH increments, it will revert.
 
-:::info See the full deploy script here: [https://github.com/jbx-protocol/juice-defifa/blob/main/contracts/scripts/Deploy.s.sol](https://github.com/jbx-protocol/juice-defifa/blob/main/contracts/scripts/Deploy.s.sol) :::
+:::info
+
+See the full deploy script here: [https://github.com/jbx-protocol/juice-defifa/blob/main/contracts/scripts/Deploy.s.sol](https://github.com/jbx-protocol/juice-defifa/blob/main/contracts/scripts/Deploy.s.sol)
+
+:::
 
 ![Defifa team NFTs](defifa.gif)
 
