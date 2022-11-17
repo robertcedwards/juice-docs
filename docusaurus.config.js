@@ -111,7 +111,7 @@ const config = {
             },
             {
               label: 'Dune Analytics',
-              to: 'https://dune.com/twodam',
+              to: 'https://dune.com/projects/juicebox',
             },
             {
               label: 'JuiceTool',
