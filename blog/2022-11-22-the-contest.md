@@ -7,6 +7,8 @@ tags: [contest]
 
 # The Contest
 
+Parts published so far:
+
 [Part 1](https://info.juicebox.money/blog/the-contest-part-1)
 
 ## Intro
