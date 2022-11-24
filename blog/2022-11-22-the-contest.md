@@ -7,6 +7,10 @@ tags: [contest]
 
 # The Contest
 
+[Part 1](https://info.juicebox.money/blog/the-contest-part-1)
+
+## Intro
+
 Think you have what it takes to decipher a story that seems oh-too-easy at first glance?
 
 If you can unlock the message within the story, it will lead you to twelve words. These twelve words will make up a seed phrase, which is your ticket to accessing funds in a crypto wallet. The wallet address is: 0xf9d30330Af73687cDA29Dfe51479D0EAa05a30Fe.
