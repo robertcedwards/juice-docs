@@ -1,4 +1,4 @@
-# IJBOperatable
+# IJBMigratable
 
 #### Code
 
