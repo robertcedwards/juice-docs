@@ -8,7 +8,7 @@ _Modifiers to allow access to functions based on the message sender's operator s
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts/tree/main/contracts/v2abstract/JBOperatable.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/abstract/JBOperatable.sol
 
 
 #### Interfaces
