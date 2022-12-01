@@ -51,7 +51,7 @@ The correct answer is **Matthewbrooks**.
 
 On last Sunday, the ALLSTARZ collab. with Forming was held at the [Juicebox headquarter in Cryptovoxels](http://juicebox.lexicondevils.xyz/). 
 
-<video src="FormingXALLSTARZ.mp4"></video>
+![Forming x ALLSTARZ](FormingXALLSTARZ.gif)
 
 This event was a wild success. It was many people's first interaction with Juicebox and it seemed very well received. One of the ALLSTARZ DJ to this event, L444U, also came to the town hall today, out of the curiosity to explore more about Juicebox from this Forming event.
 
