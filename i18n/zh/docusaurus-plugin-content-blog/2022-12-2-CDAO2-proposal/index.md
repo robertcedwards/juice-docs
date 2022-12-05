@@ -1,14 +1,16 @@
 ---
-
 slug: CDAO2-proposal
-
 title: JBP-308 ConstitutionDAO 2 筹款项目
-
-authors: [matterturbulent]
-
+authors:
+  - name: matterturbulent
+    url: https://twitter.com/MatterTurbulent
 tags: [proposals, news]
-
 ---
+
+```
+Author: matterturbulent
+Date: (2022-12-04)
+```
 
 ### 提案主旨
 
