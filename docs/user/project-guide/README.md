@@ -22,6 +22,10 @@ Consider creating a test project on the [Goerli testnet version of Juicebox](htt
 
 ## Video Guides
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2s2OyxG_rvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="subtitle">How to Fund Your Project With Juicebox (2022)</p>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pJszOKMxYNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p class="subtitle">Launch your project in 5 minutes. Worry about the details later.</p>
