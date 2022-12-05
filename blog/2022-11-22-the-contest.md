@@ -9,7 +9,7 @@ tags: [contest]
 
 Parts published so far:
 
-[Part 1](https://info.juicebox.money/blog/the-contest-part-1) [Part 2](https://info.juicebox.money/blog/the-contest-part-2)
+[Part 1](https://info.juicebox.money/blog/the-contest-part-1) [Part 2](https://info.juicebox.money/blog/the-contest-part-2) [Part 3](https://info.juicebox.money/blog/the-contest-part-3)
 
 ## Intro
 
