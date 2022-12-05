@@ -4,11 +4,14 @@ slug: CDAO2-proposal
 
 title: JBP-308 - ConstitutionDAO2 Fundraiser
 
-authors: [matterturbulent]
+authors: []
 
 tags: [proposals, news]
 
 ---
+
+Author: [matterturbulent](https://twitter.com/MatterTurbulent)
+Date: (2022-12-04)
 
 ### Synopsis
 
