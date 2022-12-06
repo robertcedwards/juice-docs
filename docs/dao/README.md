@@ -31,7 +31,7 @@ JuiceboxDAO contributors build in the open—to participate, [join our Discord](
 #### Resources
 [Docs, Guides, and Blog](https://info.juicebox.money/)<br/>
 [Github](https://github.com/jbx-protocol)<br/>
-[Notion](https://juicebox.notion.site/)<br/>
+[Notion](https://juicebox.notion.site/Juicebox-Notion-7b2436cec0c145c88b3efa0376c6dba3)<br/>
 [Dune Analytics](https://dune.xyz/twodam)<br/>
 [JuiceTool](https://juicetool.xyz/)<br/>
 [Moody's DAO](https://docs.google.com/spreadsheets/d/1zb3gHOdWiAbXDTdBA9ixv2yOJDIzCo_fEwLDdbTvJVo/edit#gid=0)<br/>

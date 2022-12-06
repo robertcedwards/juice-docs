@@ -110,6 +110,10 @@ const config = {
               to: 'https://github.com/jbx-protocol',
             },
             {
+              label: 'Notion',
+              to: 'https://juicebox.notion.site/Juicebox-Notion-7b2436cec0c145c88b3efa0376c6dba3',
+            },
+            {
               label: 'Dune Analytics',
               to: 'https://dune.com/projects/juicebox',
             },
