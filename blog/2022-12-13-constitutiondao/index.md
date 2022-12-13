@@ -46,9 +46,9 @@ And from there it snowballed. Within the first day, [ConstitutionDAO](https://tw
 
 Later that day there is a kick-off call around 8pm to start going over logistics and next steps. Some attendees were focused on the memes and having fun while others were deadly serious. [Alice Ma](https://twitter.com/alicemama15), engineer and co-founder of [Mad Realities](https://twitter.com/madrealities), was one of the attendees for that first kickoff call: 
 
-> On that first Friday night it was very obvious to us: why should this document be on sale to the highest bidder? Why is this not public property? That was the drive from the beginning. **This was a National Treasure-style heist** where we're heisting it from the next billionaire.<br><br>
-— [Alice Ma](https://twitter.com/alicemama15)
+> On that first Friday night it was very obvious to us: why should this document be on sale to the highest bidder? Why is this not public property? That was the drive from the beginning. **This was a National Treasure-style heist** where we're heisting it from the next billionaire.
 >
+>— [Alice Ma](https://twitter.com/alicemama15)
 
 ![ConstitutionDAO pfp of Nicholas Cage from National Treasure](nicolas-cage-pfp.png)  
 
@@ -92,9 +92,9 @@ By Monday November 15th (day 5), the media narrative started to heat up. Core te
 
 At a certain point, fundraising started to plateau. Money was coming in but the momentum wasn't enough for the campaign to pass Sotheby's proof-of-funds requirements by Thursday, the day of the auction. [Jon Hillis](https://twitter.com/JonathanHillis), core team member and co-founder of [Cabin](https://twitter.com/creatorcabins), had a plan:
 
-> We needed a big whale to make a contribution that would restart the hype engine and get us to the fundraising goal. So I set out to find a whale and in the end it was actually an anonymous address that put in $1 million right as things started to look stagnant. We then started seeing a lot more larger amounts coming in as well as a tremendous number of small dollar donations which set up the next meme cycle.<br><br>
-— [Jon Hillis](https://twitter.com/JonathanHillis)
-> 
+> We needed a big whale to make a contribution that would restart the hype engine and get us to the fundraising goal. So I set out to find a whale and in the end it was actually an anonymous address that put in $1 million right as things started to look stagnant. We then started seeing a lot more larger amounts coming in as well as a tremendous number of small dollar donations which set up the next meme cycle.
+>
+>— [Jon Hillis](https://twitter.com/JonathanHillis)
 
 Once the hype kicked in, money pouring into the Juicebox project was slow at first and then all at once. 
 
@@ -136,9 +136,9 @@ In the end, the winning bid went to hedge fund billionaire Ken Griffin, CEO of C
 
 While ConstitutionDAO didn't win the auction, they raised over $40 million in less than seven days, onboarded thousands into crypto, and introduced the idea of a DAO to the public. And just as we had to start our story somewhere, we also need to end somewhere. So we'll come full circle to conclude with Graham:  
 
-> ConstitutionDAO is a democratic story. It's a story of the people, a story of the underdogs. At some point, there's going to be enough capital, interest, and coordination in web3 that when you've got a large aggregate of people who are attempting to buy, launch, or build something and they're going against a titan of the traditional world, they're going to overcome that. And it's going to be done with distributed technology, teams, and more effective coordination of people. I think [ConstitutionDAO] signifies where we're going with governance and blockchain.<br><br>
-— [Graham Novak](https://twitter.com/gnovak_)
-> 
+> ConstitutionDAO is a democratic story. It's a story of the people, a story of the underdogs. At some point, there's going to be enough capital, interest, and coordination in web3 that when you've got a large aggregate of people who are attempting to buy, launch, or build something and they're going against a titan of the traditional world, they're going to overcome that. And it's going to be done with distributed technology, teams, and more effective coordination of people. I think [ConstitutionDAO] signifies where we're going with governance and blockchain.
+>
+>— [Graham Novak](https://twitter.com/gnovak_)
 
 ![Nicolas Cage in National Treasure](nicolas-cage.jpeg)
 
