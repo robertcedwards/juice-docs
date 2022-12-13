@@ -2,6 +2,7 @@
 slug: 2022-12-13-constitutiondao
 title: ConstitutionDAO and how a group of friends on the internet raised over $40 million to buy the U.S. Constitution
 description: How the campaign got started, setbacks along the way, and the final auction at Sotheby's.
+image: https://info.juicebox.money/assets/images/nicolas-cage-92471b7e614dfab2a8dbd615404705cf.jpeg
 authors: [matthew, brileigh]
 tags: [constitutiondao, fundraise, crowdfunding, juicebox, ethereum, crypto]
 ---
@@ -60,7 +61,7 @@ As they wrapped up the call, the clock started ticking. They had less than a wee
 
 Because Sotheby's wouldn't allow a DAO to bid, ConstitutionDAO partnered with a non-profit called [Endaoment](https://twitter.com/endaomentdotorg). They would hold custody of the document and bid on behalf of ConstitutionDAO at Sotheby's. Once the DAO won the auction, they would allow DAO members to draft proposals and vote to decide where the document would be displayed. 
 
-:::tip
+:::info
 When community members received $PEOPLE tokens for contributions made in ETH, these tokens represented governance votes over where the document would be displayed and how. Not ownership of the document itself.
 :::
 
@@ -110,7 +111,7 @@ Once the hype kicked in, money pouring into the Juicebox project was slow at fir
 
 Leading up to the auction, the price of ETH fell ~15% from $4800 to nearly $4000 USD. In response to this, Sotheby's informed the core team that they would no longer accept ETH as proof of funds as previously agreed upon. This meant that ConstitutionDAO needed to swap 11,500 ETH (~ $46MM) OTC with FTX and they needed to do it fast. 
 
-:::warning
+:::info
 Reminder: this all took place in November 2021 before the collapse of FTX.
 :::
 
