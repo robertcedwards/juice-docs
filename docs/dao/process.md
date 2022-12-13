@@ -38,7 +38,7 @@ A **4 day Snapshot vote** (basic single choice) will be created for each proposa
 
 Each member may cast one vote per JBX held on each proposal. Members may delegate their voting power via Snapshot.
 
-**Proposals which receive at least 80,000,000 affirmative JBX votes amounting to at least 66% of total votes are queued for execution. "Abstain" votes are not included in these counts.**
+**Proposals which receive at least 100,000,000 affirmative JBX votes amounting to at least 66% of total votes are queued for execution. *For*, *Against* and *Abstain* votes all count towards quorum.**
 
 #### Step 3 - Execution
 
@@ -47,6 +47,8 @@ Each member may cast one vote per JBX held on each proposal. Members may delegat
 The DAO's Gnosis multisig (*mainnet:[0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e](https://etherscan.io/address/0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e)*) has four days to queue the funding cycle reconfiguration.
 
 If two proposals have conflicting specifications, the more recently approved proposal takes precedence, but only for that conflicting part. If the conflicting proposals were approved in the same funding cycle, the proposal which received more affirmative votes takes precedence. Unless otherwise specified, proposals are considered effective at the time of their approval on Snapshot.
+
+If a passed proposal is not executable as written, the multisig will await further governance proposals clarifying how it should proceed. If no subsequent proposals pass clarifying how to proceed, the non-executable portions of the passed proposal and any subsequent steps that are dependent upon those portions are to be ignored. 
 
 *The multisig has control over JuiceboxDAO treasury parameters and [onchain protocol parameters](https://info.juicebox.money/dev/learn/administration). The execution of JBX token holder votes depends upon the cooperation of these elected signers. The JuiceboxDAO multisig signers have committed to executing the will of the DAO as expressed by Snapshot votes.*
 
