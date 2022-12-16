@@ -161,7 +161,7 @@ Nicholas introduced that PartyBid is a tool for collectively purchasing NFTs, wh
 
 Nicholas got the early access to the PartyBid V2, which allows us not only to own an NFT with it, but also to execute transactions from it. So Peri, Filipv and Nicholas created [a JuicyParty on PartyBid](https://www.partybid.app/party/0x56bc9de3dc9556a3282ed4e7ba8f86d5cb7d8cd8) and used it to acquire the Juicebox project that Nicholas created before. After owning this Juicebox project with the JuicyParty, they tried to execute from it a bunch of different proposals reconfiguring funding cycles and metadata of the Juicebox project. 
 
-![JuicyParty at PartyBid](juicyparty.png)
+![JuicyParty at PartyBid](Juicyparty.png)
 
 Also with a stroke of genius from Filipv, they turned the experimental Juicebox project into the [Monkey Retirement Army project](https://juicebox.money/@retirementarmy) to support post-service monkeys at the Monkey Living Center, by donating 100% of raised funds to those monkeys. Also, they tried to set up a couple of NFT tiers in this project. 
 
