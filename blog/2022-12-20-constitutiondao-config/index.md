@@ -25,13 +25,15 @@ Spoiler alert: ConstitutionDAO did not win the auction. As a result, the core te
 
 Taking a closer look at the configuration settings for `Cycle #1`, we can see that the following settings were used for their fundraise:
 
-- `Target: No target` means that there is no predefined funding target (e.g. $15 million USD). This gave ConstitutionDAO the flexibility to raise as much as they could in order to try and win the auction. In other words, even if they raised $50 million USD, they could distribute the entire amount.<br>
-Please note that `Target` is now [`Distribution Limit`](https://info.juicebox.money/dev/learn/overview#distribution-limit) for v2/v3 projects on Juicebox, so in this example they set `Distribution Limit` to `Infinite`.
+- `Target: No target` means that there is no predefined funding target (e.g. $15 million USD). This gave ConstitutionDAO the flexibility to raise as much as they could in order to try and win the auction. In other words, even if they raised $50 million USD, they could distribute the entire amount.
+
+- Please note that `Target` is now [`Distribution Limit`](https://info.juicebox.money/dev/learn/overview#distribution-limit) for v2/v3 projects on Juicebox, so in this example they set `Distribution Limit` to `Infinite`.
 
 - `Duration: Not set` means that the project owner can start a new funding cycle with new configuration settings at any time without notice. This is a very flexible strategy but can seem risky to potential contributors because the project owner might change the project rules at any time. In ConstitutionDAO’s case, `Duration` could have potentially been set to `7 days` to match the deadline for the auction at Sotheby’s.
 
-- `Redemption rate: 100%` means that when claiming overflow i.e. funds in excess of the funding target, project contributors will be able to redeem their $PEOPLE tokens for ETH in the treasury **at any time** at the same rate at which they initially contributed. In other words, there is no incentive for holding tokens longer and redeeming later: all tokens have equal value regardless of when they are redeemed. <br>
-Please note that since `Target` is set to `No Target` (same as `Distribution Limit: Infinite`), funds in the treasury will never be considered as Overflow and will therefore not be redeemable.
+- `Redemption rate: 100%` means that when claiming overflow i.e. funds in excess of the funding target, project contributors will be able to redeem their $PEOPLE tokens for ETH in the treasury **at any time** at the same rate at which they initially contributed. In other words, there is no incentive for holding tokens longer and redeeming later: all tokens have equal value regardless of when they are redeemed.
+
+- Please note that since `Target` is set to `No Target` (same as `Distribution Limit: Infinite`), funds in the treasury will never be considered as Overflow and will therefore not be redeemable.
 
 - `Contributor rate: 1,000,000 PEOPLE/ETH` means that project contributors would receive 1,000,000 $PEOPLE tokens per 1 ETH. This rate is the default setting when creating a Juicebox project but can be set to any amount desired.
 
