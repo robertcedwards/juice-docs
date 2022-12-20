@@ -2,6 +2,7 @@
 slug: 2022-12-20-constitutiondao-config
 title: How ConstitutionDAO was configured on Juicebox
 description: Project settings for ConstitutionDAO's fundraiser to buy an original copy of the U.S. Constitution.
+image: https://info.juicebox.money/assets/images/nicolas-cage-ed394261e64e080ff029b45c0c2e1ddd.png
 authors: [matthew, brileigh]
 tags: [constitutiondao, fundraise, config, configuration, juicebox, ethereum, crypto]
 ---
