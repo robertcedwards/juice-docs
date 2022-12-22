@@ -13,6 +13,7 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.svg',
+  trailingSlash: true,
   organizationName: 'Juicebox', // Usually your GitHub org/user name.
   projectName: 'juice-docs', // Usually your repo name.
 
