@@ -37,7 +37,7 @@ Talking about different versions of protocol, Jango said that the versioning nom
 
   ![project salman needs a job](project_salmanneedsajob.png)
 
-- [The Chinese Juicebox project](![image-20221223173020294](/Users/zhape/Documents/Juicebox townhalls/12-20/image-20221223173020294.png)) created by Zhape, in an effort to extend more support to projects in the Chinese community inside the Juicebox ecosystem.
+- [The Chinese Juicebox project](https://juicebox.money/@jbxcn) created by Zhape, in an effort to extend more support to projects in the Chinese community inside the Juicebox ecosystem.
 
   ![Project JBX CN](project_jbxcn.png)
 
