@@ -1,6 +1,6 @@
 ---
 slug: configuration-1-bonding-curve-rate-2
-title: "Configuration #1: Bonding Curve Rate"
+title: "第一个周期配置：联合曲线比率"
 authors: [jango]
 tags: [governance, dao]
 ---
