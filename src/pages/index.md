@@ -70,7 +70,7 @@ hide_table_of_contents: true
         </div>
         <div class="card__body">
           <p>
-            Learn about <a href="https://juicebox.money/p/juicebox">the DAO</a> building
+            Learn about the DAO building
             Juicebox and the ecosystem around it.
           </p>
         </div>
@@ -85,15 +85,15 @@ hide_table_of_contents: true
 <footer class="footer">
   <div class="container container--fluid">
     <div class="footer__links">
-      <a class="footer__link-item" href="/tos">Terms of Service</a>
-      <span class="footer__link-separator">&middot;</span>
-      <a class="footer__link-item" href="https://github.com/jbx-protocol">GitHub</a>
+      <a class="footer__link-item" href="/tos/">Terms of Service</a>
       <span class="footer__link-separator">&middot;</span>
       <a class="footer__link-item" href="https://discord.gg/juicebox">Discord</a>
       <span class="footer__link-separator">&middot;</span>
-      <a class="footer__link-item" href="/blog">Blog</a>
+      <a class="footer__link-item" href="https://github.com/jbx-protocol">GitHub</a>
       <span class="footer__link-separator">&middot;</span>
-      <a class="footer__link-item" href="/dao/contribute">Contribute</a>
+      <a class="footer__link-item" href="/user/brand-kit/">Brand Kit</a>
+      <span class="footer__link-separator">&middot;</span>
+      <a class="footer__link-item" href="/dao/contribute/">Contribute</a>
     </div>
     <div>Made by <a href="https://juicebox.money/p/juicebox">Juicebox DAO</a>.</div>
   </div>

@@ -1,0 +1,21 @@
+.color {
+  border-radius: 8px;
+  display: inline-block;
+  height: 3rem;
+  margin-right: 0.5rem;
+  padding: 16px;
+  text-align: center;
+  width: 7rem;
+}
+
+.color code {
+  margin: auto;
+  text-align: center;
+  background-color: #282A36;
+  color: #E3E3E3;
+}
+
+img {
+  max-width: 200px;
+  display: inline-block;
+}
