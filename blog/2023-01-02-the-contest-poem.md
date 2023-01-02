@@ -17,7 +17,7 @@ The twelve words you are searching for are the password to a protonmail account,
 
 Good luck!
 
-The Poem
+# The Poem
 
 Be it a disregarded scribe beseeching temperance;
 
@@ -43,7 +43,7 @@ But an erstwhile puddle, however filthy, existed.
 
 And so we’ve arrived at the last of our tips, which falls as seeds do from soft avian lips.
 
-Tips:
+## Tips:
 
 If after many tries you still find struggle,
 
