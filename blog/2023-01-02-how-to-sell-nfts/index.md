@@ -14,7 +14,8 @@ Juicebox enables creators and communities to create and launch NFT projects with
 
 You can follow along in this article or the Youtube video.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pgpK3LofDSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pgpK3LofDSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<br/>
 
 **The example for this tutorial is an NFT project called Flamingo Sunday.** We’re using Juicebox to sell flamingo NFTs at 0.1, 1, and 10 ETH tiers and anyone who contributes at those amounts will receive the corresponding NFT.
 
