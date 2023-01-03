@@ -15,6 +15,7 @@ Setting a handle for your project on Juicebox is a great way to customize your p
 You can follow along in this article or the Youtube video.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6YuVL7Yoxgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
 
 **Before you start,** you need to have:
 
