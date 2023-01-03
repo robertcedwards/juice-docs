@@ -3,7 +3,7 @@
 title: Brand Kit
 ---
 
-import './brand-kit.css';
+import styles from './brand-kit.module.css';
 
 :::tip
 Looking for more? Visit the [Wagmi Studios Google Drive](https://drive.google.com/drive/folders/1-06MIi6xI9PjM3ENoUsxe2R-aQe4-uL0). <br/>
@@ -24,31 +24,31 @@ Questions/inquiries? Ask in the [Juicebox Discord](https://discord.gg/juicebox).
 
 ### Light Mode Colors
 
-<div class="color" style={{backgroundColor: '#F5A312'}}>
+<div className={styles.color} style={{backgroundColor: '#F5A312'}}>
 <code>#F5A312</code>
 </div>
-<div class="color" style={{backgroundColor: '#18B4C7'}}>
+<div className={styles.color} style={{backgroundColor: '#18B4C7'}}>
 <code>#18B4C7</code>
 </div>
-<div class="color" style={{backgroundColor: '#FEFDFB'}}>
+<div className={styles.color} style={{backgroundColor: '#FEFDFB'}}>
 <code>#FEFDFB</code>
 </div>
-<div class="color" style={{backgroundColor: '#000000'}}>
+<div className={styles.color} style={{backgroundColor: '#000000'}}>
 <code>#000000</code>
 </div>
 
 ### Dark Mode Colors
 
-<div class="color" style={{backgroundColor: '#FFB32C'}}>
+<div className={styles.color} style={{backgroundColor: '#FFB32C'}}>
 <code>#FFB32C</code>
 </div>
-<div class="color" style={{backgroundColor: '#32C8DB'}}>
+<div className={styles.color} style={{backgroundColor: '#32C8DB'}}>
 <code>#32C8DB</code>
 </div>
-<div class="color" style={{backgroundColor: '#1A181F'}}>
+<div className={styles.color} style={{backgroundColor: '#1A181F'}}>
 <code>#1A181F</code>
 </div>
-<div class="color" style={{backgroundColor: '#E1E0E8'}}>
+<div className={styles.color} style={{backgroundColor: '#E1E0E8'}}>
 <code>#E1E0E8</code>
 </div>
 
