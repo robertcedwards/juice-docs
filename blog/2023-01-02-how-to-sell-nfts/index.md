@@ -22,7 +22,7 @@ So head to [juicebox.money](http://juicebox.money), connect your wallet, and cli
 
 ![Create a project](create-project.png)
 
-### S**tep 1: Project Details**
+### Step 1: Project Details
 
 Here you’ll provide general information about your Juicebox project including the name, description, a logo, and add social links. You can even customize the `Pay` button, for this example we could make it say “we love flamingos.” Once you’re done, click `Next`.
 
@@ -92,7 +92,7 @@ There’s also an option to add a message that appears when contributors receive
 
 ![pay button](pay-button.png)
 
-### Step 6: Confirm all settings (rules)
+### Step 7: Confirm all settings (rules)
 
 The default is a `3-day delay`, which means that any changes to the project settings need to be submitted at least 3 days before the next funding cycle starts. You can think of this as a safety measure. In other words, the project can’t suddenly change all of their settings. 
 
