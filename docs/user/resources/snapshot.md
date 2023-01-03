@@ -1,5 +1,5 @@
 ---
-title: Snapshot
+title: Snapshot Strategies
 sidebar_position: 1
 ---
 

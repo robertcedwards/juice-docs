@@ -1,50 +1,40 @@
----
-title: For Your DAO
-sidebar_position: 1
----
+# Discord Server Templates
 
-# Discord for DAOs
+Discord is among the most popular social platforms in crypto. It allows users to create free, invite-only servers for their communities. Discord servers support messaging across multiple channels, voice/video calls, and the configuration of complex permission structures. Discord also supports bots and other automations through its API.
 
-## 1. Server Template
+## Get Discord
 
-Open the [Discord for DAOs template](https://discord.new/qsCbV9HGreJU)—channels, roles, permissions, and server settings will be pre-configured.
+If you don't already have an account, create one at [discord.gg](https://discord.gg). You can access Discord via a web browser or through its native apps on Windows, macOS, Android, iOS, or Linux. If you are a complete beginner, take a look at Discord's [beginner's guide](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord).
+
+## 1. Templates
+
+:::tip
+Need a different template? Ask in the [Juicebox Discord](https://discord.gg/juicebox).
+:::
+
+First, pick a template to automatically configure channels, roles, permissions, and server settings.
+
+|Template|Description|
+|-|-|
+|[Discord For DAOs](https://discord.new/qsCbV9HGreJU)|This server works best for crypto-native communities and projects building in the open.|
+|[Discord For NFT Projects](https://discord.new/qYBEFhjzTpA5)|This server works best for NFT projects using Juicebox to manage revenues.|
 
 ![](discord0.png)
+
 <p class="subtitle">Name your server and upload a logo.</p>
 
-You will be brought to your new Discord server! Acquaint yourself with the preconfigured channels and roles:
 
-### 1.1 Channels
+You will be brought to your new Discord server! Acquaint yourself with the preconfigured channels and roles.
 
-|Category|Description|Channels|
-|-|-|-|
-|**Information**|These read-only channels provide basic information and important updates for the community.|✨｜read-me<br/>📢｜announcements<br/>🐦｜twitter-feed<br/>🔗｜links|
-|**Public**|A space for the community to interact and engage.|🌞｜gm<br/>💬｜general<br/>🗣｜off-topic<br/>👋｜introductions<br/>❓｜questions<br/>💌｜suggestions|
-|**Governance**|Formal decision making and consensus.|🏛｜read-me<br/>⚙｜workshop<br/>📜｜proposals|
-|**Contributors**|A space for contributors to collaborate and build in the open. Each channel in this category corresponds with a role which can be granted to contributors (or self-assigned). Tailor these focus areas to your community's goals.|💬｜contributors<br/>💻｜developers<br/>👪｜community-management<br/>👀｜visibility<br/>🏛｜governance<br/>✨｜onboarding<br/>💸｜finances<br/>🤝｜partnerships|
-|**Voice Channels**|Voice/video discussion.|🏛｜Town Hall<br/>🎤｜General<br/>🎤｜General 2|
-|**Admin**|Private communications channels for administrators and moderators.|admin<br/>Admin|
+### 1.1 Note on Permissions
 
-### 1.2 Roles
-
-|Role|Description|Permissions|
-|-|-|-|
-|**Admin**|Full-access administrator. Exercise caution when granting this role to others.|Administrative access to all permissions.|
-|**Moderator**|Community moderators with elevated positions.|Permission to kick/ban users and delete messages, among other things. Moderators cannot reconfigure the server.|
-|**Bots**|Cosmetic role to visually distinguish bots.|No permissions. Discord bots create and manage their own roles.|
-|**Announcements**|An opt-in role for announcement notifications.|No permissions.|
-|**Developer, Community Management, Visibility, Governance, Onboarding, Finances, and Partnerships**|Cosmetic roles to visually distinguish contributors to specific focus areas.|No permissions.|
-|**@everyone**|Default role granted to all server members.|This role grants basic permissions necessary to participate in the server.|
-
-### 1.3 Notes on Permissions
-
-Discord permissions are *cumulative*—users gain permissions from all of their roles, with positive permissions overriding negative ones. Channel permissions and category permissions behave differently; they override the permissions of users and roles within specific channels. The [Discord for DAOs template](https://discord.new/qsCbV9HGreJU) comes with sensible defaults: non-admin users will not be able to send messages or create discussion threads within information/announcement channels.
+Discord permissions are *cumulative*—users gain permissions from all of their roles, with positive permissions overriding negative ones. Channel permissions and category permissions behave differently; they override the permissions of users and roles within specific channels. All of the templates come with sensible defaults: non-admin users will not be able to send messages or create discussion threads within information/announcement channels.
 
 To test a role's permissions, click on your server's name (at the top of your channels list), and navigate to your `Server Settings`. Navigate to the `Roles` page, and click on the role you would like to test. Within the `Display` tab, scroll to the bottom and select `View Server as Role →`. This will let you test what actions the role can take and what channels it can see.
 
 ## 2. Server Settings
 
-Click on your server's name (at the top of your channels list), and navigate to your `Server Settings`. The [Discord for DAOs template](https://discord.new/qsCbV9HGreJU) comes with sensible defaults, but you may desire to reconfigure the following options:
+Click on your server's name (at the top of your channels list), and navigate to your `Server Settings`. Our templates come with sensible defaults, but you may desire to reconfigure the following options:
 
 |Setting|Sidebar Menu|Description|
 |-|-|-|
@@ -114,7 +104,6 @@ React to receive contributor roles!
 
 **Will be formatted like so:**
 
-
 ![](discord2.png)
 
 Once your message is written, click `Add emoji` to add reaction emojis and their corresponding roles. These should be added one at a time, with each emoji corresponding to one role:
@@ -156,11 +145,9 @@ A links embed will guide your community to DAO's resources and websites. To crea
 
 **The Tweet:**
 
-
 ![](twitter1.png)
 
 **Will be rendered like so:**
-
 
 ![](discord5.png)
 
