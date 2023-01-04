@@ -1,6 +1,7 @@
 ---
 slug: juicebox-jokedao
 title: Create JokeDAO Contests for Juicebox Projects
+image: https://info.juicebox.money/img/jokedao.webp
 authors: [nicholas]
 tags: [guide]
 image: "/img/jokedao.webp"
