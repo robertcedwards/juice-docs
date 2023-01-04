@@ -1,6 +1,7 @@
 ---
 slug: juicebox-donate-with-ens
 title: Receive Juicebox donations at a .eth address
+image: https://info.juicebox.money/img/donatewithens.webp
 authors: [nicholas]
 tags: [guide]
 image: "/img/donatewithens.webp"
