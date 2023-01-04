@@ -1,9 +1,9 @@
 ---
-slug: 2022-07-18-sharkdao
+slug: sharkdao-highlight
 title: SharkDAO, A Sub-DAO Raising Funds to Participate in the Nouns Ecosystem
 description: SharkDAO has raised over 1000 ETH on Juicebox, acquired six Nouns, and brought together over 400 sharks.
 authors: [matthew, brileigh]
-tags: [sharkDAO, NFT, nouns, CC0, on-chain, avatar, pfp, governance, juicebox, ethereum, crypto]
+tags: [highlight]
 image: https://info.juicebox.money/assets/images/shark-gang-6e867c702af115e10cd93fa2825a667b.png
 ---
 

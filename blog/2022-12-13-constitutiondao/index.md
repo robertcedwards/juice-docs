@@ -1,10 +1,10 @@
 ---
-slug: 2022-12-13-constitutiondao
+slug: constitutiondao-highlight
 title: ConstitutionDAO and how a group of friends on the internet raised over $40 million to buy the U.S. Constitution
 description: How the campaign got started, setbacks along the way, and the final auction at Sotheby's.
 image: https://info.juicebox.money/assets/images/nicolas-cage-92471b7e614dfab2a8dbd615404705cf.jpeg
 authors: [matthew, brileigh]
-tags: [constitutiondao, fundraise, crowdfunding, juicebox, ethereum, crypto]
+tags: [highlight]
 ---
 
 :::tip

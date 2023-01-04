@@ -1,10 +1,10 @@
 ---
-slug: 2023-01-02-set-ens
+slug: set-ens
 title: How to set a Juicebox project handle using an ENS address
 description: Use a .eth address for your Juicebox project handle.
 image: https://info.juicebox.money/assets/images/banny-juicebox-set-ens-02e742e37dd4002fc0fdc0fa1f64cbd0.png
 authors: [brileigh, matthew] 
-tags: [guide, tutorial, project creator, ENS, project handle]
+tags: [guide]
 ---
 
 # How to set a Juicebox project handle using an ENS address

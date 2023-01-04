@@ -17,6 +17,45 @@ const config = {
   organizationName: 'Juicebox', // Usually your GitHub org/user name.
   projectName: 'juice-docs', // Usually your repo name.
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'town-hall',
+        routeBasePath: 'town-hall',
+        path: './blogs/town-hall',
+        showReadingTime: true,
+        editUrl: 'https://github.com/jbx-protocol/juice-docs/blob/main',
+        blogSidebarTitle: 'Town Halls',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'updates',
+        routeBasePath: 'updates',
+        path: './blogs/updates',
+        showReadingTime: true,
+        editUrl: 'https://github.com/jbx-protocol/juice-docs/blob/main',
+        blogSidebarTitle: 'Updates',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'misc',
+        routeBasePath: 'misc',
+        path: './blogs/misc',
+        showReadingTime: true,
+        editUrl: 'https://github.com/jbx-protocol/juice-docs/blob/main',
+        blogSidebarTitle: 'Articles',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -49,7 +88,7 @@ const config = {
   },
   themeConfig: {
     image: 'img/juicedocs.png',
-    metadata: [{ name: 'keywords', content: 'Juicebox, juicebox, crypto, cryptocurrency, ethereum, Ethereum, fundraising, treasury, treasury management, Juicebox DAO, JuiceboxDAO, juiceboxdao, juicebox dao, dao tooling, dao, daos, erc20, nft, decentralized, funding, web3, Web3' }],
+    metadata: [{ name: 'keywords', content: 'Juicebox, crypto, cryptocurrency, eth, ethereum, fundraising, treasury, JuiceboxDAO, dao, daos, funding, web3' }],
     algolia: {
       appId: '6C0XLHGK46',
       apiKey: 'cf4910b7f8d618e1ee356e575db8120b',
@@ -92,7 +131,7 @@ const config = {
           sidebarId: 'dao',
           label: 'Juicebox DAO',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/blogosphere', label: 'Blogosphere', position: 'left' },
         {
             type: 'localeDropdown',
             position: 'right',
@@ -103,7 +142,7 @@ const config = {
           position: 'right',
           items: [
             {
-              label: 'Juicebox.money',
+              label: 'juicebox.money',
               to: 'https://juicebox.money',
             },
             {
@@ -119,24 +158,12 @@ const config = {
               to: 'https://dune.com/projects/juicebox',
             },
             {
-              label: 'JuiceTool',
-              to: 'https://juicetool.xyz/',
+              label: 'Proposals',
+              to: 'https://juicetool.xyz/nance/juicebox',
             },
             {
-              label: 'Snapshot',
-              to: 'https://vote.juicebox.money/#/jbdao.eth',
-            },
-            {
-              label: 'Governance Proposals',
-              to: 'https://www.notion.so/9d126f9148dc42ee83317d5cd74e4db4',
-            },
-            {
-              label: 'Moody\'s DAO',
-              to: 'https://docs.google.com/spreadsheets/d/1zb3gHOdWiAbXDTdBA9ixv2yOJDIzCo_fEwLDdbTvJVo',
-            },
-            {
-              label: 'Bookkeeping',
-              to: 'https://drive.google.com/drive/folders/1JsMOMXz6Z684DsTsLiJu3mo7jNAwjYwQ',
+              label: 'Voting',
+              to: 'https://juicetool.xyz/snapshot/jbdao.eth',
             },
           ],
         },

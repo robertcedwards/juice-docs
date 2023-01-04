@@ -2,7 +2,7 @@
 slug: why-juicebox-for-nfts
 title: WHY Juicebox for NFT Projects?
 authors: [johnnyd]
-tags: [nfts, nft, juicebox, ethereum, juicebox project, crypto, cryptocurrency, web3]
+tags: [guide, nft]
 ---
 
 # WHY Juicebox for NFT Projects?

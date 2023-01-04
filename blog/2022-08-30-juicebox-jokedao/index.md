@@ -2,7 +2,7 @@
 slug: juicebox-jokedao
 title: Create JokeDAO Contests for Juicebox Projects
 authors: [nicholas]
-tags: [guide, project creator, jbh-tooling]
+tags: [guide]
 image: "/img/jokedao.png"
 ---
 

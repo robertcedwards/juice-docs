@@ -1,10 +1,10 @@
 ---
-slug: 2022-10-11-moondao
+slug: moondao-highlight
 title: MoonDAO, a worldwide collective decentralizing space exploration and research
 description: How MoonDAO raised over $8 million (2600+ ETH) on Juicebox to send someone to space
 authors: [matthew, brileigh]
 image: https://info.juicebox.money/assets/images/banny-7bd59dfc04c9425d90616c6224d59619.png
-tags: [moondao, nasa, blue origin, spaceflight, dao, crowdfunding, juicebox, ethereum, crypto, jbh-project creators]
+tags: [highlight]
 ---
 
 ***How MoonDAO raised over $8 million (2600+ ETH) on Juicebox to send someone to space***

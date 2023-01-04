@@ -1,10 +1,10 @@
 ---
-slug: 2023-01-02-how-to-sell-nfts
+slug: how-to-sell-nfts
 title: How to Sell NFTs on Juicebox
 description: Tutorial on how to sell NFTs on Juicebox for NFT projects, DAOs, and crowdfunding.
 image: https://info.juicebox.money/assets/images/cover-img-bfad735019aa34e113d966b6c605e392.png
 authors: [brileigh, matthew]
-tags: [guide, tutorial, NFTs, project creator, config, configuration]
+tags: [guide, nft]
 ---
 
 # How to sell NFTs on Juicebox in less than 10 minutes

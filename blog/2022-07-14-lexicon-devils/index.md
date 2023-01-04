@@ -1,9 +1,9 @@
 ---
-slug: 2022-07-14-lexicon-devils
+slug: lexicon-devils-highlight
 title: Lexicon Devils, A Metaverse Architecture Guild Running on Juicebox
 description: How Lexicon Devils is building the metaverse, getting paid to do it, and managing their treasury on Juicebox.
 authors: [matthew, brileigh]
-tags: [lexicon devils, metaverse, architecture, guild, cryptovoxels, voxels, juicebox, ethereum, crypto]
+tags: [highlight]
 image: https://info.juicebox.money/assets/images/juicebox-v2-343f182edb8f0084282984d459c1d001.png
 ---
 

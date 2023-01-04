@@ -2,7 +2,7 @@
 slug: dao-tooling-101
 title: DAO Tooling 101
 authors: [aeolian]
-tags: [ecosystem, guide]
+tags: [guide, tooling]
 ---
 
 Entering the world of decentralized autonomous organizations (DAOs) is kind of like opening the gates to Narnia: it's thrilling, it's confusing, and because real money is involved, it's somewhat scary.

@@ -2,7 +2,7 @@
 slug: juicebox-zora
 title: How to Create an NFT on Zora and forward proceeds to a Juicebox project
 authors: [nicholas]
-tags: [guide, project creator, jbh-tooling]
+tags: [guide, nft]
 image: "/img/tag/zora.png"
 ---
 

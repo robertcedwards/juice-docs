@@ -1,9 +1,9 @@
 ---
-slug: 2022-08-29-comicsdao-the-whole-enchilada
+slug: comicsdao-highlight
 title: ComicsDAO - The Whole Enchilada
 authors: [felixander]
 image: https://info.juicebox.money/assets/images/SPIDER_MEME-b832d7da55d4e5c795c5e24a7946f8c2.jpg
-tags: [comicsdao, project-profile]
+tags: [highlight]
 ---
 
 # ComicsDAO - The Whole Enchilada

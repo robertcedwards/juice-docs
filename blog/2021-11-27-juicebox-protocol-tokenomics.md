@@ -2,7 +2,7 @@
 slug: juicebox-protocol-tokenomics
 title: Juicebox protocol tokenomics
 authors: [jango]
-tags: [guide]
+tags: [protocol, guide]
 ---
 
 *In its first funding cycle, each project issues 1,000,000 tokens for each 1 ETH received.*

@@ -2,7 +2,7 @@
 slug: how-juicebox-for-nfts
 title: HOW Juicebox for NFT Projects?
 authors: [johnnyd]
-tags: [nfts, nft, juicebox, ethereum, juicebox project, crypto, cryptocurrency, web3]
+tags: [guide, nft]
 ---
 
 # HOW Juicebox for NFT Projects?

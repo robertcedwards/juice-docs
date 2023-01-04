@@ -1,8 +1,8 @@
 ---
-slug: comicsdao-config-article
+slug: comicdao-config
 title: Config-Clinic - An ongoing fundraiser and web3 business in ComicsDAO
 authors: [felixander]
-tags: [config-breakdown, project-profile]
+tags: [configuration, highlight]
 ---
 
 # Config-Clinic - An ongoing fundraiser and web3 business in ComicsDAO

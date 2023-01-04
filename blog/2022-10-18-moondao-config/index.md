@@ -1,10 +1,10 @@
 ---
-slug: 2022-10-18-moondao-config
+slug: moondao-config
 title: How MoonDAO was configured on Juicebox
 description: Raising funds to decentralize space research and exploration.
 image: https://info.juicebox.money/assets/images/MoonDAO-one-small-step-230f6e4f2866a2ccb31303d5fa3683a3.png
 authors: [matthew, brileigh]
-tags: [moondao, nasa, blue origin, spaceflight, dao, crowdfunding, juicebox, ethereum, crypto, configuration,  jbh-project creators]
+tags: [configuration]
 ---
 
 ***Raising funds to decentralize space research and exploration***
