@@ -6,7 +6,7 @@ image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0b
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.webp)  
+![Town Hall banner by Sage Kellyn](/img/townhall.webp)
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## versioning with jango 
