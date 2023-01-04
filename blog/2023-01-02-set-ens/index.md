@@ -23,15 +23,21 @@ You can follow along in this article or the Youtube video.
 - An ENS name that you own and control
 - A Juicebox project that you are the owner of
 
-### Step 1: click right underneath the Project title where it says “Add handle”
+### Step 1: Add Handle
+
+Click right underneath the Project title where it says `Add handle`.
 
 ![add handle](add-handle.png)
 
-Step 2: Enter an ENS name that you own, and click `Set ENS name` This will prompt a transaction that you’ll have to confirm with your wallet. 
+### Step 2: Set ENS name
+
+Enter an ENS name that you own, and click `Set ENS name` This will prompt a transaction that you’ll have to confirm with your wallet. 
 
 ![Set ENS name](set-ens-name.png)
 
-Step 3: After the transaction is confirmed, you’ll see that it lists the ENS chosen as the project handle, **but you’re not done yet.** Next you need to set the text record for that ENS name, so click the button below that says `Set text record`. Then confirm the transaction with your wallet. 
+### Step 3: Set text record
+
+After the transaction is confirmed, you’ll see that it lists the ENS chosen as the project handle, **but you’re not done yet.** Next you need to set the text record for that ENS name, so click the button below that says `Set text record`. Then confirm the transaction with your wallet. 
 
 ![Set text record](set-text-record.png)
 
@@ -41,17 +47,23 @@ It might take a few minutes to update, but you can refresh your project page and
 
 And that’s it! 
 
-# You can also set this text record manually using the ENS app.
+### You can also set this text record manually using the ENS app.
 
 **Before you do that**, take note of your project number which you can always find under the project name or you can look at the URL for your project. In this example, **our project is #368**. 
 
 ![Project number](project-368-example.png)
 
-Step 1: go to [app.ens.domains](http://app.ens.domains), go to My Account on the left and choose the ENS address that you want to use. Then you’ll click Add / Edit Record on the right side
+### (Using ENS) Step 1: Add / Edit Record 
+
+Go to [app.ens.domains](http://app.ens.domains), go to My Account on the left and choose the ENS address that you want to use. Then you’ll click `Add / Edit Record` on the right side
+
+### (Using ENS) Step 2: Create juicebox_project_id
 
 You’ll choose `text` in the drop-down menu on the left and in the next drop-down where it says `key` we’ll click and start typing `juicebox_project_id` and then click the message that appear below that says create `juicebox_project_id`. Then we’ll click the field to the right and enter our project number which is 368. 
 
 ![set ens manually](set-ens-manually.png)
+
+### (Using ENS) Step 3: Save and confirm
 
 Press `Save` and then scroll down to the bottom of the page to click `Confirm`. This will prompt a transaction that you’ll need to confirm your wallet. Once confirmed, you’ll see that it’s been added to the list of text records for that ENS address.
 
