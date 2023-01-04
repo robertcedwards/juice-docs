@@ -2,7 +2,7 @@
 slug: moondao-config
 title: How MoonDAO was configured on Juicebox
 description: Raising funds to decentralize space research and exploration.
-image: https://info.juicebox.money/assets/images/MoonDAO-one-small-step-230f6e4f2866a2ccb31303d5fa3683a3.webp
+image: https://info.juicebox.money/assets/images/MoonDAO-one-small-step-094834bc35fb4a005e8887b47c6f9636.webp
 authors: [matthew, brileigh]
 tags: [configuration]
 ---
