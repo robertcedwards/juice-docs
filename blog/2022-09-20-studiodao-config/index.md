@@ -2,7 +2,7 @@
 slug: studiodao-config
 title: How StudioDAO and its sub-projects are configured on Juicebox
 description: Building a network of projects on Juicebox.
-image: https://info.juicebox.money/assets/images/studiodao-project-map-b44b3a14ffe8965ffa1cdfb5fc679934.webp
+image: https://info.juicebox.money/assets/images/studiodao-project-map-6d5d5c17619d9fb95204692d1a46dc99.webp
 authors: [matthew, brileigh]
 tags: [configuration]
 ---
