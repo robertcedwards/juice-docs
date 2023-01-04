@@ -1,10 +1,10 @@
 ---
-slug: 2023-01-04-jb-migration-tutorial
+slug: v3-migration
 title: How to migrate a Juicebox project from V1/V2 to V3
 description: Tutorial on how to migrate your Juicebox project from V1 or V2 to V3
 image: https://info.juicebox.money/assets/images/banny-migrations-v3-juicebox-62bee6c17e1d1775d18b4b6d1ee5f9c6.webp
 authors: [brileigh, matthew, 0xstvg]
-tags: [guide, project creator, V1, V2, V3, migration, config,]
+tags: [guide]
 ---
 
 ![How to Migrate a Juicebox Project from V1/V2 to V3](banny-migrations-v3-juicebox.webp)
