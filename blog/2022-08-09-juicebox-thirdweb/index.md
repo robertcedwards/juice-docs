@@ -1,10 +1,9 @@
 ---
 slug: juicebox-thirdweb
 title: Create an NFT on Thirdweb and forward proceeds to a Juicebox project
-image: https://info.juicebox.money/img/thirdweb.webp
+image: /img/thirdweb.webp
 authors: [nicholas]
 tags: [guide, nft]
-image: "/img/thirdweb.webp"
 ---
 
 # How to Create an NFT on Thirdweb and forward proceeds to a Juicebox project
