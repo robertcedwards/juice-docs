@@ -9,7 +9,7 @@ tags: [guide]
 
 # How to set a Juicebox project handle using an ENS address
 
-![Tutorial on how to seta JB project handle using ENS](banny-juicebox-set-ens.webp)
+![Tutorial on how to seta JB project handle using ENS](banny-ens-juicebox.webp)
 
 Setting a handle for your project on Juicebox is a great way to customize your page by linking your ENS to your project. Project handles on Juicebox make it easier for people to find your project and help set it apart with a vanity URL. This guide will show you how to set the handle directly from juicebox.money and manually using the ENS app in less than 5 minutes. 
 
