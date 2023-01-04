@@ -3,7 +3,7 @@ slug: moondao-highlight
 title: MoonDAO, a worldwide collective decentralizing space exploration and research
 description: How MoonDAO raised over $8 million (2600+ ETH) on Juicebox to send someone to space
 authors: [matthew, brileigh]
-image: https://info.juicebox.money/assets/images/banny-7bd59dfc04c9425d90616c6224d59619.webp
+image: https://info.juicebox.money/assets/images/banny-2a0fa2d6648ca7f3e459372cd89fbc01.webp
 tags: [highlight]
 ---
 
