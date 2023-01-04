@@ -2,7 +2,7 @@
 slug: forming-config
 title: How FORMING is configured on Juicebox
 description: Running a metaverse concert series on Juicebox.
-image: https://info.juicebox.money/assets/images/FORMING-vol1-2-64f1550549f8ab9d9d003db09839e43e.webp
+image: https://info.juicebox.money/assets/images/FORMING-vol1-2-551106f027bfe4224d7169e5744205f3.webp
 authors: [matthew, brileigh]
 tags: [configuration]
 ---
