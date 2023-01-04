@@ -2,11 +2,11 @@
 slug: 22-12-13
 title: December 13th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -141,7 +141,7 @@ Genekogan said that this is basically DreamBooth, the technique which lets peopl
 
 When asked upon by Nicholas whether this is something on the path to developing a produce that they can sell as a service, Genekogan said that it's basically the base. But they're still trying to discover different ways to either turn it into a service catering for customers, or just exploring with the techniques and trying to get people to use and experiment for the most part.
 
-![AI at home](AI_at_home.png)
+![AI at home](AI_at_home.webp)
 
 
 
@@ -161,7 +161,7 @@ Nicholas introduced that PartyBid is a tool for collectively purchasing NFTs, wh
 
 Nicholas got the early access to the PartyBid V2, which allows us not only to own an NFT with it, but also to execute transactions from it. So Peri, Filipv and Nicholas created [a JuicyParty on PartyBid](https://www.partybid.app/party/0x56bc9de3dc9556a3282ed4e7ba8f86d5cb7d8cd8) and used it to acquire the Juicebox project that Nicholas created before. After owning this Juicebox project with the JuicyParty, they tried to execute from it a bunch of different proposals reconfiguring funding cycles and metadata of the Juicebox project. 
 
-![JuicyParty at PartyBid](Juicyparty.png)
+![JuicyParty at PartyBid](Juicyparty.webp)
 
 Also with a stroke of genius from Filipv, they turned the experimental Juicebox project into the [Monkey Retirement Army project](https://juicebox.money/@retirementarmy) to support post-service monkeys at the Monkey Living Center, by donating 100% of raised funds to those monkeys. Also, they tried to set up a couple of NFT tiers in this project. 
 
@@ -181,7 +181,7 @@ Nicholas highlighted some projects he thought that might be interesting.
 
 Matthew and Brileigh just released the [new Juicecast episode](https://podcasts.apple.com/ca/podcast/the-juicecast/id1623504302?i=1000589496263), the epilogue of the ConstitutionDAO retrospective series podcast, which is about PeopleDAO and ConstitutionDAO2 campaign.
 
-![New Juicecast episode](new_juicecast.png)
+![New Juicecast episode](new_juicecast.webp)
 
 Also they posted a comprehensive article about ConstitutionDAO on our blog [here](https://info.juicebox.money/blog/2022-12-13-constitutiondao/).
 
@@ -189,4 +189,4 @@ Also they posted a comprehensive article about ConstitutionDAO on our blog [here
 
 Darbytrash from Lexicon Devils announced that they would be holding a Forming [Songcamp](https://twitter.com/songcamp_) collab with winter break vibes on January 6th.
 
-![Forming and Songcamp collab](forming_songcamp.png)
+![Forming and Songcamp collab](forming_songcamp.webp)

@@ -90,7 +90,7 @@ I think the most beneficial part was the user research part beyond the few proje
 
 ## 4. Quizz time: 
 
-![](quizz.png)
+![](quizz.webp)
 
 The answer is……     Casstoshi!
 

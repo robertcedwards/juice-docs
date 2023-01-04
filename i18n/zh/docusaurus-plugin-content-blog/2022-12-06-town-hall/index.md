@@ -2,11 +2,11 @@
 slug: town-hall-2022-12-06
 title: JuiceboxDAO 周会概要 2022 年 12 月 07 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## 协议及 JuiceboxDAO 趋零构思 by Jango
@@ -19,9 +19,9 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 以下是 Jango 贴在战略频道的内容，这些是他正在思考的问题，以此来抛砖引玉，请大家给予反馈、批评及其他意见。我们可以以这些内容为镜，来审视来年或将来的运营情况，同时反省过去一年我们的一些习以为常的操作。
 
-![tending towards zero page 1](tending1.png)
+![tending towards zero page 1](tending1.webp)
 
-![tending towards zero page 2](tending2.png)
+![tending towards zero page 2](tending2.webp)
 
 Jango 同时表示，要实现这一目标，我们应逐步逐个提案地来推进。目标是要找到一个可持续发展的模型。在某一个位置，核心协议要缩减，同时因为解决了一些风险问题和提供足够的资源让人们可以在后续层堆栈中自己创造机会，所以它也是稳定的。前置在 JuiceboxDAO 上面的支出需求会进一步减少，JuiceboxDAO 成了一个底层，可以在类似 Defifa 及 Peel 前端这样的外推性项目上做大量的工作，与此同时寻找这些项目自力更生的办法。我们有一个底层可以重构这些机会和风险。然后就是 JBX，在理想的情况下，作为生态系统的能量，在网络及许多更具战略性的述事组件都转移到堆栈的其他层的同时，进行自我推广。
 
@@ -35,13 +35,13 @@ Jango 认为，鉴于我们金库的性质，假设它会保持不变，我们�
 
 Towdam 打造了一个新的 [Dune 数据面板](https://dune.com/twodam/juicebox-nft-rewards)来追踪 Juicebox 协议上创建的所有 NFT。
 
-![NFT Dune dashboard](NFT_dashboard.png)
+![NFT Dune dashboard](NFT_dashboard.webp)
 
 
 
 同时，他还创建了[另一个数据面板](https://app.flipsidecrypto.com/dashboard/snapshot-plus-data-ueqrnb)来统计一些 Snapshot 投票相关的数据，Snapshot 空间里面所有的 DAO 都可以使用这个面板。
 
-![Snapshot dashboard](Snapshot_dashboard.png)
+![Snapshot dashboard](Snapshot_dashboard.webp)
 
 
 
@@ -53,11 +53,11 @@ Recently he has launched a website [blec.report](https://blec.report/) to post h
 
 最近他搭建了 [blec.report](https://blec.report/) 来发表自己关于 DEFI 和加密货币的看法。
 
-![blec.report website](blec_report_website.png)
+![blec.report website](blec_report_website.webp)
 
 在 Jango 的帮助下明白 Juicebox 的一些机制后，他同时还创建了一个叫 [Blec Report](https://juicebox.money/@blecreport) 的项目，来支持自己全职投入这方面的工作。
 
-![blec report Juicebox project](blec_report_project.png) 
+![blec report Juicebox project](blec_report_project.webp) 
 
 会上，Chris Blec 分享了他认识了解 Juicebox 的经验和一些认知的障碍，对我们提高与潜在用户的沟通很有帮助。他还表示愿意参与向社区解释 Juicebox 协议机制的工作，希望能帮助 Juicebox 吸引更多用户，因为他觉得 Juicebox 是一个非常有用的工具，将会是其他众筹平台非常好的替代选择。
 
@@ -67,7 +67,7 @@ Recently he has launched a website [blec.report](https://blec.report/) to post h
 
 Seanmc 创建了一个以 “如果 Juicebox 要举办一场会议，应该在哪里举行，为什么？”为指令的[比赛](https://www.jokedao.io/contest/polygon/0x177D12eFe658CCADAacf4F735aa14F18d4Df3645/rules)。大家可以按照这个指令在比赛中提交他们的提议，又或者使用专用的投票代币对提交的建议进行投票。比赛中获胜的提案会按预设的规则来按比例分配发送到奖励模块中的资金。在这个演示里，第一名获得 50%，第二名 33%， 第三名16%。
 
-![Jokedao rewards module contest](jokedao_contest.png)
+![Jokedao rewards module contest](jokedao_contest.webp)
 
 同时他们表示接下来将会尝试允许所有人部署自己的奖励模块。如果实现的话，在同一个比赛里就会有同时有多个奖励模块接入，按不同的参数来给予不同的名次各自的奖励。
 
@@ -79,7 +79,7 @@ Seanmc 创建了一个以 “如果 Juicebox 要举办一场会议，应该在�
 
 这个团队一直在开发这款名为 Planet 的应用，通过这个应用，用户们可以建立一个区块并发布到 IPFS 上面。应用有一个内建的 IPFS 节点，因此允许用户从他们的 Mac 机器来托管网站，同时无需用到 CRI。到[这里](https://www.planetable.xyz)浏览他们的网页。
 
-![planetable website](planetable_xyz.png)
+![planetable website](planetable_xyz.webp)
 
 在周会上，Livid 演示了如何用 ENS 域名生成一个网站并托管到 IPFS。他还展示了这款应用最近发布的新功能，允许用户使用 ETH 通过 ENS 域名来对一个作者进行打赏，同时还会将相关文章的 URL 附加到数据字段中，以便这些作者日后可以翻查资金的来源。
 
@@ -93,7 +93,7 @@ Juicebox 项目的所有权由一个 NFT 来表示，持有这些 NFT 的地址�
 
 Nicholas 在会上分享了一些 NFT 的图像，这些都是完全链上生成的，橙色是默认的主题颜色。
 
-![tokenURI resolver](tokenURI_resolver.png)
+![tokenURI resolver](tokenURI_resolver.webp)
 P
 
 Juicebox 的项目方如果想要使用这个橙色的主题，并不需要额外做任何事情。当然他们也可以选择在 NFT 上使用不同的主题。

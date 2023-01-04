@@ -44,10 +44,10 @@ Juicebox 协议不但支持有大梦想的小项目，同时也满足大项目�
 
 让我们来推演一个案例，看看如果有人一下子把大量资金注入 [JuiceboxDAO](https://juicebox.money/#/p/juicebox), 会发生什么情况。
 
-![](image-9.png)
+![](image-9.webp)
 上图是撰写本文时从 Jango 的视角看到 JuiceboxDAO。
 假设现在有人投了100万美金进来，那么我屏幕上的显示会大致会变成下图这样。
-![](Frame-1-6.png)
+![](Frame-1-6.webp)
 有人投了100万美金（约434个ETH）进来之后，从 Jango 的视角看到的JuiceboxDAO。
 变动如下：
 

@@ -2,7 +2,7 @@
 slug: constitutiondao-config
 title: How ConstitutionDAO was configured on Juicebox
 description: Project settings for ConstitutionDAO's fundraiser to buy an original copy of the U.S. Constitution.
-image: https://info.juicebox.money/assets/images/nicolas-cage-ed394261e64e080ff029b45c0c2e1ddd.png
+image: https://info.juicebox.money/assets/images/nicolas-cage-ed394261e64e080ff029b45c0c2e1ddd.webp
 authors: [matthew, brileigh]
 tags: [highlight]
 ---
@@ -14,7 +14,7 @@ ConstitutionDAO was a single purpose acquisition DAO that tried to buy a copy of
 
 In this article, we’ll cover how ConstitutionDAO used Juicebox to fundraise ~ $46 million (11,500+ ETH) in less than a week. 
 
-![Nicolas Cage in National Treasure](nicolas-cage.png)
+![Nicolas Cage in National Treasure](nicolas-cage.webp)
 
 <p class="subtitle">Nicolas Cage in National Treasure</p>
 
@@ -46,7 +46,7 @@ Taking a closer look at the configuration settings for `Cycle #1`, we can see t
 
 - `Reconfiguration strategy: No Strategy` means that there is no delay required before submitting a new Funding Cycle reconfiguration. If this were set to `3-day delay`, the team would need to submit any changes 3 days before the next funding cycle begins. Delay periods give project contributors peace of mind by giving them advance notice of any changes being made to the project rules. Setting this to `No Strategy` has the same perceived risk as `Duration: Not set`.
 
-![ConstitutionDAO’s configuration for Funding Cycle #1](cycle-1.png)
+![ConstitutionDAO’s configuration for Funding Cycle #1](cycle-1.webp)
 
 <p class="subtitle">ConstitutionDAO’s configuration for Funding Cycle #1</p>
 
@@ -62,7 +62,7 @@ After losing the auction at Sotheby’s, the core team reconfigured the project 
 
 - `Duration: Not set` and `Reconfiguration Strategy: No Strategy` typically present risks for project contributors since the project owner can start a new funding cycle with new configuration settings at any time without notice. In this case, the core team revoked ownership by [sending the project to a burn address](https://etherscan.io/tx/0x466d625525932a6725f61398a4da227c39ac909a77c5844d0bc8a222ee465311) which meant that they could no longer control the project in any way. Therefore, this risk is no longer a factor and the project configuration settings are impossible to change.
 
-![ConstitutionDAO’s configuration for Funding Cycle #3](cycle-3.png)
+![ConstitutionDAO’s configuration for Funding Cycle #3](cycle-3.webp)
 
 <p class="subtitle">ConstitutionDAO’s configuration for Funding Cycle #3</p>
 

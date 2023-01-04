@@ -2,11 +2,11 @@
 slug: 22-11-15
 title: November 15th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Frontend Update by Peel team
@@ -17,7 +17,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 - Some new subgraph updates upcoming this week, hopefully we'll  have funding cycle events appearing onto the project activity feed in the next two weeks.
 - Shout out and thank you to the DAO for supporting Peel's payout renewal proposal in the current governance cycle.
 
-![new_v3_projects](new_v3_projects.png)
+![new_v3_projects](new_v3_projects.webp)
 
 ## Defifa Update with Jango
 
@@ -43,7 +43,7 @@ As far as attestation is concerned, each of the 32 teams has 1 vote to attest to
 
 Jango also thought it's awesome to see the [project page](https://juicebox.money/v2/p/305) on juicebox.money.  Currently the project create flow only allows 3 NFT tiers, but the protocol acutally supports open-ended number of tiers. So he suggested that we should prioritize to stretch what's reasonable in frontend's perspective for juicebox.money, which should be more healthy as we don't want to spend much time building something that no one's really putting too much stress on. 
 
-![defifa_project](defifa_project.png)
+![defifa_project](defifa_project.webp)
 
 Jango was quite sure we would learn more about the parameters that we chose to initialize this game, and excited to run it again with new artwork and maybe some variable version of this site for the Women's World cup next year. 
 
@@ -65,7 +65,7 @@ If projects on V2 choose to upgrade to V3, they get to keep the ownership NFT of
 
 Filipv made a [Dune dashboard](https://dune.com/filipv/juiceboard) for purpose of analysing the statistics of Juicebox protocol. It shows figures for the past 30 days on the left hand side, and historical context on the right-hand side.
 
-![protocol_analytics](protocol_analytics.png)
+![protocol_analytics](protocol_analytics.webp)
 
 In the past 30 days, we have 44 projects deployed, which is above the numbers in October but still quite below that of the historical average. The situation is similar with payments, in terms of either the number of payments, or the amount of payments.
 
@@ -96,7 +96,7 @@ I think we have to keep reminding ourselves that the point of fees aren't to ext
 
 Now that StudioDAO is up and running with its first treasury, they have the goal to raise 100 ETH in the first month to get this all working.
 
-![greenlight_treasury](greenlight_treasury.png)
+![greenlight_treasury](greenlight_treasury.webp)
 
 Next step, they're going to hold a vote, to admit their first couple of films. There's a Alien-To-Me project and  something coming along. They now have a proposal in with MoonDAO that looks coming along well. If this proposal gets voted in, they will be funding the MoonDAO documentary, which is super cool and kind of the perfect project for them.
 
@@ -108,13 +108,13 @@ Also Kenbot is trying to collaborate with Jigglyjams to essentially incentivize 
 
 On November 27th, Lexicon Devils will be doing Forming collab with ALLSTARZ. For anyone who wants to take a look at the ALLSTARZ collection, you can click [here](https://allstarz.world/).
 
-![forming_allstarz](forming_allstarz.png)
+![forming_allstarz](forming_allstarz.webp)
 
 They're going to do something special for ALLSTARZ NFT holders. The winners of the [raffle on Twitter](https://twitter.com/allstarz_nft/status/1592274671520874496) can have their ALLSTARZ NFTs voxelized by Wackozacco so that they can wear it at the abovementioned Forming party very soon.
 
 [The Forming mixtape](https://soundcloud.com/lexicondevils/forming-mixtape-vol-1), which is still a work in progress, will be coming real soon.
 
-![Forming_mixtape](forming_mixtape.png)
+![Forming_mixtape](forming_mixtape.webp)
 
 
 
@@ -132,6 +132,6 @@ They responded, in no particular order, with:
 
 And folks in the town hall are supposed to guess:
 
-![townhall_game](townhall_game.png)
+![townhall_game](townhall_game.webp)
 
 The answer is ... Jigglyjams.

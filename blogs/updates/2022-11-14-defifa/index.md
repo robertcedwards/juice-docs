@@ -3,11 +3,11 @@ slug: 2022-11-14-defifa
 title: Defifa, a pop-up NFT game for the 2022 FIFA World Cup
 description: The decentralized World Cup built on Ethereum.
 authors: [jango]
-image: https://info.juicebox.money/assets/images/defifa-banner-b1ddcf3da3ce5e090689bc83a774c470.png
+image: https://info.juicebox.money/assets/images/defifa-banner-b1ddcf3da3ce5e090689bc83a774c470.webp
 tags: [update]
 ---
 
-![Defifa banner](defifa-banner.png)
+![Defifa banner](defifa-banner.webp)
 
 [Defifa](https://juicebox.money/v2/p/305) is an experimental pop-up NFT game that accompanies the 2022 FIFA World Cup. Minting started Nov 8th and will close before the first kickoff of the competition on November 21st. The game definitively ends on December 25th—7 days after the final whistle of the competition—at which point all treasury funds will be made available to those that wish to redeem their NFTs.
 
@@ -77,6 +77,6 @@ This version of the game justifies correctness as follows:
 
 [Defifa](https://juicebox.money/v2/p/305) is an experiment and will work as long as it has been configured correctly, however players should participate at their own risk. The code is open source and players are encouraged to fork the framework to run similar experiments for subsequent tournament-style competitions. Boa sorte!
 
-![Banny goal](banny-goal.png)
+![Banny goal](banny-goal.webp)
 
 <p class="subtitle">Artwork by <a href="https://twitter.com/sagekellyn">Sage Kellyn</a></p>

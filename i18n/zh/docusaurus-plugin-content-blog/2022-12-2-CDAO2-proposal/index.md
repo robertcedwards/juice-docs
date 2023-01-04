@@ -14,7 +14,7 @@ Date: (2022-12-04)
 
 ### 提案主旨
 
-![constitutuion movement](CDAO2_movement_2.png)
+![constitutuion movement](CDAO2_movement_2.webp)
 
 #### E Pluribus Unum 合众为一[<sup>(注1)</sup>](#注1)
 

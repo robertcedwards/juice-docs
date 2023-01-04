@@ -79,12 +79,12 @@ The StudioDAO Backlot is a for-profit services company, it mirrors sort of the s
 
 ### Projects on Juicebox
 
-![](aAVBmS7.png)
+![](aAVBmS7.webp)
 
 
 1. The StudioDAO Backlot.
 
-![](MLOjSEb.png)
+![](MLOjSEb.webp)
 
 For the Backlot, the token issuance is 1,000,000 / ETH, while 700,000 goes to the contributor, and 300,000 is reserved for the projects owner.
 
@@ -134,14 +134,14 @@ In short, we set up some structures for MovementDAO, PeaceDAO and a few other en
 We created a number of structures that are similar to what StudioDAO did. We have two different Unincorporated Nonprofit Associations(UNA), one in Delaware and one in Nevada, as well as a few LLCs in Delaware and Washington for different intellectual property. We also put together a number of intellectual property agreements and things like that.
 
 For the short term, we're just using these for these DAOs. If you want to check out these documents you can find where they are now on this website [gov.move.xyz](https://gov.move.xyz/). 
-![](2vi9cpk.png)
+![](2vi9cpk.webp)
 
 But what we're working at is templatizing a lot of the things for common use cases for Juicebox projects, and then letting people put in metadata about their projects and then having it spit out nice looking PDFs. There's like a lot of interesting stuff in here if you're interested in this sort of thing that we're hoping to to roll out to more people pretty soon.
 
 ## Tiles.wtf by @filipv and @peri
 
 **filipv**: I also want to do an update on [Tiles.wtf](tiles.wtf)
-![](HZidHaa.png)
+![](HZidHaa.webp)
 
 For those of you who didn't see it, it's a rewrite of [tiles.art](https://tiles.art/#/) but completely on-chain, so the algorithm to render the Tiles is completely in Solidity. The website is written in Svelte which is super cool because it lets people compile the components and use it with different frameworks if they'd like to. It's also a little bit more portable, so you could imagine someone setting up an npm package using different components or something else. 
 
@@ -166,26 +166,26 @@ And @tankbottoms went ahead and deployed a new V2 of the Tiles NFT contract a co
 **twodam**: Here is the [main dashboard](https://dune.com/twodam/Juicebox-Protocol-Overview) for the Juicebox protocol. 
 
 If you scroll down a little bit, you can see the section called `period` so you can select different periods.
-![](oerIvLm.png)
+![](oerIvLm.webp)
 
 After you select the period, scroll back up and click `apply all parameters`, and all the stats will refresh using this new period.
 
 Basically we are using the page to do the weekly reporting,  so you can see there is a value `new projects` and `active projects` in this period.
-![](5fba6i8.png)
+![](5fba6i8.webp)
 
 
 There is the trending projects:
-![](V4Hrl9p.png)
+![](V4Hrl9p.webp)
 
 You can see many links in blue, if you click the `See more`, it will take you to the related dashboard of that project, with the overview data, like how much total raise, how many tokens and how many token holders in that project.
 ![](IIfyF9V.jpeg)
 
 
 And on the right bottom of that project page, there's a small logbook where you can see all the actions taken by people there and all the payment Memos if there is any. And you can click all the links, they will take you to the relevant Etherscan pages of those transactions.
-![](eAncU4V.png)
+![](eAncU4V.webp)
 
 **Zeugh**: What's the meaning of Fully Diluted Valuation here?
-![](R8bcqar.png)
+![](R8bcqar.webp)
 
 **twodam**: It's the value that equals to total token supply multiplied by market price.
 
@@ -194,7 +194,7 @@ And on the right bottom of that project page, there's a small logbook where you 
 **twodam**: If they have an AMM price then it will be used, if not, redemption price on Juicebox protocol will be used instead.
 
 And back to the protocol overview payge, there is this `All users`
-![](uaPZnny.png)
+![](uaPZnny.webp)
 If you click the `See more` after an ENS/Address, it will take you to the dedicated page of that person/address. Let's take @jango's as an example:
 ![](gfvRt82.jpeg)
 
@@ -203,7 +203,7 @@ If you click the `See more` after an ENS/Address, it will take you to the dedica
 **twodam**: Yes! I would love to.
 
 One more thing, if you scroll down to the bottom of the [protocol overview dashboard](https://dune.com/twodam/Juicebox-Protocol-Overview), you can see the the current trend of the ETH in the whole protocol.
-![](arXnQf5.png)
+![](arXnQf5.webp)
 
 **Twodam's complete Dune dashboards are [here](https://dune.com/twodam).**
 
@@ -211,32 +211,32 @@ One more thing, if you scroll down to the bottom of the [protocol overview dashb
 
 **nicholas**: Can we also look at [Juicetool](https://juicetool.xyz/)?
 
-![](BLakUU6.png)
+![](BLakUU6.webp)
 
 **twodam**: On the front page, we click the Snapshot Plus at the bottom, we can go to the voting info page. In the middle of this page you can see the `Status`. That's where you can filter by `active`, `Haven't voted`, or `Under quorum`. 
-![](iBBqfVm.png)
+![](iBBqfVm.webp)
 
 **jango**: @twodam, the frontend chops are fantastic, this is looking great. You've been constrained by the Dune UI just writing queries, and now actually refactoring the interface elements is a huge unlock, this looks fantastic. 
 
 **twodam**: Thank you, I'm still learning.
 
-On the bottom left of each block, you can see the "jump to" symbol, which is basically the place you can click and do a quick jump to that specific Snapshot page from here. ![](22Uhmi0.png)
+On the bottom left of each block, you can see the "jump to" symbol, which is basically the place you can click and do a quick jump to that specific Snapshot page from here. ![](22Uhmi0.webp)
 
 **jango**: We need to figure out how to make sure that people starting their projects know this is here, and that they feel good about it. It's obviously useful, but I think most projects starting up need to orient governance around and all the things. What a luxury.
 
 **nicholas**: You can vote from within this interface also. 
 
-**Zeugh**: Oh and it shows a green `active` if there is a proposal up. ![](KNukgf4.png)
+**Zeugh**: Oh and it shows a green `active` if there is a proposal up. ![](KNukgf4.webp)
 
 **nicholas**:So to clarify, is that the list of spaces to which you are eligible to vote that you have voting tokens?
-![](a82eNDL.png)
+![](a82eNDL.webp)
 
 **Zeugh**: No, to which I joined. The ones I really enjoyed. I can't vote on Gitcoin, but I follow it to see what's going on, so I get to see it. 
 
 **twodam**: If you hover above `active`, you can see how many time left for you to vote. And if you have voted for this proposal, you can hover above `voted`, It will show which option you have voted.
 
 **nicholas**: There's a feature for whether proposals are have met quorum yet or not, next to where  `closed`. If there were active ones, you can sort, for instance, by `haven't voted` which means that the connected wallet has not yet voted on, and add `Under quorum` to see all the proposals that you have not voted on and they have not met quorum yet.
-![](17HgLX7.png)
+![](17HgLX7.webp)
 
 So I think if we zoom out a little bit, like this Juicetool plus what @jigglyjams is doing with Nance and some other initiatives altogether are like a suite of tools. Also think of the on-chaining stuff that we use for multisig. These are like a suite of tools that all the projects on Juicebox probably gonna need, given at least the most popular configuration for multisig, snapshot, DAOs. So I think this kind of stuff would be great in Juicebox High on how to set up. Possibly also build a version of Juicetool that the people down the road could deploy specifically for their project, so it has a dedicated URL and only covers their DAO's needs. It's really cool to see you do this. @twodam, when did you start doing front-end dev? When is your first line of HTML? 
 
@@ -254,11 +254,11 @@ Yesterday there was a Hundred Thousand Million project of sustainable City based
 
 They're trying to get attention of nice projects around web3. Because they're building a city and they think that building a city of the future is supposed to have creative people creating awesome stuff and they see Juicebox as one of those spaces, so they wanted to do a contest for giving a prize for a Juicebox project. They reached out to me to help organize that and we put out [a JokeDAO contest](https://www.jokedao.io/contest/polygon/0xbDe2bca1AC56640C69514DA86e55ce0Eb75968EF) which is going to start tomorrow，giving out 1 ETH to a Juicebox project that gets more votes. They're opening the contest tomorrow. Everyone is welcome to submit a Juicebox project and go to [their Discord server](https://t.co/Oi0PiA9p6B) to get tokens to vote. 
 
-![](LnLvJJv.png)
+![](LnLvJJv.webp)
 
 ## Two truths and a lie by @Felixander
 
-![](oPnH2ue.png)
+![](oPnH2ue.webp)
 
 The correct answer is ... Zom_Bae
 The lie is the one about an albino rat.

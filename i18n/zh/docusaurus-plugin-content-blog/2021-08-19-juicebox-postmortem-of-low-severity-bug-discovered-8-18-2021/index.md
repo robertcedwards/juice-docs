@@ -18,7 +18,7 @@ TLDR：**如果项目近期打算调高保留比率的话，在收到进一步�
 ## 背景
 
 为了争取计划下一步工作的时间，SharkDAO 需要找到一个办法来暂停通过 Juicebox 接受付款及吸纳新成员。Juicebox 的 [TerminalV1 合约](https://etherscan.io/address/0xd569D3CCE55b71a8a3f3C418c329A66e5f714431)并不支持`暂停`功能，所以我和 Peripheralist 只能跟 SharkDAO 社区一起见机行事。
-![](IRWKFe2.png)
+![](IRWKFe2.webp)
 
 第一步就是要删掉网站 UI 的支付表单。这可以阻止大多数人支付捐款，但是执意捐款的人仍将发现，通过其他类似 Etherscan 这样的接口还是可以直接与 Juicebox 合约进行交互。
 
@@ -44,7 +44,7 @@ Juicebox 机制的许多设计都是考虑了 gas 优化的，这意味着最常
 有一点很重要，付款期间并不会铸造保留代币。保留代币数量在以后调用 `printReservedTickets` 交易时才会进行计算。计算是通过获取当前代币总供应量并向预设的保留代币受益人铸造适当数量的新代币，确保遵照设定的保留比率。最重要的是，这个机制会记录已为当前的代币供应量铸造保留代币的这个情况，以免日后再额外铸造保留代币。没有信息差的理想状态下，如果计划提高保留比率，提高之后再调用 `printReservedTickets` 对项目最为有利，而提高前调用则对社区有利。反之亦然。这种动态允许协议把耗费 gas 的存储操作从频繁调用的支付函数中剥离出来，嵌入到较少被调用的操作中去。
 
 糟糕的是，但保留比率为 0% 时，`printReservedTickets` 调用会假定没有工作需要处理，还没来得及更新 tracker 就执行返回。这使得保留比率在未调高之前无法锁定。在 [TerminalV1 文件](https://github.com/jbx-protocol/juicehouse/blob/3555d7baf7fa8ba4bc350140201805c740e3df4e/packages/hardhat/contracts/TerminalV1.sol#L968)里，解决办法就是把第 968 行代码放到第 977 行代码下面。
-![](zX7kDi7.png)
+![](zX7kDi7.webp)
 当前 TermnalV1 的 `printReservedTickets` 实现
 
 ## 执行
@@ -63,10 +63,10 @@ Juicebox 机制的许多设计都是考虑了 gas 优化的，这意味着最常
 3. 把保留比率调整为 100%。
 
 这么做的后果就是铸造了 1,889,066.675747 个 SHARK 代币到多签钱包。下面是第一步完成之后的 UI 情况截图：
-![](81MVuy7.png)
-![](Utrf5mZ.png)
+![](81MVuy7.webp)
+![](Utrf5mZ.webp)
 这是现在的情况：
-![](s8YHchP.png)
+![](s8YHchP.webp)
 全部完成总耗时 2.5 小时。
 
 ## 感悟

@@ -32,18 +32,18 @@ The second concept to understand is the "Average Retention Rate". Many of these 
 
 The first graph shows retention rates 28 days after several major airdrops. The Juicebox Benefits Airdrop had unprecedented levels of hodling!
 
-![](juicebox_retention_snapshot.png)
+![](juicebox_retention_snapshot.webp)
 
 The next graph also shows retention rates, but instead shows them over time. After a brief selloff, retention was remarkably stable.
 
-![](juicebox_retention_over_time.png)
+![](juicebox_retention_over_time.webp)
 
 Next, we consider this same retention rate over time broken down across the 3 different score chorts (see [JBP-114](https://snapshot.org/#/jbdao.eth/proposal/0xd10c56f453851063665241417642352beaf8816aca062c29f98b1f5154ff3cdd)). Interestingly, the cohort with scores between 53-200 had the second highest retention rate, beating out the 201-300 cohort by ~15% at times.
 
-![](juicebox_retention_by_cohort.png)
+![](juicebox_retention_by_cohort.webp)
 
 Finally, we looked at how quickly each cohort claimed their JBX. Interestingly, the 53-200 tier fared better than the 201-300 tier in this metric as well. 
 
-![](juicebox_claims.png)
+![](juicebox_claims.webp)
 
 Thank you to everybody who helped make this airdrop happen. More information and analysis will be coming soon!

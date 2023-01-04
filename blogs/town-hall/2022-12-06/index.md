@@ -2,11 +2,11 @@
 slug: 22-12-06
 title: December 6th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Tending towards zero by Jango
@@ -19,9 +19,9 @@ Both these two pressures make sense.  It's just piecing together where we alread
 
 And here is the thoughts that Jango posted in the strategy channel, which is just some kind of thoughts in progress, to invite feedback, critique and other points of view. It kind of proposes a lens from which we can view maybe operations for the next year or so or into the future, while reflecting on our habits over the past year.
 
-![tending towards zero page 1](tending1.png)
+![tending towards zero page 1](tending1.webp)
 
-![tending towards zero page 2](tending2.png)
+![tending towards zero page 2](tending2.webp)
 
 Jango also reckoned that we should get there one proposal at a time.  The goal is to really find a sustainability model. There is a point where the core protocol needs to dwindle, and it's stablized because of having addressed risks and created enough pockets where people can create oppoutunities for themselves in subsequent layer stack. And there's less need to preemptively spend on JuiceboxDAO oriented things, JuiceboxDAO becomes a substrate and a lot of work can be done on expanding things like Defifa and expanding out clients at Peel, while also finding ways that those can sustain themselves. We have a substate that can structure those opportunities and risks. Then ideally JBX, as the energy of the ecosystem, serves to market itself as the network and a lot of more strategic storytelling components move to these other layers of this stack as well.
 
@@ -35,12 +35,12 @@ We are going to get the split allocators of V1 and V2, which will be published b
 
 Twodam created a new Dune dashboard following all the NFTs created on the Juicebox protocol.
 
-![NFT Dune dashboard](NFT_dashboard.png)
+![NFT Dune dashboard](NFT_dashboard.webp)
 
 
 Also, he made a dashboard to summarize the metrics relevant to Snapshot voting, which is also usable for all the DAOs in the Snapshot space.
 
-![Snapshot dashboard](Snapshot_dashboard.png)
+![Snapshot dashboard](Snapshot_dashboard.webp)
 
 
 ## Blec Report Project by Chris Blec
@@ -49,11 +49,11 @@ Also, he made a dashboard to summarize the metrics relevant to Snapshot voting, 
 
 Recently he has launched a website [blec.report](https://blec.report/) to post his opinions about DEFI and crypto. 
 
-![blec.report website](blec_report_website.png)
+![blec.report website](blec_report_website.webp)
 
 And after figuring out the mechanisms of Juicebox through the help of Jango, he also created a Juicebox project called [Blec Report](https://juicebox.money/@blecreport), in order to get some support to work on it full time.
 
-![blec report Juicebox project](blec_report_project.png) 
+![blec report Juicebox project](blec_report_project.webp) 
 
 And Chris Blec shared his experience and some obstacles in getting to understand Juicebox, which was very helpful in our understanding how we should communicate with potential users. He also expressed his willingness to play a role in clarifying to the community how Juicebox works, and hopefully acquiring more users to Juicebox, because he thinks Juicebox is a very useful tool and will be a great alternative to other sources of crowdfunding. 
 
@@ -63,7 +63,7 @@ Last week Seanmc came to our town hall and gave a preview of their rewards modul
 
 Seanmc set up [the contest](https://www.jokedao.io/contest/polygon/0x177D12eFe658CCADAacf4F735aa14F18d4Df3645/rules) with a prompt of "If Juicebox had a conference, where should it take place and why?".  People can submit proposals according to this prompt or vote on the submitted proposals with a dedicated voting toke. And the winners will get paid out proportionately according to the rules set with funds sent in the rewards module. In this case, Rank 1 gets 50%, Rank 2 gets 33% and Rank 3 gets 16% respectively. 
 
-![Jokedao rewards module contest](jokedao_contest.png)
+![Jokedao rewards module contest](jokedao_contest.webp)
 
 Also the thing they are looking at doing in the future, is to allow anyone to deploy their own rewards module. If done, there might be multiple rewards modules all looking at the same contest and having different parameters for different ranks to pay them out with.
 
@@ -75,7 +75,7 @@ Normally, if you want to host a website on the ENS domains, the process will inv
 
 The team has been developing this App called Planet, which helps users to build a block and publish it to IPFS. It has a built-in IPFS node and allow users to host websites from their Mac and no CRI is needed. Go check their [website](https://www.planetable.xyz/).
 
-![planetable website](planetable_xyz.png)
+![planetable website](planetable_xyz.webp)
 
 On the town hall, Livid demonstrated how to generate a website with ENS domain and then host it to IPFS. And he also showcased the new functionality recently added to this app, which allows users to tip a content creator with ETH by ENS domains, while at the same time attaches the URLs of the articles to the data field so that content creators can back check where the funds come from later.
 
@@ -88,7 +88,7 @@ Planet is an open source App, its repo can be found [here]( https://github.com/P
 The ownership of Juicebox projects is represented by NFTs, which allows whoever holding those NFTs to change the funding cycle configurations of relevant Juicebox projects. Currently the project NFTs on both V1 and V2 protocol have no metadata, so Nicholas has been working on a tokenURI resolver, which is like an extra contract to deploy, to make some of the project details visible on the NFT. JuiceboxDAO has given the permisson to do so until the end of December in [this proposal](https://juicetool.xyz/snapshot/jbdao.eth/proposal/0x44ca6ed9c0ea0bcaac4a6cc96127de3185e2eac2cf1a8b47c2f026680a6c6c4c). 
 
 Nicholas shared some of the images on the town hall, which are generated entirely onchain with orange as the default color.
-![tokenURI resolver](tokenURI_resolver.png)
+![tokenURI resolver](tokenURI_resolver.webp)
 Project owners in Juicebox will not have to do anything to get the standard orange one if they choose, and will also be able to set a different theme to the NFT.
 
 Nicholas is expecting that a V1 of this product will be up for this Christmas.

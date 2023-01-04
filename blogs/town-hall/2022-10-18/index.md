@@ -2,11 +2,11 @@
 slug: 22-10-18
 title: October 18th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -31,11 +31,11 @@ Nicholas also launch a 3-tiered (0.1 ETH / 1 ETH / 10 ETH) NFT collection to hel
 
 Also the DAO agrees to allocate 3,000,000 JBX rewards to the contributors of the Audit Fund project, which is to be divided into 1,000,000 JBX for each tier of NFT respectively and  evenly split between NFT holders of the same tier.  Because Jango and Peri decided to match the rewards of the DAO, the rewards finally reached 3,000,000 JBX for each tier of contribution. And the NFTs serve as a ticket to the airdrop of these JBX.
 
-![image-20221020154829920](image-20221020154829920.png)
+![image-20221020154829920](image-20221020154829920.webp)
 
 The Audit Fund project turned out to be a huge success, with total funds raised far more than needed to pay the audit contest.
 
-![image-20221020153948172](image-20221020153948172.png)
+![image-20221020153948172](image-20221020153948172.webp)
 
 
 
@@ -89,7 +89,7 @@ The context of this event is as follows:
 
 ## Visibility Update by Matthewbrooks and Brileigh
 
-![](juicenews-oct-18-2022-1200px.png)
+![](juicenews-oct-18-2022-1200px.webp)
 
 A [new edition of Juiciness newsletter](https://juicenews.beehiiv.com/p/juicenews-oct-18) is released today, covering:
 
@@ -109,9 +109,9 @@ Also they are trying re-render all the past Juicecast episodes with custom 4k wa
 
 Felixander asked 3 peolple to decribe ''Banny's craziest night" and use those descriptions for purpose of AI drawing on Dall-E. He showed on the town hall one of the drawings and ask people to guess whose description makes this picture.
 
-![image-20221021115923557](image-20221021115923557.png)
+![image-20221021115923557](image-20221021115923557.webp)
 
-![image-20221022010503011](image-20221022010503011.png)
+![image-20221022010503011](image-20221022010503011.webp)
 
 
 

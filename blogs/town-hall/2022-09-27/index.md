@@ -2,11 +2,11 @@
 slug: 22-09-27
 title: September 27th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Tech update with jango
@@ -15,7 +15,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 **jango:**
 A week ago, we deployed the V3 contracts. We need to set up the juiceboxDAO funding cycles on V3, which will be a transaction that all the multi-signers have to sign for, and we have to synchronize it with the V2 and V1 funding cycles. So we're going to queue up this transaction to kick off V3 funding cycles this Saturday, run a quick 7-day funding cycle and then reconfigure it to align with the 14-day cycles of V2 and V1.
 
-![launch of 1st V3 FC](gSt2Dyu.png)
+![launch of 1st V3 FC](gSt2Dyu.webp)
 
 The V3 cycle won't have any payouts from it, nor have any redemptions. It'll basically just be a place for fees to come into from projects operating there. All is looking good. 
 
@@ -63,7 +63,7 @@ I feel pretty comfortable rolling the NFT Rewards contracts without the audit co
 
 **brileigh:**
 [New release](https://juicenews.beehiiv.com/p/juicenews-sep-27) of Juicenews is out. 
-![](0PM1U8z.png)
+![](0PM1U8z.webp)
 
 
 We also released a [new Juicecast episode](https://anchor.fm/thejuicecast/episodes/Ep--11---Steve-from-Marin-County-Swim-Association-e1oet1l) today with JuiceboxDAO contributor [0xSTVG](https://twitter.com/0xSTVG), to talk about the [Marin County Swim Association](https://juicebox.money/@mcsa), a Non-profit project he created on Juicebox.
@@ -84,7 +84,7 @@ Absolutely. We're looking to have a very robust overview of ConstitutionDAO, fro
 **Felixander:**
 Regarding JB High, I think it will actually be live this week, though still in its very nascent stage. Huge thanks to the Peel team particularly Blaz who has taken the lead on that.
 
-![](ycglZ2j.png)
+![](ycglZ2j.webp)
 
 The idea is to create something where project creators can jump in and immediately get a really quick and good understanding for how to launch a project, as well as the different tooling options available in this space. We're going to make the JB high into a educational hub and put in a lot of this leveraging content that we've made.
 
@@ -92,7 +92,7 @@ Regarding the article, I am also working on a config style article that's going 
 
 ## Two truths and a lie with Felixander
 
-![](ImdjSrX.png)
+![](ImdjSrX.webp)
 
 The correct answer this time is ... **kenbot** of StudioDao
 

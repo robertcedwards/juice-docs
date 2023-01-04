@@ -2,18 +2,18 @@
 slug: town-hall-2022-11-22
 title: Juicebox DAO Town Hall 2022 年 11 月 23 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## 协议数据分析 by Filipv
 
 我们过去 30 天项目创建数量和付款数据都明显高于历史平均值。
 
-![Protocol metrics](protocol_metrics.png)
+![Protocol metrics](protocol_metrics.webp)
 
 
 
@@ -29,7 +29,7 @@ ONNI 的[The Marfa Giant](https://juicebox.money/@marfagiant) 项目成功迁移
 
 Jango 在战略频道列出了 V1、V2 社区安全启动 V3 版本还需要采取的一些最后工作步骤：
 
-![versioning last stretch](version_last_streth.png)
+![versioning last stretch](version_last_streth.webp)
 
 ### 加强 JBX 代币机制
 
@@ -57,7 +57,7 @@ Lexicon Devils 的 Youtube 频道在[这里](https://www.youtube.com/channel/UCd
 
 YouniDAO 是一个致力于支持本地独立音乐人发挥自己的创意谋生存的一个 DAO。他们最近刚刚启动了自己的 [Juicebox 筹款项目](https://juicebox.money/@younidao) ，项目设置了一整个系列 33 个 NFT。YouniDAO 是首批利用我们 NFT 奖励功能的 Juicebox 项目。
 
-![YouniDAO project](younidao_NFT.png)
+![YouniDAO project](younidao_NFT.webp)
 
 他们正在开展一个 Uni Fest Summers 2023 的筹款活动，着眼于把它打造成首个依托 web3 支持独立音乐家的巡演活动。
 
@@ -71,11 +71,11 @@ Saiko 同时还说，YouniDAO 的字面意思就是你和我 DAO 的意思，围
 
 
 
-![blunt finance](blunt_frontpage.png)
+![blunt finance](blunt_frontpage.webp)
 
 Blunt Finance 有一些优点，其中之一就是你可以把相当于 Juicebox 项目保留代币的一部分授予你的捐款人。它是通过底层整合 Juicebox 及  [Slice](https://slice.so/) 来实现的这个操作的。
 
-![About slicer/slice](slicer_slice.png)
+![About slicer/slice](slicer_slice.webp)
 
 <p class="subtitle">背景材料: <a href="https://slice.so/">Slicer and Slice</a></p>
 
@@ -83,7 +83,7 @@ Blunt 筹款轮结束之后，会创建一个 Slicer （Jacopo 编写的另一�
 
 人们在建立一个 blunt 项目的时候，可以使用一些高级设置参数。
 
-![blunt create flow](blunt_createpage.png)
+![blunt create flow](blunt_createpage.webp)
 
 一个 blunt 筹款轮实质上就是一个设置了某些特殊规则的筹款周期，它可以分成两个阶段：
 
@@ -108,11 +108,11 @@ Jacopo 还介绍说，合约的编写工作大致已经完成，可能还有一�
 
 他们刚刚发布了[最新一期的 Juicenews](https://juicenews.beehiiv.com/p/juicenews-nov-22)，你可以在页面上订阅，每周会有新一期的通讯发送到你的邮箱。
 
-![Juicenews new edition](juicenews.png)
+![Juicenews new edition](juicenews.webp)
 
 Matthew 和 Brileigh 上周还推出了新一辑的 Juicecast 播客节目，这是他们为 ConstitutionDAO 一周年制作的系列播客节目的第一期。所有的 Juicecast 播客节目可以去[这里](https://anchor.fm/thejuicecast)收听。
 
-![ConstitutionDAO podcast](CDAO_podcast.png)
+![ConstitutionDAO podcast](CDAO_podcast.webp)
 
 ## Confluence Miami 活动 by Bruxa
 
@@ -122,7 +122,7 @@ Confluence 的主题是“加密货币与气候变化的交汇”，旨在把气
 
 他们在 Juicebox 上创建了一个[Confluence @Art Basel 2022](https://juicebox.money/v2/p/315) 来筹款支持举办这个 Confluence 活动， 在利用 Juicebox 新的 NFT 奖励功能的同时，还对未来支持类似活动的可行性进行试验。
 
-![Confluence project](confluence_nft.png)
+![Confluence project](confluence_nft.webp)
 
 ## 寻宝比赛  by Felixander
 
@@ -132,4 +132,4 @@ Felixander 创办了一个比赛活动，详情参阅他撰写的[这篇博客](
 
 找到这个以太坊钱包 12 个记忆词的提示藏在 Felixander 准备要讲的一个故事里。故事分为 5 个部分，第一部分将于感恩节当日发布，其余四部分将于之后的每周一发布一部分，12 月 19 日发布最后一部分。通读整个故事，就有机会解开 Felixander 的这个谜题并找到打开宝箱的钥匙！
 
-![a contest by felixander](contest_felix.png)
+![a contest by felixander](contest_felix.webp)

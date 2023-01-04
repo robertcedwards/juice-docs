@@ -2,7 +2,7 @@
 slug: 2022-11-03-defifa-launch
 title: The 2022 World Cup is decentralized and happening on Ethereum with an all-banana cast
 description: Defifa game rules and launch info
-image: https://info.juicebox.money/assets/images/argentinaflag-b55d726e0d643b82f6a9f359dddf9548.png
+image: https://info.juicebox.money/assets/images/argentinaflag-b55d726e0d643b82f6a9f359dddf9548.webp
 authors: [felixander]
 tags: [update]
 ---
@@ -13,7 +13,7 @@ tags: [update]
 
 The Juicebox protocol has its eyes set on the FIFA World Cup this year. A new project called Defifa is set to launch on November 5th, and will allow players to purchase NFT flags of any of the 32 World Cup teams set to play this year.
 
-![Argentina flag](argentinaflag.png)
+![Argentina flag](argentinaflag.webp)
 
 ***(example of the Argentina flag NFT)***
 

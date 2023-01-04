@@ -2,18 +2,18 @@
 slug: 22-11-22
 title: November 22nd, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Protocol Analytics by Filipv
 
 Our project creations and payments in the past 30 days are both well above historical averages.
 
-![Protocol metrics](protocol_metrics.png)
+![Protocol metrics](protocol_metrics.webp)
 
 
 ## V3 Versioning by Jango
@@ -28,7 +28,7 @@ Currently V2 projects can launch their V3 funding cycles with the new NFT reward
 
 As per Jango, here are the final steps folks will need to take in order for communities on V1 and/or V2 to safely launch on V3:
 
-![versioning last stretch](version_last_streth.png)
+![versioning last stretch](version_last_streth.webp)
 
 Finally, there're two pending projects that were prototyped in the summer but put on hold as we proceeded to build out V3 and the NFT extension, they are more oriented towards strengthening the JBX mechanism.
 
@@ -51,7 +51,7 @@ Lexicon Devils' Youtube channel is [here](https://www.youtube.com/channel/UCdVQn
 
 YouniDAO is a DAO that amed at finding a way for local independent musicians to make a living off their creativity. They just launched their crowdfunding [Juicebox project](https://juicebox.money/@younidao) lately, with a Trench Family collection of 33 NFTs for their contributors. YouniDAO is one of the first projects on Juicebox to make use of our NFT rewards functionality.
 
-![YouniDAO project](younidao_NFT.png)
+![YouniDAO project](younidao_NFT.webp)
 
 They are currently doing an onboarding crowdfund campaign for Uni Fest Summers 2023, with the goal of making it the first web3 backed tour for independent musicians. 
 
@@ -63,11 +63,11 @@ They extended their gratitude towards Jango and folks in the Juicebox community,
 
 Basically [Blunt Finance](https://blunt.finance/) is a Juicebox project funding cycle that has some additional features and follows some special rules. The way they are presenting right now is that it allows "Fundraise by giving contributors a share of future tokens and manage terms bluntly in the open with your community".
 
-![blunt finance](blunt_frontpage.png)
+![blunt finance](blunt_frontpage.webp)
 
 There are a few perks that Blunt Finance has, one of them is that you are able to allocate a percentage of what is actually the reserve rate of a Juicebox project to those who have contributed. The way it achieves this is because it actually uses both Juicebox and [Slice](https://slice.so/) under the hood.
 
-![About slicer/slice](slicer_slice.png)
+![About slicer/slice](slicer_slice.webp)
 
 <p class="subtitle">Context: <a href="https://slice.so/">Slicer and Slice</a></p>
 
@@ -75,7 +75,7 @@ Once a blunt round is completed, there will be a slicer, which is another smart 
 
 These are some of the advanced settings that one can make use of when they are setting up a blunt project.
 
-![blunt create flow](blunt_createpage.png)
+![blunt create flow](blunt_createpage.webp)
 
 A blunt round is basically a funding cycle that has some special rules, and it's divided in two different stages:
 
@@ -100,11 +100,11 @@ Jacopo also introduced that currently the contracts are mostly done, there might
 
 They just published the new edition of Juicenews [here](https://juicenews.beehiiv.com/p/juicenews-nov-22), you can also subscribe to this newsletter which will be sent to your email on a weekly basis.
 
-![Juicenews new edition](juicenews.png)
+![Juicenews new edition](juicenews.webp)
 
 Matthew and Brileigh have also released a new episode of Juicecast, which is the first episode of ConstitutionDAO deepdive series they are producing for the ConstitutionDAO anniversary. The full Juicecast episodes can be found [here](https://anchor.fm/thejuicecast).
 
-![ConstitutionDAO podcast](CDAO_podcast.png)
+![ConstitutionDAO podcast](CDAO_podcast.webp)
 
 ## Confluence Miami by Bruxa
 
@@ -114,7 +114,7 @@ Confluence, with the theme of "The Intersection of Cryptocurrency and Climate Ch
 
 They created a [Confluence @Art Basel 2022](https://juicebox.money/v2/p/315) project on Juicebox to raise funds for this event, making use of the new NFT rewards of Juicebox, to experiment a way to support this kind of activities in the future.
 
-![Confluence project](confluence_nft.png)
+![Confluence project](confluence_nft.webp)
 
 ## A Contest by Felixander
 
@@ -124,4 +124,4 @@ This contest is actually a treasure hunt, and the treasure lies in an [Ethereum 
 
 The hints to get the 12 seed phrases of this Ethererum wallet address will be in the story Felixander is going to tell. The story comes in 5 parts, the first part of which will be dropped on Thanksgiving , and the rest will be released every Monday afterwards until December 19th. Read throught the whole story and you will have the chance to solve this puzzle by Felixander and get that treasure!
 
-![a contest by felixander](contest_felix.png)
+![a contest by felixander](contest_felix.webp)

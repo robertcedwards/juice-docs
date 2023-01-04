@@ -2,11 +2,11 @@
 slug: 2022-10-18-town-hall
 title: JuiceboxDAO 周会概要 2022 年 10 月 19 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 主题图片作者： [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -31,11 +31,11 @@ Nicholas 同时启动了一个三级 NFT （0.1 ETH / 1 ETH / 10 ETH） 系列�
 
 同时，DAO 同意分拨 3,000,000 个 JBX 代币来奖励审计基金项目的捐款人, 每一个分级 NFT的持有人将一起分享 1,000,000 个 JBX。后来 Jango 和 Peri 宣布各自追加 300 万 JBX 的奖励，所以最后每一个分级 NFT 的持有人将共同分享 300万 个 JBX。
 
-![](jang_markup.png)
+![](jang_markup.webp)
 
 审计基金项目获得空前成功，募集到的总资金大大超过审计费用所需资金。
 
-![](fundingresult_auditfund.png)
+![](fundingresult_auditfund.webp)
 
 
 
@@ -93,7 +93,7 @@ Jango 提交的[关于这个活动的提案](https://juicetool.xyz/snapshot/jbda
 
 ## 可视化工作报告  Matthewbrooks and Brileigh
 
-![](juicenews-oct-18-2022.png)
+![](juicenews-oct-18-2022.webp)
 
 
 
@@ -113,9 +113,9 @@ Jango 提交的[关于这个活动的提案](https://juicetool.xyz/snapshot/jbda
 
 Felixander 事前让三个人用自己的话描述一下 “ Banny 最疯狂之夜” 应该是怎么样的，然后用他们的描述分别去 Dall-E 生成 AI 绘图。他在周会上展示其中一副作品，并请大家猜一猜，这副作品是来自以下哪位的描述。
 
-![](artapprisal.png)
+![](artapprisal.webp)
 
-![](dalledrawing.png)
+![](dalledrawing.webp)
 
 
 

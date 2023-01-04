@@ -2,11 +2,11 @@
 slug: town-hall-2022-12-13
 title: JuiceboxDAO 周会概要 2022 年 12 月 14 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 插图作者： [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -193,7 +193,7 @@ Genekogan 说底层的技术其实就是 DreamBooth，这种技术可以让人�
 
 Nicholas 问他们是否打算开发一种可以作为服务来销售的产品，Genekogan 则回答说是有这个打算，但他们仍在尝试不同的做法，或者开发一种面对客户的服务产品，又或者进一步探索这些技术，让更多人来使用和测试。
 
-![AI at home](AI_at_home.png)
+![AI at home](AI_at_home.webp)
 
 
 
@@ -213,7 +213,7 @@ Nicholas 介绍，PartyBid 是一款筹款购买 NFT 的工具，可以用来募
 
 Nicholas 获得了 PartyBid V2 的内部试用，V2 不仅支持持有 NFT，还可以用 NFT 来执行交易。 Peri、Filipv 和 Nicholas 在 PartyBid 上创建了 [一个 JuicyParty](https://www.partybid.app/party/0x56bc9de3dc9556a3282ed4e7ba8f86d5cb7d8cd8) 并收购了 Nicholas 预先创建的 Juicebox 项目。 在用 JuicyParty 控制这个 Juicebox 项目后，他们试着执行一系列不同的提案，重新配置 Juicebox 项目的筹款周期和更改一些元数据。
 
-![JuicyParty at PartyBid](Juicyparty.png)
+![JuicyParty at PartyBid](Juicyparty.webp)
 
 因为 Filipv 突发奇想，他们用于试验这个操作的 Juicebox 项目改成了 [退休猴子军团项目](https://juicebox.money/@retirementarmy)，以支持 Monkey Living Center 的退役猴子，筹款 100% 捐赠给这些猴子。 此外，他们还在项目中设置几个 NFT 等级。
 
@@ -233,7 +233,7 @@ Nicholas 粗略介绍了一些他认为可能很意思的项目。
 
 Matthew 和 Brileigh 刚刚发布了 [新一期 Juicecast 节目](https://podcasts.apple.com/ca/podcast/the-juicecast/id1623504302?i=1000589496263)，ConstitutionDAO 回顾系列播客的终章，这一期是有关于 PeopleDAO 的 和 ConstitutionDAO2 最近的筹款活动。
 
-![New Juicecast episode](new_juicecast.png)
+![New Juicecast episode](new_juicecast.webp)
 
 他们还在我们的博客上发布了一篇全面介绍 ConstitutionDAO [文章](https://info.juicebox.money/blog/2022-12-13-constitutiondao/)。
 
@@ -241,4 +241,4 @@ Matthew 和 Brileigh 刚刚发布了 [新一期 Juicecast 节目](https://podcas
 
 Lexicon Devils 的 Darbytrash 宣布他们将在 1 月 6 日举办一场 Forming 与  [Songcamp](https://twitter.com/songcamp_) 合作的活动。
 
-![Forming and Songcamp collab](forming_songcamp.png)
+![Forming and Songcamp collab](forming_songcamp.webp)

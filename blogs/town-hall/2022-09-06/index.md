@@ -2,11 +2,11 @@
 slug: 22-09-06
 title: September 6th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Versioning with @jango
@@ -21,7 +21,7 @@ The Juicebox projects contract won't be changed. This version won't be a require
 
 Frontend has deployed a new settings page, a revamped and powerful settings page for Juicebox projects in the juicebox.money site last week, we'll leverage that to give project owners some confidence over how they're managing their treasuries across versions.  
 
-![New settings menu on juicebox.money](jbm-settings.png)
+![New settings menu on juicebox.money](jbm-settings.webp)
 
 In our chats, we're calling this contracts update V3 but it shouldn't be taken as another major version as V2 was to V1.
 
@@ -108,14 +108,14 @@ Their ultimate goal is to house at least 10,000 migrant families within 2 years,
 
 ## Two truths and a lie with @Felixander  
 
-![Two truths and a lie](twotruths.png)
+![Two truths and a lie](twotruths.webp)
 
 The correct answer is @gulan
 
 
 ## Defifa with @jango  
 
-![Defifa](defifa.png)  
+![Defifa](defifa.webp)  
 
 With the World Cup Qatar 2022 upcoming in November this year, and being one of the first global events after Covid, @jango thinks this could be a meme shilling point in some way. And he landed on a mechanism, a self-governed game system, facilitating the incoming NFT Rewards and the NFT voting system. (If you are interested in this project, you can read the Defifa specs [here](https://www.notion.so/juicebox/Defifa-8644f449958e4d9bb632cb5a46708fb6), and join the discussion in this [Discord thread](https://discord.com/channels/775859454780244028/1012501341626699896))
 

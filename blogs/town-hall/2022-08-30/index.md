@@ -2,11 +2,11 @@
 slug: 22-08-30
 title: August 30th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Business dev with @0xSTVG
@@ -21,7 +21,7 @@ He plans to submit some proposals in the upcoming months, trying to help onboard
 
 Except for the Tic-Tac-Toe he showed last time, recently he has added another 9 games to the platform.  
 
-![](gplay.png) 
+![](gplay.webp) 
 
 New features developed:
 - Game invitation link, which can automatically connect the person to a game someone else created,
@@ -41,13 +41,13 @@ Also he is going to work with @twodam to set up a frontend to configure Nance th
 
 @nicholas was hosting a [Banny drawing contest](https://www.jokedao.io/contest/polygon/0x5165B4a0b7A49601Ec588196B5c83D04E70E58B2) using the JokeDAO voting machenism, in order to help showcasing the JokeDAO V2 new feature of uploading images as contest submissions. Everyone could submit a Banny/Bannyverse drawing in a submission period for others to vote, and the voting would be open once the preset submission period was up.  
 
-![](jokedao.png)
+![](jokedao.webp)
 
 @nicholas minted the voting tokens and distributed them by airdropping to whoever has taken part in the JuiceboxDAO governance voting on [Snapshot](https://snapshot.org/#/jbdao.eth) before. People receiving this token can vote for whatever images they like, and the image that gets highest votes win the contest.
 
 And @nicholas also made a tutorial about how to create JokeDAO contests for Juicebox projects, which can be found [here.](https://www.youtube.com/watch?v=KIL8MpcqpVY)  
 
-![](jokedao-tutorial.png)
+![](jokedao-tutorial.webp)
 
 The winner of this contest was @brileigh, and the image that got the highest votes is:  
 
@@ -85,11 +85,11 @@ A new release of the [Juicenews newletters on Aug. 30.](https://juicenews.beehii
 
 And a [new episode of Juicecast](https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy83OGQ1ZDlhMC9wb2RjYXN0L3Jzcw/episode/YmRmMDFlYmItNDg5NC00MjNjLWExMzctMTJmMDM0ZDEzYzdi?sa=X&ved=0CAUQkfYCahcKEwiYvrT3je_5AhUAAAAAHQAAAAAQAQ) featuring @seanmc of JokeDAO. And @matthewbrooks urged us to at the very least listen to the first 10mins, which should be very great!  
 
-![](juicecast.png)
+![](juicecast.webp)
 
 
 ## Two truths and a lie with @Felixander
 
-![](twotruths.png)
+![](twotruths.webp)
 
 The correct answer is @Gogo, and he's a great story teller, try to tune in to his story of being surrounded by "Shark DAO" in Australia at 35'37" of the [Town Hall recording](https://www.notion.so/juicebox/FC-29-Town-Hall-A-1fc041a5539d4d7ca79072ad599b81dc).

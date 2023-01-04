@@ -42,9 +42,9 @@ Back to the original question: how might big money involve themselves in Juicebo
 The answer is to just stick money in the protocol for the specific project. The system works the same for everyone. 
 
 Let's play out an example to see what might happen if someone wanted to dump an investment into the [JuiceboxDAO](https://juicebox.money/#/p/juicebox).
-![](image-9.png)JuiceboxDAO from Jango's perspective at the time of this writing
+![](image-9.webp)JuiceboxDAO from Jango's perspective at the time of this writing
 Let's say someone parks $1 million here. My screen would then look more like this.
-![](Frame-1-6.png)JuiceboxDAO from Jango's perspective after a $1 million (~434 ETH) payment.
+![](Frame-1-6.webp)JuiceboxDAO from Jango's perspective after a $1 million (~434 ETH) payment.
 Here's what changed:
 
 1. There is more overflow.

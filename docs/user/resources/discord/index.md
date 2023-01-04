@@ -19,7 +19,7 @@ First, pick a template to automatically configure channels, roles, permissions, 
 |[Discord For DAOs](https://discord.new/qsCbV9HGreJU)|This server works best for crypto-native communities and projects building in the open.|
 |[Discord For NFT Projects](https://discord.new/qYBEFhjzTpA5)|This server works best for NFT projects using Juicebox to manage revenues.|
 
-![](discord0.png)
+![](discord0.webp)
 
 <p class="subtitle">Name your server and upload a logo.</p>
 
@@ -75,7 +75,7 @@ Click the 📢 for announcement notifications!
 ```
 
 **Will be formatted like so:**
-![](discord1.png)
+![](discord1.webp)
 
 Once your message is written, click `Add emoji`, select the loudspeaker emoji, and select the announcements role. Users that click the loudspeaker will now be notified when you tag the `@announcements` role. Click `Create` to publish your message.
 
@@ -104,11 +104,11 @@ React to receive contributor roles!
 
 **Will be formatted like so:**
 
-![](discord2.png)
+![](discord2.webp)
 
 Once your message is written, click `Add emoji` to add reaction emojis and their corresponding roles. These should be added one at a time, with each emoji corresponding to one role:
 
-![](discord3.png)
+![](discord3.webp)
 
 Click `Create` to publish your message.
 
@@ -128,7 +128,7 @@ A links embed will guide your community to DAO's resources and websites. To crea
 2. Click `Create Webhook`. Assign a screen name and profile picture here. Assign this integration to the `#🐦｜twitter-feed` channel.
 
 
-![](discord4.png)
+![](discord4.webp)
 <p class="subtitle">An example webhook configuration</p>
 
 3. In a new tab, open [IFTTT](https://ifttt.com). If you do not already have an account, [create one at ifttt.com/join](https://ifttt.com/join).
@@ -145,11 +145,11 @@ A links embed will guide your community to DAO's resources and websites. To crea
 
 **The Tweet:**
 
-![](twitter1.png)
+![](twitter1.webp)
 
 **Will be rendered like so:**
 
-![](discord5.png)
+![](discord5.webp)
 
 ## 5. Next Steps
 

@@ -2,11 +2,11 @@
 slug: 22-12-27
 title: December 27th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Juicebox Analytics Update with Nicholas
@@ -17,7 +17,7 @@ One of our community members KMac suggested that there are some statistics we ca
 
 Filipv thought that we can pin down some of the focused areas so that they can be consolidated into certain dashboards dedicated to be used towards Juicebox analytics on the town hall.
 
-![town hall analytic update discussion](analytics_suggestion.png)
+![town hall analytic update discussion](analytics_suggestion.webp)
 
 ## Defifa Attestation with Jango
 
@@ -27,7 +27,7 @@ Users can start voting one week after the last World Cup game, and the voting du
 
 And Filipv helped to demo how to attest the scorecards on [defifa.net](https://defifa.net).
 
-![defifa scorecard attestation](defifa_attestation.png)
+![defifa scorecard attestation](defifa_attestation.webp)
 
 The next plan for Defifa is to create a game for the NFL playoffs in January next year. The idea isn't to iterate too much stuff into the NFL game, it might need some new arts but will keep using the contracts and frontend as much as possible along the lines of defifa.net/nfl2023 or something like that.
 
@@ -51,11 +51,11 @@ Also they are doing RSVP on [Forming homepage](https://forming.lexicondevils.xyz
 
 Jango wondered how many submission were made for this event and what was the process to choose the artists that will perform on Forming, and Darby said they received 8 - 9 submissions,  the Songcamp community made the final decisions in choosing performers, with Lexicon Devils being responsible for editing and curating the contents as usual.  Also there's a criteria for applying for a Forming performance, which requires the contents to be filmed exclusively for premiering at the Forming events.
 
-![Forming x Songcamp collab RSVP](forming_songcamp.png)
+![Forming x Songcamp collab RSVP](forming_songcamp.webp)
 
 Lexicon Devils' [Forming project on Juicebox](https://juicebox.money/@forming) has also migrated to the V3 protocol lately. They will be putting up some different tiers of NFTs on this project later this month.
 
-![Lexicon Devils' new NFT tier](Lexicon_NFT.png)
+![Lexicon Devils' new NFT tier](Lexicon_NFT.webp)
 
 ## Two truths and a lie with Felixander
 
@@ -67,7 +67,7 @@ Clues:
 2. I played basketball against Isaiah Babyface Thomas;
 3. A book I wrote sold over 1 million copies.
 
-![2 truths and a lie with Felixander](felixander_contest.png)
+![2 truths and a lie with Felixander](felixander_contest.webp)
 
 The correct answer was ... KMac.
 

@@ -14,7 +14,7 @@ Jango: This morning STVG posted at the loose_thoughts channel: What if we could 
 So at this point, something is for sure up or at least not served correctly or the front end isn’t interpreting correctly. That’s quick to check. The etherscan.io confirmed that the current funding cycle starts at a later day. I went to check the unit tests and there were a bunch of cases that I felt this was trying to cover and still passing. So I tried to create the situation exactly and was still struggling to do so. What ended up being the exact step to follow to recreate the bug which I eventually found was: if you create a funding cycle or configure a funding cycle with a duration and then let it roll over to the next funding cycle without reconfiguring, now you’re in the 2nd funding cycle, now you’re in the 2nd funding cycle of the 1st configuration. Then you configure the subsequent one, and before the current cycle is over, you reconfigure the subsequent one again to override the previous configuration. If you’re in this exact state, the 2nd reconfiguration, instead of being based on the 1st FC which you kinda rolling over onto, will be based on the funding cycle you are going to override. 
 
 That puts us in a weird state. The edge case was not covered in the tests. So I quickly wrote a test and confirmed it, before I found the one line to add to the contract to fix the problem to make the test pass, which I’ll post here:
-![](code.png)
+![](code.webp)
 
 So once we identified the problem, sorry I'm kind of doing a realtime postmortem here and I’ll write this up later, then we can start to think about the solutions and consequences. Luckily V2 was deployed only recently and there are only 27 projects at the time. And most projects don’t have large volumes in their treasury either, the bug doesn’t affect the treasuries so funds are all safe, too. 
 
@@ -37,7 +37,7 @@ It feels like it’s at a lighter moment now. Most of the morning was pretty ten
 
 All V2 projects on the site currently have a sweet alert on them. Hopefully all the communities running on it, not just project owners we reached out, see this warning and get a heads up for what’s going on. Thank you Peri, for coming through.
 
-![](project.png)
+![](project.webp)
 
  ## 2. Demo of veBanny by @0xBA5ED: 
  
@@ -160,7 +160,7 @@ As you can see, it’s just a lot of stuff. If you want to learn what to do, you
 
 @jango: If you look at the screenshots shared(below), I am very interested in the same idea. And I wonder if it’s gonna be self-contained in the idea of a payment terminal, so maybe instead of imaging the whole site as what you can bring your payment terminal which is basically a functionality to move funds into the treasury according to some means. The customization is at least scoped to that box, this is a mock that we’re still playing with ideas here.
 
-![](terminal.png)
+![](terminal.webp)
 
 @filipv: I think this is so exciting for existing projects, I know so many projects, like SharkDAO, have spoken about doing NFT issuance on Juicebox. This is pretty crazy. I don’t think anything like this exists in general and something like this could really draw people into the Juicebox ecosystem. Like Nichola said, this is a combination of all of the best. And the fact that this is in Juicebox potentially is super super crazy.
 
@@ -178,6 +178,6 @@ Check use-cases below:
 
 ## 7. Quizz time:
 
-![](quizz.png)
+![](quizz.webp)
 And the answer is…… @Zom_Bae!!!!
 

@@ -97,6 +97,6 @@ The bot terminal basically creates treasuries which will interface with differen
 
 ### 9. Quizz time:   
 
-![](quizz.png)
+![](quizz.webp)
 
 The answer is……..@mieos

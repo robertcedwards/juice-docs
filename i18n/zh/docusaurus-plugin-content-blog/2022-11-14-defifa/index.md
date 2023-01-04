@@ -3,11 +3,11 @@ slug: 2022-11-14-defifa
 title: Defifa，2022 年国际足联世界杯的一个 NFT 小游戏
 description: The decentralized World Cup built on Ethereum.
 authors: [jango]
-image: https://info.juicebox.money/assets/images/defifa-banner-b1ddcf3da3ce5e090689bc83a774c470.png
+image: https://info.juicebox.money/assets/images/defifa-banner-b1ddcf3da3ce5e090689bc83a774c470.webp
 tags: [defifa, fifa world cup, defi, crypto, ethereum, juicebox, ]
 ---
 
-![Defifa banner](defifa-banner.png)
+![Defifa banner](defifa-banner.webp)
 
 [Defifa](https://juicebox.money/v2/p/305) 是一个应 2022 年国际足联世界杯而生的试验性 NFT 小游戏。NFT 铸造 从 11 月 8 日开始，至 11 月 21 日世界杯揭幕战开始前截止。游戏定于 12 月 25 日结束 — 世界杯闭幕后 7 天 — 届时项目所有的金库资金将向 NFT 持有者开放赎回。
 
@@ -77,7 +77,7 @@ Defifa 使用这一机制定义了 32 个等级，分别对应世界杯的 32 �
 
 [Defifa](https://juicebox.money/v2/p/305)  是一个实验，只要配置无误就能正常运行，但是玩家们要自行承担参与的风险。它的代码是开源的，欢迎玩家们分叉这个框架，继续用以后的锦标赛赛事做类似的试验。祝你好运！
 
-![Banny goal](banny-goal.png)
+![Banny goal](banny-goal.webp)
 
 <p class="subtitle">插图作者： <a href="https://twitter.com/sagekellyn">Sage Kellyn</a></p>
 

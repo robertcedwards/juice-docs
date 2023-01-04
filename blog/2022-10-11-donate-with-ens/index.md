@@ -3,7 +3,7 @@ slug: juicebox-donate-with-ens
 title: Receive Juicebox donations at a .eth address
 authors: [nicholas]
 tags: [guide]
-image: "/img/donatewithens.png"
+image: "/img/donatewithens.webp"
 ---
 
 # Receive Juicebox donations at a .eth address
@@ -24,31 +24,31 @@ It's not necessary to complete this tutorial, but it's also a good idea to set u
 
 To set up a project handle, go to the project's page on juicebox.money, connect wallet with the project owner's wallet, click the cog icon to access the Project Settings, then select `Project handle` in the menu and follow the instructions on that page. 
 
-![](0.png)
+![](0.webp)
 
 ## 1. Create a Payment Address
 A payment address forwards ETH it receives to a given project. Anyone can create a payment address for a project.
 
 On the project page, click the tools button.
-![](1.png)
+![](1.webp)
 
 Click `Create Payment Address` and follow the instructions on the page. 
 
-![](2.png)
+![](2.webp)
 
 If you insert text or a link to an image (https or ipfs) in the payment memo, that memo will appear in the project's Activity Feed each time anyone sends ETH to the ENS address we'll configure in the next steps.
 
-![](3.png)
+![](3.webp)
 
 
 ## 2. Configure the Payment Address in the ENS address's records
 Go to https://app.ens.domains/name/YOURNAME.eth/details. You'll have to substitute `YOURNAME` for the .eth address you're trying to configure.
 
-![](4.png)
+![](4.webp)
 
 Click `Add/Edit Record`, paste the payment address you generated into the Addresses: ETH input. Click save and confirm the transaction in your wallet.
 
-![](5.png)
+![](5.webp)
 
 The ETH record is now set. ETH transactions sent to this ENS address will be directed to the payment address, which will in turn forward the ETH to the Juicebox project and issue the project's tokens to the address that sent the original ETH transaction, if the project payer was configured to do so.
 

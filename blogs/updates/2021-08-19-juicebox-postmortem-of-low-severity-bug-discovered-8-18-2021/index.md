@@ -20,7 +20,7 @@ What follows is how I discovered the bug, the technical details about it, and wh
 ## Context
 
 To give them time to plan for for what's next, SharkDAO needed a way to pause payments and new members coming in through Juicebox. Juicebox doesn't support a `pause` function in its [TerminalV1](https://etherscan.io/address/0xd569D3CCE55b71a8a3f3C418c329A66e5f714431) contract, so Peripheralist and I had to improvise alongside the SharkDAO community.
-![](image.png)
+![](image.webp)
 First step was to remove the payment form from the UI. This keeps most people from sending in contributions, but someone dedicated to sending a payment would eventually find that the Juicebox contract could still be interacted with directly through other interfaces like Etherscan.
 
 To even the playing field, I had the idea to raise SharkDAO's reserved rate to 100%, meaning all payments coming in through the contract would allocate 100% of minted SHARK tokens to preprogrammed addresses instead of to the paying address. With no SHARK incentive for contributing payments, the community would be disincentivized to pay through back-door means, effectively creating the desired `pause` functionality. If anyone did send payments, we could easily refund them the money.
@@ -47,7 +47,7 @@ Importantly, the reserved token amount is *not* minted during a payment. Instead
 
 Unfortunately, when the reserved rate is 0%, the `printReservedTickets` call assumes there's no work to do, and returns before it has had a chance to update the tracker. This prevents anyone from locking in the rate before it is increased. In the [TerminalV1 file](https://github.com/jbx-protocol/juicehouse/blob/3555d7baf7fa8ba4bc350140201805c740e3df4e/packages/hardhat/contracts/TerminalV1.sol#L968), the solution is literally just putting line 968 below line 977:
 
-![](image-1.png)Current TerminalV1 implementation of `printReservedTickets`
+![](image-1.webp)Current TerminalV1 implementation of `printReservedTickets`
 ## Execution
 
 I immediately proposed two workarounds to the SharkDAO admins:
@@ -65,9 +65,9 @@ I then spent a few hours recreating the the original bug in our integration test
 
 The side effect is that 1,889,066.675747 SHARK were minted to the multi-sig. Here's a screenshot of what the UI looked like after step 1:
 
-![](Screen-Shot-2021-08-19-at-12.43.52-AM-1.png)![](Screen-Shot-2021-08-19-at-12.41.21-AM.png)
+![](Screen-Shot-2021-08-19-at-12.43.52-AM-1.webp)![](Screen-Shot-2021-08-19-at-12.41.21-AM.webp)
 And here's what it looks like now:
-![](image-2.png)
+![](image-2.webp)
 We got all of this done in about 2.5 hours.
 
 ## Takeaway

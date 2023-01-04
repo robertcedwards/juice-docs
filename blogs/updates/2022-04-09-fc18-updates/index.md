@@ -29,7 +29,7 @@ You can use the new blog with your RSS reader by adding [https://info.juicebox.m
 
 [Lexicon Devils](http://web.lexicondevils.xyz/) has some amazing plans for April! Here's the schedule:
 
-![](cryptovoxels.png)
+![](cryptovoxels.webp)
 
 Head to the [Juicebox Lounge](http://juicebox.lexicondevils.xyz) to join!
 

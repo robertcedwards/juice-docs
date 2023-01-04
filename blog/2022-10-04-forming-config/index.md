@@ -2,7 +2,7 @@
 slug: forming-config
 title: How FORMING is configured on Juicebox
 description: Running a metaverse concert series on Juicebox.
-image: https://info.juicebox.money/assets/images/FORMING-vol1-2-64f1550549f8ab9d9d003db09839e43e.png
+image: https://info.juicebox.money/assets/images/FORMING-vol1-2-64f1550549f8ab9d9d003db09839e43e.webp
 authors: [matthew, brileigh]
 tags: [configuration]
 ---
@@ -11,13 +11,13 @@ tags: [configuration]
 
 [FORMING](https://juicebox.money/v2/p/66) is a metaverse concert series hosted by [Lexicon Devils](https://twitter.com/devils_lexicon) for Juicebox. To learn more about how Lexicon Devils is building the metaverse and getting paid to do it, check out this [deep dive on the JB blog](https://info.juicebox.money/blog/2022-07-14-lexicon-devils) as well as episode 8 of the Juicecast with [Wackozacco](https://twitter.com/wackozacco420) and [Peacenode](https://twitter.com/peace_node) on [Spotify](https://open.spotify.com/episode/3dVbEegY8abnQSbejulgiL?si=9f3a2106287d4a59) and [Apple Podcasts](https://podcasts.apple.com/ca/podcast/ep-8-peacenode-and-wackozacco-from-lexicon-devils/id1599885493?i=1000569582815). You can also check out [this configuration article](https://info.juicebox.money/blog/2022-09-27-lexicon-devils-config) to learn how Lexicon Devils configured their [project on Juicebox](https://juicebox.money/p/lexicondevils) to receive payments for services rendered and distribute funds to contributors for their work.
 
-![Attendees repping sick wearables at FORMING vol. 1](FORMING-vol1-1.png)
+![Attendees repping sick wearables at FORMING vol. 1](FORMING-vol1-1.webp)
 
 <p class="subtitle">Attendees repping sick wearables at FORMING vol. 1</p>
 
 As the pinnacle of their monthly Juicebox event series, Lexicon Devils is hosting [FORMING](http://forming.lexicondevils.xyz/), an experimental metaverse concert featuring performances by web3 musicians. The team created a second Juicebox project dedicated to crowdfunding with fans and community members to pay out participating artists in ETH. Each monthly event features a curated lineup of web3 musicians, with pre-recorded performances (including juicy skits from [DarbyTrash](https://twitter.com/darbytrash)) at a virtual party in the [Juicebox parcel](http://juicebox.lexicondevils.xyz/).
 
-![The stage for FORMING vol. 1](FORMING-vol1-2.png)
+![The stage for FORMING vol. 1](FORMING-vol1-2.webp)
 
 <p class="subtitle">The stage for FORMING VOL. 1</p>
 
@@ -33,7 +33,7 @@ On September 17th 2022, FORMING highlighted tracks made by beta testers of [FLOP
 
 In the `Funding distribution` panel, we can see funds being distributed evenly (25% each) to all participants in FORMING vol. 3:
 
-![Recent Funding distribution for all artists performing at FORMING vol. 3](FORMING-funding-distribution.png)
+![Recent Funding distribution for all artists performing at FORMING vol. 3](FORMING-funding-distribution.webp)
 
 <p class="subtitle">Recent Funding distribution for all artists performing at FORMING vol. 3</p>
 
@@ -49,13 +49,13 @@ While Lexicon Devils have their own project to manage payouts for their contribu
 - `Owner token minting is disabled` which means that the project owner cannot mint tokens at any time. Only project contributors will mint new FRM tokens.
 - `No reconfiguration strategy` was set, meaning that a project can be reconfigured at any time without notifying contributors. Again, this is a very flexible approach for project creators but carries risk for project contributors.
 
-![Funding cycle configuration for the FORMING project on Juicebox](FORMING-FC.png)
+![Funding cycle configuration for the FORMING project on Juicebox](FORMING-FC.webp)
 
 <p class="subtitle">Funding cycle configuration for the <a href="https://juicebox.money/v2/p/66">FORMING project on Juicebox</a></p>
 
 Looking at the history of `Distributed Funds` in the `Activity` panel on the right side, we can look through past months to see funds being distributed to the roster of artists that have performed at FORMING vol. 1, 2, and 3. By using Juicebox to manage their treasury in an open and transparent way, community members are able to see the payouts for each volume of FORMING which is not usually possible in a traditional event planning context.
 
-![FORMING-DISTRIBUTION.png](FORMING-payouts.png)
+![FORMING-DISTRIBUTION.webp](FORMING-payouts.webp)
 
 <p class="subtitle">History of funds distributed for FORMING vol. 1, 2, and 3</p>
 
@@ -69,7 +69,7 @@ There is currently no `Reserved token` allocation, meaning that all tokens minte
 
 In addition to hilarious skits performed by [Darby](https://twitter.com/darbytrash) and [JGAP](https://twitter.com/jokersgotaposse)—including mock Jeopardy and Jerry Springer episodes—the team also streams a screenshare of funds being distributed at the end of the event. By using Juicebox to manage FORMING, Lexicon Devils demonstrates the power of a transparent and programmable treasury to create trust while harnessing the power of collective action to fund artists.
 
-![Live view of funds being distributed to artists at the end of FORMING vol. 3](FORMING-vol3-2.png)
+![Live view of funds being distributed to artists at the end of FORMING vol. 3](FORMING-vol3-2.webp)
 
 <p class="subtitle">Live view of funds being distributed to artists at the end of FORMING vol. 3</p>  
 

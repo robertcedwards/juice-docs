@@ -3,7 +3,7 @@ slug: juicebox-jokedao
 title: Create JokeDAO Contests for Juicebox Projects
 authors: [nicholas]
 tags: [guide]
-image: "/img/jokedao.png"
+image: "/img/jokedao.webp"
 ---
 
 # How to Create JokeDAO Contests for Juicebox Projects

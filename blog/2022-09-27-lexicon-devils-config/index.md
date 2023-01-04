@@ -2,7 +2,7 @@
 slug: lexicon-devils-config
 title: How Lexicon Devils is configured on Juicebox
 description: Managing a metaverse architecture guild on Juicebox.
-image: https://info.juicebox.money/assets/images/JBParcel-d13135fe0ee6e93a9319bbe1ebb9659a.png
+image: https://info.juicebox.money/assets/images/JBParcel-d13135fe0ee6e93a9319bbe1ebb9659a.webp
 authors: [matthew, brileigh]
 tags: [configuration]
 ---
@@ -27,7 +27,7 @@ Lexicon Devils has created buildings, concerts, and other metaverse experiences 
 
 In the `Activity` panel of their Juicebox project, we can filter by `Paid` to see recent payments made to the project which consist of recurring payouts from the JuiceboxDAO v1 project:
 
-![Recent payments made to the Lexicon Devils Juicebox project](LexiconDevilsRecurringPayout-2.png)
+![Recent payments made to the Lexicon Devils Juicebox project](LexiconDevilsRecurringPayout-2.webp)
 
 <p class="subtitle">Recent payments made to the <a href="https://juicebox.money/p/lexicondevils">Lexicon Devils Juicebox project</a></p>
 
@@ -42,13 +42,13 @@ Jumping into the project’s config, we can see that the following choices were 
 - `Token minting is disabled`, meaning that the project owners cannot mint tokens at any time. Only project contributions will mint new tokens.
 - `No reconfiguration strategy was set`, meaning that the project can be reconfigured at any time without notifying contributors. This is a very flexible approach for project creators but carries risk for project contributors.
 
-![Funding cycle configuration for the Lexicon Devils Juicebox Project](LexiconDevilsConfig.png)
+![Funding cycle configuration for the Lexicon Devils Juicebox Project](LexiconDevilsConfig.webp)
 
 <p class="subtitle">Funding cycle configuration for the <a href="https://juicebox.money/p/lexicondevils">Lexicon Devils Juicebox project</a></p>
 
 Looking at the history of `Distributed Funds` in the `Activity` panel, we can see funds being distributed to the builders of Lexicon Devils. Building in the open and managing their project on Juicebox allows anyone to see *which address(es)* are being paid for *how much* each time funds are distributed.
 
-![Two past examples of funds being distributed to Lexicon Devils builders](Lexicon-DistributedFunds-2.png)
+![Two past examples of funds being distributed to Lexicon Devils builders](Lexicon-DistributedFunds-2.webp)
 
 <p class="subtitle">Two past examples of funds being distributed to Lexicon Devils builders</p>
 
@@ -61,13 +61,13 @@ We can also take a look at how Lexicon Devils’ [`Reserved Tokens`](https://inf
 
 Using Reserved Tokens to reward active contributors helps create incentive alignment by giving builders more tokens and therefore more power to shape the future of the project through governance. Their success is the project’s success: builders contribute to the project, accumulate project tokens over time, and are invested in seeing it succeed long-term.
 
-![Reserved token allocation for Lexicon Devils on Juicebox](LexiconDevilsReserve.png)
+![Reserved token allocation for Lexicon Devils on Juicebox](LexiconDevilsReserve.webp)
 
 <p class="subtitle">Reserved token allocation for <a href="https://juicebox.money/p/lexicondevils">Lexicon Devils on Juicebox</a></p>
 
 In addition to managing their own project as metaverse architects on Juicebox, Lexicon Devils is also working on [FORMING](https://juicebox.money/v2/p/66), a hyperverse concert series that pays web3 musicians to perform at the [Juicebox parcel](http://juicebox.lexicondevils.xyz/). Stay tuned for another overview and configuration article that will dive into the [FORMING project on Juicebox](https://juicebox.money/v2/p/66).
 
-![Juicebox Transit Centre and Learning Centre in Voxels](JBParcel.png)
+![Juicebox Transit Centre and Learning Centre in Voxels](JBParcel.webp)
 
 <p class="subtitle"><a href="http://juicebox.lexicondevils.xyz/">Juicebox Transit Centre and Learning Centre in Voxels</a></p>
 

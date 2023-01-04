@@ -87,7 +87,7 @@ const config = {
     locales: ['en', 'zh'],
   },
   themeConfig: {
-    image: 'img/juicedocs.png',
+    image: 'img/juicedocs.webp',
     metadata: [{ name: 'keywords', content: 'Juicebox, crypto, cryptocurrency, eth, ethereum, fundraising, treasury, JuiceboxDAO, dao, daos, funding, web3' }],
     algolia: {
       appId: '6C0XLHGK46',
@@ -110,7 +110,7 @@ const config = {
     navbar: {
       logo: {
         alt: 'Juicebox Logo',
-        src: 'img/logo.png',
+        src: 'img/logo.webp',
       },
       items: [
         {

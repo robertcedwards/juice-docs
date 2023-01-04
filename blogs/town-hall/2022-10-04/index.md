@@ -2,11 +2,11 @@
 slug: 22-10-04
 title: October 4th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -41,10 +41,10 @@ The versioning work in frontend seems to follow along and might be available soo
 ## NFT Reward Audit Fund by Nicholas and Jango
 
 The [NFT Rewards Audit Fund](https://juicebox.money/@auditfund) is a Juicebox project that Nicholas created to help funding a Code4rena audit contest for the NFT Rewards contracts. Folks can decide to contribute to it so as to speed things up, even before the DAO decides to support. 
-![](e6b3wgP.png)
+![](e6b3wgP.webp)
 
 Also Nicholas submitted a [proposal](https://juicetool.xyz/nance/juicebox/proposal/6bb92c83571245949ecf1e495793e66b) for JuiceboxDAO to support and fund this audit contest. Once approved, funds will be distributed into the treasury of the Audit Fund project, to be paid to Code4rena later on. 
-![](vds1VsU.png)
+![](vds1VsU.webp)
 
 If JuiceboxDAO does decide to fully support the expense of this Code4rena audit, folks who donated to this project before could possibly get their full refund through redemption. This proposal will serve on both edges:
 - paying for NFT Rewards audit contest;
@@ -136,11 +136,11 @@ The art is phenomenal, shoutout to Mieos for tuning together each of these teams
 Filipv did a demonstration of Juice accounting app, which he made originally for JuiceboxDAO but ended up making it generic for all Juicebox projects.
 
 If you want to get accounting for a certain project on Juicebox, you can input the required parameters and get some information for this project in return, which can be pretty useful for some project creators looking to deal with taxes etc. in a given jurisdiction.
-![](UhF79Mu.png)
+![](UhF79Mu.webp)
 
 
 Let's say we want to get accounting for TilesDAO, we put in the project ID, the protocol version and put in the fiat currency that we're using, it will touch things and write to the folders. For example, if we open up `payments` folder, it gives us the time stamp, ETH amounts, fiat conversion at the time of payment, and the caller.
-![](xoXfxvf.png)
+![](xoXfxvf.webp)
 
 
 You can download [here](https://github.com/filipv-eth/juice-accountant) and try to run the app if you want.
@@ -150,11 +150,11 @@ And also [another app](https://github.com/filipv-eth/jb-fees) to calulate fees i
 ## Juicetool nance update by jigglyjams
 
 If you go to the [Juicetool Nance page](https://juicetool.xyz/nance/juicebox), it will load the proposals that are currently tagged.
-![](9fDmoRT.png)
+![](9fDmoRT.webp)
 （*Here it shows # TBD, becuase we don't give the proposals any proposal ID until it passes the temperature check.* ）
 
 By clicking the `New Proposal`, you can have this proposal template:
-![](XPeoKdJ.png)
+![](XPeoKdJ.webp)
 This template allows you to select a payout that goes to an address or a project, and specify the amount and number of cycles. And also it will resolve ENS name in the `Receiver address`.
 
 Once you finish filling the fields and hit `Submit`, we get a proposal created. When you submit a new proposal, we'll still push it to Notion at this point. 
@@ -167,7 +167,7 @@ Longer term roadmap for Nance:
 
 ## Says who？ with Felixander
 
-![](LneNnRp.png)
+![](LneNnRp.webp)
 
 
 And the correct answer is ... **Sage**.

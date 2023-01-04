@@ -8,7 +8,7 @@ title: Use Juicebox via Etherscan
 
 2. Input your desired parameters and click `Write` to submit your transaction:
 
-![](Untitled%203.png)
+![](Untitled%203.webp)
 
 :::tip
 If you are not already familiar with project parameters, read the [Programmable treasury guide](https://info.juicebox.money/dev/build/programmable-treasury) and the [`launchProjectFor`](https://info.juicebox.money/dev/api/contracts/or-controllers/jbcontroller/write/launchprojectfor) docs.
@@ -22,7 +22,7 @@ If you are not already familiar with project parameters, read the [Programmable 
 
 2. Input your desired parameters and click `Write` to submit your transaction:
 
-![](Untitled%206.png)
+![](Untitled%206.webp)
 
 
 :::tip

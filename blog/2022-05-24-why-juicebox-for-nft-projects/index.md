@@ -37,7 +37,7 @@ Firstly, a properly configured Juicebox project makes rug-pulls impossible. You 
 
 Additionally, your Juicebox page shows exactly how all your funds are flowing - how much and where it’s coming from, and where those funds are subsequently being spent. The only way funds can leave the treasury is by configuring and scheduling a payment, for which your community will always have time to react to. 
 
-![](image1.png)
+![](image1.webp)
 
 *Spending (left) and income (right) shown on a project’s Juicebox page*
 

@@ -2,11 +2,11 @@
 slug: town-hall-2022-12-20
 title: JuiceboxDAO 周会概要 2022 年 12 月 21 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -27,7 +27,7 @@ Jango 提出，关于如何向新进成员或一直做贡献的成员分配 JBX 
 
 使用[Filipv 创建的数据面板](https://dune.com/filipv/recent-recipients)来比较 Juicebox 协议上不同版本项目的收款情况，我们可以看到 V3 协议的使用趋势正在健康发展，而 V1 和 V1.1 协议的项目正慢慢式微，尤其是像 Lexicon Devils 这样的 V1 上少数仅存的活跃项目都转移到 V3 之后。
 
-![projects recently received payments](recent_recepients.png)
+![projects recently received payments](recent_recepients.webp)
 
 谈到协议的不同版本，Jango 说最近他对 Nicholas 和 Peri 发起的版本命名讨论很感兴趣。这个讨论探讨关于 Juicebox.money 网站是否应该弱化其关于协议版本的提示，从而避免引起用户的混乱。他同时提到，很高兴我们的版本控制工作让我们可以很舒服地对智能合约进行迭代，如果没有这个工作，这些智能合约将是固化不能调整的。在版本控制的同时，也让其他社区选择是否要一起迁移过来新的协议版本。如果我们重做这个版本控制的工作，有些命名的方法其实是本可以稍微改进一下的。这件事情鼓励我们用一种开放的态度来看问题。目前已经有很多项目迁移到了 V3，但我们可能还是会搭建很多版本控制的基础设施来开拓发展的路径，只要我们觉得值得冒这些或者某些功能足够重要。
 
@@ -35,19 +35,19 @@ Jango 提出，关于如何向新进成员或一直做贡献的成员分配 JBX 
 
 - [Salman Needs A Job](https://juicebox.money/@salmanneedsajob) 一个探索 Web3 工作世界的公民新闻项目。
 
-  ![project salman needs a job](project_salmanneedsajob.png)
+  ![project salman needs a job](project_salmanneedsajob.webp)
 
 - [中文 Juicebox 项目](https://juicebox.money/@jbxcn) 由 Zhape 创建，旨在向 Juicebox 生态内的中文社区项目提供更多的支持。
 
-  ![Project JBX CN](project_jbxcn.png)
+  ![Project JBX CN](project_jbxcn.webp)
 
 - [Juicetool 项目](https://juicebox.money/@juicetool) 由 Twodam创建并用于筹款运营 Juicetool 网站。
 
-  ![Project Juicetool](project_juicetool.png)
+  ![Project Juicetool](project_juicetool.webp)
 
 - [zhougsoft](https://juicebox.money/@zhougsoft) 由一个 mfer 社区的成员 zhoug 所创建。
 
-  ![Project zhougsoft](project_zhougsoft.png)
+  ![Project zhougsoft](project_zhougsoft.webp)
 
 ### 之前等待 V3 的一些项目的现状
 

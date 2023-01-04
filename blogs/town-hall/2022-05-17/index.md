@@ -93,7 +93,7 @@ The DAONYC event by DAOplanet is on June 24 -25, right after the NFTNYC, so we m
 ## 7.Quizz time: 
 In the statements below, two are true, one is a lie. Guess who it is?
 
-![](quizz.png)
+![](quizz.webp)
 
 The answer is…… **@filipv**, and he is not banned from any Starbucks.
 

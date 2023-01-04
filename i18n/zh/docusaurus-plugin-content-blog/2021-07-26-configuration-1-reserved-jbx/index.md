@@ -13,7 +13,7 @@ JuiceboxDAO 的第一个周期配置包含了一个10% 的预设 JBX 保留比�
 
 因此，这些设置的接收人按项目的发展速度，而不是按某个带最短生效期或锁定机制的计划，来获得他们的 JBX 授予。
 
-![image-6](image-6.png)
+![image-6](image-6.webp)
 
 图片截取自 https://juicebox.money/#/p/juicebox
 

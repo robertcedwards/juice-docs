@@ -2,7 +2,7 @@
 slug: moondao-config
 title: How MoonDAO was configured on Juicebox
 description: Raising funds to decentralize space research and exploration.
-image: https://info.juicebox.money/assets/images/MoonDAO-one-small-step-230f6e4f2866a2ccb31303d5fa3683a3.png
+image: https://info.juicebox.money/assets/images/MoonDAO-one-small-step-230f6e4f2866a2ccb31303d5fa3683a3.webp
 authors: [matthew, brileigh]
 tags: [configuration]
 ---
@@ -13,7 +13,7 @@ tags: [configuration]
 
 In this article, we’ll cover how MoonDAO used Juicebox to fundraise ~ $8.3 million (2600+ ETH) to buy two Blue Origin tickets.
 
-![Banner from MoonDAO introduction article on Pablo's Mirror](MoonDAO-one-small-step.png)
+![Banner from MoonDAO introduction article on Pablo's Mirror](MoonDAO-one-small-step.webp)
 
 <p class="subtitle">Banner from MoonDAO introduction article on <a href="https://mirror.xyz/pmoncada.eth/uuufJem6v9X-fW3Bu4v1p_3qA5gPf96lZelHUM97BC8">Pablo’s Mirror</a></p>
 
@@ -23,13 +23,13 @@ The second phase of MoonDAO’s roadmap was to send a person to space in 2022. T
 
 Since achieving their goal, MoonDAO is no longer minting $MOONEY tokens and has stopped fundraising. This article will cover how the project was **initially configured** for their fundraise. On the `Funding Cycle` panel on the left, we can look in the `History` tab to see past funding cycle configurations. This article will break down the settings from `Funding cycle #1`.
 
-![Funding cycle history for MoonDAO on Juicebox](MoonDAO-FC-history.png)
+![Funding cycle history for MoonDAO on Juicebox](MoonDAO-FC-history.webp)
 
 <p class="subtitle">Funding cycle history for <a href="https://juicebox.money/p/moondao">MoonDAO on Juicebox</a></p>
 
 In the `Funding distribution` panel, we can see that 100% of funds withdrawn were distributed to the [MoonDAO Treasury (0xce…b2c9)](https://etherscan.io/address/0xce4a1e86a5c47cd677338f53da22a91d85cab2c9#tokentxns), a multi-sig [Safe (formerly Gnosis Safe)](https://gnosis-safe.io/) wallet.
 
-![Funding distribution for MoonDAO on Juicebox](MoonDAO-funding-distribution.png)
+![Funding distribution for MoonDAO on Juicebox](MoonDAO-funding-distribution.webp)
 
 <p class="subtitle">Funding distribution for <a href="https://juicebox.money/p/moondao">MoonDAO on Juicebox</a></p>
 
@@ -46,7 +46,7 @@ Taking a closer look at the configuration settings for `Funding cycle #1`, we ca
 - `Token minting is disabled` which means that the project owner cannot mint tokens at any time. Only project contributions will mint new $MOONEY tokens. This gives project contributors confidence that the token supply cannot be inflated by the project owners.
 - `No reconfiguration strategy` was set, meaning that the project can be reconfigured and take effect immediately after the current cycle ends. This presents some risk to project contributors as the upcoming funding cycle parameters can be changed with very little notice. Since MoonDAO’s project has a `Duration set to 30 days`, any reconfiguration would take effect once the current cycle ends.
 
-![Funding cycle #1 configuration for MoonDAO on Juicebox](MoonDAO-cycle-1.png)
+![Funding cycle #1 configuration for MoonDAO on Juicebox](MoonDAO-cycle-1.webp)
 
 <p class="subtitle">Funding cycle #1 configuration for <a href="https://juicebox.money/p/moondao">MoonDAO on Juicebox</a></p>
 

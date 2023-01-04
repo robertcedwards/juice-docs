@@ -2,11 +2,11 @@
 slug: 22-11-29
 title: November 29th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Infura gate postmortem by Peri and Filipv
@@ -21,7 +21,7 @@ The upside of this problem is that it helped us to figure out some inefficiencie
 
 Jigglyjam was doing a short demo of submitting a JuiceboxDAO proposal. He introduced the proposal interface in [juicetool](https://juiccetool.xyz) and showcased how to fill and submit a proposal.
 
-![juicetool proposal interface](juicetool_proposal.png)
+![juicetool proposal interface](juicetool_proposal.webp)
 
 And he also introduced that after the proposal is submitted, a discussion thread will be created in our Discord server. In addtion to that, a new branch is going to be created in the [dolthub page of Juicebox governance](https://www.dolthub.com/repositories/jigglyjams/juicebox-governance), and the proposal will also be pushed to the database. All of these are in the process of slowly migrating off Notion to this open mySQL database.
 
@@ -41,7 +41,7 @@ The rewards can be paid in multiple different types of native tokens or ERC-20 t
 
 Felixander asked a question of "How Gabriel Haines will find SBF?" to Filipv, Dr.Gorilla and Matthewbrooks. And he asked attendants on the town hall to guess who was one that gave the answer "naked and handcuffed to a jacuzzi". For the backgound of this question, please refer to the project description of the [the Gabriel Haines project](https://juicebox.money/v2/p/327).
 
-![quiz poll](quiz_poll.png)
+![quiz poll](quiz_poll.webp)
 
 The correct answer is **Matthewbrooks**.
 
@@ -68,4 +68,4 @@ Also Lexicon Devils have planned a few Forming collabs with other communities la
 
 Twodam made [a very cool Dune dashboard](https://dune.com/twodam/juicebox-nft-rewards) that shows NFT rewards statistics across the Juicebox protocol.
 
-![NFT Dune dashboard](NFT_dashboard.png)
+![NFT Dune dashboard](NFT_dashboard.webp)

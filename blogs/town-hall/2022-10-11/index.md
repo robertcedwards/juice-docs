@@ -2,11 +2,11 @@
 slug: 22-10-11
 title: October 11th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Tech update with Jango
@@ -27,7 +27,7 @@ Felixander and Burtula made the [Banny graphic novel](https://drive.google.com/f
 ComicsDAO is going to publish Nouns comics these days, which will be distributed off-chain and be available in bookstores around the U.S. 
 
 They have 8 pages in this comic book that going to be used as Ad pages for DAOs or projects related to the Nouns community, and now they want to give 1 page to JuiceboxDAO so that we can promote ourselves by graphic story telling like Felixander just did.
-![](kaHDm5i.png)
+![](kaHDm5i.webp)
 
 Gogo said ComicsDAO want to do this for gratitude of the supports that JuiceboxDAO has been giving them, which he thinks might help Juicebox reach out to more folks in real life.
 
@@ -57,7 +57,7 @@ From there they managed to identify a few different objectives.
 To produce contents for their website, they went to city council covering events in real time, and reached out to artists, poets, writers for their works and published them.
 
 Also ONNI created a data visualiation tool for city budget on the website so that people in town could look at it and click around to check all the details.
-![](kqZfebn.png)
+![](kqZfebn.webp)
 
 They now have a plan to distribute project tokens to every people in the town and make this publication project truly a community-owned one. But in a rural town without web3 or even web2 mentality according to ONNI, they still need to find ways to educate people to adopt this new way of paying or getting paid. And they are also exploring the possibility of issue some NFT with contents like poems or chef's recipes so that the sales of NFT can flow back into Marfa giant and be paid to the content creators.
 
@@ -73,21 +73,21 @@ Matthew and Brileigh have just released their latest episode of Juicenew [here](
 
 And they also wrote [an article about Moondao](https://info.juicebox.money/blog/2022-10-11-moondao/
 ), with details about the backgroud, the development history, as well as the most recent updates of this community.
-![](Cct58Ri.png)
+![](Cct58Ri.webp)
 
 
 
 
 
 In the course of creating the Audit Fund project, Nicholas came up with a cool model to use an ENS name to work with the Juicebox project payer, so that funds like ETH sent to the ENS will be forwarded to this project payer and go into the treasury of that Juicebox project, with project tokens minted to the original contributor in return. Nicholas wrote a blog post as a tutorial in details [here](https://info.juicebox.money/blog/juicebox-donate-with-ens/).
-![](NY7Zu1d.png)
+![](NY7Zu1d.webp)
 
 
 
 ## FORMING updates by Wackozacco and darbytrash from Lexicon Devils
 
 Their next FORMING event will be on the Saturday leading up to Halloween, i.e. Oct. 29th, and the theme for this event will be a little spooky. 
-![](https://i.imgur.com/oMDz6r8.png)
+![](https://i.imgur.com/oMDz6r8.webp)
 
 Submissions are open at the moment, if anybody wants to do a 10 - 15 mins recording of some live performances, feel free to submit in the [Forming webisite](http://forming.lexicondevils.xyz/). Submission will be closed on Oct. 25th.
 

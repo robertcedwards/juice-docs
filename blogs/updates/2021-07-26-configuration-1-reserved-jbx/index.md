@@ -10,7 +10,7 @@ The first JuiceboxDAO configuration includes a preprogrammed reserved JBX rate o
 A new supply of JBX is minted each time the project receives a contribution. This JBX goes to a beneficiary address specified by the contributor (usually themselves), with the exception of the reserved tokens. A 10% reserved rate means 10% of these newly minted tokens will be distributable to preprogrammed recipients.
 
 As a result, the configured recipients "vest" their JBX at the rate of the project's growth instead of a cliff/lock schedule.
-![](image-6.png)Screenshot from https://juicebox.money/#/p/juicebox
+![](image-6.webp)Screenshot from https://juicebox.money/#/p/juicebox
 ### Investors
 
 - **Jango** gets **40%** of reserved tokens for architecting the mechanism, writing the contracts, thoroughly testing the ecosystem, leading design and development efforts post-launch, and leading project relations.

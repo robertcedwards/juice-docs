@@ -11,7 +11,7 @@ tags: [observations]
 
 JuiceboxDAO 保留代币当前的分配情况如下：
 
-![reserved jbx distribution](image-5.png)
+![reserved jbx distribution](image-5.webp)
 
 
 

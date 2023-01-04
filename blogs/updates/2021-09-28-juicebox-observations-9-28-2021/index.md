@@ -8,7 +8,7 @@ tags: [observations]
 As funds are contributed to the JuiceboxDAO treasury – either as direct payments or as fees paid – JBX is minted and distributed. Currently, 35% of these are reserved and allocated to preprogrammed addresses while the remaining 65% are sent to the contributor of the payment. 
 
 The current distribution of reserved tokens for JuiceboxDAO is as follows:
-![](image-5.png)
+![](image-5.webp)
 There is no cap to how many JBX are minted into existence: as more ETH is contributed, more JBX is created, albeit at a slightly decreasing rate over time due to the discount rate (currently 10% fewer JBX minted per ETH every 2 weeks). With each payment, the pie being shared grows while everyone's share of the pie slightly shrinks.
 
 ... except for those on the reserved tokens list. At any given moment, their overall JBX positions tend towards the percent of reserved tokens they're programmed to receive, at the rate of the treasury's growth. This also means that currently 35% of the DAO's value tends to concentrate between the reserved token holders, with the remaining 65% going to a long-tail distribution between those who chipped in or paid fees to the treasury over time, favoring those who did so soonest. 

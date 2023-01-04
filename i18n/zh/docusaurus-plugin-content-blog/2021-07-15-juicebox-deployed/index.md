@@ -2,7 +2,7 @@
 slug: juicebox-deployed
 title: Juicebox 已经部署
 authors: [jango]
-image: https://info.juicebox.money/img/juicedocs.png
+image: https://info.juicebox.money/img/juicedocs.webp
 tags: [protocol, Chinese translation]
 ---
 
@@ -18,7 +18,7 @@ Juicebox 是一个商业模式即服务及可编程的金库，为社区共有�
 
 请到 [juicebox.money](http://juicebox.money/) 了解一下。只需一个 gas 优化的交易，就可以开始把 Juicebox 用作你的项目支付终端。
 
-![img](image-1-00cbe61f0580484ee3ccd027db901aac.png)
+![img](image-1-00cbe61f0580484ee3ccd027db901aac.webp)
 
 以上是一个正在 Juicebox 运营的项目。
 
@@ -30,7 +30,7 @@ Juicebox 是一个商业模式即服务及可编程的金库，为社区共有�
 
 Juicebox 协议提供了这样的方式，允许项目在接收付款之前先承诺项目现金流的分配细则，预先知会用户其资金的去向。作为一个付款终端和可编程金库，这个协议非常适用于可预计成本（人员支出、服务订购、捐款、预算内事项，等等）占比较高的项目，也适合那些希望成功时自动回馈社区的人。
 
-![img](Screen-Shot-2021-07-13-at-12.00.04-PM-bcb80e96e9feb8e7850f8b6c664bb61f.png)
+![img](Screen-Shot-2021-07-13-at-12.00.04-PM-bcb80e96e9feb8e7850f8b6c664bb61f.webp)
 
 
 
@@ -40,11 +40,11 @@ Juicebox 协议提供了这样的方式，允许项目在接收付款之前先�
 
 项目部署之后，任何人都可以通过作为捐赠人在 [juicebox.money](http://juicebox.money/) 上直接付款，或者使用其他合约把费用集合到 Juicebox 协议，来资助你的项目。不管采取哪种方式，他们都会相应地获得项目分发的社区代币。
 
-![img](Screen-Shot-2021-07-13-at-4.03.07-PM-edc6095bc9b1adb8d720bd349ad46451.png)
+![img](Screen-Shot-2021-07-13-at-4.03.07-PM-edc6095bc9b1adb8d720bd349ad46451.webp)
 
 人们可以通过类似 [Juicebox.money](http://juicebox.money/) 的界面来直接向你付款。
 
-![img](Screen-Shot-2021-07-13-at-1.24.21-PM-7ed933806dc1d76c1f75630c1e0d77aa.png)
+![img](Screen-Shot-2021-07-13-at-1.24.21-PM-7ed933806dc1d76c1f75630c1e0d77aa.webp)
 
 又或者，项目可以通过继承  `JuiceboxProject.sol` 并使用` _takeFee` 来以合约方式接受付款。作为项目方，你可以设置一个筹款目标，明确创建及运营这个项目一段固定的时间所需要花费的资金。你可以在收到任何资金之前就设置这个目标。如果你的项目在某个固定时间内赚取的资金比筹款目标要多，那么你的支持者们和你一样，都可以通过销毁代币来赎回溢出的资金。随着使用量的增长，这样实质上把所有人向项目付款的成本推向零。
 
@@ -52,7 +52,7 @@ Juicebox 协议提供了这样的方式，允许项目在接收付款之前先�
 
 这样一来，项目团队和社区就会同心协力确保溢出的增长速度大于支出速度。
 
-![img](image-2-1b63811fa9e5d3f119fd4244860ea016.png)
+![img](image-2-1b63811fa9e5d3f119fd4244860ea016.webp)
 
 筹款周期自动滚动，这样赞助人和收费合约就可以在能力范围内持续地资助他们重视的项目。你可以配置折扣率来激励早期支持者，配置联合曲线比率来鼓励社区成员作出承诺，配置保留率以便每次有人付款并获得代币的同时你也可以分得一些自己的代币。
 

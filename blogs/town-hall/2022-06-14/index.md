@@ -30,7 +30,7 @@ So basically if I have Juicebox V1 token, there'll be a place in the interface t
 
 So we've been working on another layer, another contract to add into the existing contracts that will support handles for V2 projects. It is not quite finished and it's not on mainnet yet.  But we do have everything kind of functionally together so I can give a demo of how it'll work in the app and explain how it works pretty quickly.
 
-![](njwILOI.png)
+![](njwILOI.webp)
 
 _(screen sharing ongoing)_
 
@@ -68,7 +68,7 @@ And then other than that I showed this last week, we have a new contract where y
 
 ## quizz time:
 
-![](AME442G.png)
+![](AME442G.webp)
 
 The answer is....
 

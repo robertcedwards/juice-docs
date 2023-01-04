@@ -12,7 +12,7 @@ The repo link for *JB Project Payer Extension – Tokens Receiver* is incorrect.
 
 Make an interesting project using [scaffold-eth](https://github.com/scaffold-eth/scaffold-eth) and [Juicebox v2](https://github.com/jbx-protocol/juice-contracts-v2)! Open to all teams and individuals.
 
-<img src="/img/hackathon/coder.png" width="200px" style={{display: "block", margin: "auto"}} /><br/>
+<img src="/img/hackathon/coder.webp" width="200px" style={{display: "block", margin: "auto"}} /><br/>
 
 ### Overview
 

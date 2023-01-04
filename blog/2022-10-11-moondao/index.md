@@ -3,7 +3,7 @@ slug: moondao-highlight
 title: MoonDAO, a worldwide collective decentralizing space exploration and research
 description: How MoonDAO raised over $8 million (2600+ ETH) on Juicebox to send someone to space
 authors: [matthew, brileigh]
-image: https://info.juicebox.money/assets/images/banny-7bd59dfc04c9425d90616c6224d59619.png
+image: https://info.juicebox.money/assets/images/banny-7bd59dfc04c9425d90616c6224d59619.webp
 tags: [highlight]
 ---
 
@@ -38,7 +38,7 @@ Despite the disappointment of ConstitutionDAO [losing the auction to buy an offi
 
 Their goals quickly solidified and became more serious when Pablo and Kori hopped on a call to discuss what their values were, what MoonDAO could become, and why space should be a frontier for all humans. They shared a common vision for MoonDAO: a bottom-up, horizontal approach to space research that would reflect the thoughts and desires of humanity as a whole.
 
-![Banny on the Moon by Burtula from WAGMI Studios](banny.png)
+![Banny on the Moon by Burtula from WAGMI Studios](banny.webp)
 
 <p class="subtitle"><a href="https://twitter.com/bannyverse">Banny</a> on the Moon by <a href="https://twitter.com/Tam_Burtula">Burtula</a> from <a href="https://juicebox.money/p/wagmistudios">WAGMI Studios</a></p>
 
@@ -48,7 +48,7 @@ The first goal for MoonDAO was to launch their governance token, [$MOONEY](https
 
 On December 17th, 2021, the MoonDAO project was [created](https://etherscan.io/tx/0xdaf319a9954a8638b76dfdea9914088a8b967dfa4982bb304f63d6b8ca7c2269) and their next goal was to raise enough funds to buy tickets for a sub-orbital flight on [Blue Origin](https://www.blueorigin.com/). “Juicebox is a bootstrapped community building from the ground up,” says Pablo. “It’s a community of regular people trying to do something new and I knew that we wanted to work with them over any other platform for crowdfunding.” By the end of January 2022, MoonDAO had raised over 2,600 ETH (~ $8.1 million USD).
 
-![MoonDAO's Ticket to Space NFT](ticket-NFT.png)
+![MoonDAO's Ticket to Space NFT](ticket-NFT.webp)
 
 <p class="subtitle">MoonDAO's <a href="https://opensea.io/collection/ticket-to-space-nft">Ticket to Space NFT</a></p>
 

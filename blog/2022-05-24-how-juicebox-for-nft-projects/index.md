@@ -20,7 +20,7 @@ In this article you’ll learn:
 
 ## 1. Create your project
 
-![](image1.png)
+![](image1.webp)
 
 *[https://juicebox.money/#/create](https://juicebox.money/#/create) or [https://rinkeby.juicebox.money/#/create](https://rinkeby.juicebox.money/#/create) (testnet)*
 
@@ -60,7 +60,7 @@ This is important. It restricts how long before the next funding cycle reconfigu
 
 This will create an Ethereum address that can be used to pay your project, rather than having to go through the Juicebox interface. It will be necessary in the model of the Juicebox NFT project we’re going for, since you will use this address as the destination for your royalty fees. You will be prompted to do this when you create your project, but can do it later at any time in the ‘Tools’ section of your project page pictured below. 
 
-![](image2.png)
+![](image2.webp)
 
 ## 3. Do your thang on Opensea, or wherever. Send royalty fees to the payable address. Let the magic happen 
 

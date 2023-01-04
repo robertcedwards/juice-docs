@@ -33,7 +33,7 @@ What does the Constitution say? Here's the tldr;
 
 ### The Constitution to ConstitutionDAO pipeline 📜  
 
-![ConstitutionDAO banner](cdao-cover.png)
+![ConstitutionDAO banner](cdao-cover.webp)
 
 Even though the story of ConstitutionDAO isn't about any particular person, we have to start somewhere. Our story begins with [Graham Novak](https://twitter.com/gnovak_) on Thursday November 11th, 2021. It's 9:55am and Graham is sitting in an office in Atlanta, Georgia where he manages crypto investments at 28th Street Ventures. A friend in a non-crypto group chat shares the link to an upcoming auction of the U.S. Constitution at Sotheby's with an estimated price of 10-15 million dollars. 
 
@@ -41,7 +41,7 @@ The bid estimate seemed shockingly low to Graham. At the same time, he was resea
 
 And from there it snowballed. Within the first day, [ConstitutionDAO](https://twitter.com/ConstitutionDAO) went from a group chat of friends to a Discord of over 2000 members with National Treasure memes spreading like wildfire. An initial email was sent to Sotheby's to start coordinating logistics.
 
-![Screenshot of the first email sent to Sotheby's on behalf of the ConstitutionDAO campaign](first-email.png)  
+![Screenshot of the first email sent to Sotheby's on behalf of the ConstitutionDAO campaign](first-email.webp)  
 
 <p class="subtitle">First email sent to Sotheby's on behalf of the ConstitutionDAO campaign</p>  
 
@@ -51,7 +51,7 @@ Later that day there is a kick-off call around 8pm to start going over logistics
 >
 >— [Alice Ma](https://twitter.com/alicemama15)
 
-![ConstitutionDAO pfp of Nicholas Cage from National Treasure](nicolas-cage-pfp.png)  
+![ConstitutionDAO pfp of Nicholas Cage from National Treasure](nicolas-cage-pfp.webp)  
 
 <p class="subtitle">ConstitutionDAO pfp of Nicolas Cage from National Treasure</p>  
 
@@ -65,7 +65,7 @@ Because Sotheby's wouldn't allow a DAO to bid, ConstitutionDAO partnered with a 
 When community members received $PEOPLE tokens for contributions made in ETH, these tokens represented governance votes over where the document would be displayed and how. Not ownership of the document itself.
 :::
 
-![Nicolas Cage Banny by Sage Kellyn](nicolas-banny.png)
+![Nicolas Cage Banny by Sage Kellyn](nicolas-banny.webp)
 
 <p class="subtitle">Nicolas Cage Banny by <a href="https://twitter.com/SageKellyn">Sage Kellyn</a></p>  
 
@@ -85,7 +85,7 @@ At 8:31pm on Sunday night (day 4), the [Juicebox project](https://juicebox.money
 
 By Monday November 15th (day 5), the media narrative started to heat up. Core team members of ConstitutionDAO were being interviewed on CNBC, The New York Times, Bloomberg, and more. Everyone, including your neighbour, was starting to learn what the word DAO meant.
 
-![Core team members Alice Ma and Packy McCormick appear on CNBC news](cnbc.png)  
+![Core team members Alice Ma and Packy McCormick appear on CNBC news](cnbc.webp)  
 
 <p class="subtitle">Core team members <a href="https://twitter.com/alicemama15">Alice Ma</a> and <a href="https://twitter.com/packyM">Packy McCormick</a> appear on <a href="https://www.cnbc.com/video/2021/11/15/in-crypto-we-trust-bidding-for-the-us-constitution-with-ethereum.html">CNBC news</a></p>  
 
@@ -99,13 +99,13 @@ At a certain point, fundraising started to plateau. Money was coming in but the 
 
 Once the hype kicked in, money pouring into the Juicebox project was slow at first and then all at once. 
 
-![ConstitutionDAO crossing $10 million dollars worth of ETH on Juicebox](ten-million.png)
+![ConstitutionDAO crossing $10 million dollars worth of ETH on Juicebox](ten-million.webp)
 
 <p class="subtitle">ConstitutionDAO crossing $10 million dollars worth of ETH on Juicebox</p>
 
 [Metaversal](https://www.metaversal.gg/) also committed $1MM live on the Andreesen Horowitz show on Clubhouse. The ball was rolling again and over the next 24 hours the treasury miraculously grew to over $40MM dollars. The money coming into Juicebox on the 17th going into the 18th made up more than half of the entire amount raised by ConstitutionDAO. The meme had reached escape velocity.
 
-![ConstitutionDAO Twitter update at 12am on November 18, 2021](nov-18.png)
+![ConstitutionDAO Twitter update at 12am on November 18, 2021](nov-18.webp)
 
 ### The last minute $46MM USD swap that saved the campaign 💵  
 

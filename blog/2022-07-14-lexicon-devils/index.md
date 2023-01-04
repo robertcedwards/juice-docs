@@ -4,7 +4,7 @@ title: Lexicon Devils, A Metaverse Architecture Guild Running on Juicebox
 description: How Lexicon Devils is building the metaverse, getting paid to do it, and managing their treasury on Juicebox.
 authors: [matthew, brileigh]
 tags: [highlight]
-image: https://info.juicebox.money/assets/images/juicebox-v2-343f182edb8f0084282984d459c1d001.png
+image: https://info.juicebox.money/assets/images/juicebox-v2-343f182edb8f0084282984d459c1d001.webp
 ---
 
 # Lexicon Devils: A Metaverse Architecture Guild Running on Juicebox  
@@ -19,7 +19,7 @@ To learn more about how the Lexicon Devils project is configured on Juicebox, re
 
 I spent the majority of my childhood exploring the internet and playing classic computer games like *Age of the Empires*, *The Secret of Monkey Island*, and especially *The Sims*. For hours and hours I would build, design, and arrange anything I could think up. Unbound by the limits of gravity, money, or even common sense, *The Sims* was an excuse to imagine what was possible rather than what was realistic. At the time this maybe seemed like a silly diversion, but like many of our early internet activities this turned out to be great practice for the future that was hurdling towards us. Spending hours customizing a Myspace page was, in retrospect, a great introduction to frontend development. And perhaps The Sims was the perfect introduction to metaverse architecture.
 
-![Old Town, The Sims](old-town.png)
+![Old Town, The Sims](old-town.webp)
 
 <p class="subtitle">Old Town in The Sims (2000)</p>
 
@@ -53,7 +53,7 @@ As part of the growing bannyverse, [WAGMI Studios](https://juicebox.money/#/p/wa
 
 Since October 2021, the Juicebox plot in Voxels has gone through many iterations as a center for learning, discovery, and entertainment. It stands out from surrounding parcels with its attention to detail and references to IRL architecture and design. Through pixelated curves and large windows blending the inside and outside, the current [Juicebox v2 build](http://juicebox.lexicondevils.xyz/) combines characteristics of mid-century modern design with a tropical Banny aesthetic. Bringing this all together in one big juicy cocktail, the v2 build is a utopian dream in line with the ethos that anyone can grow and fund their dream project.  
 
-![v2 of the Juicebox parcel.](juicebox-v2.png)
+![v2 of the Juicebox parcel.](juicebox-v2.webp)
 
 <p class="subtitle">v2 of the Juicebox Learning Center, Transit Center, and Juicebar</p>
 

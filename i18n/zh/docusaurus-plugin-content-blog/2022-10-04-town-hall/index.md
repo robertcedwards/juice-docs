@@ -2,11 +2,11 @@
 slug: 2022-10-04-town-hall
 title: JuiceboxDAO 周会概要 2022 年 10 月 05 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 配图作者 [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -34,10 +34,10 @@ NFT 奖励合约目前体量相对稍大，这个是设计理念导致的，因�
 ## NFT 奖励合约审计基金  Nicholas 及 Jango
 
 [NFT 奖励审计基金](https://juicebox.money/@auditfund) 是 Nicholas 创建的一个项目，专门用于筹款举办 NFT 奖励合约的 Code4rena 审计比赛。在得到 DAO 的支持之前，人们可以先行捐款支持这个比赛。
-![](e6b3wgP.png)
+![](e6b3wgP.webp)
 
 目前 Nicholas 已经发起一个[提案](https://juicetool.xyz/nance/juicebox/proposal/6bb92c83571245949ecf1e495793e66b), 请求 JuiceboxDAO 资助这次审计活动。如果提案得到批准，审计资金会转到项目的金库用于向 Code4rena 支付费用。
-![](vds1VsU.png)
+![](vds1VsU.webp)
 
 如果 JuiceboxDAO 同意支付审计费用，早期向这个项目捐款的人就可以通过赎回项目代币获得全额退款。这个提案能够达到两个效果：
 - 支付 NFT 奖励合约的审计费用；
@@ -129,10 +129,10 @@ Code4rena 的人早前跟我们联系，表示他们有意向在 Juicebox 协议
 Filipv 在会上演示他开发的会计应用。这个应该原本的初衷是开发给 JuiceboxDAO 使用的，现在开发成通用版本，所有 Juicebox 项目都可以使用。
 
 如果你想获取某个 Juicebox 项目的会计数据，只需输入要求的参数就可以获得相应的项目信息。这个对某些项目方在他们的法律管辖区里处理税务事宜应该会比较有用。
-![](UhF79Mu.png)
+![](UhF79Mu.webp)
 
 比方说你想获得 TilesDAO 的会计信息，只需要输入项目 ID、协议版本和要使用的货币名称，就可以获取相应的信息并写入对应的文件内。以下这个是 `付款` 文件，列举了交易的时间戳、ETH 数量、付款时货币价值和付款地址等信息。
-![](xoXfxvf.png)
+![](xoXfxvf.webp)
 
 你可以在[这里]下载应用的代码。
 
@@ -142,13 +142,13 @@ Filipv 在会上演示他开发的会计应用。这个应该原本的初衷是�
 
 在 [Juicetool Nance 页面](https://juicetool.xyz/nance/juicebox), 可以看到目前标注的提案。
 
-![](9fDmoRT.png)
+![](9fDmoRT.webp)
 
 （*图上显示的 # TBD 的意思是目前提案处于温度测试阶段，暂时还不会分配提案号*）
 
 点击页面的 `New Proposal`，会进行入提案模板的页面：
 
-![](XPeoKdJ.png)
+![](XPeoKdJ.webp)
 
 这个模板可以选择支出的对象是一个地址还是一个项目，同时还可以标明支出的金额和持续的周期数。同时在接收地址还可以自动解释 ENS 名称。
 
@@ -162,7 +162,7 @@ Nance 机器人的时间路线图：
 
 ## 谁说的？ Felixander
 
-![](LneNnRp.png)
+![](LneNnRp.webp)
 
 这是周会上的一个新的游戏环节，让大家猜猜是谁说的某一句话。
 

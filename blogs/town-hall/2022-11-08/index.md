@@ -2,11 +2,11 @@
 slug: 22-11-08
 title: November 8th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -66,7 +66,7 @@ Also Gulan explained about the CogniDAO he has been working on lately. The main 
 
 Later this month, on Nov. 27, Lexicon Devils will be doing a Forming and [AllSTARZ](https://twitter.com/allstarz_nft) collab. Wackozacco has made a bunch of Voxels models for the ALLSTARZ collection and will make them wearables in Cryptovoxels.
 
-![image-20221112170837528](image-20221112170837528.png)
+![image-20221112170837528](image-20221112170837528.webp)
 
 They are going to make a mixtape for all the previous Forming events, and use that to build hype around Forming and share more culture amongst more communities. They had a productive meeting yesterday and discussed some game plans and what other NFT communities they want to reach out, so as to keep moving forward with Forming.
 
@@ -78,7 +78,7 @@ Matthew gave a brief summary to all the proposals in the current governance cycl
 
 Also Matthew and Brileigh released a [new edition of Juicenews](https://juicenews.beehiiv.com/p/juicenews-nov-08), summing up all major activities happened in Juicebox ecosystem last week.
 
-![img](juicenews-nov-08-2022-1200px.png)
+![img](juicenews-nov-08-2022-1200px.webp)
 
 
 
@@ -88,7 +88,7 @@ From Nov. 01 to the day of this town hall, we had 266 ETH in raised volume with 
 
 And periodic active projects on the protocol are on a down trend.
 
-![image-20221112121200783](image-20221112121200783.png)
+![image-20221112121200783](image-20221112121200783.webp)
 
 
 

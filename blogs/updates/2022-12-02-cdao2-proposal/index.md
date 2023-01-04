@@ -14,7 +14,7 @@ Date: (2022-12-04)
 
 ### Synopsis
 
-![constitutuion movement](CDAO2_movement_2.png)
+![constitutuion movement](CDAO2_movement_2.webp)
 
 **E Pluribus Unum — Out of Many, One**
 

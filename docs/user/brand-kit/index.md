@@ -15,9 +15,9 @@ Questions/inquiries? Ask in the [Juicebox Discord](https://discord.gg/juicebox).
 ## Logos
 |Type|PNG|SVG|
 |-|-|-|
-|**Normal**|![Juicebox Logo](logo.png)|![Juicebox Logo](logo.svg)|
-|**Black (Light Mode)**|![Black Juicebox Logo](logo_black.png)|![Black Juicebox Logo](logo_black.svg)|
-|**White (Dark Mode)**|![White Juicebox Logo](logo_white.png)|![White Juicebox Logo](logo_white.svg)|
+|**Normal**|![Juicebox Logo](logo.webp)|![Juicebox Logo](logo.svg)|
+|**Black (Light Mode)**|![Black Juicebox Logo](logo_black.webp)|![Black Juicebox Logo](logo_black.svg)|
+|**White (Dark Mode)**|![White Juicebox Logo](logo_white.webp)|![White Juicebox Logo](logo_white.svg)|
 
 ## Style
 
@@ -58,8 +58,8 @@ Questions/inquiries? Ask in the [Juicebox Discord](https://discord.gg/juicebox).
 
 |Type|PNG|SVG|
 |-|-|-|
-|**Light Mode**|![](banny_light.png)|![](banny_light.svg)|
-|**Dark Mode**|![](banny_dark.png)|![](banny_dark.svg)|
+|**Light Mode**|![](banny_light.webp)|![](banny_light.svg)|
+|**Dark Mode**|![](banny_dark.webp)|![](banny_dark.svg)|
 
 ## Contact
 

@@ -10,7 +10,7 @@ sidebar_position: 5
 
 1. Visit the [proposals database](https://www.notion.so/9d126f9148dc42ee83317d5cd74e4db4).
 2. Click the ⬇ highlighted below, and select `📜 Proposal Template`.
-![](/img/proposals-db.png)
+![](/img/proposals-db.webp)
 3. Once your proposal is ready, change its status from `Draft` to `Discussion`.
 4. A discussion thread for your proposal will be generated in the `#💡-proposals` channel of [Juicebox's Discord server](https://discord.gg/juicebox). The community will help you prepare the proposal for the next [temperature check](process).
 

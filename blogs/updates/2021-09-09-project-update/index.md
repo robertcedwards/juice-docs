@@ -49,7 +49,7 @@ Co-authored: jango, peri, exekias, nati, nicholas, zeugh
 
 - New analytics data in project dashboards. Still room to grow, more data sourced into The Graph and ready to use.
 
-![](image-4.png)
+![](image-4.webp)
 - New wallet connection integration. Can now connect with many other wallets with BlockNative integration.
 - Progress on Github issues backlog.
 - Wording in the interface being reconsidered:  "staking" vs "claiming". 
@@ -105,7 +105,7 @@ Updates:
 - Experimenting with Synthetix [staking rewards contracts](https://github.com/Synthetixio/synthetix/blob/develop/contracts/StakingRewards.sol): [https://github.com/jbx-protocol/staking-rewards](https://github.com/jbx-protocol/staking-rewards).
 - Fleshing out UI prototypes:
 
-![](image-3.png)
+![](image-3.webp)
 **Help wanted:**
 
 - Comms with JBX project owners (e.g., SHARK) to understand their needs from a staking reward/LP perspective.

@@ -2,18 +2,18 @@
 slug: 22-09-20
 title: September 20th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
 ## Capsules project with peri
 
 The [Capsules](https://cpsls.app/) is peri's latest project of on-chain typeface that he launched just one day before this town hall. 
-![](F5YDE5e.png)
+![](F5YDE5e.webp)
 
 This project of on-chain typeface introduces a standard to make it easy to store fonts on-chain. There're a lot of projects that use text in on-chain rendered SVGs these days, but if they want to use a custom font in an on-chain rendered SVG, they need to find a way to store that font on-chain. Also storing fonts on-chain is expensive and complicated, and there isn't a standard way to do it. For this reason, Capsules project introduces a new typeface contract interface in order to standardize storing fonts and make it easier to access.
 
@@ -24,14 +24,14 @@ People can also download the typeface [here](https://cpsls.app/#/typeface) for f
 The typeface contract allows you to define the typefaces even when you deploy a contract without storing all the data for them, which means anybody else can just come and store the data, provided it matches what you define in the first place.
 
 For this project, there are 7 special pure color NFTs that goes to people who store the 7 fonts 100 to 700. Folks from around the Juicebox ecosystem got news of this launch and stored all of them in just couple of minutes, which is a very decentralized effort to get some new infrasturcture onto the blockchain. 
-![](cosc0mW.png)
+![](cosc0mW.webp)
 
 Definitely follow [peri on Twitter](https://twitter.com/peripheralist) to get more first hand info and all his genius ideas!
 
 Nicholas also managed to make a prototype using the Capsules typeface to render some active data of a Juicebox project.![](1PfC1pp.jpeg)
 
 And filipv downloaded the Capsules fonts and set his terminal font to them, which is super super cool. 
-![](SvdMNyS.png)
+![](SvdMNyS.webp)
 
 
 ## Versioning update with jango
@@ -78,7 +78,7 @@ The new release of Juicebox newsletter can be found [here](https://newsletter.ju
 The config articles are going to run through how a project is configured and some of reasons for those decisions made, to help new project creators understand why certain projects are using a different configurations and why they're making those decisions. So if new project creators want to build a similar project, they can look to that article as a reference point for their own project.
 
 Brileigh and Matthew just launched their first config article [here](https://info.juicebox.money/blog/2022-09-20-studiodao-config/).
-![](mUXCtBp.png)
+![](mUXCtBp.webp)
 
 ### Juicecast (Juicebox Podcast)
 
@@ -114,13 +114,13 @@ One of the new features they have, is a statistics page that shows how much the 
 
 Sayid and Mieos played a game to demostrate how the game goes on the town hall.
 
-![](gab5Bm7.png)
+![](gab5Bm7.webp)
 
 As now it seems a little troublesome to buy $Matic on exchanges and bridge it to the Polygon Mainnet, Sayid also announced a 500 $Matic scholarship so that users can use the built-in request function to ask for $Matic from them.
 
 ## Two Truths And A Lie with Felixander
 
-![](gJqUCzL.png)
+![](gJqUCzL.webp)
 
 The correct answer is ... Viraz.
 

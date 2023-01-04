@@ -2,7 +2,7 @@
 slug: 2022-12-06-juicebox-in-the-words-of-felixander
 title: Juicebox in the words of Felixander
 description: Juicebox in the words of... is a series that highlights JB community members in interview form. Learn about members’ roles at JB and what makes them tick.
-image: https://info.juicebox.money/assets/images/jbcover-b36ea7a3885d0bd16a24bb5d5324525a.png
+image: https://info.juicebox.money/assets/images/jbcover-b36ea7a3885d0bd16a24bb5d5324525a.webp
 authors: [brileigh, matthew]
 tags: [interview]
 ---
@@ -11,7 +11,7 @@ tags: [interview]
 
 *This article is a written version of an upcoming episode of The Juicecast in which Matthew and Brileigh interview Felixander to hear all about his origin story and his special project… The Contest.*
 
-![juicebox in the words of](jbcover.png)
+![juicebox in the words of](jbcover.webp)
 
 *Felixander is a writer and all-around colourful character at Juicebox. He contributes to the JB blog, collaborates with Wagmi Studios on Bannyverse content, and organizes community-building activities at Town Hall. In short, he is doing his best to get the juicy word out there to the masses and bring newcomers into the JB ecosystem.*
 
@@ -51,7 +51,7 @@ There was a trainer and they were all going to this house with five or six of th
 
 **Matthew: Uhhhh, wow. My neurons are dancing around and making connections, and now you writing *Red Rocket Banny* makes perfect sense.** 
 
-![Excerpt from Wagmi Studios Bannyverse Treatment by Felixander](red-rocket-banny.png)
+![Excerpt from Wagmi Studios Bannyverse Treatment by Felixander](red-rocket-banny.webp)
 
 <p class="subtitle">Excerpt from Wagmi Studios Bannyverse Treatment by Felixander</p>
 

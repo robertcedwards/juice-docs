@@ -2,18 +2,18 @@
 slug: 22-10-25
 title: October 25th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Audit Fund Recap by Nicholas
 
 icholas created the Audit Fund project to raise funds from our community members to pay Code4rena for the NFT Rewards contract audit contest, before the funds were distributed from the DAO. For more details about this project, please refer the [summary of Town Hall last week](https://info.juicebox.money/blog/2022-10-18-town-hall).
 
-![image-20221026195655998](image-20221026195655998.png)
+![image-20221026195655998](image-20221026195655998.webp)
 
 On Oct. 22nd, after the grants from the DAO was added to the balance of the treasury of Audit Fund (`Add to balance` is a method to pay a Juicebox treasury without invoking minting of tokens, which in this case is to make sure the donors can have their full refund), people started to redeem their project tokens to get the ETH they donated a few days ago back in full amount.
 
@@ -47,12 +47,12 @@ Some characteristics of this create flow:
 
 - This create flow breaks down our current creation process into different steps, so that project creators basically only need to make one big decision every step, so as to alleviate their cognitive load in this process.
 
-![image-20221028234859190](image-20221028234859190.png)
+![image-20221028234859190](image-20221028234859190.webp)
 
 - This new flow tries to simplify the UI and make interface neat and clean, by folding some optional choices or hiding some unselected information away, so that project creators don't need to be bombarded with too much information in their project creation.
 - The create flow supplies some default templates such as `Automated Funding Cycle`, `Default Token Settings`, etc., so that project creators can just choose the frequently used configurations instead of having to customize their own every step of the way. 
 
-![image-20221029000127331](image-20221029000127331.png)
+![image-20221029000127331](image-20221029000127331.webp)
 
 -  It integrates the new NFT Rewards contract, project creators now have more choices to incentive their supporters, though the contract is expansive so a lot of functionalities might need to be added in future iterations.
 
@@ -64,7 +64,7 @@ Kenbot was very grateful for Jango's encouragement to build in public, which has
 
 Kenbot also made a demo on the Town Hall to showcase all the items on the [webpage of StudioDAO](https://www.studiodao.xyz/), which he hoped would become a dashboard of fun things to do and be related to the NFT collection of community members. He thinks that crazy ideas will start from here and will be able to have more and more funding so that things will grow from the bottom up to their brilliant success.
 
-![image-20221029131715291](image-20221029131715291.png)
+![image-20221029131715291](image-20221029131715291.webp)
 
 ## DevCon Casa Event Recap by Bruxa
 
@@ -84,7 +84,7 @@ Also he is going to work on the Ad page that ComicsDAO provides us in their Noun
 
 The 2nd edition of Banny comic is coming out soon, here is the teaser of the story of detective Banny.
 
-![](YPMykE9.png)
+![](YPMykE9.webp)
 
 And about the Defifa press, Felixander has been reaching out to get some press to cover our Defifa project before its launch. He invited any kind of help to that matter and was open to any ideas on getting the ball rolling over there.
 
@@ -92,8 +92,8 @@ And about the Defifa press, Felixander has been reaching out to get some press t
 
 On the meeting Felixander asked some DAO members to give him a one-word activity or an item that Banny gets up to on a wild weekend. And he invited some of the members to play a game at skribble.io, in which one person is to draw a picture from their word while the rest of member are supposed to guess what that word it. 
 
-![image-20221029184407155](image-20221029184407155.png)
+![image-20221029184407155](image-20221029184407155.webp)
 
 After the game, Felixander set up a poll to see what is the most favorite word/item in the game.
 
-![image-20221029184537493](image-20221029184537493.png)
+![image-20221029184537493](image-20221029184537493.webp)

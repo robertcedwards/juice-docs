@@ -41,7 +41,7 @@ So we're now minting this thing through the website which is cool. The stuff is 
 
 ## Product prospective with @Zeugh
 
-![](ktQrGSS.png)
+![](ktQrGSS.webp)
 
 **Zeugh**: The Juicebox.money is a complex thing to use. I think it will be something to see that front end are more focused on some type of projects. Let's say there's a NFT project wants to launch its treasury on Juicebox, they can have a direct way for easy launch to help set it up ahead of time. You want to launch a NFT project and make the funds through Juicebox so people can co-own the treasury like tileDAO did and issue tokens for people that are minting.
 
@@ -71,14 +71,14 @@ Another thing I want to talk about is what we're discussing a lot in the chat ab
 
 One thing I want to bring up first is the possibility of changing the governance cycle in order to allow for longer temperature checks because I definitely feel the temp check are too short. But there's also balance if you lengthen the temp check, it makes it harder to get things through the governance process and it takes longer to get things done. We did a poll and people are really into the weekday idea.
 
-![](nG8Bn2D.png)
+![](nG8Bn2D.webp)
 
 **nicholas**: Since people prefer temp check ends during the week, I'd particularly like the proposal edit freeze to happen during the week, because I had to spend a lot of Sundays modifying proposals because people obviously just give comments leading up to the freeze and I prefer it end in the week. I understand people have jobs and I am certain that might not be convenient, but people from the poll seem to be happy with that idea.
 
 **jango**: For me personally, it's nice to end on weekend because I can do a lot more meeting oriented and dev oriented stuff during the week, and in the weekend, I can read the proposals and think about those. There's not much weekend breaktime.
 
 **nicholas**: How specified should proposals be? I made a suggestion that is three points if you add them to the proposals, 
-![](GbRQJsd.png)
+![](GbRQJsd.webp)
 maybe they will enable more delegation, because a lot of the burden getting the proposal through can be like knowing exactly what steps should be taken, when it's not always necessary DAO knows every single steps if DAO is willing to accept the risks, the implementation risk of someone delegating it to the person who's the author or someone specified in the proposal. I think it's a decent choice if it's a better financial allocation and also adding a risk in risk section which is like "Look, we're not specifying the address the money got set to, we don't think that's a super important detail for the DAO to be voting on", but that's a risk we can screw up sending it to a wrong address because it wasn't specified in the proposal. It allow the proposal to move forward before all those details are sorted out. Some proposal do deserve to have hyper detailed specifications and it's important for the DAO to vote on it, others delegation will be more appropriate. I think that might be a interesting format for making governance more manageable. 
 
 **filipv**: I'm definitely onboard with that. I think that thing need to be weighted very carefully just because it's not like we are going through a hierachy and people are revising it in every step. It's kind of like every proposal goest to the multisig like the one source of truth. It's like something running close to the middel very powerful and very dangerous. I think we need to be careful about specifications and and we don't want to lead to some DAO crisis when people are disagreeing on an interpretation of the proposal after the fact.
@@ -128,7 +128,7 @@ I still think it's instrutive not only from accounting perspective but also from
 **gogo**: I'm very glad to be able to discover the future of ComicsDAO and strategy of what we're gonna do there. We had a super contribution from JuiceboxDAO from the beginning which is pretty amazing. 
 
 I would like to share what we just thought. So we basically are doing a full story and the beginning starts with [this post here](https://twitter.com/ComicsDAO/status/1533991837865746432). 
-![](5MGlSvX.png) 
+![](5MGlSvX.webp) 
 What I would like to propose is that this is our heroes Banny and they're travelling throught the DAO galaxy to DAOs. We would like to know where JuiceboxDAO would like the ship to go to the next DAO, so that we can keep on building covers to next DAO. Let's create a poll here and vote on the DAO that JuiceboxDAO decides what ComicsDAO is gonna do next. 
 
 Another thing is that, we had a big player, this guy is amazing and helps us a lot.
@@ -145,13 +145,13 @@ Austin Griffith's BuildGuild got launched this week and there's a proposal to fu
 So it's very cool to see comfort circle, and hopefully we will be able to fund a modest hackathon to get the treasury kickstarted with funds, hopefully getting that brew of hackers into the ecosystem. 
 
 @twodam's has posted a twitter about this week's projects [here](https://twitter.com/twodam_eth/status/1534200052511518720).
-![](zGAeIDq.png)
+![](zGAeIDq.webp)
 
 **jango**: Super exciting. Thank you @nicholas for doing a lot. Most excited once we get the V1 V2 token stuff, situated to start talking to the SharkDAO, or a lot of folks operating on V1 still doing ongoing work and fundraising, to see if they want to move over and leverage some of the new tools to make their projects more successful, whatever that means to them these days. But I think we're still a little ways away, so getting new projects on is still the name of the game for sure.
 
 ## Quizz time:
 
-![](NHRuMkt.png)
+![](NHRuMkt.webp)
 
 Oh man, this episode definitely needs a PG rating for sure. I won't compile it so if you are interested, check out [recording](https://www.notion.so/juicebox/6a6028d4c57d443a9a76dbc7efc2551c?v=6f0854095bf0490885e67bdc9b01f74b&p=ed2b9848a39c484d91e93301ef199592) and jump in to 1h25'00", you're welcome!
 

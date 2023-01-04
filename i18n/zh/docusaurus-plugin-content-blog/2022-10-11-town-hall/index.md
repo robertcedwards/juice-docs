@@ -2,11 +2,11 @@
 slug: 2022-10-11-town-hall
 title: Juicebox DAO 周会概要 Oct. 12, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## 开发工作汇报 Jango
@@ -26,7 +26,7 @@ Felixander 和 Burtula 一同制作了 [Banny 图像小说](https://drive.google
 ComicsDAO 正在帮助 Nouns 出版一本关于 Nouns 生态的漫画书，这本书将在链下全美各大书店发行。
 
 他们手上掌握了其中 8 页的广告页面，提供给与 Nouns 相关各个 DAO 及项目进行宣传。ComicsDAO 考虑把其中的一页无偿提供给 JuiceboxDAO, 以便我们可以为自己做一些宣传。
-![](kaHDm5i.png)
+![](kaHDm5i.webp)
 
 ## NFT Rewards 审计基金 Nicholas
 
@@ -49,7 +49,7 @@ ComicsDAO 正在帮助 Nouns 出版一本关于 Nouns 生态的漫画书，这�
 他们的网站目前实时报道镇市政厅的各项活动，采访一些当地的艺术家、诗人及作家及刊登他们的作品。
 
 ONNI 创建了一个数据可视化工作，在网站上详细列出镇子的各项预算及成本支出等数据，让居民可以查阅参考。
-![](kqZfebn.png)
+![](kqZfebn.webp)
 
 他们还计划向每个镇上居民颁发项目代币，让这个项目变成一个社区共同拥有及管理的项目。但在这样一个偏远小镇，居民的 web3 甚至 web2 认知都还不完全成熟的情况下，怎样教育大家接受新的支付方式会是一个不小的挑战。同时他们还考虑到发行以诗歌和菜谱为内容的 NFT 的可行性，NFT 的销售收入可以反哺社区用于支持艺术家们的创作。
 
@@ -64,17 +64,17 @@ Matthew 和 Brileigh 刚刚推出新一期的 [Juicenew](https://juicenews.beehi
 
 同时他们还撰写了一篇[文章](https://info.juicebox.money/blog/2022-10-11-moondao/
 )，详细介绍 MoonDAO 创建背景、发展历程和社区的最新情况。
-![](Cct58Ri.png)
+![](Cct58Ri.webp)
 
 
 
 Nicholas 在创建审计基金项目的过程中，摸索出一个用 ENS 域名来作为项目直接支付地址的模式，他把这个做法详细地写成一个[教程](https://info.juicebox.money/blog/juicebox-donate-with-ens/)，供大家需要时进行参考。
-![](NY7Zu1d.png)
+![](NY7Zu1d.webp)
 
 ## FORMING 工作报告 Lexicon Devils
 
 Lexicon Devils 目前不定期与其他项目合作，在 Juicebox 在 Cryptovoxels 的总部举行一些现场表演活动。最近一次的活动安排在 10 月 29 日，万圣节的前夕，所以本期活动也是相关的惊悚主题。
-![](oMDz6r8.png)
+![](oMDz6r8.webp)
 
 这一期的表演活动开放申请，任何人有意参加演出都可以到 [Forming 的网站](http://forming.lexicondevils.xyz/)提交申请，截止日期为 10 月 25 日。
 

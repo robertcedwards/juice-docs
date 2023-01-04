@@ -14,30 +14,30 @@ tags: [protocol, update]
 Juicebox is a business-model-as-a-service and programmable treasury for community-owned Ethereum projects.
 
 Go check it out at [juicebox.money](http://juicebox.money). You can begin using Juicebox as your project's payment terminal with one gas-efficient transaction.
-![](image-1.png)A project running on Juicebox.
+![](image-1.webp)A project running on Juicebox.
 ### Motivation
 
 Long story short: indie artists and devs, DAOs, and public goods more generally, need a groovy way to capture the value they create, make reliable cashflow money out of it, and then share it back into the world. 
 
 The Juicebox protocol does this by allowing projects to make commitments about how its cashflow will be distributed *before *ever receiving payments, signaling to users how their money will be spent ahead of time*. *It works really well as a payment terminal and programmable treasury for projects that have mostly predictable costs (like staff payouts, service subscriptions, donations, budgeted initiatives, etc.), and who want to automatically reward their community as they become successful.
 
-![](Screen-Shot-2021-07-13-at-12.00.04-PM.png)
+![](Screen-Shot-2021-07-13-at-12.00.04-PM.webp)
 ### How it works
 
 With just one gas-efficient transaction, you can start funding and growing a Juicebox project, and configuring its treasury's payouts.
 
 Once deployed, anyone can fund your project either as a patron by making a payment directly through [juicebox.money](http://juicebox.money), or by using other contracts that take fees composably into the Juicebox protocol. Either way, they'll receive your project's community tokens in return.
-![](Screen-Shot-2021-07-13-at-4.03.07-PM.png)People can pay you directly via an interface like [juicebox.money](http://juicebox.money).![](Screen-Shot-2021-07-13-at-1.24.21-PM.png)Or, inherit from `JuiceboxProject.sol` and use `_takeFee` to get paid contractually.
+![](Screen-Shot-2021-07-13-at-4.03.07-PM.webp)People can pay you directly via an interface like [juicebox.money](http://juicebox.money).![](Screen-Shot-2021-07-13-at-1.24.21-PM.webp)Or, inherit from `JuiceboxProject.sol` and use `_takeFee` to get paid contractually.
 As the project owner, you can set a funding target that specifies how much it'll cost to create and operate your project for a set amount of time. You do this *before* anyone sends you money. If your project earns more than its funding target in a set period of time, the overflow can be redeemed by your supporters alongside you in exchange for burning tokens. This effectively pushes everyone's price to pay for your project towards zero as usage grows.
 
 If left unclaimed, overflow serves as a runway for projects.
 
 A project's team and its community are thus incentivized to work together to make sure overflow growth outpaces spending.
-![](image-2.png)
+![](image-2.webp)
 Funding cycles roll over automatically, allowing people and contracts to affordably fund projects that are important to them on an ongoing basis.
 
 You can configure a discount rate to incentivize earlier adopters, a bonding curve rate to incentive commitment from community members, and a reserved rate to receive some of your own tokens each time someone pays you and receives tokens themselves.
-![](image-3.png)
+![](image-3.webp)
 Project owners can re-asses their funding needs and cycle configuration over time, and can choose to take their token holders' perspectives into account while publishing these sorts of changes to Juicebox.
 
 ---

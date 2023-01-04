@@ -26,7 +26,7 @@ The first Juicebox configuration for the JuiceboxDAO lasts 30 days, and includes
 - Fleek costs **$10** monthly.
 
 The total is **$19,967**.
-![](image-7.png)
+![](image-7.webp)
 
 The staff payout sums are small compared to market rates for these skills. We decided to start off with a small budget during the first funding cycle to encourage a longer runway, and to be able to re-evaluate needs as the first funding cycle plays out. 
 

@@ -17,7 +17,7 @@ hide_table_of_contents: true
       <div class="card">
         <div class="card__image">
           <img
-            src="/img/townhall.png"
+            src="/img/townhall.webp"
             alt="Image alt text"/>
         </div>
         <div class="card__body">
@@ -35,7 +35,7 @@ hide_table_of_contents: true
       <div class="card">
         <div class="card__image">
           <img
-            src="/img/townhall.png"
+            src="/img/townhall.webp"
             alt="Image alt text"
             title="Logo Title Text 1" />
         </div>
@@ -54,7 +54,7 @@ hide_table_of_contents: true
       <div class="card">
         <div class="card__image">
           <img
-            src="/img/townhall.png"
+            src="/img/townhall.webp"
             alt="Two Juicebox Characters Discussing Townhall"
            />
         </div>
@@ -73,7 +73,7 @@ hide_table_of_contents: true
       <div class="card">
         <div class="card__image">
           <img
-            src="/img/townhall.png"
+            src="/img/townhall.webp"
             alt="Image alt text"
             title="Logo Title Text 1" />
         </div>

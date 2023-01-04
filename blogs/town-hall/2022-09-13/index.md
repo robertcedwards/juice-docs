@@ -2,11 +2,11 @@
 slug: 22-09-13
 title: September 13th, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## versioning with jango 
@@ -30,12 +30,12 @@ The frontend team found out that the biggest pain point for our users, which imp
 *Strath was sharing his screen and showcasing the improved UI design*
 
 The biggest feedback they had was the step 2 of the 3 steps in the current creation flow, the Funding cycles which is some kind of tiered approach and has a lot to go through. 
-![current flow](kN4ebr4.png)
+![current flow](kN4ebr4.webp)
 
 They are trying to break it down to simplify everything, get rid of the cognitive load and give people the ability to make one big decision per page. 
 
 Here's what the improved UI looks like:
-![new flow](g623nG8.png)
+![new flow](g623nG8.webp)
 
 And Strath was explaining the tabs in the new UI one by one.
 
@@ -56,7 +56,7 @@ It gets a little complicated, but it does provide particular accounting niceties
 
 ## Two truths and a lie with Felixander
 
-![TwoTruthOneLie](DdfC3oh.png)
+![TwoTruthOneLie](DdfC3oh.webp)
 
 The correct answer is 0xBA5ED.
 

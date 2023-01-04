@@ -2,11 +2,11 @@
 slug: town-hall-2022-11-29
 title: JuiceboxDAO Town Hall Summary 2022 年 11 月 30 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Infura 事后剖析 by Peri and Filipv
@@ -21,7 +21,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 Jigglyjams 在会上简单介绍了[juicetool](https://juiccetool.xyz) 上的提案界面并演示如何填写及提交一个提案。
 
-![juicetool proposal interface](juicetool_proposal.png)
+![juicetool proposal interface](juicetool_proposal.webp)
 
 同时他还介绍，提案提交之后，会自动在我们的 Discord 服务生成一个讨论频道。除此之外，还会在[dolthub 的 Juicebox 治理页面](https://www.dolthub.com/repositories/jigglyjams/juicebox-governance) 生成一个新的目录，提案也会推送至数据库。这些是 Jigglyjams 计划逐步把 Notion 迁移到 MySQL 数据库的一些步骤。
 
@@ -41,7 +41,7 @@ JokeDAO 的负责人 Seanmc 来到周会，对 JuiceboxDAO 对 JokeDAO 的拨款
 
 Felixander 向 Filipv、Dr.Gorilla 及 Matthewbrooks 等三人提了一个问题：“ 你觉得 Gabriel Haines 最后会怎样找到 SBF？“。他要求周会参会者猜一下，”赤裸地铐在按摩池上“ 这个回答是以下哪一位给出来的？这个问题的背景，请参考 [Gabriel Haines 项目](https://juicebox.money/v2/p/327) 的项目描述。
 
-![quiz poll](quiz_poll.png)
+![quiz poll](quiz_poll.webp)
 
 正确答案是 **Matthewbrooks**。
 
@@ -68,4 +68,4 @@ Lexicon Devils 把活动的[表演内容](https://www.youtube.com/watch?v=zNxjgp
 
 Twodam 制作了一个非常酷的 Dune 数据面板来展示整个 Juicebox 协议的各种 NFT 奖励统计数据。
 
-![NFT Dune dashboard](NFT_dashboard.png)
+![NFT Dune dashboard](NFT_dashboard.webp)

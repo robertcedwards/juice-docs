@@ -2,11 +2,11 @@
 slug: 22-12-20
 title: December 20, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -27,7 +27,7 @@ Jango said this discussio of how to get JBX outward to both incoming members or 
 
  Using the [dashboard created by Filipv](https://dune.com/filipv/recent-recipients) to compare projects that are receiving payments between different version of Juicebox protocols, we can see that V3 protocol is having a very healthy trend of adoption, while V1 and V1.1 is tending towards zero, espcially as projects like Lexicon Devils which are some of the last active ones on V1 have already moved to V3.
 
-![projects recently received payments](recent_recepients.png)
+![projects recently received payments](recent_recepients.webp)
 
 Talking about different versions of protocol, Jango said that the versioning nomenclature discussions had been very interesting for him this week, which was brought up by Nicholas and Peri about the usefulness of scoping down how the juicebox.money website references versions of protocol because it can be confusing sometimes. Jango also said he was grateful to the versioning effort for getting us to a place where we feel comfortable iterating on otherwise fixed smart contracts, while giving other communities the option to move over as well. He thought that if we could do this versioning efforts over again, there may have been some nomenclature things that we could improve. This definitely encourages us to be open-minded abou how we go from here. A lot of treasuries have evolved over to V3, but we might still want a lot of that versioning infrastructure to create some path forward, given the risks or features that we find compelling enough to do.
 
@@ -35,19 +35,19 @@ Talking about different versions of protocol, Jango said that the versioning nom
 
 - [Salman Needs A Job](https://juicebox.money/@salmanneedsajob) is a citizen journalism project exploring the World of Work in Web3.
 
-  ![project salman needs a job](project_salmanneedsajob.png)
+  ![project salman needs a job](project_salmanneedsajob.webp)
 
 - [The Chinese Juicebox project](https://juicebox.money/@jbxcn) created by Zhape, in an effort to extend more support to projects in the Chinese community inside the Juicebox ecosystem.
 
-  ![Project JBX CN](project_jbxcn.png)
+  ![Project JBX CN](project_jbxcn.webp)
 
 - [The Juicetool project](https://juicebox.money/@juicetool) that Twodam launched to fund the running of Juicetool website.
 
-  ![Project Juicetool](project_juicetool.png)
+  ![Project Juicetool](project_juicetool.webp)
 
 - [zhougsoft](https://juicebox.money/@zhougsoft) created by zhoug who is a member of the mfers community.
 
-  ![Project zhougsoft](project_zhougsoft.png)
+  ![Project zhougsoft](project_zhougsoft.webp)
 
 ### Current status of some projects waiting for V3 before
 

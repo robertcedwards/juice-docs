@@ -2,11 +2,11 @@
 slug: town-hall-2022-11-08
 title: JuiceboxDAO 周会概要 2022 年 11 月 9 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Defifa 工作报告 by Jango
@@ -69,7 +69,7 @@ Gulan 目前在 JuiceboxDAO 主要负责会计记账工作， 他在会上演示
 
 月底大概 11 月 27 日，Lexicon Devil 将会举办一场 FORMING 携手 [AllSTARZ](https://twitter.com/allstarz_nft) 的艺术展示活动。 Wachozacco 为他们的 NFT 系列制作了一些 Voxel 模型并将用于制作 Voxels 空间的可穿戴物品。
 
-![image-20221112170837528](image-20221112170837528.png)
+![image-20221112170837528](image-20221112170837528.webp)
 
 他们同时打算把之前举办过活动做一个混剪编辑，用来向其他社区宣传和分享 Forming 文化。昨天他们召开了一个会议，商讨下步工作方向及计划接触的社区，不断地推动 Forming 的向前发展。
 
@@ -79,7 +79,7 @@ Matthew 在会上对当前治理周期的各个提案逐一进行粗略的介绍
 
 Matthew 及 Brileigh 同时发布了[新一期的果汁新闻](https://juicenews.beehiiv.com/p/juicenews-nov-08)，总结最近一周发生在 Juicebox 生态内的主要大事。
 
-![img](juicenews-nov-08-2022-1200px.png)
+![img](juicenews-nov-08-2022-1200px.webp)
 
 
 
@@ -89,7 +89,7 @@ Matthew 及 Brileigh 同时发布了[新一期的果汁新闻](https://juicenews
 
 同时协议周期性活跃项目的数字目前呈现下降的趋势。
 
-![image-20221112121200783](image-20221112121200783.png)
+![image-20221112121200783](image-20221112121200783.webp)
 
 
 

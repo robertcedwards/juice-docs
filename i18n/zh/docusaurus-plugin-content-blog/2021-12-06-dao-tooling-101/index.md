@@ -12,7 +12,7 @@ tags: [ecosystem, guide]
 特别是DAO堆栈 --- 运营DAO所需的一整套软件工具 --- 正在日趋成熟。这方面的一个例子就是 Juicebox，它作为一个 DAO 的金库管理协议，最近被 [ConstitutionDAO](https://juicebox.money/#/p/constitutiondao) 选用来进行筹款活动，尝试去购买一个美国宪法的副本，这次筹款成功募得将近 4700 万美元。
 
 通过这篇文章，我们会对 DAO 的各种基本功能进行定义，还会介绍实现这些功能需要用到的工具。本文内容受到 Juicebox 贡献者 `@nnnnicholas` 的 The Fintech Blueprint Podcast 播客的启发；如果你更喜欢听语音内容，[去听一下](https://twitter.com/nnnnicholas/status/1460661895879348232?s=20&t=uUoFXuazXWYqRUgHLflMfQ)！
-![](c3kCNED.png)
+![](c3kCNED.webp)
 
 ## DAO 是做什么的？
 

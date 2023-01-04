@@ -12,7 +12,7 @@ Late 2021 appears to be the frontier of DAOs, and best practices and playbooks f
 In particular, the DAO stack - the set of software tools required to run a DAO - is beginning to mature. One such example is Juicebox - a DAO treasury protocol - which was recently picked by the [ConstitutionDAO](https://juicebox.money/#/p/constitutiondao) to raise almost ~47million USD in an attempt to buy a copy of the United States Constitution.
 
 In this article, we'll define the fundamental functions of a DAO and describe the tools required to fulfill these functions. The content is a derivative of Juicebox contributor `@nnnnicholas` 's episode on The Fintech Blueprint Podcast; if audio is your thing, [check it out](https://twitter.com/nnnnicholas/status/1460661895879348232?s=20&t=uUoFXuazXWYqRUgHLflMfQ)!
-![](c3kCNED.png)
+![](c3kCNED.webp)
 
 ## **What's a DAO do?**
 

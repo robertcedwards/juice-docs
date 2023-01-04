@@ -2,11 +2,11 @@
 slug: town-hall-2022-10-25
 title: JuiceboxDAO 周会概要 2022 年 10 月 26 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -15,7 +15,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 Nicholas 创建了一个审计基金项目，在我们社区成员之间筹款，以便在 DAO 的审计拨款下来之前能够向 Code4rena 垫款按时启动审计。请查看[上周的周会概要](https://info.juicebox.money/zh/blog/2022-10-18-town-hall)了解更多关于这个项目的详细情况。
 
-![image-20221026195655998](image-20221026195655998.png)
+![image-20221026195655998](image-20221026195655998.webp)
 
 10 月 23 日，DAO 的拨款用 Add to balance 的方法（`Add to balance` 即增加金库余额，这个方式不会铸造新代币，这样就可以确保此项目的赎回不会受到新增代币的稀释）转到审计基金项目的金库，之前的捐款人可以赎回他们数天前捐款时获得的项目代币来获得全额 ETH 退款。
 
@@ -53,12 +53,12 @@ Strath 先前在 9 月 14 日的周会上曾对这个工作做过初步的介绍
 
 - 新流程把原有流程分拆成多个不用的步骤，这样的话，项目方每个步骤只需要做一个大的决策，从而减轻他们对协议参数的认知负担。
 
-![image-20221028234859190](image-20221028234859190.png)
+![image-20221028234859190](image-20221028234859190.webp)
 
 - 新流程的 UI 简化，操作界面简洁干净，把一些可选项和非常用项折叠或隐藏起来，让项目方不用在面对太多冗余信息。
 - 新流程提供了一些常用的参数模板如 `自动筹款周期`、`黑夜代币设置`等这样的默认值，项目方可以选用一些常用的配置，不用每一步都非得定制化。
 
-![image-20221029000127331](image-20221029000127331.png)
+![image-20221029000127331](image-20221029000127331.webp)
 
 -  新流程整合了全新的 NFT 奖励合约，项目方在奖励支持者的时候有了更多的选择，但由于该合约涵括面比较广，还需要进行多次迭代把更多功能整合进来。
 
@@ -72,7 +72,7 @@ Kenbot 作为 StudioDAO 的创始人，表示很感谢 Jango 的支持和鼓励�
 
 Kenbot 还在会上演示了 StudioDAO 的主页，介绍页面上不同的项目和内容。他表示希望这个页面能成为一个有趣的面板，同时与社区成员的 NFT 藏品实现关联。随着项目启动，创新思维会不断萌发，募集资金也将不断增多，将会实现项目最终的成功。
 
-![image-20221029131715291](image-20221029131715291.png)
+![image-20221029131715291](image-20221029131715291.webp)
 
 
 
@@ -96,7 +96,7 @@ Felixander 在会上他将会更加致力于 Banny 小宇宙的设计工作，�
 
 Banny 漫画第二期即将推出，下图是侦探 Banny 故事的预告图。
 
-![](YPMykE9.png)
+![](YPMykE9.webp)
 
 关于 Defifa 项目的发布一事，Felixander 表示他一直在与媒体接洽，希望对我们即将推出的 Defifa 项目进行追踪报道。他也邀请有兴趣的人一同参与推进这个工作。
 
@@ -104,8 +104,8 @@ Banny 漫画第二期即将推出，下图是侦探 Banny 故事的预告图。
 
 在会上，Felixander 请大家用一个词或一个物品来形容一下 Banny 的狂野周末。然后他请大家在 skribble.io 网站上玩一个画图猜字的游戏。 
 
-![image-20221029184407155](image-20221029184407155.png)
+![image-20221029184407155](image-20221029184407155.webp)
 
 最后，他在会上发起问卷调查，看一下谁想出来的词或物品最受到大家的认同。
 
-![image-20221029184537493](image-20221029184537493.png)
+![image-20221029184537493](image-20221029184537493.webp)

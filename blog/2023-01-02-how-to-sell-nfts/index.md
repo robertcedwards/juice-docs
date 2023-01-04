@@ -2,14 +2,14 @@
 slug: how-to-sell-nfts
 title: How to Sell NFTs on Juicebox
 description: Tutorial on how to sell NFTs on Juicebox for NFT projects, DAOs, and crowdfunding.
-image: https://info.juicebox.money/assets/images/cover-img-bfad735019aa34e113d966b6c605e392.png
+image: https://info.juicebox.money/assets/images/cover-img-bfad735019aa34e113d966b6c605e392.webp
 authors: [brileigh, matthew]
 tags: [guide, nft]
 ---
 
 # How to sell NFTs on Juicebox in less than 10 minutes
 
-![How to sell NFTs on Juicebox](cover-img.png)
+![How to sell NFTs on Juicebox](cover-img.webp)
 
 Juicebox enables creators and communities to create and launch NFT projects with powerful yet simple tools tailored to your needs in an ongoing basis. In this tutorial we’ll guide you through how to configure a Juicebox project to sell NFTs in less than 10 minutes. Whether you’re a creator selling content, managing a DAO, NFT project or crpytocurrency crowdfund, you can sell NFTs easily on Juicebox with complete control and transparency. 
 
@@ -22,13 +22,13 @@ You can follow along in this article or the Youtube video.
 
 So head to [juicebox.money](http://juicebox.money), connect your wallet, and click “create a project.”
 
-![Create a project](create-project.png)
+![Create a project](create-project.webp)
 
 ### Step 1: Project Details
 
 Here you’ll provide general information about your Juicebox project including the name, description, a logo, and add social links. You can even customize the `Pay` button, for this example we could make it say “we love flamingos.” Once you’re done, click `Next`.
 
-![Project details](project-details.png)
+![Project details](project-details.webp)
 
 ### Step 2: Funding Cycles
 
@@ -36,7 +36,7 @@ If we set this to 14 days then **all of our project settings will be locked for 
 
 **You can decide what’s best for your project** and if you need the flexibility to change at any time, you can choose `Manual Funding Cycles`. If you’re not sure, you can start with `Automated Funding Cycles`. 
 
-![Funding Cycles](funding-cycles.png)
+![Funding Cycles](funding-cycles.webp)
 
 :::tip
 Remember, you can always reconfigure your project later to reflect your needs for the project
@@ -48,7 +48,7 @@ This is where you decide how much money from the project can be distributed per 
 
 If we set a `Specific Funding Target` of 10,000 USD, we can distribute up to 10,000 USD worth of ETH per 14-day funding cycle. This is like a hard cap on the amount that can be distributed from the treasury so the project owner can’t take all the funds and disappear. Anything over 10,000 USD worth of ETH will be considered `Overflow` and can be redeemed by anyone who contributed to the project, almost like a refund.
 
-![Funding Target](funding-target.png)
+![Funding Target](funding-target.webp)
 
 :::tip
 You can also set this in ETH instead of ETH denominated in USD.
@@ -66,33 +66,33 @@ If we were doing specific amounts, I could say that I want to receive 10,000 USD
 
 Both of these can be configured to add other people, for example if you had a team of four people (including yourself) working on the project, you could split the payouts 25% to each address by clicking `Add Payout` and adding their address and 25%.
 
-![how to add a payout](add-payout.png)
+![how to add a payout](add-payout.webp)
 
 But for this tutorial we’ll keep it simple and stick with 100% going to the project creator.
 
-![Payouts](payouts.png)
+![Payouts](payouts.webp)
 
 ### Step 5: Project Token
 
 Here you can decide how your project’s tokens will work. There’s a lot of things you can customize here but the `Default Token Settings` will work for most projects. You can always reconfigure this setting in the future, depending on the roadmap for your NFT project.
 
-![project token](project-token.png)
+![project token](project-token.webp)
 
 ### Step 6: NFTs
 
 Click `Add NFT` choose an image, and give it a name, a description, and the minimum ETH contribution in order for someone to buy the NFT. This is also where you can decide the supply. You can either have a limited supply—for example, only 10 can be minted—or an unlimited supply. You can also add an external link to point to a website of your choice.
 
-![add nft](add-nft.png)
+![add nft](add-nft.webp)
 
 You can repeat this process as many times as you like for each NFT you have. They can be priced and supplied all the same, or you can create tiers. Using tiered NFTs is a great way to create different incentives for people to support your Juicebox project at different price points. 
 
 Once you have all your NFTs added, you can create a collection name, description, and custom token symbol. For this project, we’ll call it “Flamingo”
 
-![collection settings](collection-settings.png)
+![collection settings](collection-settings.webp)
 
 There’s also an option to add a message that appears when contributors receive an NFT as well as a button with a link, this could be a project website, Twitter, Discord, etc. 
 
-![pay button](pay-button.png)
+![pay button](pay-button.webp)
 
 ### Step 7: Confirm all settings (rules)
 
@@ -100,11 +100,11 @@ The default is a `3-day delay`, which means that any changes to the project sett
 
 You can change this to be longer, shorter, or no delay, but we’ll stick with the 3-day default.
 
-![3 day delay](3-day-delay.png)
+![3 day delay](3-day-delay.webp)
 
 **Before deploying**, review your settings and make any changes needed. You can always go back and tweak things before you deploy. Check the `Terms of Service` box and you’re ready to go! Click `Deploy`, confirm the transaction in your wallet, and your project is live!
 
-![project deployed](project-deployed.png)
+![project deployed](project-deployed.webp)
 
 :::tip
 You can go through this entire process on Goerli testnet before launching your project on mainnet. If you have any questions, please come by the Juicebox discord server for support at discord.gg/juicebox.
@@ -112,7 +112,7 @@ You can go through this entire process on Goerli testnet before launching your p
 
 Note that the NFT images might take awhile to display properly. If someone wants to purchase an NFT at the 0.1 ETH tier, for example, they just click on the NFT, click the customized pay button, click `I understand` to acknowledge the safety warning, and then click `Pay`. You can even leave a little on-chain memo like “we love the flamingos”, an image, or Banny sticker with your contribution. 
 
-![How to pay](how-to-pay.png)
+![How to pay](how-to-pay.webp)
 
 So we’ll refresh the page and now you can see the NFT that we just purchased in the Activity feed on the right. 
 

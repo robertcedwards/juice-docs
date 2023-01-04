@@ -2,11 +2,11 @@
 slug: town-hall-2022-11-15
 title: JuiceboxDAO 周会概要 2022 年 11 月 16 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## 前端工作报告 Peel 团队
@@ -17,7 +17,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 - 本周会做一些新的 subgraph 的更新，接下来两周左右我们将可以在页面上的项目动态上显示筹款周期更新的情况。
 - 非常感谢本周期 DAO 对 Peel 的长期报酬更新提案的支持。
 
-![new_v3_projects](new_v3_projects.png)
+![new_v3_projects](new_v3_projects.webp)
 
 ## Defifa 工作报告 with Jango
 
@@ -43,7 +43,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 Jango 同时认为在 juicebox.money 上展示[项目的页面](https://juicebox.money/v2/p/305)是很棒的。目前的项目创建流程只允许设置 3 个 NFT 等级，但协议其实支持无限数量的 NFT 等级。因此他建议 juicebox.money 前端的工作应该优先扩展支持合适的等级数量，他觉得这样做才是健康的，我们总不想花费这么多人力物力开发出来的东西因为太过局限而无人问津。
 
-![defifa_project](defifa_project.png)
+![defifa_project](defifa_project.webp)
 
  Jango 很有信心，游戏过后，我们会对用于启动项目的各项参数的作用有更深认识，他很希望将来替换主题图案和网站设计后，来年再举办一次女足世界杯的相关游戏。
 
@@ -65,7 +65,7 @@ V1 到 V2 其实一个重大的升级，它打开了 Juicebox 协议很多的创
 
 Filipv 制作了一个 [Dune 数据面板](https://dune.com/filipv/juiceboard)用于分析 Juicebox 协议的各项指标数据。以下图表左边是过去 30 天的情况，右边则是历史数据。
 
-![protocol_analytics](protocol_analytics.png)
+![protocol_analytics](protocol_analytics.webp)
 
 过去 30 天，协议有 44 个项目成功创建，高于 10 月的数字，但仍明显低于历史平均值。付款的数据也是类似的情况，从付款次数或者从付款金额来看都是这样。
 
@@ -96,7 +96,7 @@ StudioDAO 已于本周启动。他们将于周四召开第一次市政例会，�
 
 SudioDAO 成功启动并创建了第一个金库之后，他们的筹款目标是在一个月内筹集 100 ETH 资金，用于推动项目的发展。
 
-![greenlight_treasury](greenlight_treasury.png)
+![greenlight_treasury](greenlight_treasury.webp)
 
 接下来，他们将举行一次投票来决定 DAO 的第一批电影项目。目前有意向加入的有 Alien-To-Me 及其他几个项目。同时他们还有一项关于 MoonDAO 的提案。如果提案获得通过，他们会资助拍摄一部 MoonDAO 的纪录片，非常酷，而且对 StuidioDAO 来说就是一个完美项目。
 
@@ -108,13 +108,13 @@ SudioDAO 成功启动并创建了第一个金库之后，他们的筹款目标�
 
 11 月 27 日，Lexicon Devil 将携手 ALLSTARZ 举办一个 Forming 活动。ALLSTARZ 一个很酷的 NFT 系列，可以在[这里](https://allstarz.world/)查看。
 
-![forming_allstarz](forming_allstarz.png)
+![forming_allstarz](forming_allstarz.webp)
 
 他们计划为 ALLSTARZ 的 NFT 持有人准备一个特别的活动。NFT 持有人可以参与这个[Twitter 抽奖活动](https://twitter.com/allstarz_nft/status/1592274671520874496)，Wackozacco 将会为获奖者按他们持有的 ALLSTARZ NFT制作 Voxels 的可穿戴道具，然后穿上去参与上面提到的 Forming 活动。
 
 他们正在制作过往[Forming 活动的混音带](https://soundcloud.com/lexicondevils/forming-mixtape-vol-1)，应该很快就可以完成。
 
-![Forming_mixtape](forming_mixtape.png)
+![Forming_mixtape](forming_mixtape.webp)
 
 
 
@@ -132,6 +132,6 @@ Felixander talked to three of our community members, Jigglyjam, Gogo and Viraz, 
 
 参与周会的成员猜一下究竟以上的第二句话是哪个人说的。
 
-![townhall_game](townhall_game.png)
+![townhall_game](townhall_game.webp)
 
 正确答案是 Jigglyjams。

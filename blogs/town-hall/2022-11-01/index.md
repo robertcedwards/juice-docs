@@ -2,11 +2,11 @@
 slug: 22-11-01
 title: November 1st, 2022
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 
@@ -23,7 +23,7 @@ Submission of transactions for Gnosis safe multisig used to be a very tedious pr
 - Someone will have to review the new payouts and then revise them one by one on the reconfiguration interface, ofter times involving some calculation of percentages; (if it's a funding cycle with dozens payout proposal, it can be a very back breaking effort. We should shout out to Jango and Twodam for handling these in the past.)
 - The transaction details on Gnosis safe is very complicated and not at all friendly for a  non-Dev to read,  let alone tell the rights or wrongs.
 
-![image-20221104162337765](image-20221104162337765.png)
+![image-20221104162337765](image-20221104162337765.webp)
 
 ### How this tool works
 
@@ -33,7 +33,7 @@ This reconfiguration helper will line up two adjacent funding cycles reconfigura
 
 As the data are fetched from our Notion database,  the operator don't need to manually calculate on the interface of Juicebox.money before submitting the transaction any longer. Especially when JuiceboxDAO will potentially have 3 reconfigurations (V1, V2 and V3) to update every funding cycle in the future, this helper will definitely make life a lot easier for mutisig signatories and the operators.
 
-![image-20221103231710173](image-20221103231710173.png)
+![image-20221103231710173](image-20221103231710173.webp)
 
 ## Notes from Jango
 
@@ -73,7 +73,7 @@ And he created a Juicebox project called [JB Eyeball Collection Fund](https://ju
 
 Fexliander prepared 3 prompts in a poll and ask community member to guess which one of them was going to generated the most creepy image when thrown upon Dall-E the AI drawing.
 
-![image-20221103225309357](image-20221103225309357.png)
+![image-20221103225309357](image-20221103225309357.webp)
 
 ## ConstitutionDAO Podcast Series Update with Matthewbrooks and Brileigh
 

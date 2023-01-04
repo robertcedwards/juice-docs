@@ -2,11 +2,11 @@
 slug: town-hall-2022-12-27
 title: JuiceboxDAO 周会概要 2022 年 12 月 28 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## Juicebox 数据分析报告 Nicholas
@@ -17,7 +17,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 Filipv 认为我们可以讨论决定一些重点关注的领域，这样就可以开发一些专用的数据面板来用于周会的分析用途。
 
-![town hall analytic update discussion](analytics_suggestion.png)
+![town hall analytic update discussion](analytics_suggestion.webp)
 
 ## Defifa 认证  Jango
 
@@ -27,7 +27,7 @@ Filipv 认为我们可以讨论决定一些重点关注的领域，这样就可�
 
 会上 Filipv 帮忙演示如何在 [defifa.net](https://defifa.net) 上认证记分卡。
 
-![defifa scorecard attestation](defifa_attestation.png)
+![defifa scorecard attestation](defifa_attestation.webp)
 
 我们的下一步计划是将在明年一月的 NFL 季后赛再组织一次 Defifa 游戏。虽然会有一些新的图案和标志，但我们不打算在 NFL 比赛中进行太多的迭代升级，主要还是会尽可能沿用目前的合约和前端，及使用类似 defifa.net/nfl2023 这样的网址。
 
@@ -51,11 +51,11 @@ Lexicon Devils 将会在 2023 年 1 月 6 日与 [Songcamp](https://twitter.com/
 
 Jango 问到有多少人申请参与此次活动的表演，以及甄选 Forming 的表演者的流程是怎样的。Darby 解释，此次活动共收到 8 - 9 份申请，主要由 Songcamp 社区来决定表演人选，然后再由 Lexicon Devils 来负责这些表演内容的编辑及展示。申请参与 Forming 表演有一个条件，录制的表演内容必须是专门为 Forming 活动准备的。
 
-![Forming x Songcamp collab RSVP](forming_songcamp.png)
+![Forming x Songcamp collab RSVP](forming_songcamp.webp)
 
 Lexicon Devils 的 [Forming 项目](https://juicebox.money/@forming) 最近也迁移到了 V3 协议。他们晚些时间会在项目推出一些不同等级的 NFT。
 
-![Lexicon Devils' new NFT tier](Lexicon_NFT.png)
+![Lexicon Devils' new NFT tier](Lexicon_NFT.webp)
 
 ## 猜谜活动 Felixander
 
@@ -68,7 +68,7 @@ Felixander 在周会上提供三句提示，其中两句是真话一句是假话
 1. 我曾经和以赛亚·托马斯（著名 NBA 球员）一起打篮球；
 2. 我写了一本书，卖出 100 万册。
 
-![2 truths and a lie with Felixander](felixander_contest.png)
+![2 truths and a lie with Felixander](felixander_contest.webp)
 
 正确答案是 Kmac
 
