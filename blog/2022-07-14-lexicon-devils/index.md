@@ -2,9 +2,9 @@
 slug: lexicon-devils-highlight
 title: Lexicon Devils, A Metaverse Architecture Guild Running on Juicebox
 description: How Lexicon Devils is building the metaverse, getting paid to do it, and managing their treasury on Juicebox.
+image: https://info.juicebox.money/assets/images/juicebox-v2-add33c4360a6591dbd7c84eca08202d2.webp
 authors: [matthew, brileigh]
 tags: [highlight]
-image: https://info.juicebox.money/assets/images/juicebox-v2-343f182edb8f0084282984d459c1d001.webp
 ---
 
 # Lexicon Devils: A Metaverse Architecture Guild Running on Juicebox  
