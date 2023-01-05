@@ -13,6 +13,10 @@ Many projects have no need for formal governance — the project creator or a sm
 
 ## 2. Offchain Governance (Recommended)
 
+:::tip
+Most projects ratify a Governance Process to use alongside Snapshot voting. Feel free to use [our process](https://info.juicebox.money/dao/process/) as a starting point. You can also join the [Juicebox Discord](https://discord.gg/juicebox) and tag `filipv#0001` and `0xSTVG.eth (stevie g)#7744` for help!
+:::
+
 Although this could be as simple as conducting polls in a Discord server, project creators are advised to use [Snapshot](https://snapshot.org):
 
 > Snapshot is a decentralized voting system. It provides flexibility on how voting power is calculated for a vote. Snapshot supports various voting types to cater to the needs of organizations. Creating proposals and voting on Snapshot is user-friendly and does not cost gas as the process is performed off-chain.
