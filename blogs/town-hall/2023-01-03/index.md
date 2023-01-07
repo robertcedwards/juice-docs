@@ -2,7 +2,7 @@
 slug: 23-01-03
 title: January 3rd, 2023
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
 tags: [town-hall]
 ---
 
