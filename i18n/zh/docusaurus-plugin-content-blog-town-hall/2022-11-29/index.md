@@ -1,8 +1,8 @@
 ---
-slug: town-hall-2022-11-29
-title: JuiceboxDAO Town Hall Summary 2022 年 11 月 30 日
+slug: 22-11-29
+title: JuiceboxDAO 周会概要 2022 年 11 月 30 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
 tags: [dao, town hall, news]
 ---
 

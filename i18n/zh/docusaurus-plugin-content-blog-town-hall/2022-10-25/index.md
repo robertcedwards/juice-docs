@@ -1,8 +1,8 @@
 ---
-slug: town-hall-2022-10-25
+slug: 22-10-25
 title: JuiceboxDAO 周会概要 2022 年 10 月 26 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
 tags: [dao, town hall, news]
 ---
 
