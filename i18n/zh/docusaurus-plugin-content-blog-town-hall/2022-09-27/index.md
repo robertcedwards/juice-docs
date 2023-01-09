@@ -1,5 +1,5 @@
 ---
-slug: 2022-09-27-town-hall
+slug: 22-09-27
 title: JuiceboxDAO 周会概要 2022 年 9 月 28 日
 authors: [zhape]
 image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
