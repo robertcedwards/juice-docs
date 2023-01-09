@@ -2,12 +2,12 @@
 slug: 23-01-03
 title: JuiceboxDAO 周会概要 2023 年 1 月 4 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
@@ -17,7 +17,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 Juicebox 历史现金流：
 
-![protocol analytics 0103](protocol_analytics_0103.png)
+![protocol analytics 0103](protocol_analytics_0103.webp)
 
 新项目介绍：
 
@@ -25,19 +25,19 @@ Juicebox 历史现金流：
 
     EmpireDAO 一个位于纽约的共享工作空间组织，目前租约遇到了一些问题。本项目旨在筹款帮助他们留在目前的地址并避免创始人个人破产。
 
-    ![empireDAO project](empiredao_project.png)
+    ![empireDAO project](empiredao_project.webp)
 
 - [Lenster](https://juicebox.money/@lensterapp)
 
     Lenster 是 Lens 协议的其中一个前端。这可能是一个用于试验 Juicebox 的项目。
 
-    ![Lenster project](lenster_project.png)
+    ![Lenster project](lenster_project.webp)
 
 - [Twitter DAO Energy Gauge](https://juicebox.money/v2/p/379)
 
     本项目由 Jango 创建。想法源于最近关于推特是否应该更 DAO 化的一些讨论，Jango 创建了一个项目金库，以便有需要的人可以安全地把他们的资金保管起来，并可以随时取走。
     
-    ![twitter dao energy gauge](twitterdaogauge_project.png)
+    ![twitter dao energy gauge](twitterdaogauge_project.webp)
 
 
 
@@ -121,7 +121,7 @@ Darby 还宣布，Lexicon Devils 有在今年纽约的 NFTNYC 上搞一次现场
 
 Matthew 和 Brileight 发布了Juicecast 新一期[采访 Darbytrash 的播客节目](https://podcasts.apple.com/ca/podcast/ep-19-darbytrash-from-forming/id1623504302?i=1000592726192)，介绍 Forming 诞生的缘起，还有它过往及将来计划的一些活动。
 
-![Juicecast episode of Forming](juicecast_forming.png)
+![Juicecast episode of Forming](juicecast_forming.webp)
 
 
 

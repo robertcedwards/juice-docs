@@ -2,12 +2,12 @@
 slug: 22-09-20
 title: JuiceboxDAO 周会概要 2022 年 9 月 21 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
 
-![Town Hall banner by Sage Kellyn](https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png)  
+![Town Hall banner by Sage Kellyn](https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp)  
 图片制作：[Sage Kellyn](https://twitter.com/SageKellyn) 
 
 
@@ -15,7 +15,7 @@ tags: [dao, town hall, news]
 
 [Capsules](https://cpsls.app/)是 peri 自己搞的一个链上字体项目。
 
-![cpsls project](F5YDE5e.png)
+![cpsls project](F5YDE5e.webp)
 
 这个项目是要尝试引入一个链上存储字体(typeface)的标准。现在有很多项目在链上渲染的 SVG 中使用到各种文本，但是如果他们想要在 SVG 里用到定制的字体的话，就要先想办法在链上存储这些字型（font)。链上存储字体既昂贵又复杂，目前也没有一个通用的标准。这个项目的目标就是要引入一个新的字体合约接口来实现字体链上存储的标准化，同时让价格更加亲民。
 
@@ -26,7 +26,7 @@ tags: [dao, town hall, news]
 这个字体合约允许用户来定义不同的字体，用户部署这个合约之后并不需要自己来存储相关的数据，只要数据符合合约定义的规格，谁都可以帮忙进行链上的存储。
 
 目前这个项目有 7 个纯色 NFT，让大家通过 mint NFT 来帮助存储 下图中 100 - 700 的 7 种字型。我们社区里很多早期就从 peri 的推特获悉这个项目，并在项目启动的第一时间就把这 7 个 NFT mint 光了。这也是一个链上基建发展的去中心化的一种努力吧。
-![7 fonts minted](cosc0mW.png)
+![7 fonts minted](cosc0mW.webp)
 
 peri 的推特在[这里](https://twitter.com/peripheralist), 有兴趣的可以关注一下他。
 
@@ -34,7 +34,7 @@ nicholas 使用这个 Capsules 字体渲染了某个 Juicebox 的活跃数据来
 ![nicholas's typeface](1PfC1pp.jpeg)
 
 而 filipv 则是下载了 Capsules 的字型并设置成自己电脑系统的字型。
-![filipv's typeface](SvdMNyS.png)
+![filipv's typeface](SvdMNyS.webp)
 
 ## 版本控制（versioning)工作汇报 by jango
 
@@ -56,7 +56,7 @@ jango 同时提及 V3 合约可以扩展实现许多功能。其中一个就是�
 ![juicenews](Xb7qYnT.jpeg)
 
 他们计划推出一系列的配置介绍的文章，深入剖析现有项目配置的方案及采取相关方案的原因，以便新的项目创建人可以更好地理解 Juicebox 的配置机制以及给自己的创建做一定的参考。他们写的第一篇配置介绍的文章是关于 StudioDAO 的，可以在[这里](https://info.juicebox.money/blog/2022-09-20-studiodao-config/)阅读。
-![studioDAO config article](mUXCtBp.png)
+![studioDAO config article](mUXCtBp.webp)
 
 Juicecast播客方面，他们最近采访了 0xSTVG，了解了他创建的 [Marin Swim County Association](https://juicebox.money/@mcsa)项目，节目将于本周晚些时候发布。
 
@@ -83,11 +83,11 @@ sunnndayyy 此次代表 Interface 参加会议，主要是介绍他们社区已�
  Sayid 介绍了一些平台新增的小功能，如用户数据的统计列表等。
 
  他还和 Mieos 在会上演示游戏对战。
- ![gplay game](gab5Bm7.png)
+ ![gplay game](gab5Bm7.webp)
 
 ## 猜谜时间 by Felixander
 
-![2truths1lie](gJqUCzL.png)
+![2truths1lie](gJqUCzL.webp)
 
 这是每期周会的保留节目，某位成员讲的两句真话和一句假话，让大家猜一下是哪一个成员。
 

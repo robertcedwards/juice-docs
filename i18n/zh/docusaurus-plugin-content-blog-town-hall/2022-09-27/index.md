@@ -2,11 +2,11 @@
 slug: 22-09-27
 title: JuiceboxDAO 周会概要 2022 年 9 月 28 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## 开发工作汇报 by jango
@@ -15,7 +15,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 V3 合约已于上周部署完毕。目前需要创建 JuiceboxDAO 的 V3 版本筹款周期，这是一个需要多签授权的交易。我们需要把 V3 筹款周期与 V1 及 V2 周期进行时间上的同步。这个交易已经发起，多签在周六前签名授权就可以执行。这个 V3 第一个筹款周期历时 7 天，到期后重新配置就可以与 V1、V2 的 14 天筹款周期同步。
 
-![launch of 1st V3 FC](gSt2Dyu.png)
+![launch of 1st V3 FC](gSt2Dyu.webp)
 
 V3 筹款周期目前没有任何支出及赎回的安排，仅作为接收 V3 项目费用用途。
 
@@ -48,7 +48,7 @@ nicholas 认为如果能够展开与 Code4rena 的合作，对大家都会是有
 ## 社区能见度工作汇报 by brileigh 及 matthewbrooks
 
 Juicenews (Juicebox 通讯)新的一期发布在[这里](https://juicenews.beehiiv.com/p/juicenews-sep-27)。
-![juicenews 20220927](0PM1U8z.png)
+![juicenews 20220927](0PM1U8z.webp)
 
 
 新的一期 [Juicecast 播客节目](https://anchor.fm/thejuicecast/episodes/Ep--11---Steve-from-Marin-County-Swim-Association-e1oet1l)，采访嘉宾是 JuiceboxDAO 的其中一个贡献者 [0xSTVG](https://twitter.com/0xSTVG), 介绍他创建的 [Marin County Swim Association](https://juicebox.money/@mcsa) 项目（一个非盈利性的地方性游泳协会）以及他参与 DAO 工作的经历和心得。
@@ -60,7 +60,7 @@ Juicenews (Juicebox 通讯)新的一期发布在[这里](https://juicenews.beehi
 （如果有兴趣参与这个采访或者提出自己的看法，可以在 Discord 联系 zhape#0046 或者直接联系matthewbrooks.eth#1111，谢谢）
 
 ## JB high 工作汇报 Felixander
-![jb high update](ycglZ2j.png)
+![jb high update](ycglZ2j.webp)
 
 JB high 是一个计划把社区内创作的一些协议的教学内容、博客及可用工具介绍等整合成一个 Juicebox.money 的用户教育中枢，方便创建项目的人快速查阅并提升对协议的理解。
 
@@ -70,6 +70,6 @@ JB high 是一个计划把社区内创作的一些协议的教学内容、博客
 
 每期周会的保留节目，某位成员讲的两句真话和一句假话，让大家猜一下是哪一个成员。
 
-![2truths1lie](ImdjSrX.png)
+![2truths1lie](ImdjSrX.webp)
 
 本期周会的正确答案是......来自 StudioDAO 的 kenbot。

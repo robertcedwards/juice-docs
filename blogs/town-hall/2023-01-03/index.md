@@ -2,12 +2,12 @@
 slug: 23-01-03
 title: January 3rd, 2023
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
@@ -17,7 +17,7 @@ There is not much activity in the last week. We have 62 ETH in payment on the pr
 
 History cashflows of Juicebox:
 
-![protocol analytics 0103](protocol_analytics_0103.png)
+![protocol analytics 0103](protocol_analytics_0103.webp)
 
 Highlights of some projects:
 
@@ -25,19 +25,19 @@ Highlights of some projects:
 
     EmpireDAO is a co-working space in New York and they are now having a bit problem with their lease. This project is fundraising to help them stay in their current space and avoid personal bankrupt of the founder. 
     
-    ![empireDAO project](empiredao_project.png)
+    ![empireDAO project](empiredao_project.webp)
 
 - [Lenster](https://juicebox.money/@lensterapp)
 
     Lenster is one of the front ends for the Lens protocol. This might be a project they're using to experiment with Juicebox.
     
-    ![Lenster project](lenster_project.png)
+    ![Lenster project](lenster_project.webp)
 
 - [Twitter DAO Energy Gauge](https://juicebox.money/v2/p/379)
 
     This is a project created by Jango. The idea came from recent discussions around whether Twitter should tend towards more Dao-ish, so Jango created a treasury where people can safely deposit their funds in and get the funds back any time they want easily.
     
-    ![twitter dao energy gauge](twitterdaogauge_project.png)
+    ![twitter dao energy gauge](twitterdaogauge_project.webp)
 
 
 
@@ -121,7 +121,7 @@ Darby also announced that Lexicon Devils had the plan to hold a live Forming eve
 
 Matthew and Brileigh has also released [a new episode of Juicecast featuring Darbytrash](https://podcasts.apple.com/ca/podcast/ep-19-darbytrash-from-forming/id1623504302?i=1000592726192), covering how Forming got started and its past and future events. 
 
-![Juicecast episode of Forming](juicecast_forming.png)
+![Juicecast episode of Forming](juicecast_forming.webp)
 
 
 

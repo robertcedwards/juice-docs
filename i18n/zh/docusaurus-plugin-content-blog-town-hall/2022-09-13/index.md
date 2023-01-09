@@ -2,11 +2,11 @@
 slug: 22-09-13
 title: JuiceboxDAO 周会概要 2022 年 9 月 14 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [dao, town hall, news]
 ---
 
-![Town Hall banner by Sage Kellyn](townhall.png)  
+![Town Hall banner by Sage Kellyn](townhall.webp)  
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## 版本控制 (versioning) jango
@@ -29,12 +29,12 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 *Strath 在会上展示改进的 UI 设计界面*
 
-用户反馈得最多的是目前创建项目三个步骤中的第二步`筹款周期`，有很多层的参数要配置。![current flow](kN4ebr4.png)
+用户反馈得最多的是目前创建项目三个步骤中的第二步`筹款周期`，有很多层的参数要配置。![current flow](kN4ebr4.webp)
 
 前端团队希望把这个流程分解开来并进行简化，消除协议参数的认知障碍，让创建者可以每个页面只需要做一项决策。
 
 这是改进的 UI 目前的样子：
-![new create flow](g623nG8.png)
+![new create flow](g623nG8.webp)
 
 如果大家有兴趣对这个工作提出自己的看法，欢迎去到相关的[ Figma 页面](https://www.figma.com/file/EN7CZTekcSo3sHyaGt6cC0/JBX---Project-Creation-Flow---High-Fidelity---Sep-2022-(WIP)?node-id=0%3A1)。
 
@@ -52,7 +52,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 ## 猜谜时间
 
-![TwoTruthOneLie](DdfC3oh.png)
+![TwoTruthOneLie](DdfC3oh.webp)
 
 答案是 0xBA5ED
 

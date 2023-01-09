@@ -27,13 +27,13 @@ You can follow along in the video made by STVG or step-by-step in this article. 
 
  Go to your project page that you are the owner of and click on `Project Settings`.
 
-![Project Settings](project-settings.png)
+![Project Settings](project-settings.webp)
 
 ### Step 2: Project Upgrade
 
 Once you’re in project settings, scroll down to `Project upgrade` on the left side panel at the bottom. Next you’ll see what version you’re currently on and a button that says `Start upgrade`. 
 
-![project upgrades](project-upgrades.png)
+![project upgrades](project-upgrades.webp)
 
 This is where you’ll begin to reconfigure your project settings to launch a V3 funding cycle. 
 
@@ -41,7 +41,7 @@ The first thing to set is the`Start time`. You can set this to whatever time you
 
 In this example, STVG wanted to launch his V3 funding cycle on December 1st, 2022 at 1:00AM PST. You can enter whatever time you want your project to start here and simply copy and paste the timestamp into the `Start time` on the Juicebox project upgrade page. 
 
-![Unix start time example](start-time-example.png)
+![Unix start time example](start-time-example.webp)
 
 :::tip
 Fun fact: Unix time is a date and time system widely used in computing that measures time by the number of seconds that have elapsed since 00:00:00 UTC on 1 January 1970.
@@ -49,7 +49,7 @@ Fun fact: Unix time is a date and time system widely used in computing that meas
 
 When you’re done setting a start time, click `Funding`.
 
-![projectupgrades](project-upgrades.png)
+![projectupgrades](project-upgrades.webp)
 
 ### Step 3: Funding
 
@@ -57,7 +57,7 @@ Here you can set your `Funding Cycles` (how long all the settings on your projec
 
 This process is similar to the latest create project flow on Juicebox, where you can have `Automated Funding Cycles` or `Manual Funding Cycles`.  You can keep the same settings from your old contract if you don’t want to change things like the payout address(s) or funding cycles, or you can use this opportunity to update changes to reflect the needs of your project. 
 
-![automated funding cycles](automated-fc.png)
+![automated funding cycles](automated-fc.webp)
 
 For `Payouts` you can decide if one address is receiving all the funds that get distributed or you could configure it to add other people, for example if you had a second person working on the project you split the payouts 50/50. You can do this either through `Percentages` of `Specific amounts` denominated in ETH or USD. When you’re done making any changes, click `Save funding configuration`, then click `Token`.
 
@@ -74,7 +74,7 @@ This is where you can customize different settings for the tokenomics of your pr
 
 In this example, STVG left most of these settings untouched but added himself to the `Reserved Token Allocation`by clicking `Add Token Allocation`. then adding his ENS address in the field for the `Beneficiary address` and changing the `Percentage allocation` to `100%` and confirming by clicking `Add Token Allocation`. 
 
-![token allocation](token-allocation.png)
+![token allocation](token-allocation.webp)
 
 These token settings are turned off by default. If you’re not sure what to do, the `Default Token Settings` will work for most projects. You can always reconfigure these settings in the future, depending on the strategy of your Juicebox project. You can always hop into the Juicebox Discord if you need help! When you’re done, click `Save token configuration`. 
 
@@ -82,7 +82,7 @@ These token settings are turned off by default. If you’re not sure what to do,
 
 Here you have the option to add NFTs to your Juicebox project so contributors can receive an NFT if they meet your minimum funding criteria. You can add as many NFTs as you want and determine the supply and price of each NFT. Next you’ll add a `Collection Name` and `Collection Symbol`, as well as an optional description of the NFTs.  If you’re not ready, you can always add NFTs later on. You can also check out [this tutorial](https://info.juicebox.money/blog/2023-01-02-how-to-sell-nfts/) on how to use NFTs. When you’re done, click `Save NFTs`. 
 
-![nfts](nfts.png)
+![nfts](nfts.webp)
 
 ### Step 6: Rules
 
@@ -92,17 +92,17 @@ Make sure to set your `Reconfiguration Rules`, which essentially creates a safet
 
 You can also decide to `Pause Payments`, `Allow Token Minting`, and `Allow Terminal Reconfiguration`.  When you’re all done, click `Save Rules`.
 
-![reconfiguration-rules.png](reconfiguration-rules.png)
+![reconfiguration-rules.webp](reconfiguration-rules.webp)
 
 ### Step 7: Review and Deploy
 
 Last but not least, you can review a summary of all your new V3 settings before you deploy. 
 
-![review and deploy](reviewndeploy.png)
+![review and deploy](reviewndeploy.webp)
 
 When you’re good to go, click `Launch V3 funding cycle`. This will prompt a transaction in your wallet which you’ll have to confirm and you’re done! 
 
-![Launch a V3-Funding cycle](launch-v3-fc.png)
+![Launch a V3-Funding cycle](launch-v3-fc.webp)
 
 And that’s it! You’ve successfully migrated to V3.
 
