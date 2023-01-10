@@ -11,7 +11,7 @@ tags: [guide, nft]
 
 ![How to sell NFTs on Juicebox](cover-img.webp)
 
-Juicebox enables creators and communities to create and launch NFT projects with powerful yet simple tools tailored to your needs in an ongoing basis. In this tutorial we’ll guide you through how to configure a Juicebox project to sell NFTs in less than 10 minutes. Whether you’re a creator selling content, managing a DAO, NFT project or crpytocurrency crowdfund, you can sell NFTs easily on Juicebox with complete control and transparency. 
+Juicebox enables creators and communities to create and launch NFT projects with powerful yet simple tools tailored to your needs in an ongoing basis. In this tutorial we’ll guide you through how to configure a Juicebox project to sell NFTs in less than 10 minutes. Whether you’re a creator selling content, managing a DAO, NFT project or cryptocurrency crowdfund, you can sell NFTs easily on Juicebox with complete control and transparency. 
 
 You can follow along in this article or the Youtube video.
 
@@ -20,7 +20,7 @@ You can follow along in this article or the Youtube video.
 
 **The example for this tutorial is an NFT project called Flamingo Sunday.** We’re using Juicebox to sell flamingo NFTs at 0.1, 1, and 10 ETH tiers and anyone who contributes at those amounts will receive the corresponding NFT.
 
-So head to [juicebox.money](http://juicebox.money), connect your wallet, and click “create a project.”
+So head to [juicebox.money](http://juicebox.money), connect your wallet, and click `Create a project`.
 
 ![Create a project](create-project.webp)
 
@@ -54,7 +54,7 @@ If we set a `Specific Funding Target` of 10,000 USD, we can distribute up to 10,
 You can also set this in ETH instead of ETH denominated in USD.
 :::
 
-Another way to do this is an ****`Infinite Funding Target` which means you can distribute as much as you want from the treasury, but this can be perceived as risky to contributors to your project because you could take all the money and run. So for this example, we’ll go with a `Specific Funding Target` of 10,000 USD worth of ETH.
+Another way to do this is an `Infinite Funding Target` which means you can distribute as much as you want from the treasury, but this can be perceived as risky to contributors to your project because you could take all the money and run. So for this example, we’ll go with a `Specific Funding Target` of 10,000 USD worth of ETH.
 
 ### Step 4: Payouts
 
@@ -107,7 +107,7 @@ You can change this to be longer, shorter, or no delay, but we’ll stick with t
 ![project deployed](project-deployed.webp)
 
 :::tip
-You can go through this entire process on Goerli testnet before launching your project on mainnet. If you have any questions, please come by the Juicebox discord server for support at discord.gg/juicebox.
+You can go through this entire process on Goerli testnet before launching your project on mainnet. If you have any questions, please come by the [Support channel](https://discord.com/channels/775859454780244028/864240636277293106) in the Juicebox Discord.
 :::
 
 Note that the NFT images might take awhile to display properly. If someone wants to purchase an NFT at the 0.1 ETH tier, for example, they just click on the NFT, click the customized pay button, click `I understand` to acknowledge the safety warning, and then click `Pay`. You can even leave a little on-chain memo like “we love the flamingos”, an image, or Banny sticker with your contribution. 
