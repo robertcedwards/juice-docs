@@ -27,7 +27,7 @@ If you haven't already, take the following steps over the next 2 weeks. If you h
 - [ ] Set up Two-Factor authentication for all of your Juicebox accounts
 - [ ] Buy and use a hardware wallet — a [Ledger](https://www.ledger.com/) or a [Trezor](https://trezor.io/).
 - [ ] Regularly run antivirus software. For Windows users, Windows Defender and [MalwareBytes](https://www.malwarebytes.com/) are both decent free options.
-- [ ] Check your email and phone number on [haveibeenpwned](https://haveibeenpwned.com/).
+- [ ] Check your email and phone number on [haveibeenpwned](https://haveibeenpwned.com/), and update credentials for any accounts which appear.
 
 ## Intervention Checklist
 
