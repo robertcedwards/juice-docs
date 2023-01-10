@@ -17,7 +17,7 @@ sidebar_position: 2
 
 If you haven't already, take the following steps over the next 2 weeks. If you have any questions, ask filipv.
 
-- [ ] Familiarize yourself with the [Emergency Process](emergency).
+- [ ] Familiarize yourself with the [Emergency Process](../emergency).
 - [ ] Set up automatic updates for all relevant software (browsers, apps, clients, etc).
 - [ ] Join the [Backup Telegram](https://t.me/jbx_backup).
 - [ ] Buy a [YubiKey](https://www.yubico.com/), or a similar 2FA hardware device.
