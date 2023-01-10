@@ -31,7 +31,7 @@ You can follow along in the video made by STVG or step-by-step in this article. 
 
 ### Step 2: Project Upgrade
 
-Once you’re in project settings, scroll down to `Project upgrade` on the left side panel at the bottom. Next you’ll see what version you’re currently on and a button that says `Start upgrade`. 
+Once you’re in project settings, scroll down to `Project upgrades` on the left side panel at the bottom. Next you’ll see what version you’re currently on and a button that says `Start upgrade`. 
 
 ![project upgrades](project-upgrades.webp)
 
@@ -66,7 +66,7 @@ For `Payouts` you can decide if one address is receiving all the funds that get 
 This is where you can customize different settings for the tokenomics of your project including:
 
 - `Mint Rate` (number of tokens per 1 ETH minted)
-- `Reserved token allocation` (option to set aside a percentage of all tokens that get minted tokens when people contribute ETH to the project)
+- `Reserved token allocation` (option to set aside a percentage of all tokens that get minted when people contribute ETH to the project)
 - `Discount Rate` (option to decrease how many tokens are issued over each funding cycle to incentivize early contributors)
 - `Redemption rate` (determine what proportion of treasury assets can be reclaimed by a token holder by redeeming their tokens, AKA incentivize contributors to hold their tokens longer to get a better rate if they decide to burn the tokens in exchange for ETH in the future)
 
@@ -86,11 +86,11 @@ Here you have the option to add NFTs to your Juicebox project so contributors ca
 
 ### Step 6: Rules
 
-Last but not least, you can review all the settings (rules) for your project before deploying the contract. 
+Last but not least, you'll need to set the rules for your project before deploying. 
 
 Make sure to set your `Reconfiguration Rules`, which essentially creates a safety measure of how soon you can reconfigure your Juicebox project settings before they take effect. You can choose the 3-day delay (default) 7-day delay, No delay, or a Custom Strategy. 
 
-You can also decide to `Pause Payments`, `Allow Token Minting`, and `Allow Terminal Reconfiguration`.  When you’re all done, click `Save Rules`.
+You can also decide to `Pause Payments`, `Allow Token Minting`, and `Allow Terminal Reconfiguration`. When you’re all done, click `Save Rules`.
 
 ![reconfiguration-rules.webp](reconfiguration-rules.webp)
 
