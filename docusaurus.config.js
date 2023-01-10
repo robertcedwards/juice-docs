@@ -155,7 +155,7 @@ const config = {
             },
             {
               label: 'Dune Analytics',
-              to: 'https://dune.com/projects/juicebox',
+              to: 'https://dune.com/juicebox',
             },
             {
               label: 'Proposals',
