@@ -12,6 +12,11 @@ Sending ETH to an ENS address is one of the simplest ways for donors to interact
 
 In this tutorial, I'll show you how to configure an ENS address to forward ETH to a Juicebox project.
 
+You can also watch the video walkthrough by JBDAO contributors [Matthew](https://twitter.com/0xmatthewb) and [Brileigh](https://twitter.com/0xbrileigh):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k31kISgsoO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br/>
+
 ## Before you start
 ### Have a Juicebox Project
 Before you can receive donations, you'll need a Juicebox Project. Learn how to [Make Your Juicebox Project](/user).
