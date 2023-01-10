@@ -49,7 +49,7 @@ Fun fact: Unix time is a date and time system widely used in computing that meas
 
 When you’re done setting a start time, click `Funding`.
 
-![projectupgrades](project-upgrades.webp)
+![project upgrades](project-upgrades-v3.png)
 
 ### Step 3: Funding
 
