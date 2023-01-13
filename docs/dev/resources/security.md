@@ -20,6 +20,10 @@ The protocol runs entirely on public smart contracts explained in detail through
 
 * [Audit report from Hacken on 2022-06-01](https://github.com/People-DAO/Audit-Reports/blob/main/1_%5BJuice%20Protocol_06012022%5DAudit_Report.pdf)
 
+## Other Audits
+
+* [Code4rena NFT Delegate audit](https://code4rena.com/reports/2022-10-juicebox/)
+
 ## Postmortems
 
 * [Low severity bug discovered 8/18/2021](/blog/juicebox-postmortem-of-low-severity-bug-discovered-8-18-2021)
