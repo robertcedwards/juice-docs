@@ -95,7 +95,7 @@ This is the guideline to follow when an incident is reported.
 
 The primary objective is to minimize the loss of funds, in particular for Juicebox users. All decisions made should be driven by this goal.
 
-1. Open a private communication channel (War Room) and only invite (i) online contributors that can fulfill the roles described above, as well as (ii) additional persons that can provide critical insight into the circumstances of the issue and how it can best be resolved.
+1. Open a private communication channel (War Room) and only invite (i) online contributors that can fulfill the roles described above, as well as (ii) additional persons that can provide critical insight into the circumstances of the issue and how it can best be resolved. Check the [Services List](../services) and invite contributors relevant to the problem.
 2. Information shared in the War Room shall be considered private and should not be shared with any third parties. Relevant data should be pinned and updated by the Facilitator for the team to have handy.
 3. The team's first milestone is to assess the situation as quickly as possible: Confirming the reported information and determining how critical the incident is. A few questions to guide this process:
    - Is there confirmation from several team members/sources that the issue is valid? Are there example transactions that show the incident occurring? (Pin these in the War Room)
@@ -132,7 +132,7 @@ The primary objective is to minimize the loss of funds, in particular for Juiceb
 
 - [ ] Create War Room
 - [ ] Assign Key Roles to War Room members
-- [ ] Add relevant developer(s) to the War Room
+- [ ] Add relevant developer(s) to the War Room (check the [Services List](../services))
 - [ ] Clear queued transactions on relevant Multisig(s)
 - [ ] Disable payments, redemptions, or other features as needed in the frontend(s)
 - [ ] Identify and confirm the issue, as well as any relevant transactions (pin to War Room)
