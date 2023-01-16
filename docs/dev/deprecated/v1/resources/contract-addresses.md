@@ -12,6 +12,8 @@ TerminalDirectory: [`0x46C9999A2EDCD5aA177ed7E8af90c68b7d75Ba46`](https://ethers
 
 TerminalV1: [`0xd569D3CCE55b71a8a3f3C418c329A66e5f714431`](https://etherscan.io/address/0xd569D3CCE55b71a8a3f3C418c329A66e5f714431)
 
+TerminalV1_1: [`0x981c8ECD009E3E84eE1fF99266BF1461a12e5c68`](https://etherscan.io/address/0x981c8ECD009E3E84eE1fF99266BF1461a12e5c68)
+
 Projects: [`0x9b5a4053FfBB11cA9cd858AAEE43cc95ab435418`](https://etherscan.io/address/0x9b5a4053FfBB11cA9cd858AAEE43cc95ab435418)\`\`
 
 TicketBooth: [`0xee2eBCcB7CDb34a8A822b589F9E8427C24351bfc`](https://etherscan.io/address/0xee2eBCcB7CDb34a8A822b589F9E8427C24351bfc)
