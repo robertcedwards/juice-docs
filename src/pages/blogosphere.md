@@ -35,8 +35,8 @@ hide_table_of_contents: true
       <div class="card">
         <div class="card__image">
           <img
-            src="/img/townhall.webp"
-            alt="Image alt text"
+            src="/img/updates.webp"
+            alt="Juicebox Banny looking through binoculars"
             title="Logo Title Text 1" />
         </div>
         <div class="card__body">

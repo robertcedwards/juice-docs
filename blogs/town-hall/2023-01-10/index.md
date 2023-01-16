@@ -2,12 +2,12 @@
 slug: 23-01-10
 title: January 10th, 2023
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
@@ -17,7 +17,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 The first document is [the Juicebox Emergency Procedures](https://info.juicebox.money/dao/security/emergency/#definitions-and-examples), which covers what we should do if something does go wrong.
 
-![Juicebox Emergency Procedures](jbx_emergency_procedures.png)
+![Juicebox Emergency Procedures](jbx_emergency_procedures.webp)
 
 The second one, [Contributor Operations Security](https://info.juicebox.money/dao/security/opsec/) is more a general security guid for DAO contributors
 
@@ -29,7 +29,7 @@ Filipv made a dedicated version of dashboard for purpose of protocol analytics i
 
 He went over and introduced all the items on the dashboard, which covers things like number of projects created, fees paid, payments by projects, recent Juicebox payments, number of active projects(with volume > 1 ETH), and recent issuance and redemption(burn) of JBX, as well as the cashflows of various JuiceboxDAO terminals, etc.
 
-![Dune dashboard for town hall](townhall_dashboard.png)
+![Dune dashboard for town hall](townhall_dashboard.webp)
 
 ## Qwestive Referral Program Demo with JZ
 
@@ -41,7 +41,7 @@ According to JZ, referral has been a proven process for acquiring users in web3 
 
 He tried to prove his point by making two examples of  Web3 projects which have made a huge success in using their referral programs to drive in new users and funds, GMX.io and Rango Exchange, respectively.
 
-![Jz's examples of using referral](referral_usecases.png)
+![Jz's examples of using referral](referral_usecases.webp)
 
 In conclusion, he thought that the referral system can actually drive in quite significant volume.
 
@@ -75,13 +75,13 @@ At the end of the discussion, [Jango](https://twitter.com/me_jango) brought up a
 
 [Nicholas](https://twitter.com/nnnnicholas) was collaborating with Matthew and other members on the Juicebox 2022 year in review. He made a list of important events happened in our ecosystem during the past year, and called on people who have suggestions come forth with them.
 
-![jbx 2022 year in review](2022_in_review.png)
+![jbx 2022 year in review](2022_in_review.webp)
 
 ## Defifa Update by Jango
 
 On the day of this town hall, the Defifa Ballkids team just deployed a new Defifa game that accompanies the NFL Playoffs this year. The team is trying to iterate as quickly as they can, so that they can study the games and play with different ideas.
 
-![Defifa NFL Playoffs NFTs](defifa_nfl_nft.png)
+![Defifa NFL Playoffs NFTs](defifa_nfl_nft.webp)
 
 They are also trying a couple of new things this time. Firstly, a better attestation process. The timing of the last Defifa World Cup was a little bit awkward, so this time they will try to start the voting for the attestation of a scorecard when the Super Bowl happens.
 
@@ -101,7 +101,7 @@ Jango also mentioned that the team is planning to do the Defifa for March Madnes
 
 We've simplified it quite a bit to really narrow in on a specific use case, which is to set the target of fundraising ahead of time at the stage of creating a funding round.
 
-![blunt advanced parameters](blunt_parameters.png)
+![blunt advanced parameters](blunt_parameters.webp)
 
 A project creator, blunt round creator in this case, can set the fundraise parameters such as fundraise duration, funding target, hard cap and project owner, etc. If the funding duration ends and the fundrasing reaches its target, the project ownership will be passed to the preset project owner and runs just like a normal Juicebox project thereafter. If the target is not met when the campaign is over, the contracts will automatically schedule a funding cycle #2 with refunds to donors. 
 
