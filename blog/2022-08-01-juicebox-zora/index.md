@@ -25,6 +25,7 @@ Go to the project you would like to pay on [juicebox.money](http://juicebox.mone
 <p class="subtitle">Project tools on <a href="https://juicebox.money">juicebox.money</a></p>
     
 ### 2. Create payable address
+
 Click `Deploy project payer contract` in the project tools.
 
 ![](Untitled1.webp)
