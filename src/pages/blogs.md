@@ -1,16 +1,10 @@
 ---
-title: Blogosphere
-slug: /blogosphere
+title: Blogs
+slug: /blogs
 hide_table_of_contents: true
 ---
 
-*Welcome to...*
-
-# *The Juicebox Blogosphere*
-
----
-
-<style>{`h1 {font-size: 3.5rem;} html {text-align: center; }`}</style>
+<style>{`.card {border: solid 1px var(--ifm-color-primary)}`}</style>
 <div class="container" style={{marginTop: "30px"}}>
   <div class="row">
     <div class="col col--3" style={{marginBottom: "30px"}}>
@@ -90,5 +84,4 @@ hide_table_of_contents: true
     </div>
   </div>
 </div>
-
 

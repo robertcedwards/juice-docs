@@ -131,7 +131,7 @@ const config = {
           sidebarId: 'dao',
           label: 'Juicebox DAO',
         },
-        { to: '/blogosphere', label: 'Blogosphere', position: 'left' },
+        { to: '/blogs', label: 'Blogs', position: 'left' },
         {
             type: 'localeDropdown',
             position: 'right',
