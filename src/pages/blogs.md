@@ -78,7 +78,7 @@ hide_table_of_contents: true
           </small>
         </div>
         <div class="card__footer">
-          <a class="button button--primary button--block" href="/misc">Enjoy →</a>
+          <a class="button button--primary button--block" href="/misc">Miscellaneous →</a>
         </div>
       </div>
     </div>
