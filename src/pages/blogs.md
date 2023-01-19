@@ -11,8 +11,8 @@ hide_table_of_contents: true
       <div class="card">
         <div class="card__image">
           <img
-            src="/img/townhall.webp"
-            alt="Image alt text"/>
+            src="/img/projectcreators.webp"
+            alt="Nerdy Juicebox apple project creator"/>
         </div>
         <div class="card__body">
           <h4>Project Creators</h4>

@@ -7,7 +7,7 @@ Our legal documents, templates, and website source code are all completely open 
 
 ## Developing
 
-Our documents are written in [mdsvex](https://mdsvex.pngwn.io/docs/) (a combination of markdown and Svelte), and converted into web pages by a custom static site generator written in [Svelte](https://svelte.dev/).
+Our documents are written in [mdsvex](https://mdsvex.webpwn.io/docs/) (a combination of markdown and Svelte), and converted into web pages by a custom static site generator written in [Svelte](https://svelte.dev/).
 
 The docs are automatically generated from a file structure adhering to:
 

@@ -2,12 +2,12 @@
 slug: 23-01-10
 title: JuiceboxDAO 周会概要 2023 年 1 月 11 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
@@ -17,7 +17,7 @@ Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
 第一份文件是[Juicebox 应急流程](https://info.juicebox.money/dao/security/emergency/#definitions-and-examples)，总结了紧急情况下我们应该采取的措施。
 
-![Juicebox Emergency Procedures](jbx_emergency_procedures.png)
+![Juicebox Emergency Procedures](jbx_emergency_procedures.webp)
 
 第二份文件是[贡献者安全操作指引](https://info.juicebox.money/dao/security/opsec/) ，是给 DAO 的贡献者的一般性安全指引。
 
@@ -29,7 +29,7 @@ Filipv 制作了一个专用于周会协议分析的数据面板，可以在[这
 
 他在会上简单介绍了一下数据面板上的各个项目，包括新建项目数量、支付的平台费用、项目付款、近期 Juicebox 付款、活跃项目（金额超过 1 ETH）数量、新发行及赎回（销毁）的 JBX 代币数量，还有各个 JuiceboxDAO 的支付终端现金流，等等。
 
-![Dune dashboard for town hall](townhall_dashboard.png)
+![Dune dashboard for town hall](townhall_dashboard.webp)
 
 ## Qwestive 推荐计划演示 JZ
 
@@ -41,7 +41,7 @@ Filipv 制作了一个专用于周会协议分析的数据面板，可以在[这
 
 为证明自己的说法，他举例了两个使用推荐计划在新增用户和资金方面获得巨大的成功的 Web3 项目，分别是 GMX.io 和 Rango Exchange。
 
-![Jz's examples of using referral](referral_usecases.png)
+![Jz's examples of using referral](referral_usecases.webp)
 
 他的结论是，推荐系统可以形成很大规模的引流。
 
@@ -75,13 +75,13 @@ Nicholas 同意这个推荐计划很有意义，尤其是在创建项目方面�
 
 [Nicholas](https://twitter.com/nnnnicholas) 目前和 Matthew 及其他社区成员合作做一个 Juicebox 2022 年度回顾的工作。他列出一个我们生态内去年的重要事件表单，也呼吁大家有其他看法可以向他提议。
 
-![jbx 2022 year in review](2022_in_review.png)
+![jbx 2022 year in review](2022_in_review.webp)
 
 ## Defifa 工作报告 Jango
 
 就在周会当天，Defifa 球童团队刚刚部署了新一代的 Defifa 游戏来配合今年的 NFL 季后赛赛事。团队正争取尽快进行迭代，这样可以更好的研究游戏项目并尝试新的想法。
 
-![Defifa NFL Playoffs NFTs](defifa_nfl_nft.png)
+![Defifa NFL Playoffs NFTs](defifa_nfl_nft.webp)
 
 这次他们尝试了几样新的东西。第一个，改进了认证流程。上次 Defifa 世界杯的认证时间点有些尴尬，这一次他们试图在超级碗开始的时候就开始认证记分卡。
 
@@ -103,7 +103,7 @@ Jango 同时提到，团队计划也会在 March Madness （全美大学体育�
 
 我们将它简化成真正针对一个具体的用例，即在创建筹款活动时提前设定好筹款的目标。
 
-![blunt advanced parameters](blunt_parameters.png)
+![blunt advanced parameters](blunt_parameters.webp)
 
 
 
