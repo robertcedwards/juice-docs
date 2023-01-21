@@ -36,4 +36,4 @@ From here, you can build the following:
 
 [Program project permissions](project-nft.md) - Build custom Juicebox Project NFT logic to create your own project access controls.
 
-[Program treasury extensions](treasury-extensions) - Create custom contractual rules defining what happens when a project receives funds, and under what conditions funds can leave the treasury during a funding cycle.
+[Program treasury extensions](../treasury-extensions) - Create custom contractual rules defining what happens when a project receives funds, and under what conditions funds can leave the treasury during a funding cycle.
