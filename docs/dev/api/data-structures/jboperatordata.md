@@ -2,7 +2,7 @@
 
 #### Code
 
-https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/structs/JBGroupedSplits.sol
+https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/structs/JBOperatorData.sol
 
 #### Definition
 
