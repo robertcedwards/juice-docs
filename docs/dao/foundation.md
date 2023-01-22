@@ -8,7 +8,7 @@ sidebar_position: 2
 
 *What the DAO works toward*
 
-JuiceboxDAO helps people confidently run programmable and community funded treasuries from startup to scale, openly on Ethereum.
+JuiceboxDAO helps people confidently fund, operate, and scale programmable treasuries on Ethereum.
 
 #### Values
 
@@ -27,43 +27,60 @@ JuiceboxDAO helps people confidently run programmable and community funded treas
 
 (No particular order)
 
-**Protocol**  
-Define, optimize, test, monitor, and document the Juicebox protocol.
+**Protocol**
 
-**Community alignment**  
-Help members of the JB community get the resources and attention they need to get started and work together.
+Define, optimize, test, secure, monitor, and document the core Juicebox protocol.
 
-**Web3 ecosystem**  
+**Security**
+
+Minimize, monitor, and mitigate risks to project creators, contributors, and patrons across contracts and frontends.
+
+**Community alignment**
+
+Help project owners and members of the JB community get the resources and attention they need to build and work together.
+
+**Web3 ecosystem**
+
 Position JB to work with and help other public DAOs, tools, and services to safely widen opportunities for all in Web3.
 
-**Onboarding**  
+**Onboarding**
+
 Help people launch their projects on JB and build extensions to the protocol through active Q&A availability, providing useful documentation, and helping shape the information architecture of web clients.
 
-**Governance**  
+**Governance**
+
 Plan out how we will make decisions together as the DAO scales, and keep it accountable to its agreed upon decision-making schedule.
 
-**Legal**  
-Work towards the legal clarity necessary to make JB a welcoming DAO where anyone can contribute with confidence to any focus area and get compensated for their work.
+**Legal**
 
-**Data viz**  
+Work towards the legal clarity necessary to make Juicebox a welcoming protocol where any project can be deployed with confidence.
+
+**Analytics**
+
 Give projects rich insights into their community, and provide overview information about the JB protocol.
 
-**Frontend**  
-Develop web clients for the protocol that make the user experience more empowering, reliable, and delightful over time.
+**Frontend**
 
-**Juicebox ecosystem**  
+Develop web clients for the protocol that make the user experience of exploring projects and contributing to them more empowering, reliable, and delightful over time.
+
+**Juicebox ecosystem**
+
 Stand up infrastructure to help projects running on the Juicebox protocol grow their decentralized communities and experiment with various treasury strategies.
 
-**Visibility & materials**  
-Create and propagate digital and physical publications, stickers, art, videos, memes, and other stuff that radiate JB vibes and tell our story.
+**Visibility & materials**
 
-**Dev ops**  
+Create and propagate digital and physical publications, stickers, art, videos, memes, and other stuff that radiate Juicebox vibes and tell our story.
+
+**Dev ops**
+
 Make it as easy as possible for people to build on JB by improving processes, tooling, and documentation for all developers.
 
-**Mechanism**  
+**Mechanism**
+
 Build models and tools to analyze Juicebox project configurations. Develop and implement utilities for tokens in the Juicebox ecosystem.
 
-**Product, project, and program management**  
+**Product, project, and program management**
+
 Regularly define, assess, prioritize, and publicly communicate the goals and progress of what we’re working towards across focus areas.
 
 #### Membership
@@ -79,6 +96,6 @@ DAO members are responsible for proposing and voting on:
 
 DAO membership is required by the people and projects who raise funds on the Juicebox protocol, is given to people who are currently stewarding its focus areas, and is open to people who choose to help fund its treasury.
 
-Membership is represented via the JBX token issued using the Juicebox protocol itself.
+Membership is represented via the JBX token issued using the Juicebox protocol itself. All JBX holders are JuiceboxDAO members.
 
 Members can quit by burning any portion of their tokens at any time and take with them a portion of the treasury's funds.
