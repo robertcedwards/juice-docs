@@ -9,9 +9,9 @@ sidebar_position: 5
 
 ## Dune Analytics
 
-1. The [Juicebox Project Dashboard](https://dune.com/juicebox/v3) ([v1 here](https://dune.com/twodam/Juicebox-Projects)) gives a detailed look into your project's cashflows, payouts, tokens, NFTs, and other trends. Enter your project ID and desired resolution, and then click `Apply all parameters`.
-2. The [Juicebox Portfolio Dashboard](https://dune.com/twodam/Juicebox-Portfolio) gives an overview of an individual wallet's interactions with various Juicebox projects.
-3. The [Juicebox Protocol Overview](https://dune.com/twodam/Juicebox-Protocol-Overview) is self explanatory.
+1. The [Juicebox Project Dashboard](https://dune.com/juicebox/v3) ([v1 here](https://dune.com/juicebox/project-v1)) gives a detailed look into your project's cashflows, payouts, tokens, NFTs, and other trends. Enter your project ID and desired resolution, and then click `Apply all parameters`.
+2. The [Juicebox User Dashboard](https://dune.com/juicebox/user) gives an overview of an individual wallet's interactions with various Juicebox projects.
+3. The [Juicebox Overview](https://dune.com/juicebox/overview) provides a high-level overview of Juicebox protocol and JuiceboxDAO trends.
 
 ## Flipside
 
