@@ -20,7 +20,7 @@ Day 15 / Day 1 - Funding Cycle Updated - Saturday (19:19 UTC) <br/>
 
 Proposals can be submitted on [Juicetool](https://juicetool.xyz/nance/juicebox) at any time. Once a proposal is ready for discussion, authors can change the proposal status from `Draft` to `Discussion`, which will automatically create a discussion thread in the [JuiceboxDAO Discord Server](https://www.discord.gg/juicebox).
 
-*For help, see [How to Make a Governance Proposal](proposals.md)*
+*For help, see [How to Make a Governance Proposal](../proposals)*
 
 #### Step 1 - Temperature Check
 
