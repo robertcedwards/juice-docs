@@ -1,6 +1,8 @@
 ---
+slug: v3-jbx-postmortem
 title: V3 JBX Deployment Bug Postmortem
-author: jango
+authors: [jango]
+tags: [protocol, update]
 ---
 
 The deployment of the V3 JBX token contained a bug that caused excess reserved token issuance. This bug was caught before it could have been exploited, and mitigated by following the [JBX Emergency Procedure](https://info.juicebox.money/dao/security/emergency/).
@@ -63,17 +65,17 @@ The principle goal is to prevent unexpected reserved token issuance from Juicebo
 
 Below is a game plan to A) adjust the Juicebox DAO V2 treasury's token issuance, and B) stop issuance from JuiceboxDAO's V1 treasury altogether:
 
-A)
+#### A
 
-> 1. A funding cycle should be scheduled to move the V2 treasury's reserved rate to 0%. The V2 treasury's issuance rate should be adjusted accordingly such that it continues issuing the same amount of tokens outwardly to payers as before. JuiceboxDAO reserved rate recipients will still receive their V2 allocations, but will get it directly on V3. 
+1. A funding cycle should be scheduled to move the V2 treasury's reserved rate to 0%. The V2 treasury's issuance rate should be adjusted accordingly such that it continues issuing the same amount of tokens outwardly to payers as before. JuiceboxDAO reserved rate recipients will still receive their V2 allocations, but will get it directly on V3. 
 
-B) 
+#### B
 
-> 1. V1 issuance cannot be set directly, only through discount rates. Beacuse of this, V1 issuance needs to be paused altogether. In order to do this, JuiceboxDAO must migrate its V1 payment terminal to V1.1 which respects a funding cycle metadata flag instructing for payments to be paused. 
-> 
-> 2. A funding cycle should be scheduled with the metadata flag with pause payments turned on.
-> 
-> 3. JuiceboxDAO should submit transactions to move the V1 payment terminal fee to 0% and the V1.1 payment terminal fee to 0%. This is needed in order to continue allowing V1 projects to distribute funds, since a fee incurred to a treasury with paused payments would revert.
+1. V1 issuance cannot be set directly, only through discount rates. Because of this, V1 issuance needs to be paused altogether. In order to do this, JuiceboxDAO must migrate its V1 payment terminal to V1.1 which respects a funding cycle metadata flag instructing for payments to be paused. 
+
+2. A funding cycle should be scheduled with the metadata flag with pause payments turned on.
+
+3. JuiceboxDAO should submit transactions to move the V1 payment terminal fee to 0% and the V1.1 payment terminal fee to 0%. This is needed in order to continue allowing V1 projects to distribute funds, since a fee incurred to a treasury with paused payments would revert.
 
 Once these steps have been scheduled, the expected V3 treasury reserved rate distribution can be restored.
 
