@@ -2,12 +2,12 @@
 slug: 23-01-17
 title: January 17th, 2023
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
@@ -17,7 +17,7 @@ Nicholas would be hosting an NFT Tokenomics Office Hours together with Jango in 
 
 Also Nicholas was experimenting the idea of letting folks to reserve a priority spot to talk about their projects by minting an NFT on the [Office Hours project](https://juicebox.money/@officehoursclub).
 
-![Office Hours project](office_hours.png)
+![Office Hours project](office_hours.webp)
 
 The purpose of this Office Hours is to discuss about NFT tokenomics or membership tokenomics to help people create projects with great membership dynamics.
 
@@ -25,7 +25,7 @@ Jango also said that we had been wtinessing treasuries that are more fundrasing 
 
 Also Nicholas had launched a Juicebox project [Web3 Galzxy Brain](https://juicebox.money/@web3galaxybrain) for his Twitter Space and podcast, selling 5 seconds worth of advertising on his show for 1 NFT minted on this project. This is also one the experiments to hopefully find something interesting that people can make use of in the future.
 
-![Web3 Galaxy Brain](web3_galaxy_brain.png) 
+![Web3 Galaxy Brain](web3_galaxy_brain.webp) 
 
 ## Merch Demo with STVG
 
@@ -67,7 +67,7 @@ Jmill and Genekogan came to our town hall introducing Banny Warhol last December
 
 ## Contest by Felixander
 
-![Felixander's contest](felixander_contest_0117.png)
+![Felixander's contest](felixander_contest_0117.webp)
 
  And the correct answer is ... defifa.net.
 
@@ -77,7 +77,7 @@ Jmill and Genekogan came to our town hall introducing Banny Warhol last December
 
 Nicholas was working with him to create a new Juicebox project, where Gabriel Haines will be selling NFTs and doing roast or pep talk for the minters of those NFTs. By the time of this town hall summary, this project has been created successfully and has recieved quite a few payments.
 
-![Gabriel Haines project](gabriel_rantsforyou.png)
+![Gabriel Haines project](gabriel_rantsforyou.webp)
 
 And Gabriel is no stranger to Juicebox either, he was sent to the Bahamas to search for SBF in a cowdfunding in [another Juicebox project](https://juicebox.money/v2/p/327) last year.
 
@@ -85,11 +85,11 @@ And Gabriel is no stranger to Juicebox either, he was sent to the Bahamas to sea
 
 Matthew and Brileigh had an video interview with the above-mentioned Gabriel Haines [here](https://www.youtube.com/watch?v=nBi49fBHaeo)
 
-![Video interview with Gabriel Haines](interview_gabrielhaines.png)
+![Video interview with Gabriel Haines](interview_gabrielhaines.webp)
 
 And they also just released an [Juicecast episode featuring Chris Blec](https://www.youtube.com/watch?v=mJ5CKcW4GsQ), who is basically doing research and writing really critical articles about some DEFI protocols, and publishing those articles on his website [blec.report](https://blec.report/). Chris Blec also created a [Blec Report project](https://juicebox.money/@blecreport) on Juicebox to support his work.
 
-![Juicecast episode with Chris Blec](interview_chrisblec.png)
+![Juicecast episode with Chris Blec](interview_chrisblec.webp)
 
 ## Tiny Dino Show by Cheugy
 
@@ -101,4 +101,4 @@ The Tiny Dino Show is an educational show for kids and young adults. They plan o
 
 Cheugy thought the model of Juicebox is very suitable for projects that may want to implement their governance at some point. He would be looking forward to learning what implementations Juicebox will have later on when it comes to governance.
 
-![Project Tiny Dino Show](project_tinydinoshow.png)
+![Project Tiny Dino Show](project_tinydinoshow.webp)
