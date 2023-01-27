@@ -131,7 +131,30 @@ const config = {
           sidebarId: 'dao',
           label: 'Juicebox DAO',
         },
-        { to: '/blogs', label: 'Blogs', position: 'left' },
+        { 
+          type: 'dropdown',
+          label: 'Blogs',
+          to: '/blogs',
+          position: 'left',
+          items: [
+            {
+              label: 'For Project Creators',
+              to: '/blog',
+            },
+            {
+              label: 'Updates',
+              to: '/updates',
+            },
+            {
+              label: 'Town Halls',
+              to: '/town-hall',
+            },
+            {
+              label: 'Miscellaneous',
+              to: '/misc',
+            },
+          ],
+        },
         {
             type: 'localeDropdown',
             position: 'right',
