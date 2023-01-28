@@ -27,5 +27,7 @@ The protocol runs entirely on public smart contracts explained in detail through
 
 ## Postmortems
 
-* [Low severity bug discovered 8/18/2021](/blog/juicebox-postmortem-of-low-severity-bug-discovered-8-18-2021)
+* [Low severity bug discovered 8/18/2021](/updates/juicebox-postmortem-of-low-severity-bug-discovered-8-18-2021)
 * [Postmortem for medium severity bug identified on May 24, 2022](https://github.com/jbx-protocol/juice-contracts-v2/blob/main/security/postmortem/5.24.2022.md)
+* [V3 JBX Deployment Bug Postmortem](/updates/v3-jbx-postmortem/)
+

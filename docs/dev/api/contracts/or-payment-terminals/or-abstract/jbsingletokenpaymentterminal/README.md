@@ -5,6 +5,7 @@ _Generic terminal managing all inflows and outflows of funds into the protocol e
 #### Traits
 
 `abstract`
+
 #### Code
 
 https://github.com/jbx-protocol/juice-contracts-v3/blob/main/contracts/abstract/JBPayoutRedemptionPaymentTerminal.sol
