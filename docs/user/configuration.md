@@ -100,7 +100,7 @@ Optionally, Juicebox lets you reward your contributors with one or more custom N
 - Each tier can have unique metadata, as well as a unique price, maximum supply, reserved rate, and governance voting power.
 - Project owners can use NFTs for redemption instead of using project tokens.
 
-You can use NFTs for off-chain governance with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance with Governor Contracts — Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard. [*Learn more about on-chain governance →*](#on-chain-governance)
+You can use NFTs for off-chain governance with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance with Governor Contracts — Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard. [*Learn more about on-chain governance.*](#on-chain-governance)
 
 :::tip
 Juicebox NFTs are also a great way to create an NFT collection for your artwork — some projects use Juicebox for this alone, turning off tokens entirely. Adding NFTs may increase the gas fee for deploying your project.
@@ -130,7 +130,7 @@ These settings apply to all of the NFTs in your collection:
 #### On-chain Governance
 
 :::tip
-Snapshot strategies can read each NFT's voting power, even if your project is set to `No on-chain governance`. *See [Using Snapshot With Juicebox →](/user/resources/snapshot/)*
+Snapshot strategies can read each NFT's voting power, even if your project is set to `No on-chain governance`. See [*Using Snapshot With Juicebox*](/user/resources/snapshot/).
 :::
 
 Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard, meaning you can use them with on-chain governance tools like [Tally](https://tally.xyz/).
