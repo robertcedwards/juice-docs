@@ -5,6 +5,10 @@ sidebar_position: 1
 
 # Using Snapshot With Juicebox
 
+:::tip
+Most projects ratify some type of Governance Process to use alongside Snapshot voting. Feel free to use [our process](https://info.juicebox.money/dao/process/) as a starting point. You can also join the [Juicebox Discord](https://discord.gg/juicebox) and tag `filipv#0001` and `0xSTVG.eth (stevie g)#7744` for help!
+:::
+
 ## What's Snapshot?
 
 From the [Snapshot Docs](https://docs.snapshot.org/):
@@ -12,15 +16,29 @@ From the [Snapshot Docs](https://docs.snapshot.org/):
 >
 > In short, Snapshot is an off-chain gasless multi-governance client with easy to verify and hard to contest results.
 
-You can easily set up [Snapshot](https://snapshot.org/) voting with a Juicebox project token by using the strategies below. Make sure you follow the TODO notes, and delete the notes once you do. If you need help customizing your parameters, send a message in the [Juicebox Discord](https://discord.gg/juicebox).
+## How to set up a Snapshot space
 
-## Strategies For v3 Projects
+You can deploy a Snapshot space for your project on [snapshot.org](https://snapshot.org/#/setup), or you can:
+
+1. Visit your project's page on [juicebox.money](https://juicebox.money).
+2. Open your project settings by clicking the gear in the upper right-hand corner.
+3. Selecting `Governance` in the left-hand sidebar. 
+
+Both of these options will require you to have an ENS address (this is a short name ending with `.eth` that refers to your wallet). If you don't have an ENS, visit [app.ens.domains](https://app.ens.domains).
+
+Once your space is created, visit it on [Snapshot.org](https://snapshot.org/#/) and open the `Settings`. Here, you can change your space's name & avatar, and configure how voting power is calculated with one or more **Strategies**.
+
+Several strategies have been prepared for you below. Make sure you follow the TODO notes, and delete the notes once you do. If you need help customizing your parameters or are looking for a different strategy, send a message in the [Juicebox Discord](https://discord.gg/juicebox).
+
+You can have up to 8 strategies, and voting power is cumulative across them.
+
+## Strategies
 
 ### Project Token Voting
 
-*This strategy takes both claimed ERC-20s and unclaimed tokens into account.*
+This strategy gives each address one vote per project token held, taking both claimed ERC-20s and unclaimed tokens into account. If you want to add delegation, use this **AND** the [Project Token Delegation strategy](#project-token-delegation).
 
-1. Use a `contract-call` strategy.
+1. Add a `contract-call` strategy.
 2. Use these parameters:
 
 ```json
@@ -61,9 +79,9 @@ You can easily set up [Snapshot](https://snapshot.org/) voting with a Juicebox p
 
 ### Project Token Delegation
 
-*This strategy takes both claimed ERC-20s and unclaimed tokens into account.*
+This strategy allows voters to delegate their project token votes to somebody else. When Bobby delegates his voting power to Alice, Alice gets all of Bobby's voting power in addition to her own, but only when Bobby doesn't vote. If Bobby votes, he reclaims all of his voting power (for that vote). If you use this strategy, **you must also add the [Project Token Voting strategy](#project-token-voting).**
 
-1. Use a `delegation` strategy.
+1. Add a `delegation` strategy.
 2. Use these parameters:
 
 ```json
@@ -110,191 +128,88 @@ You can easily set up [Snapshot](https://snapshot.org/) voting with a Juicebox p
 }
 ```
 
-## Strategies For v2 Projects
+### NFT Voting Weight
 
-### Project Token Voting
+This strategy gives each address votes based on their NFT's [Voting Weight](/user/configuration/#tiers).
 
-*This strategy takes both claimed ERC-20s and unclaimed tokens into account.*
-
-1. Use a `contract-call` strategy.
-2. Use these parameters:
+1. Add a `contract-call` strategy.
+2. Use the following parameters:
 
 ```json
 {
-	"args": [
-		"%{address}",
-		"0x01" // TODO: REPLACE WITH YOUR PROJECT ID HEX ENCODED.
-	],
-	"symbol": "JBX", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
-	"address": "0xCBB8e16d998161AdB20465830107ca298995f371",
-	"decimals": 18,
-	"methodABI": {
-	"name": "balanceOf",
-	"type": "function",
-	"inputs": [
-		{
-			"name": "",
-			"type": "address",
-			"internalType": "address"
-		},
-		{
-			"name": "",
-			"type": "uint256",
-			"internalType": "uint256"
-		}
-	],
-	"outputs": [
-		{
-			"name": "",
-			"type": "uint256",
-			"internalType": "uint256"
-		}
-	],
-	"stateMutability": "view"
-	}
-}
-```
-
-### Project Token Delegation
-
-*This strategy takes both claimed ERC-20s and unclaimed tokens into account.*
-
-1. Use a `delegation` strategy.
-2. Use these parameters:
-
-```json
-{
-  "symbol": "JBX (delegated)", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
-  "strategies": [
-    {
-      "name": "contract-call",
-      "params": {
-        "args": [
-          "%{address}",
-          "0x01" // TODO: REPLACE WITH YOUR PROJECT ID HEX ENCODED.
-        ],
-        "symbol": "JBX", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
-        "address": "0xCBB8e16d998161AdB20465830107ca298995f371",
-        "decimals": 18,
-        "methodABI": {
-          "name": "balanceOf",
-          "type": "function",
-          "inputs": [
-            {
-              "name": "",
-              "type": "address",
-              "internalType": "address"
-            },
-            {
-              "name": "",
-              "type": "uint256",
-              "internalType": "uint256"
-            }
-          ],
-          "outputs": [
-            {
-              "name": "",
-              "type": "uint256",
-              "internalType": "uint256"
-            }
-          ],
-          "stateMutability": "view"
-        }
+  "args": [
+    "0x33f37dda8936568456d630dc6a41886bfdda4a2d", // TODO: REPLACE WITH YOUR NFT'S ADDRESS.
+    "%{address}"
+  ],
+  "address": "0xffB2Cd8519439A7ddcf2C933caedd938053067D2",
+  "symbol": "MONKEY", // TODO: REPLACE WITH YOUR SYMBOL.
+  "decimals": 0,
+  "methodABI": {
+    "inputs": [
+      {
+        "name": "_nft",
+        "internalType": "address",
+        "type": "address"
+      },
+      {
+        "name": "_account",
+        "internalType": "address",
+        "type": "address"
       }
-    }
-  ]
-}
-```
-
-## Strategies For v1 Projects
-
-### Project Token Voting
-1. Choose "contract-call".
-2. Stick this in 
-
-```json
-{
-	"args": [
-		"%{address}",
-		"0x01" // TODO: REPLACE WITH YOUR PROJECT ID HEX ENCODED.
-	],
-	"symbol": "JBX", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
-	"address": "0xee2eBCcB7CDb34a8A822b589F9E8427C24351bfc",
-	"decimals": 18,
-	"methodABI": {
-	"name": "balanceOf",
-	"type": "function",
-	"inputs": [
-		{
-			"name": "",
-			"type": "address",
-			"internalType": "address"
-		},
-		{
-			"name": "",
-			"type": "uint256",
-			"internalType": "uint256"
-		}
-	],
-	"outputs": [
-		{
-			"name": "",
-			"type": "uint256",
-			"internalType": "uint256"
-		}
-	],
-	"stateMutability": "view"
-	}
-}
-```
-
-### Project Token Delegation
-
-*This strategy takes both claimed ERC-20s and unclaimed tokens into account.*
-
-1. Use a `delegation` strategy.
-2. Use these parameters:
-
-```json
-{
-  "symbol": "JBX (delegated)", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
-  "strategies": [
-    {
-      "name": "contract-call",
-      "params": {
-        "args": [
-          "%{address}",
-          "0x01" // TODO: REPLACE WITH YOUR PROJECT ID HEX ENCODED.
-        ],
-        "symbol": "JBX", // TODO: REPLACE WITH YOUR TOKEN SYMBOL.
-        "address": "0xee2eBCcB7CDb34a8A822b589F9E8427C24351bfc",
-        "decimals": 18,
-        "methodABI": {
-          "name": "balanceOf",
-          "type": "function",
-          "inputs": [
-            {
-              "name": "",
-              "type": "address",
-              "internalType": "address"
-            },
-            {
-              "name": "",
-              "type": "uint256",
-              "internalType": "uint256"
-            }
-          ],
-          "outputs": [
-            {
-              "name": "",
-              "type": "uint256",
-              "internalType": "uint256"
-            }
-          ],
-          "stateMutability": "view"
-        }
+    ],
+    "name": "votingUnitsOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "units",
+        "type": "uint256"
       }
-    }
-  ]
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+}
+```
+
+### NFT Balance
+
+This strategy gives each address one vote per NFT held, taking all tiers into account.
+
+1. Add a `contract-call` strategy.
+2. Use the following parameters:
+
+```json
+{
+  "args": [
+    "0x33f37dda8936568456d630dc6a41886bfdda4a2d", // TODO: REPLACE WITH YOUR NFT'S ADDRESS.
+    "%{address}"
+  ],
+  "address": "0xffB2Cd8519439A7ddcf2C933caedd938053067D2",
+  "symbol": "MONKEY", // TODO: REPLACE WITH YOUR SYMBOL.
+  "decimals": 0,
+  "methodABI": {
+    "inputs": [
+      {
+        "name": "_nft",
+        "internalType": "address",
+        "type": "address"
+      },
+      {
+        "name": "_owner",
+        "internalType": "address",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "balance",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
 }
 ```

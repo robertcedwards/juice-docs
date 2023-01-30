@@ -1,5 +1,5 @@
 ---
-title: Configuration Reference
+title: Configuring Your Project
 sidebar_position: 2
 ---
 
@@ -94,19 +94,53 @@ If this is enabled, the project creator can mint tokens on demand. Most people k
 
 ## NFTs (Optional)
 
+Juicebox lets you reward your contributors with one or more custom NFT tiers:
+
+- Project owners can set tiers when creating their project, and can add or remove tiers over time.
+- Each tier can have unique metadata, as well as a unique price, maximum supply, reserved rate, and governance voting power.
+- Project owners can use NFTs for redemption instead of using project tokens.
+
+You can use NFTs for off-chain governance with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance with Governor Contracts — Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard. [*Learn more about on-chain governance →*](#on-chain-governance)
+
 :::tip
-This is a great way to create an NFT collection for your artwork — some projects use Juicebox for this alone, turning off tokens entirely. Adding NFTs will increase the gas fee for deploying your project.
+Juicebox NFTs are also a great way to create an NFT collection for your artwork — some projects use Juicebox for this alone, turning off tokens entirely. Adding NFTs may increase the gas fee for deploying your project.
 :::
-
-#### Collection Settings
-
-- "Collection Name", "Collection Symbol", and "Collection Description" are each a different piece of collection metadata which will be displayed in wallets and on websites like [Zora](https://zora.co/) and [OpenSea](https://opensea.io/).
-- Payment Success Popup is an optional popup shown when people mint an NFT. You can also link them to a website (like your Discord server)!
 
 #### Tiers
 
-To add a tier, click `Add NFT`. Each tier can have:
+You need to have at least one tier for your project to have NFTs. To add a tier, click `Add NFT`. Each tier can have:
 
 - A unique image, name, description, and link.
-- A minimum contribution threshold. If this is set to 1 ETH, somebody who pays your project 1 ETH will receive 1 ETH worth of project tokens **and** an NFT.
-- A limited supply. You can use this to encourage people to be within the first 50 supporters, or you make an expensive 1/1 NFT! Each tier can have a different supply.
+- A minimum contribution — your NFT's price. If this is set to 1 ETH, somebody who pays your project 1 ETH will receive 1 ETH worth of project tokens **and** an NFT.
+- A limited supply — the maximum numbers of NFTs that can be minted from this tier. You can use this to encourage people to be within the first 50 supporters, or you can make an expensive 1/1 NFT. Each tier can have a different supply.
+
+You can also set advanced options:
+
+- **Reserved NFTs.** For every `N` NFTs minted, mint an extra one to the address of your choosing. This can be a helpful way to reward your collaborators.
+- **Voting weight.** Give each tier a custom voting weight, which can be used for offchain governance (with a tool like [Snapshot](/user/resources/snapshot/), or for onchain governance.
+- **External link.** Link minters to your project's website, Discord, or somewhere else.
+
+#### Collection Settings
+
+These settings apply to all of the NFTs in your collection:
+
+- "Collection Name", "Collection Symbol", and "Collection Description" are each a different piece of collection metadata which will be displayed in wallets and on websites like [Zora](https://zora.co/) and [OpenSea](https://opensea.io/).
+- **Payment Success Popup** is an optional popup shown when people mint an NFT. You can use this to direct contributors to your project's website, Discord, or somewhere else.
+
+#### On-chain Governance
+
+:::tip
+Snapshot strategies can read each NFT's voting power, even if your project is set to `No on-chain governance`. *See [Using Snapshot With Juicebox →](/user/resources/snapshot/)*
+:::
+
+Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard, meaning you can use them with on-chain governance tools like [Tally](https://tally.xyz/).
+
+This works by tracking an NFT's ownership over time as it is minted, burned, traded, or transferred, meaning that you can calculate the voting power of any address at any time (even for times in the past).
+
+[juicebox.money](https://juicebox.money) lists three on-chain governance options:
+
+| Option | Description |
+| --- | --- |
+| **No on-chain governance** | Your project won't track voting power over time. |
+| **Standard on-chain governance** | Track the total voting power of each address over time. |
+| **Tier-based on-chain governance** | Instead of tracking total voting power, the contract tracks each address' voting power within each NFT tier over time. This can be useful for running multiple voting processes out of one treasury, or for complex on-chain governance. |
