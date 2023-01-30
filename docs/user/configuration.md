@@ -92,9 +92,9 @@ The lower this rate is, the less incentive there is to redeem tokens.
 
 If this is enabled, the project creator can mint tokens on demand. Most people keep this off!
 
-## NFTs (Optional)
+## NFTs
 
-Juicebox lets you reward your contributors with one or more custom NFT tiers:
+Optionally, Juicebox lets you reward your contributors with one or more custom NFT tiers:
 
 - Project owners can set tiers when creating their project, and can add or remove tiers over time.
 - Each tier can have unique metadata, as well as a unique price, maximum supply, reserved rate, and governance voting power.
