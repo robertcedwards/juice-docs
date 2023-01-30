@@ -2,12 +2,12 @@
 slug: 23-01-24
 title: January 24th, 2023
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.png
+image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
 tags: [town-hall]
 ---
 
 
-![Town Hall banner by Sage Kellyn](townhall.png) 
+![Town Hall banner by Sage Kellyn](townhall.webp) 
 
 Art by [Sage Kellyn](https://twitter.com/SageKellyn)
 
@@ -178,7 +178,7 @@ ONNI will be reaching out to project creators over the next week, with the hope 
 
  Matthew and Brileigh have started making tutorials for various Juicebox related functionalities, such as setting up a project handle, V3 migration, setting up a payment address for a project. Also they started making more general overviews of Juicebox's complete create flow.
 
-![videos by Matthew and brileigh on Youtube](jbdao_youtube.png)
+![videos by Matthew and brileigh on Youtube](jbdao_youtube.webp)
 
 Along with those tutorial videos, they are also writing corresponding articles, as some people will find it easier to follow along with an article that goes step by step.
 

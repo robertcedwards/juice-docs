@@ -4,7 +4,7 @@ slug: /blogs
 hide_table_of_contents: true
 ---
 
-<style>{`.card {border: solid 1px var(--ifm-color-primary)}`}</style>
+<style>{`.card {border: solid 1px var(--ifm-color-primary)} img { width: 100%; } @media screen and (max-width: 996px) and (min-width: 505px) { img { display: none !important; } } `}</style>
 <div class="container" style={{marginTop: "30px"}}>
   <div class="row">
     <div class="col col--3" style={{marginBottom: "30px"}}>
@@ -12,7 +12,8 @@ hide_table_of_contents: true
         <div class="card__image">
           <img
             src="/img/projectcreators.webp"
-            alt="Nerdy Juicebox apple project creator"/>
+            alt="Nerdy Juicebox apple project creator"
+          />
         </div>
         <div class="card__body">
           <h4>Project Creators</h4>
@@ -31,7 +32,7 @@ hide_table_of_contents: true
           <img
             src="/img/updates.webp"
             alt="Juicebox Banny looking through binoculars"
-            title="Logo Title Text 1" />
+          />
         </div>
         <div class="card__body">
           <h4>Updates & Observations</h4>
@@ -50,7 +51,7 @@ hide_table_of_contents: true
           <img
             src="/img/townhall.webp"
             alt="Two Juicebox Characters Discussing Townhall"
-           />
+          />
         </div>
         <div class="card__body">
           <h4>Town Hall</h4>
@@ -67,9 +68,9 @@ hide_table_of_contents: true
       <div class="card">
         <div class="card__image">
           <img
-            src="/img/townhall.webp"
-            alt="Image alt text"
-            title="Logo Title Text 1" />
+            src="/img/miscellaneous.webp"
+            alt="Miscellaneous objects, including a conical flask and a microphone."
+          />
         </div>
         <div class="card__body">
           <h4>Miscellaneous</h4>
