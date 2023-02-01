@@ -84,9 +84,9 @@ This makes your token more expensive over time. With a 5% discount rate, your to
 
 #### Redemption rate
 
-At 100%, redemptions are 1:1 — somebody redeeming 10% of all project tokens will receive 10% of the overflow. At 0%, no redemptions happen. Anywhere else, redemptions take place along a bonding curve, meaning earlier redeemers will get less ETH in return, and later redeemers will get more.
+At 100%, redemptions are 1:1 — somebody redeeming 10% of all project tokens will receive 10% of the overflow. At 0%, no redemptions happen. Anywhere else, redemptions take place along a bonding curve, meaning earlier redeemers will get less ETH per token redeemed, and later redeemers will get more.
 
-The lower this rate is, the less incentive there is to redeem tokens.
+The lower this rate is, the less of an incentive there is to redeem tokens before others.
 
 #### Token minting
 
