@@ -85,7 +85,7 @@ Currently when members of multisig execute multisig transactions on Gnosis Safe,
 
 Next, Filipv is thinking of doing the same thing for project taps, which can be triggered by anyone as a public transaction to distribute payouts from Juicebox projects. It will be cool to also find a way to make reimbursements to people who triggered those project taps for those gas fees paid.
 
-Jango also reminded that there's also a functionality in the contracts for payouts, which allows people to route some of the payouts to the person who clicks "Distribute" and triggers that distribution transaction. So actually projects can bake that into the payout directly to incentivize people or MEV bots to click and trigger that transaction.
+Jango also reminded that there's also a functionality in the contracts for payouts, which allows people to route some of the payouts to the person who clicks "Distribute" and triggers that distribution transaction. So actually projects can bake that into the payout directly to incentivize people or [MEV](https://www.blocknative.com/blog/what-is-mev) bots to click and trigger that transaction.
 
 ### Juicy Spider Project Search
 
