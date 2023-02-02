@@ -2,7 +2,7 @@
 slug: 22-09-13
 title: JuiceboxDAO 周会概要 2022 年 9 月 14 日
 authors: [zhape]
-image: https://info.juicebox.money/assets/images/townhall-f6220cb63e79e62f790a0ba4a041c68c.webp
+image: https://info.juicebox.money/assets/images/townhall-fa970c078e21123c4e80993400e638db.webp
 tags: [dao, town hall, news]
 ---
 
