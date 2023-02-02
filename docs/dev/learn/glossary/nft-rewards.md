@@ -22,6 +22,6 @@
 
 #### What you'll want to know if you're building
 
-* An project can be deployed with a new NFT Rewards contract attached using the [`JBTiered721DelegateProjectDeployer.launchProjectFor(...)`](/dev/api/contracts/or-delegates/jbtiered721delegateprojectdeployer/write/launchprojectfor.md) transaction.
-* A project can be reconfigured with a new NFT Rewards contract using the [`JBTiered721DelegateProjectDeployer.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-delegates/jbtiered721delegateprojectdeployer/write/reconfigurefundingcyclesof.md) transaction.
-* An already-existing NFT rewards contract can be passed into the standard [`JBController.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller/write/launchprojectfor.md) and [`JBController.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof.md) transactions in the funding cycle's metadata.
+* An project can be deployed with a new NFT Rewards contract attached using the [`JBTiered721DelegateProjectDeployer.launchProjectFor(...)`](/dev/api/extensions/juice-721-delegate/contracts/contract.JBTiered721DelegateProjectDeployer/#launchprojectfor) transaction.
+* A project can be reconfigured with a new NFT Rewards contract using the [`JBTiered721DelegateProjectDeployer.reconfigureFundingCyclesOf(...)`](/dev/api/extensions/juice-721-delegate/contracts/contract.JBTiered721DelegateProjectDeployer/#reconfigurefundingcyclesof) transaction.
+* An already-existing NFT rewards contract can be passed into the standard [`JBController.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller/write/launchprojectfor/) and [`JBController.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-controllers/jbcontroller/write/reconfigurefundingcyclesof/) transactions in the funding cycle's metadata.
