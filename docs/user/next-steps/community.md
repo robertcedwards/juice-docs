@@ -23,6 +23,10 @@ To get started, look at our pre-built [Discord Server Templates/Guide](/user/res
 
 [Discourse](https://github.com/discourse) is an open source forum used by many web3 projects, including several Juicebox projects. Some projects use it to host formal governance discussion, and others use it for everything.
 
+### Discourse
+[Geneva](https://www.geneva.com/) Geneva gives you everything you need to keep your groups, clubs, and communities organized and connected. Web3 token gated native for communities.
+
+
 ## Collaboration
 
 ### Notion
